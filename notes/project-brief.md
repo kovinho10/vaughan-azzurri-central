@@ -46,9 +46,14 @@ Current Ontario Cup facts from the men's draw:
 - If Vaughan win, the Third Round is Sunday, July 26.
 - Round dates shown: First Round June 21; Second Round July 5; Third Round July 26; Quarter-finals August 9; Semi-final August 30; Final September 13 at Zanchin Automotive Soccer Centre, Vaughan.
 
+## Roster reference files
+
+- `assets/reference/roster/2026-04-26-roster-1.jpg` and `assets/reference/roster/2026-04-26-roster-2.jpg` are the roster screenshots from April 26, 2026 used to cross-check OSL registrations, OSA numbers, names, and DOBs.
+
 ## Squad updates
 
-- Chris Duenas added as a squad member: nickname Noodles, nationality Ecuadorian, position CDM, number 24.
+- Chris Duenas registered: OSA #44159, nickname Noodles, nationality Ecuadorian, position CDM, number 24. DOB is only partially visible in the roster screenshot as `1993/04`; exact day still needs confirmation before adding age.
+- Kelvin Ramirez registered: OSA #44154, nickname Kelvinho, DOB 2004-01-01, nationality Brazilian, position CB, number 16.
 
 ## Top bar weather
 

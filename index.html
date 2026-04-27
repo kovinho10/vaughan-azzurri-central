@@ -2382,30 +2382,30 @@
   // ROSTER &mdash; from OSL registration sheet (edit nicknames as desired)
   // ============================================================
   const roster = [
-    // OSL-registered (18)
+    // OSL-registered (20)
     { osa: 44139, first: 'Julian',     last: 'Accettola',   nick: 'Acc',      dob: '2002-05-22', pos: 'ST', num: 9,  nat: '🇮🇹', natName: 'Italian' },
     { osa: 44126, first: 'Sven',       last: 'Arapovic',    nick: 'Sven',     dob: '1991-01-23', pos: 'CB', num: 4,  nat: '🇭🇷', natName: 'Croatian' },
     { osa: 44127, first: 'Matthew',    last: 'Arnone',      nick: 'Arnone',   dob: '1994-02-28', pos: 'DM', num: 6,  nat: '🇮🇹', natName: 'Italian' },
     { osa: 44153, first: 'Yigal',      last: 'Bruk',        nick: 'Yigal',    dob: '2002-02-04', pos: 'RW', num: 21, nat: '🇺🇦', natName: 'Ukrainian' },
     { osa: 44136, first: 'Dylan',      last: 'Carreiro',    nick: 'Dylan',    dob: '1995-01-20', pos: 'CM', num: 8,  nat: '🇵🇹', natName: 'Portuguese' },
     { osa: 44138, first: 'Daniel',     last: 'Cramarossa',  nick: 'Cram',     dob: '1995-08-03', pos: 'LB', num: 2,  nat: '🇮🇹', natName: 'Italian' },
-    { osa: 44131, first: 'Milo',       last: 'Djuricic',    nick: 'Milo',     dob: '2000-07-28', pos: 'CB', num: 5,  nat: '🇷🇸', natName: 'Serbian' },
-    { osa: 44135, first: 'Gianfranco', last: 'Gileppo',     nick: 'G',        dob: '2000-05-03', pos: 'CM', num: 19, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44131, first: 'Milo',       last: 'Djuricic',    nick: 'Milo',     dob: '2000-07-28', pos: 'CB',  num: 5,  nat: '🇷🇸', natName: 'Serbian' },
+    { osa: 44159, first: 'Chris',      last: 'Duenas',      nick: 'Noodles',  dob: null,         pos: 'CDM', num: 24, nat: '🇪🇨', natName: 'Ecuadorian' },
+    { osa: 44135, first: 'Gianfranco', last: 'Gileppo',     nick: 'G',        dob: '2000-05-03', pos: 'CM',  num: 19, nat: '🇮🇹', natName: 'Italian' },
     { osa: 44129, first: 'Agostino',   last: 'Greco',       nick: 'Ago',      dob: '1999-11-11', pos: 'CM', num: 14, nat: '🇮🇹', natName: 'Italian' },
     { osa: 44137, first: 'Nikita',     last: 'Ivanov',      nick: 'Nick',     dob: '2000-06-15', pos: 'CB', num: 13, nat: '🇷🇺', natName: 'Russian' },
     { osa: 44122, first: 'Mario',      last: 'Kovacevic',   nick: 'Mario',    dob: '1990-12-25', pos: 'ST', num: 10, nat: '🇧🇦', natName: 'Bosnian', captain: true, role: 'Sporting Director' },
     { osa: 44125, first: 'Michael',    last: 'Petitti',     nick: 'Petiti',   dob: '2001-08-21', pos: 'LW', num: 11, nat: '🇮🇹', natName: 'Italian' },
     { osa: 44152, first: 'Jarred',     last: 'Phillips',    nick: 'JP',       dob: '1995-05-14', pos: 'RB', num: 7,  nat: '🇯🇲', natName: 'Jamaican' },
+    { osa: 44154, first: 'Kelvin',     last: 'Ramirez',     nick: 'Kelvinho', dob: '2004-01-01', pos: 'CB', num: 16, nat: '🇧🇷', natName: 'Brazilian' },
     { osa: 44146, first: 'Gabriel',    last: 'Poles',       nick: 'Poles',    dob: '2002-12-05', pos: 'LW', num: 17, nat: '🇮🇹', natName: 'Italian' },
     { osa: 44124, first: 'Lucas',      last: 'Puntillo',    nick: 'Punti',    dob: '1997-09-15', pos: 'RW', num: 15, nat: '🇮🇹', natName: 'Italian' },
     { osa: 44145, first: 'Alain',      last: 'Sargeant',    nick: 'Alain',    dob: '1995-11-27', pos: 'CB', num: 3,  nat: '🇯🇲', natName: 'Jamaican' },
     { osa: 44143, first: 'Robert',     last: 'Ursu',        nick: 'Robert',   dob: '2003-04-09', pos: 'GK', num: 1,  nat: '🇷🇴', natName: 'Romanian', startingGK: true },
     { osa: 44140, first: 'Sotiri',     last: 'Varlokostas', nick: 'Sotiri',   dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', backupGK: true },
     // Squad members (not on OSL registration sheet)
-    { osa: null,  first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW',  num: 45, nat: '🇮🇹', natName: 'Italian', vc: true },
-    { osa: null,  first: 'Kelvin',     last: '',            nick: 'Kelvinho', dob: null,         pos: 'CB',  num: 16, nat: '🇧🇷', natName: 'Brazilian' },
-    { osa: null,  first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB',  num: 18, nat: '🇮🇹', natName: 'Italian', vc2: true },
-    { osa: null,  first: 'Chris',      last: 'Duenas',      nick: 'Noodles',  dob: null,         pos: 'CDM', num: 24, nat: '🇪🇨', natName: 'Ecuadorian' },
+    { osa: null,  first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW', num: 45, nat: '🇮🇹', natName: 'Italian', vc: true },
+    { osa: null,  first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB', num: 18, nat: '🇮🇹', natName: 'Italian', vc2: true },
   ];
 
   // ============================================================
