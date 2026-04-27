@@ -46,6 +46,10 @@ Current Ontario Cup facts from the men's draw:
 - If Vaughan win, the Third Round is Sunday, July 26.
 - Round dates shown: First Round June 21; Second Round July 5; Third Round July 26; Quarter-finals August 9; Semi-final August 30; Final September 13 at Zanchin Automotive Soccer Centre, Vaughan.
 
+## Squad updates
+
+- Chris Duenas added as a squad member: nickname Noodles, nationality Ecuadorian, position CDM, number 24.
+
 ## Top bar weather
 
 Show current weather for Vaughan, Ontario in the top bar beside the date. Use a simple condition icon/symbol (sun, cloud, rain, snow, thunder, etc.) plus current temperature. Current implementation uses Open-Meteo with Vaughan coordinates and no API key.
