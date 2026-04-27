@@ -673,49 +673,6 @@
     position: relative;
     z-index: 1;
   }
-  .section-h--hq h2::after {
-    content: 'OFF-PITCH COMMAND CENTRE';
-    margin-left: 10px;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    color: var(--azz-bright);
-    border: 1px solid rgba(96,165,250,.28);
-    background: rgba(59,130,246,.08);
-    border-radius: 4px;
-    padding: 3px 7px;
-    vertical-align: middle;
-  }
-  .venue-card {
-    border-color: rgba(71,86,133,.78);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.045), 0 18px 40px -32px rgba(0,0,0,.9);
-  }
-  .venue-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: linear-gradient(90deg, rgba(255,255,255,.035), transparent 35%), radial-gradient(circle at 92% 8%, rgba(146,20,31,.12), transparent 32%);
-    z-index: 1;
-  }
-  .venue-card-bar::after { background: linear-gradient(90deg, rgba(255,255,255,.035), transparent 35%), radial-gradient(circle at 92% 8%, rgba(234,179,8,.12), transparent 32%); }
-  .venue-pulse {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    margin-top: 9px;
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:#bfdbfe;
-    position:relative;
-    z-index:2;
-  }
-  .venue-pulse span { width:7px; height:7px; border-radius:50%; background:var(--azz-bright); box-shadow:0 0 0 4px rgba(96,165,250,.12); }
-  .venue-pulse--gold { color:#fde68a; }
-  .venue-pulse--gold span { background:var(--draw); box-shadow:0 0 0 4px rgba(234,179,8,.12); }
 
   /* ───── Competitions: minimalist strip ───── */
   .comps {
@@ -927,41 +884,28 @@
   /* ───── Two-col grid ───── */
   .grid-2 {
     display: grid;
-    grid-template-columns: minmax(0, 1.32fr) minmax(360px, 0.92fr);
-    gap: 14px;
-    margin-bottom: 18px;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
     align-items: start;
   }
   @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
 
   /* ───── Next match ───── */
   .next-match {
-    background:
-      linear-gradient(135deg, rgba(16, 27, 50, 0.96), rgba(7, 16, 30, 0.98)),
-      var(--surface);
-    border: 1px solid rgba(71, 86, 133, 0.82);
-    border-radius: 12px;
-    padding: 22px;
+    background: linear-gradient(135deg, var(--surface-raised), var(--surface));
+    border: 1px solid var(--border-hi);
+    border-radius: 10px;
+    padding: 24px;
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.045), 0 18px 44px -34px rgba(0,0,0,.92);
   }
   .next-match::before {
     content: '';
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.14), transparent 48%),
-      linear-gradient(90deg, rgba(255,255,255,.035), transparent 32%);
+    background: radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.15), transparent 50%);
     pointer-events: none;
-  }
-  .next-match::after {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--azz-bright), var(--rosso));
-    opacity: .9;
   }
   .next-match-inner { position: relative; z-index: 1; }
   .next-match-tag-row {
@@ -1080,76 +1024,51 @@
   }
 
 
-  /* ───── Matchday HQ: boardroom / security / atmosphere ───── */
+  /* ───── Boardroom briefing / manager security ───── */
   .fm-briefing-grid {
-    margin: 0 0 18px;
+    margin: 0 0 16px;
     display: grid;
-    grid-template-columns: 1.05fr 1.05fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
     align-items: stretch;
   }
-  @media (max-width: 1100px) { .fm-briefing-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 1100px) {
+    .fm-briefing-grid { grid-template-columns: 1fr; }
+  }
 
   .fm-briefing-card {
-    min-height: 210px;
-    background:
-      linear-gradient(135deg, rgba(14, 24, 45, 0.96), rgba(5, 11, 22, 0.98)),
-      var(--surface);
-    border: 1px solid rgba(71, 86, 133, 0.78);
-    border-radius: 10px;
-    padding: 16px;
+    background: rgba(7, 16, 30, 0.46);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 15px;
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.045), 0 18px 40px -34px rgba(0,0,0,.92);
-  }
-  .fm-briefing-card::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--azz-bright), rgba(255,255,255,.08));
-    opacity: .9;
   }
   .fm-briefing-card::after {
     content: '';
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.10), transparent 50%),
-      linear-gradient(90deg, rgba(255,255,255,.03), transparent 42%);
+    background: radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.08), transparent 55%);
     pointer-events: none;
-  }
-  .fm-briefing-card.security-card::before { background: linear-gradient(180deg, var(--win), var(--azz-bright)); }
-  .fm-briefing-card.atmosphere-card::before { background: linear-gradient(180deg, var(--draw), var(--rosso)); }
-  .module-code {
-    position: absolute;
-    right: 12px;
-    top: 10px;
-    z-index: 2;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 0.18em;
-    color: rgba(191,219,254,.5);
   }
   .fm-briefing-label {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.26em;
+    font-weight: 700;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--azz-bright);
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     position: relative;
     z-index: 1;
   }
   .fm-briefing-title {
     font-family: 'Fraunces', serif;
-    font-weight: 650;
-    font-size: 19px;
-    line-height: 1.12;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.15;
     color: var(--paper);
-    margin-bottom: 7px;
+    margin-bottom: 6px;
     position: relative;
     z-index: 1;
   }
@@ -1160,63 +1079,123 @@
     position: relative;
     z-index: 1;
   }
-  .briefing-pills { display:flex; flex-wrap:wrap; gap:6px; margin-top:11px; position:relative; z-index:1; }
-  .briefing-pills span, .manager-stamp {
-    font-family:'Barlow Condensed',sans-serif;
-    font-size:9px;
-    font-weight:850;
-    letter-spacing:.17em;
-    text-transform:uppercase;
-    border:1px solid rgba(255,255,255,.09);
-    background:rgba(255,255,255,.045);
-    color:var(--text);
-    border-radius:999px;
-    padding:5px 8px;
+  .security-meter {
+    margin-top: 12px;
+    position: relative;
+    z-index: 1;
   }
-  .manager-stamp { display:inline-flex; margin-top:10px; color:#bbf7d0; border-color:rgba(34,197,94,.25); background:rgba(34,197,94,.08); }
-  .security-meter { margin-top: 14px; position: relative; z-index: 1; }
   .security-row {
     display: flex;
     justify-content: space-between;
     gap: 12px;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.18em;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 7px;
+    margin-bottom: 6px;
   }
-  .security-row b { color: var(--win); font-weight: 900; }
+  .security-row b { color: var(--win); font-weight: 800; }
   .security-track {
-    height: 9px;
-    background: rgba(4,10,20,.82);
-    border: 1px solid rgba(71,86,133,.82);
+    height: 8px;
+    background: var(--bg-deep);
+    border: 1px solid var(--border);
     border-radius: 999px;
     overflow: hidden;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,.45);
   }
-  .security-fill { height: 100%; width: 100%; background: linear-gradient(90deg, var(--win), var(--azz-bright)); border-radius: 999px; box-shadow: 0 0 14px rgba(34,197,94,.32); }
-  .cup-briefing { display:grid; grid-template-columns:auto 1fr; gap: 14px; align-items:center; position:relative; z-index:1; }
-  .cup-briefing .comp-badge { width:62px; height:62px; border-radius:14px; font-size:15px; }
-  .hieu-security { display:grid; grid-template-columns:auto 1fr; gap: 14px; align-items:start; position:relative; z-index:1; }
-  .manager-photo { width:66px; height:66px; border-radius:50%; background:#fff; padding:3px; flex-shrink:0; box-shadow: 0 0 0 1px rgba(255,255,255,.65), 0 10px 22px -10px rgba(0,0,0,.85), 0 0 26px -18px rgba(34,197,94,.9); }
-  .manager-photo img { width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
-  .atmosphere-card { padding: 16px; }
-  .atmosphere-top { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; position: relative; z-index: 1; margin-bottom: 12px; }
-  .atmosphere-status { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--draw); border: 1px solid rgba(234, 179, 8, 0.38); background: rgba(234, 179, 8, 0.11); padding: 5px 10px; border-radius: 4px; white-space: nowrap; box-shadow: inset 0 1px 0 rgba(255,255,255,.05); }
-  .atmosphere-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; position: relative; z-index: 1; }
-  .atmo-tile { background: rgba(4, 10, 20, 0.66); border: 1px solid rgba(71,86,133,.82); border-radius: 7px; padding: 10px; min-width: 0; box-shadow: inset 0 1px 0 rgba(255,255,255,.035); }
-  .atmo-num { font-family: 'Barlow Condensed', sans-serif; font-size: 27px; font-weight: 900; line-height: 1; color: var(--paper); font-variant-numeric: tabular-nums; }
+  .security-fill {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--win), var(--azz-bright));
+    border-radius: 999px;
+  }
+
+  .atmosphere-card {
+    padding: 15px;
+  }
+  .atmosphere-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 12px;
+  }
+  .atmosphere-status {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--draw);
+    border: 1px solid rgba(234, 179, 8, 0.35);
+    background: rgba(234, 179, 8, 0.10);
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .atmosphere-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  .atmo-tile {
+    background: rgba(13, 19, 34, 0.72);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px;
+    min-width: 0;
+  }
+  .atmo-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--paper);
+    font-variant-numeric: tabular-nums;
+  }
   .atmo-num.small { font-size: 18px; color: var(--azz-bright); }
-  .atmo-lab { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .atmo-track { height: 6px; margin-top: 9px; background: rgba(4,10,20,.85); border: 1px solid rgba(71,86,133,.78); border-radius: 999px; overflow: hidden; }
-  .atmo-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--azz), var(--draw)); box-shadow: 0 0 11px rgba(234,179,8,.26); }
+  .atmo-lab {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .atmo-track {
+    height: 6px;
+    margin-top: 9px;
+    background: var(--bg-deep);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .atmo-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--azz), var(--draw));
+  }
   .atmo-fill.confidence { width: 94%; }
   .atmo-fill.chat { width: 88%; }
   .atmo-fill.pressure { width: 38%; background: linear-gradient(90deg, var(--win), var(--draw)); }
   .atmo-fill.delusion { width: 97%; background: linear-gradient(90deg, var(--draw), var(--rosso)); }
-  .atmo-note { margin-top: 10px; position: relative; z-index: 1; font-size: 12px; line-height: 1.5; color: var(--muted); }
+  .atmo-note {
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
   .atmo-note b { color: var(--paper); }
 
 
@@ -1260,15 +1239,10 @@
   .campaign-status { font-size: 11px; color: var(--muted); margin-top: 2px; }
   @media (max-width: 800px) { .campaign-wall { grid-template-columns: repeat(2,1fr); } }
   @media (max-width: 520px) { .campaign-wall { grid-template-columns: 1fr; } }
-  .venue-facts { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; margin-top: 12px; position:relative; z-index:2; }
-  .venue-fact { background:rgba(7,16,30,.62); border:1px solid var(--border); border-radius:7px; padding:8px; min-width:0; display:flex; align-items:center; gap:8px; }
-  .venue-fact-icon { width:28px; height:28px; border-radius:8px; flex:0 0 28px; display:inline-flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:900; letter-spacing:.08em; color:#bfdbfe; background:rgba(59,130,246,.15); border:1px solid rgba(96,165,250,.34); box-shadow:inset 0 1px 0 rgba(255,255,255,.06); }
-  .venue-fact-icon--gold { color:#fde68a; background:rgba(234,179,8,.13); border-color:rgba(234,179,8,.34); }
-  .venue-fact .lab { font-family:'Barlow Condensed',sans-serif; font-size:8px; letter-spacing:.16em; text-transform:uppercase; color:var(--dim); white-space:nowrap; }
-  .venue-fact .val { font-family:'Barlow Condensed',sans-serif; font-size:15px; line-height:1.05; font-weight:850; color:var(--paper); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  .comp-stage { grid-template-columns: minmax(0, 1fr); gap: 7px; }
-  .comp-stage-val { white-space: normal; overflow: visible; text-overflow: clip; font-size: clamp(16px, 2vw, 18px); }
-  .comp-stage-note { max-width: none; text-align: left; }
+  .venue-facts { display:grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 12px; position:relative; z-index:1; }
+  .venue-fact { background:rgba(7,16,30,.62); border:1px solid var(--border); border-radius:6px; padding:8px 9px; }
+  .venue-fact .lab { font-family:'Barlow Condensed',sans-serif; font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--dim); }
+  .venue-fact .val { font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:800; color:var(--paper); margin-top:2px; }
   .cup-briefing { display:grid; grid-template-columns:auto 1fr; gap: 14px; align-items:center; }
   .cup-briefing .comp-badge { width:58px; height:58px; border-radius:12px; font-size:15px; }
   .hieu-security { display:grid; grid-template-columns:auto 1fr; gap: 13px; align-items:start; }
@@ -1501,17 +1475,19 @@
   .side-stack {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
   }
-  .side-stack .card {
-    border-radius: 10px;
-    border-color: rgba(71, 86, 133, 0.76);
-    background: rgba(7,16,30,.50);
-  }
-  .side-stack .card-h { padding: 12px 16px; }
-  .side-stack .empty { padding: 20px 16px; min-height: 88px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-  .side-stack .empty-icon { font-size: 28px; margin-bottom: 5px; }
 
+  /* Beer Leaderboard subtle glow */
+  .beer-card { position: relative; }
+  .beer-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    background: radial-gradient(circle at 0% 100%, rgba(234, 179, 8, 0.06), transparent 60%);
+    pointer-events: none;
+  }
 
   /* ───── Player rank list (compact) ───── */
   .rank-list { display: flex; flex-direction: column; }
@@ -1520,7 +1496,7 @@
     grid-template-columns: 24px 1fr auto;
     gap: 12px;
     align-items: center;
-    padding: 10px 16px;
+    padding: 10px 18px;
     border-bottom: 1px solid var(--border);
   }
   .rank-row:last-child { border-bottom: none; }
@@ -1557,149 +1533,98 @@
     font-variant-numeric: tabular-nums;
   }
 
-  /* ───── Squad dossier cards ───── */
+  /* ───── Squad grid ───── */
   .squad-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 10px;
   }
   .player-card {
-    background:
-      linear-gradient(135deg, rgba(16, 27, 50, 0.94), rgba(7, 16, 30, 0.98)),
-      var(--surface);
-    border: 1px solid rgba(71, 86, 133, 0.78);
-    border-radius: 10px;
-    padding: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
     transition: border-color 0.2s ease, transform 0.2s ease;
     position: relative;
-    overflow: hidden;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.045), 0 16px 34px -30px rgba(0,0,0,.92);
   }
-  .player-card::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--azz-bright), rgba(255,255,255,.08));
-    opacity: .88;
-  }
-  .player-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.10), transparent 46%), linear-gradient(90deg, rgba(255,255,255,.028), transparent 38%);
-  }
-  .player-card:hover { border-color: rgba(96,165,250,.62); transform: translateY(-2px); }
+  .player-card:hover { border-color: var(--border-hi); transform: translateY(-2px); }
   .player-card-top {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 12px;
-    align-items: start;
-    position: relative;
-    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
   }
-  .pc-ident { min-width: 0; display:grid; grid-template-columns:auto 1fr; gap:10px; align-items:start; }
-  .pc-avatar {
-    width: 46px;
-    height: 46px;
-    border-radius: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px;
-    font-weight: 900;
-    letter-spacing: .08em;
-    color: #fde68a;
-    background: rgba(234,179,8,.13);
-    border: 1px solid rgba(234,179,8,.38);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
-  }
-  .pc-avatar.outfield { color:#bfdbfe; background:rgba(59,130,246,.13); border-color:rgba(96,165,250,.34); }
-  .pc-avatar.has-photo {
-    padding: 2px;
-    background: #fff;
-    border-color: rgba(255,255,255,.72);
-    overflow: hidden;
-  }
-  .pc-avatar.has-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
-  .pc-kicker {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: .22em;
-    text-transform: uppercase;
-    color: var(--dim);
-    margin-bottom: 4px;
-  }
+  /* Nickname is now BIG (primary identity) */
   .pc-nick {
     font-family: 'Fraunces', serif;
-    font-weight: 650;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 22px;
     line-height: 1.05;
     letter-spacing: -0.015em;
     color: var(--paper);
     display: flex;
     align-items: center;
     gap: 6px;
-    min-width: 0;
   }
-  .pc-flag { font-size: 14px; line-height: 1; }
-  .pc-nat-lockup { display:flex; align-items:center; gap:6px; min-width:0; }
-  .pc-nat-name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .pc-flag {
+    font-size: 16px;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+  /* Full name BELOW the nickname, smaller */
   .pc-fullname {
     color: var(--muted);
     font-family: 'Manrope', sans-serif;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 3px;
     letter-spacing: 0.01em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
+  /* Position + Number badge */
   .pc-pos-box {
-    min-width: 52px;
-    display: grid;
-    justify-items: end;
-    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
   }
   .pc-num {
     font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 0.85;
-    color: var(--paper);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 0.9;
+    color: var(--text);
     font-variant-numeric: tabular-nums;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
   }
   .pc-pos {
     font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 850;
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    padding: 4px 8px;
-    border-radius: 4px;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    padding: 2px 7px;
+    border-radius: 3px;
     text-transform: uppercase;
     white-space: nowrap;
   }
-  .pc-pos.gk { background: rgba(234, 179, 8, 0.15); color: var(--draw); border: 1px solid rgba(234, 179, 8, 0.34); }
-  .pc-pos.outfield { background: rgba(59, 130, 246, 0.12); color: var(--azz-bright); border: 1px solid rgba(59, 130, 246, 0.34); }
-  .pc-roles { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px; position: relative; z-index: 1; }
+  .pc-pos.gk { background: rgba(234, 179, 8, 0.15); color: var(--draw); border: 1px solid rgba(234, 179, 8, 0.3); }
+  .pc-pos.outfield { background: rgba(59, 130, 246, 0.12); color: var(--azz-bright); border: 1px solid rgba(59, 130, 246, 0.3); }
+
+  /* Role badges row (Captain, VC, Sporting Director, etc.) */
+  .pc-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+  }
   .pc-role-badge {
     font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 850;
-    font-size: 8px;
+    font-weight: 700;
+    font-size: 9px;
     letter-spacing: 0.18em;
-    padding: 4px 7px;
-    border-radius: 999px;
+    padding: 2px 6px;
+    border-radius: 3px;
     text-transform: uppercase;
   }
   .pc-role-capt { background: rgba(234, 179, 8, 0.18); color: var(--draw); border: 1px solid rgba(234, 179, 8, 0.4); }
@@ -1707,64 +1632,40 @@
   .pc-role-sd   { background: rgba(220, 38, 56, 0.14); color: #fca5a5; border: 1px solid rgba(220, 38, 56, 0.3); }
   .pc-role-gk1  { background: rgba(34, 197, 94, 0.14); color: var(--win); border: 1px solid rgba(34, 197, 94, 0.3); }
   .pc-role-gk2  { background: rgba(138, 155, 189, 0.10); color: var(--muted); border: 1px solid var(--border); }
-  .pc-meta-grid {
-    display:grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 6px;
-    margin-top: 12px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(71,86,133,.72);
-    position: relative;
-    z-index: 1;
-  }
-  .pc-meta-item {
-    background: rgba(4,10,20,.56);
-    border: 1px solid rgba(71,86,133,.68);
-    border-radius: 7px;
-    padding: 7px 8px;
-    min-width:0;
-  }
-  .pc-meta-lab, .pc-stat-lab {
+
+  .pc-meta {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 8px;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-size: 11px;
     color: var(--dim);
-    white-space: nowrap;
-  }
-  .pc-meta-val {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px;
-    font-weight: 850;
-    color: var(--text);
-    margin-top: 3px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 8px;
   }
   .pc-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    margin-top: 8px;
-    border: 1px solid rgba(71,86,133,.68);
-    border-radius: 7px;
-    overflow:hidden;
-    position: relative;
-    z-index: 1;
+    gap: 4px;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid var(--border);
   }
-  .pc-stat { text-align: center; padding: 8px 6px; background: rgba(4,10,20,.46); border-right:1px solid rgba(71,86,133,.58); }
-  .pc-stat:last-child { border-right:0; }
+  .pc-stat { text-align: center; }
   .pc-stat-num {
     font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 20px;
-    color: var(--paper);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text);
     line-height: 1;
     font-variant-numeric: tabular-nums;
   }
-  .pc-stat-lab { margin-top: 4px; }
+  .pc-stat-lab {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-top: 4px;
+  }
 
   /* ───── Fixture list ───── */
   .fixture-list { display: flex; flex-direction: column; }
@@ -2213,11 +2114,11 @@
     </div>
   </div>
 
-  <!-- ─────────── MATCHDAY HQ ─────────── -->
-  <div class="section-h section-h--hq">
-    <h2>Matchday HQ</h2>
+  <!-- ─────────── HOME GROUND + TEAM BAR ─────────── -->
+  <div class="section-h">
+    <h2>Home Turf</h2>
     <div class="h-line"></div>
-    <div class="h-meta">Home turf · boardroom · atmosphere</div>
+    <div class="h-meta">Where the magic happens</div>
   </div>
 
   <div class="venues-row">
@@ -2229,8 +2130,7 @@
         </div>
         <div class="venue-name"><a href="https://www.google.com/maps/search/?api=1&query=North+Maple+Regional+Park+11085+Keele+St+Maple+ON" target="_blank" rel="noopener">North Maple Regional Park</a></div>
         <div class="venue-note">Main pitch · home base · where everyone finds out whether preseason running was real</div>
-        <div class="venue-pulse"><span></span> Primary matchday base</div>
-        <div class="venue-facts venue-facts--badges"><div class="venue-fact"><div class="venue-fact-icon">HB</div><div><div class="lab">Role</div><div class="val">Home</div></div></div><div class="venue-fact"><div class="venue-fact-icon">TF</div><div><div class="lab">Surface</div><div class="val">Turf</div></div></div><div class="venue-fact"><div class="venue-fact-icon">FIT</div><div><div class="lab">Mood</div><div class="val">Fitness Test</div></div></div></div>
+        <div class="venue-facts"><div class="venue-fact"><div class="lab">Role</div><div class="val">Home Base</div></div><div class="venue-fact"><div class="lab">Surface</div><div class="val">Forgiving Turf</div></div><div class="venue-fact"><div class="lab">Mood</div><div class="val">Fitness Fraud Detection</div></div></div>
       </div>
     </div>
     <div class="venue-card venue-card-photo venue-card-bar">
@@ -2241,34 +2141,29 @@
         </div>
         <div class="venue-name"><a href="https://www.google.com/maps/search/?api=1&query=The+Mills+TapHouse+Grill+9100+Jane+St+Vaughan+ON" target="_blank" rel="noopener">The Mills TapHouse + Grill</a></div>
         <div class="venue-note">Post-match HQ · tactical autopsies · hydration decisions of variable quality</div>
-        <div class="venue-pulse venue-pulse--gold"><span></span> Result-dependent morale hub</div>
-        <div class="venue-facts venue-facts--badges"><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">HQ</div><div><div class="lab">Role</div><div class="val">HQ</div></div></div><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">8</div><div><div class="lab">Drive</div><div class="val">8 min</div></div></div><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">FT</div><div><div class="lab">Mood</div><div class="val">Full Time</div></div></div></div>
+        <div class="venue-facts"><div class="venue-fact"><div class="lab">Role</div><div class="val">HQ</div></div><div class="venue-fact"><div class="lab">Distance</div><div class="val">8 min</div></div><div class="venue-fact"><div class="lab">Mood</div><div class="val">Result-led</div></div></div>
       </div>
     </div>
   </div>
 
   <div class="fm-briefing-grid fade-up">
     <div class="fm-briefing-card">
-      <div class="module-code">BRD-01</div>
       <div class="cup-briefing">
         <span class="comp-badge comp-badge--cup"><img src="assets/images/embedded/embedded-34487ca7c248.png" alt="League Cup logo"></span>
         <div>
           <div class="fm-briefing-label">Boardroom Briefing</div>
           <div class="fm-briefing-title">Cup campaign begins</div>
           <div class="fm-briefing-text">Ontario Cup draw complete: <b>Niagara at home</b> on July 5, kickoff TBD. Board expectation: survive July without inventing excuses.</div>
-          <div class="briefing-pills"><span>Objective: survive July</span><span>Home draw</span></div>
         </div>
       </div>
     </div>
-    <div class="fm-briefing-card security-card">
-      <div class="module-code">SEC-99</div>
+    <div class="fm-briefing-card">
       <div class="hieu-security">
         <div class="manager-photo"><img src="assets/images/embedded/embedded-cf10074b187a.jpg" alt="Hieu Quach" loading="lazy"></div>
         <div>
           <div class="fm-briefing-label">Manager Security</div>
           <div class="fm-briefing-title">Untouchable</div>
           <div class="fm-briefing-text">Hieu Quach has maximum backing. Results may eventually test the board, but for now the head coach is secure.</div>
-          <div class="manager-stamp">Board confidence locked</div>
         </div>
       </div>
       <div class="security-meter">
@@ -2277,7 +2172,6 @@
       </div>
     </div>
     <div class="fm-briefing-card atmosphere-card">
-      <div class="module-code">ATM-04</div>
       <div class="atmosphere-top">
         <div>
           <div class="fm-briefing-label">Club Atmosphere</div>
@@ -2471,6 +2365,19 @@
         </div>
       </div>
 
+      <div class="card fade-up beer-card">
+        <div class="card-h">
+          <div class="card-h-title">🍺 Beer Leaderboard</div>
+          <div class="card-h-meta">@ The Mills</div>
+        </div>
+        <div class="card-body tight">
+          <div class="empty">
+            <div class="empty-icon">🍺</div>
+            First tally after MW1 vs GTA United.
+            <div class="empty-tip">Captain Mario K. heavy preseason favourite</div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -2627,29 +2534,29 @@
   // ============================================================
   const roster = [
     // OSL-registered (20)
-    { first: 'Julian',     last: 'Accettola',   nick: 'Acc',      dob: '2002-05-22', pos: 'ST', num: 9,  nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Sven',       last: 'Arapovic',    nick: 'Sven',     dob: '1991-01-23', pos: 'CB', num: 4,  nat: '🇭🇷', natName: 'Croatian' },
-    { first: 'Matthew',    last: 'Arnone',      nick: 'Arnone',   dob: '1994-02-28', pos: 'DM', num: 6,  nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Yigal',      last: 'Bruk',        nick: 'Yigal',    dob: '2002-02-04', pos: 'RW', num: 21, nat: '🇺🇦', natName: 'Ukrainian' },
-    { first: 'Dylan',      last: 'Carreiro',    nick: 'Dylan',    dob: '1995-01-20', pos: 'CM', num: 8,  nat: '🇵🇹', natName: 'Portuguese' },
-    { first: 'Daniel',     last: 'Cramarossa',  nick: 'Cram',     dob: '1995-08-03', pos: 'LB', num: 2,  nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Milo',       last: 'Djuricic',    nick: 'Milo',     dob: '2000-07-28', pos: 'CB',  num: 5,  nat: '🇷🇸', natName: 'Serbian' },
-    { first: 'Chris',      last: 'Duenas',      nick: 'Noodles',  dob: null,         pos: 'CDM', num: 24, nat: '🇪🇨', natName: 'Ecuadorian' },
-    { first: 'Gianfranco', last: 'Gileppo',     nick: 'G',        dob: '2000-05-03', pos: 'CM',  num: 19, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Agostino',   last: 'Greco',       nick: 'Ago',      dob: '1999-11-11', pos: 'CM', num: 14, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Nikita',     last: 'Ivanov',      nick: 'Nick',     dob: '2000-06-15', pos: 'CB', num: 13, nat: '🇷🇺', natName: 'Russian' },
-    { first: 'Mario',      last: 'Kovacevic',   nick: 'Mario',    dob: '1990-12-25', pos: 'ST', num: 10, nat: '🇧🇦', natName: 'Bosnian', captain: true, role: 'Sporting Director' },
-    { first: 'Michael',    last: 'Petitti',     nick: 'Petiti',   dob: '2001-08-21', pos: 'LW', num: 11, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Jarred',     last: 'Phillips',    nick: 'JP',       dob: '1995-05-14', pos: 'RB', num: 7,  nat: '🇯🇲', natName: 'Jamaican' },
-    { first: 'Kelvin',     last: 'Ramirez',     nick: 'Kelvinho', dob: '2004-01-01', pos: 'CB', num: 16, nat: '🇧🇷', natName: 'Brazilian' },
-    { first: 'Gabriel',    last: 'Poles',       nick: 'Poles',    dob: '2002-12-05', pos: 'LW', num: 17, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Lucas',      last: 'Puntillo',    nick: 'Punti',    dob: '1997-09-15', pos: 'RW', num: 15, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Alain',      last: 'Sargeant',    nick: 'Alain',    dob: '1995-11-27', pos: 'CB', num: 3,  nat: '🇯🇲', natName: 'Jamaican' },
-    { first: 'Robert',     last: 'Ursu',        nick: 'Robert',   dob: '2003-04-09', pos: 'GK', num: 1,  nat: '🇷🇴', natName: 'Romanian', startingGK: true },
-    { first: 'Sotiri',     last: 'Varlokostas', nick: 'Sotiri',   dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', photo: 'assets/images/players/sotiri.jpeg', backupGK: true },
+    { osa: 44139, first: 'Julian',     last: 'Accettola',   nick: 'Acc',      dob: '2002-05-22', pos: 'ST', num: 9,  nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44126, first: 'Sven',       last: 'Arapovic',    nick: 'Sven',     dob: '1991-01-23', pos: 'CB', num: 4,  nat: '🇭🇷', natName: 'Croatian' },
+    { osa: 44127, first: 'Matthew',    last: 'Arnone',      nick: 'Arnone',   dob: '1994-02-28', pos: 'DM', num: 6,  nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44153, first: 'Yigal',      last: 'Bruk',        nick: 'Yigal',    dob: '2002-02-04', pos: 'RW', num: 21, nat: '🇺🇦', natName: 'Ukrainian' },
+    { osa: 44136, first: 'Dylan',      last: 'Carreiro',    nick: 'Dylan',    dob: '1995-01-20', pos: 'CM', num: 8,  nat: '🇵🇹', natName: 'Portuguese' },
+    { osa: 44138, first: 'Daniel',     last: 'Cramarossa',  nick: 'Cram',     dob: '1995-08-03', pos: 'LB', num: 2,  nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44131, first: 'Milo',       last: 'Djuricic',    nick: 'Milo',     dob: '2000-07-28', pos: 'CB',  num: 5,  nat: '🇷🇸', natName: 'Serbian' },
+    { osa: 44159, first: 'Chris',      last: 'Duenas',      nick: 'Noodles',  dob: null,         pos: 'CDM', num: 24, nat: '🇪🇨', natName: 'Ecuadorian' },
+    { osa: 44135, first: 'Gianfranco', last: 'Gileppo',     nick: 'G',        dob: '2000-05-03', pos: 'CM',  num: 19, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44129, first: 'Agostino',   last: 'Greco',       nick: 'Ago',      dob: '1999-11-11', pos: 'CM', num: 14, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44137, first: 'Nikita',     last: 'Ivanov',      nick: 'Nick',     dob: '2000-06-15', pos: 'CB', num: 13, nat: '🇷🇺', natName: 'Russian' },
+    { osa: 44122, first: 'Mario',      last: 'Kovacevic',   nick: 'Mario',    dob: '1990-12-25', pos: 'ST', num: 10, nat: '🇧🇦', natName: 'Bosnian', captain: true, role: 'Sporting Director' },
+    { osa: 44125, first: 'Michael',    last: 'Petitti',     nick: 'Petiti',   dob: '2001-08-21', pos: 'LW', num: 11, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44152, first: 'Jarred',     last: 'Phillips',    nick: 'JP',       dob: '1995-05-14', pos: 'RB', num: 7,  nat: '🇯🇲', natName: 'Jamaican' },
+    { osa: 44154, first: 'Kelvin',     last: 'Ramirez',     nick: 'Kelvinho', dob: '2004-01-01', pos: 'CB', num: 16, nat: '🇧🇷', natName: 'Brazilian' },
+    { osa: 44146, first: 'Gabriel',    last: 'Poles',       nick: 'Poles',    dob: '2002-12-05', pos: 'LW', num: 17, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44124, first: 'Lucas',      last: 'Puntillo',    nick: 'Punti',    dob: '1997-09-15', pos: 'RW', num: 15, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44145, first: 'Alain',      last: 'Sargeant',    nick: 'Alain',    dob: '1995-11-27', pos: 'CB', num: 3,  nat: '🇯🇲', natName: 'Jamaican' },
+    { osa: 44143, first: 'Robert',     last: 'Ursu',        nick: 'Robert',   dob: '2003-04-09', pos: 'GK', num: 1,  nat: '🇷🇴', natName: 'Romanian', startingGK: true },
+    { osa: 44140, first: 'Sotiri',     last: 'Varlokostas', nick: 'Sotiri',   dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', backupGK: true },
     // Squad members (not on OSL registration sheet)
-    { first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW', num: 45, nat: '🇮🇹', natName: 'Italian', vc: true },
-    { first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB', num: 18, nat: '🇮🇹', natName: 'Italian', vc2: true },
+    { osa: null,  first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW', num: 45, nat: '🇮🇹', natName: 'Italian', vc: true },
+    { osa: null,  first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB', num: 18, nat: '🇮🇹', natName: 'Italian', vc2: true },
   ];
 
   // ============================================================
@@ -2913,32 +2820,21 @@
     if (p.backupGK)   roles.push('<span class="pc-role-badge pc-role-gk2">Backup GK</span>');
     const rolesHTML = roles.length ? `<div class="pc-roles">${roles.join('')}</div>` : '';
 
-    const status = p.startingGK ? 'First Choice' : p.backupGK ? 'Backup' : p.captain ? 'Captain' : p.vc ? 'Vice Captain' : p.role === 'Sporting Director' ? 'Staff / Player' : 'Squad';
-    const avatarHTML = p.photo
-      ? `<div class="pc-avatar has-photo"><img src="${p.photo}" alt="${fullName}" loading="lazy"></div>`
-      : `<div class="pc-avatar ${isGK ? '' : 'outfield'}">${isGK ? 'GK' : p.pos}</div>`;
+    const osaStr = p.osa ? ` · #${p.osa}` : ' · TBD';
 
     card.innerHTML = `
       <div class="player-card-top">
-        <div class="pc-ident">
-          ${avatarHTML}
-          <div style="min-width:0;">
-            <div class="pc-kicker">Squad Dossier</div>
-            <div class="pc-nick">${p.nick}</div>
-            <div class="pc-fullname">${fullName}</div>
-          </div>
+        <div style="min-width:0; flex:1;">
+          <div class="pc-nick-wrap"><span class="position-icon ${isGK ? 'gk' : ''}">${isGK ? 'GK' : 'XI'}</span><div class="pc-nick">${p.nick}<span class="pc-flag" title="${p.natName}">${p.nat}</span></div></div>
+          <div class="pc-fullname">${fullName}</div>
+          ${rolesHTML}
         </div>
         <div class="pc-pos-box">
           <div class="pc-num">${p.num}</div>
           <div class="pc-pos ${posClass}">${p.pos}</div>
         </div>
       </div>
-      ${rolesHTML}
-      <div class="pc-meta-grid">
-        <div class="pc-meta-item"><div class="pc-meta-lab">Status</div><div class="pc-meta-val">${status}</div></div>
-        <div class="pc-meta-item"><div class="pc-meta-lab">Nation</div><div class="pc-meta-val pc-nat-lockup"><span class="pc-flag" title="${p.natName}">${p.nat}</span><span class="pc-nat-name">${p.natName}</span></div></div>
-        <div class="pc-meta-item"><div class="pc-meta-lab">Age</div><div class="pc-meta-val">${ageStr}</div></div>
-      </div>
+      <div class="pc-meta">${p.natName} · ${ageStr}${osaStr}</div>
       <div class="pc-stats">
         <div class="pc-stat"><div class="pc-stat-num">0</div><div class="pc-stat-lab">App</div></div>
         <div class="pc-stat"><div class="pc-stat-num">0</div><div class="pc-stat-lab">Gls</div></div>

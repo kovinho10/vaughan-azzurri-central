@@ -1617,19 +1617,6 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
   }
   .pc-avatar.outfield { color:#bfdbfe; background:rgba(59,130,246,.13); border-color:rgba(96,165,250,.34); }
-  .pc-avatar.has-photo {
-    padding: 2px;
-    background: #fff;
-    border-color: rgba(255,255,255,.72);
-    overflow: hidden;
-  }
-  .pc-avatar.has-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
   .pc-kicker {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 9px;
@@ -1651,9 +1638,7 @@
     gap: 6px;
     min-width: 0;
   }
-  .pc-flag { font-size: 14px; line-height: 1; }
-  .pc-nat-lockup { display:flex; align-items:center; gap:6px; min-width:0; }
-  .pc-nat-name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .pc-flag { font-size: 14px; line-height: 1; transform: translateY(-1px); }
   .pc-fullname {
     color: var(--muted);
     font-family: 'Manrope', sans-serif;
@@ -2627,29 +2612,29 @@
   // ============================================================
   const roster = [
     // OSL-registered (20)
-    { first: 'Julian',     last: 'Accettola',   nick: 'Acc',      dob: '2002-05-22', pos: 'ST', num: 9,  nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Sven',       last: 'Arapovic',    nick: 'Sven',     dob: '1991-01-23', pos: 'CB', num: 4,  nat: '🇭🇷', natName: 'Croatian' },
-    { first: 'Matthew',    last: 'Arnone',      nick: 'Arnone',   dob: '1994-02-28', pos: 'DM', num: 6,  nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Yigal',      last: 'Bruk',        nick: 'Yigal',    dob: '2002-02-04', pos: 'RW', num: 21, nat: '🇺🇦', natName: 'Ukrainian' },
-    { first: 'Dylan',      last: 'Carreiro',    nick: 'Dylan',    dob: '1995-01-20', pos: 'CM', num: 8,  nat: '🇵🇹', natName: 'Portuguese' },
-    { first: 'Daniel',     last: 'Cramarossa',  nick: 'Cram',     dob: '1995-08-03', pos: 'LB', num: 2,  nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Milo',       last: 'Djuricic',    nick: 'Milo',     dob: '2000-07-28', pos: 'CB',  num: 5,  nat: '🇷🇸', natName: 'Serbian' },
-    { first: 'Chris',      last: 'Duenas',      nick: 'Noodles',  dob: null,         pos: 'CDM', num: 24, nat: '🇪🇨', natName: 'Ecuadorian' },
-    { first: 'Gianfranco', last: 'Gileppo',     nick: 'G',        dob: '2000-05-03', pos: 'CM',  num: 19, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Agostino',   last: 'Greco',       nick: 'Ago',      dob: '1999-11-11', pos: 'CM', num: 14, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Nikita',     last: 'Ivanov',      nick: 'Nick',     dob: '2000-06-15', pos: 'CB', num: 13, nat: '🇷🇺', natName: 'Russian' },
-    { first: 'Mario',      last: 'Kovacevic',   nick: 'Mario',    dob: '1990-12-25', pos: 'ST', num: 10, nat: '🇧🇦', natName: 'Bosnian', captain: true, role: 'Sporting Director' },
-    { first: 'Michael',    last: 'Petitti',     nick: 'Petiti',   dob: '2001-08-21', pos: 'LW', num: 11, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Jarred',     last: 'Phillips',    nick: 'JP',       dob: '1995-05-14', pos: 'RB', num: 7,  nat: '🇯🇲', natName: 'Jamaican' },
-    { first: 'Kelvin',     last: 'Ramirez',     nick: 'Kelvinho', dob: '2004-01-01', pos: 'CB', num: 16, nat: '🇧🇷', natName: 'Brazilian' },
-    { first: 'Gabriel',    last: 'Poles',       nick: 'Poles',    dob: '2002-12-05', pos: 'LW', num: 17, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Lucas',      last: 'Puntillo',    nick: 'Punti',    dob: '1997-09-15', pos: 'RW', num: 15, nat: '🇮🇹', natName: 'Italian' },
-    { first: 'Alain',      last: 'Sargeant',    nick: 'Alain',    dob: '1995-11-27', pos: 'CB', num: 3,  nat: '🇯🇲', natName: 'Jamaican' },
-    { first: 'Robert',     last: 'Ursu',        nick: 'Robert',   dob: '2003-04-09', pos: 'GK', num: 1,  nat: '🇷🇴', natName: 'Romanian', startingGK: true },
-    { first: 'Sotiri',     last: 'Varlokostas', nick: 'Sotiri',   dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', photo: 'assets/images/players/sotiri.jpeg', backupGK: true },
+    { osa: 44139, first: 'Julian',     last: 'Accettola',   nick: 'Acc',      dob: '2002-05-22', pos: 'ST', num: 9,  nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44126, first: 'Sven',       last: 'Arapovic',    nick: 'Sven',     dob: '1991-01-23', pos: 'CB', num: 4,  nat: '🇭🇷', natName: 'Croatian' },
+    { osa: 44127, first: 'Matthew',    last: 'Arnone',      nick: 'Arnone',   dob: '1994-02-28', pos: 'DM', num: 6,  nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44153, first: 'Yigal',      last: 'Bruk',        nick: 'Yigal',    dob: '2002-02-04', pos: 'RW', num: 21, nat: '🇺🇦', natName: 'Ukrainian' },
+    { osa: 44136, first: 'Dylan',      last: 'Carreiro',    nick: 'Dylan',    dob: '1995-01-20', pos: 'CM', num: 8,  nat: '🇵🇹', natName: 'Portuguese' },
+    { osa: 44138, first: 'Daniel',     last: 'Cramarossa',  nick: 'Cram',     dob: '1995-08-03', pos: 'LB', num: 2,  nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44131, first: 'Milo',       last: 'Djuricic',    nick: 'Milo',     dob: '2000-07-28', pos: 'CB',  num: 5,  nat: '🇷🇸', natName: 'Serbian' },
+    { osa: 44159, first: 'Chris',      last: 'Duenas',      nick: 'Noodles',  dob: null,         pos: 'CDM', num: 24, nat: '🇪🇨', natName: 'Ecuadorian' },
+    { osa: 44135, first: 'Gianfranco', last: 'Gileppo',     nick: 'G',        dob: '2000-05-03', pos: 'CM',  num: 19, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44129, first: 'Agostino',   last: 'Greco',       nick: 'Ago',      dob: '1999-11-11', pos: 'CM', num: 14, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44137, first: 'Nikita',     last: 'Ivanov',      nick: 'Nick',     dob: '2000-06-15', pos: 'CB', num: 13, nat: '🇷🇺', natName: 'Russian' },
+    { osa: 44122, first: 'Mario',      last: 'Kovacevic',   nick: 'Mario',    dob: '1990-12-25', pos: 'ST', num: 10, nat: '🇧🇦', natName: 'Bosnian', captain: true, role: 'Sporting Director' },
+    { osa: 44125, first: 'Michael',    last: 'Petitti',     nick: 'Petiti',   dob: '2001-08-21', pos: 'LW', num: 11, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44152, first: 'Jarred',     last: 'Phillips',    nick: 'JP',       dob: '1995-05-14', pos: 'RB', num: 7,  nat: '🇯🇲', natName: 'Jamaican' },
+    { osa: 44154, first: 'Kelvin',     last: 'Ramirez',     nick: 'Kelvinho', dob: '2004-01-01', pos: 'CB', num: 16, nat: '🇧🇷', natName: 'Brazilian' },
+    { osa: 44146, first: 'Gabriel',    last: 'Poles',       nick: 'Poles',    dob: '2002-12-05', pos: 'LW', num: 17, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44124, first: 'Lucas',      last: 'Puntillo',    nick: 'Punti',    dob: '1997-09-15', pos: 'RW', num: 15, nat: '🇮🇹', natName: 'Italian' },
+    { osa: 44145, first: 'Alain',      last: 'Sargeant',    nick: 'Alain',    dob: '1995-11-27', pos: 'CB', num: 3,  nat: '🇯🇲', natName: 'Jamaican' },
+    { osa: 44143, first: 'Robert',     last: 'Ursu',        nick: 'Robert',   dob: '2003-04-09', pos: 'GK', num: 1,  nat: '🇷🇴', natName: 'Romanian', startingGK: true },
+    { osa: 44140, first: 'Sotiri',     last: 'Varlokostas', nick: 'Sotiri',   dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', backupGK: true },
     // Squad members (not on OSL registration sheet)
-    { first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW', num: 45, nat: '🇮🇹', natName: 'Italian', vc: true },
-    { first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB', num: 18, nat: '🇮🇹', natName: 'Italian', vc2: true },
+    { osa: null,  first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW', num: 45, nat: '🇮🇹', natName: 'Italian', vc: true },
+    { osa: null,  first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB', num: 18, nat: '🇮🇹', natName: 'Italian', vc2: true },
   ];
 
   // ============================================================
@@ -2913,18 +2898,16 @@
     if (p.backupGK)   roles.push('<span class="pc-role-badge pc-role-gk2">Backup GK</span>');
     const rolesHTML = roles.length ? `<div class="pc-roles">${roles.join('')}</div>` : '';
 
+    const osaVal = p.osa ? `#${p.osa}` : 'TBD';
     const status = p.startingGK ? 'First Choice' : p.backupGK ? 'Backup' : p.captain ? 'Captain' : p.vc ? 'Vice Captain' : p.role === 'Sporting Director' ? 'Staff / Player' : 'Squad';
-    const avatarHTML = p.photo
-      ? `<div class="pc-avatar has-photo"><img src="${p.photo}" alt="${fullName}" loading="lazy"></div>`
-      : `<div class="pc-avatar ${isGK ? '' : 'outfield'}">${isGK ? 'GK' : p.pos}</div>`;
 
     card.innerHTML = `
       <div class="player-card-top">
         <div class="pc-ident">
-          ${avatarHTML}
+          <div class="pc-avatar ${isGK ? '' : 'outfield'}">${isGK ? 'GK' : p.pos}</div>
           <div style="min-width:0;">
             <div class="pc-kicker">Squad Dossier</div>
-            <div class="pc-nick">${p.nick}</div>
+            <div class="pc-nick">${p.nick}<span class="pc-flag" title="${p.natName}">${p.nat}</span></div>
             <div class="pc-fullname">${fullName}</div>
           </div>
         </div>
@@ -2936,8 +2919,8 @@
       ${rolesHTML}
       <div class="pc-meta-grid">
         <div class="pc-meta-item"><div class="pc-meta-lab">Status</div><div class="pc-meta-val">${status}</div></div>
-        <div class="pc-meta-item"><div class="pc-meta-lab">Nation</div><div class="pc-meta-val pc-nat-lockup"><span class="pc-flag" title="${p.natName}">${p.nat}</span><span class="pc-nat-name">${p.natName}</span></div></div>
         <div class="pc-meta-item"><div class="pc-meta-lab">Age</div><div class="pc-meta-val">${ageStr}</div></div>
+        <div class="pc-meta-item"><div class="pc-meta-lab">OSA</div><div class="pc-meta-val">${osaVal}</div></div>
       </div>
       <div class="pc-stats">
         <div class="pc-stat"><div class="pc-stat-num">0</div><div class="pc-stat-lab">App</div></div>

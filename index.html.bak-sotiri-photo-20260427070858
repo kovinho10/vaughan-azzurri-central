@@ -1617,19 +1617,6 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
   }
   .pc-avatar.outfield { color:#bfdbfe; background:rgba(59,130,246,.13); border-color:rgba(96,165,250,.34); }
-  .pc-avatar.has-photo {
-    padding: 2px;
-    background: #fff;
-    border-color: rgba(255,255,255,.72);
-    overflow: hidden;
-  }
-  .pc-avatar.has-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
   .pc-kicker {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 9px;
@@ -2646,7 +2633,7 @@
     { first: 'Lucas',      last: 'Puntillo',    nick: 'Punti',    dob: '1997-09-15', pos: 'RW', num: 15, nat: '🇮🇹', natName: 'Italian' },
     { first: 'Alain',      last: 'Sargeant',    nick: 'Alain',    dob: '1995-11-27', pos: 'CB', num: 3,  nat: '🇯🇲', natName: 'Jamaican' },
     { first: 'Robert',     last: 'Ursu',        nick: 'Robert',   dob: '2003-04-09', pos: 'GK', num: 1,  nat: '🇷🇴', natName: 'Romanian', startingGK: true },
-    { first: 'Sotiri',     last: 'Varlokostas', nick: 'Sotiri',   dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', photo: 'assets/images/players/sotiri.jpeg', backupGK: true },
+    { first: 'Sotiri',     last: 'Varlokostas', nick: 'Sotiri',   dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', backupGK: true },
     // Squad members (not on OSL registration sheet)
     { first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW', num: 45, nat: '🇮🇹', natName: 'Italian', vc: true },
     { first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB', num: 18, nat: '🇮🇹', natName: 'Italian', vc2: true },
@@ -2914,14 +2901,11 @@
     const rolesHTML = roles.length ? `<div class="pc-roles">${roles.join('')}</div>` : '';
 
     const status = p.startingGK ? 'First Choice' : p.backupGK ? 'Backup' : p.captain ? 'Captain' : p.vc ? 'Vice Captain' : p.role === 'Sporting Director' ? 'Staff / Player' : 'Squad';
-    const avatarHTML = p.photo
-      ? `<div class="pc-avatar has-photo"><img src="${p.photo}" alt="${fullName}" loading="lazy"></div>`
-      : `<div class="pc-avatar ${isGK ? '' : 'outfield'}">${isGK ? 'GK' : p.pos}</div>`;
 
     card.innerHTML = `
       <div class="player-card-top">
         <div class="pc-ident">
-          ${avatarHTML}
+          <div class="pc-avatar ${isGK ? '' : 'outfield'}">${isGK ? 'GK' : p.pos}</div>
           <div style="min-width:0;">
             <div class="pc-kicker">Squad Dossier</div>
             <div class="pc-nick">${p.nick}</div>
