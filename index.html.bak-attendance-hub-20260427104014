@@ -934,27 +934,25 @@
   }
   @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
 
-  /* ───── Match centre dossier ───── */
+  /* ───── Next match ───── */
   .next-match {
     background:
-      radial-gradient(circle at 50% 8%, rgba(96,165,250,.10), transparent 35%),
-      linear-gradient(135deg, rgba(15, 26, 48, 0.98), rgba(5, 10, 21, 0.99)),
+      linear-gradient(135deg, rgba(16, 27, 50, 0.96), rgba(7, 16, 30, 0.98)),
       var(--surface);
-    border: 1px solid rgba(96, 165, 250, 0.22);
+    border: 1px solid rgba(71, 86, 133, 0.82);
     border-radius: 12px;
-    padding: 18px;
+    padding: 22px;
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.055), 0 18px 44px -34px rgba(0,0,0,.95);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.045), 0 18px 44px -34px rgba(0,0,0,.92);
   }
   .next-match::before {
     content: '';
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, rgba(255,255,255,.035), transparent 28%, transparent 72%, rgba(255,255,255,.02)),
-      repeating-linear-gradient(90deg, rgba(255,255,255,.018) 0 1px, transparent 1px 84px);
-    opacity: .55;
+      radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.14), transparent 48%),
+      linear-gradient(90deg, rgba(255,255,255,.035), transparent 32%);
     pointer-events: none;
   }
   .next-match::after {
@@ -962,227 +960,125 @@
     position: absolute;
     left: 0; top: 0; bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, var(--azz-bright), var(--draw), var(--rosso));
-    opacity: .95;
+    background: linear-gradient(180deg, var(--azz-bright), var(--rosso));
+    opacity: .9;
   }
   .next-match-inner { position: relative; z-index: 1; }
   .next-match-tag-row {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(71,86,133,.62);
+    margin-bottom: 18px;
   }
-  .next-match-tag, .match-header-chip {
-    display: inline-flex; align-items: center; gap: 6px;
+  .next-match-tag {
+    display: inline-flex; align-items: center; gap: 5px;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 10px;
-    font-weight: 850;
+    font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--text);
-    background: rgba(255,255,255,.045);
-    border: 1px solid rgba(255,255,255,.085);
-    padding: 5px 10px;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
-  }
-  .match-header-chip.gold { color: #fde68a; background: rgba(234,179,8,.10); border-color: rgba(234,179,8,.26); }
-  .match-header-chip.source { margin-left: auto; color: var(--dim); }
-  .nm-countdown { text-align: center; margin: 2px 0 12px; }
-  .nm-countdown .num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(48px, 6vw, 64px);
-    font-weight: 900;
-    color: var(--paper);
-    line-height: .9;
-    letter-spacing: -0.035em;
-    text-shadow: 0 0 28px rgba(96,165,250,.12);
-  }
-  .nm-countdown .lab {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-top: 5px;
+    background: var(--surface-hi);
+    border: 1px solid var(--border-hi);
+    padding: 4px 10px;
+    border-radius: 3px;
   }
   .next-match-vs {
-    display: grid;
-    grid-template-columns: minmax(0,1fr) 70px minmax(0,1fr);
-    gap: 14px;
+    display: flex;
     align-items: center;
-    margin-bottom: 14px;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
   }
   .nm-team {
+    flex: 1;
     text-align: center;
-    background: rgba(4,10,20,.34);
-    border: 1px solid rgba(71,86,133,.45);
-    border-radius: 10px;
-    padding: 14px 12px 12px;
-    min-width: 0;
   }
-  .nm-team-logo { margin: 0 auto 8px; }
   .nm-team-name {
     font-family: 'Fraunces', serif;
-    font-weight: 650;
-    font-size: clamp(21px, 3vw, 30px);
-    line-height: 1.02;
-    letter-spacing: -0.018em;
-    color: var(--paper);
+    font-weight: 600;
+    font-size: clamp(20px, 3.5vw, 28px);
+    line-height: 1;
+    letter-spacing: -0.01em;
   }
-  .nm-team-name.us { color: #dbeafe; }
+  .nm-team-name.us { color: var(--azz-bright); }
   .nm-team-tag {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.2em;
+    font-weight: 600;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-top: 7px;
+    margin-top: 6px;
   }
   .nm-vs {
-    justify-self: center;
-    width: 52px; height: 52px;
-    border-radius: 999px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 13px;
+    font-weight: 700;
+    font-size: 14px;
     letter-spacing: 0.2em;
-    color: var(--paper);
+    color: var(--dim);
     text-transform: uppercase;
-    background: rgba(255,255,255,.055);
-    border: 1px solid rgba(255,255,255,.10);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.045);
   }
   .nm-meta {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 8px;
-    padding: 10px 0 0;
-    border-top: 1px solid rgba(71,86,133,.62);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
   }
-  .nm-meta > div {
-    text-align: left;
-    background: rgba(4,10,20,.45);
-    border: 1px solid rgba(71,86,133,.55);
-    border-radius: 8px;
-    padding: 10px 11px;
-    min-width: 0;
-  }
-  .nm-meta .lab, .nm-att-lab {
+  .nm-meta div { text-align: left; }
+  .nm-meta .lab {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 850;
-    letter-spacing: 0.2em;
+    font-size: 10px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--dim);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
   .nm-meta .val {
     font-family: 'Manrope', sans-serif;
     font-size: 13px;
     color: var(--text);
-    font-weight: 750;
-    line-height: 1.28;
+    font-weight: 600;
+    line-height: 1.3;
   }
-  .nm-attendance { display: block; }
-  .nm-att-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: .95;
-    color: var(--paper);
-    letter-spacing: -0.02em;
-    font-variant-numeric: tabular-nums;
-  }
+
   .match-preview {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(71,86,133,.62);
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
     display: grid;
-    grid-template-columns: 1.25fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 12px;
   }
   .preview-block {
-    background: rgba(4, 10, 20, 0.50);
-    border: 1px solid rgba(71,86,133,.64);
-    border-radius: 9px;
-    padding: 13px 14px;
-    position: relative;
-    overflow: hidden;
-  }
-  .preview-block::before {
-    content:'';
-    position:absolute;
-    left:0; top:0; bottom:0;
-    width:2px;
-    background: var(--azz-bright);
-    opacity:.65;
+    background: rgba(7, 16, 30, 0.38);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 15px;
   }
   .preview-label {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 0.22em;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--azz-bright);
-    margin-bottom: 8px;
+    margin-bottom: 7px;
   }
-  .preview-text { font-size: 13px; color: var(--text); line-height: 1.52; }
-  .preview-text b { color: var(--paper); font-weight: 850; }
-  .sub-strip {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(71,86,133,.62);
-  }
-  .sub-cal-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.20em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
-  .sub-cal-label b { color: var(--text); font-weight: 900; letter-spacing: 0.2em; }
-  .sub-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
-  .sub-btn {
-    flex: 1;
-    min-width: 140px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 11px 13px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-family: 'Manrope', sans-serif;
+  .preview-text {
     font-size: 13px;
-    font-weight: 750;
-    transition: all 0.2s ease;
-    -webkit-tap-highlight-color: transparent;
-    background: rgba(255,255,255,.045);
     color: var(--text);
-    border: 1px solid rgba(255,255,255,.09);
+    line-height: 1.55;
   }
-  .sub-btn-apple { background: rgba(255,255,255,.08); color: var(--paper); }
-  .sub-btn-apple:hover, .sub-btn-google:hover { border-color: rgba(96,165,250,.46); transform: translateY(-1px); }
-  .sub-btn-google { background: rgba(59,130,246,.06); color: var(--text); }
-  .sub-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .preview-text b {
+    color: var(--paper);
+    font-weight: 800;
+  }
   @media (max-width: 900px) {
-    .next-match-vs { grid-template-columns: 1fr; }
-    .nm-vs { width: auto; height: auto; padding: 7px 12px; }
-    .nm-meta { grid-template-columns: repeat(2, minmax(0,1fr)); }
     .match-preview { grid-template-columns: 1fr; }
-    .match-header-chip.source { margin-left: 0; }
-    .next-match-tag-row { flex-wrap: wrap; }
   }
-  @media (max-width: 520px) { .nm-meta { grid-template-columns: 1fr; } }
+
 
   /* ───── Matchday HQ: boardroom / security / atmosphere ───── */
   .fm-briefing-grid {
@@ -1408,6 +1304,111 @@
   @media (max-width: 520px) {
     .atmosphere-grid { grid-template-columns: 1fr; }
   }
+
+  .nm-attendance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 16px 0 8px;
+    margin-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .nm-att-stat { text-align: center; }
+  .nm-att-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .nm-att-lab {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 5px;
+  }
+  .nm-att-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--border);
+  }
+  .nm-countdown {
+    text-align: center;
+    margin: 4px 0 18px;
+  }
+  .nm-countdown .num {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .nm-countdown .lab {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ───── Subscribe buttons (compact) ───── */
+  .sub-strip {
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .sub-cal-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .sub-cal-label b {
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+  .sub-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .sub-btn {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .sub-btn-apple {
+    background: var(--text);
+    color: var(--bg);
+  }
+  .sub-btn-apple:hover { background: white; transform: translateY(-1px); }
+  .sub-btn-google {
+    background: var(--surface-hi);
+    color: var(--text);
+    border: 1px solid var(--border-hi);
+  }
+  .sub-btn-google:hover { background: var(--border-hi); transform: translateY(-1px); }
+  .sub-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 
   /* ───── Tables ───── */
   table {
@@ -1764,147 +1765,6 @@
     font-variant-numeric: tabular-nums;
   }
   .pc-stat-lab { margin-top: 4px; }
-
-  /* ───── Attendance hub ───── */
-  .attendance-hub { margin-bottom: 24px; }
-  .attendance-summary {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-  .attendance-stat-card {
-    background: linear-gradient(135deg, rgba(16, 27, 50, 0.94), rgba(7,16,30,.98));
-    border: 1px solid rgba(71,86,133,.78);
-    border-radius: 10px;
-    padding: 14px 16px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.045);
-  }
-  .attendance-stat-card::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--win), var(--azz-bright));
-  }
-  .attendance-stat-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 1;
-    color: var(--paper);
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .attendance-stat-lab {
-    margin-top: 6px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--dim);
-  }
-  .attendance-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
-    gap: 12px;
-    align-items: stretch;
-  }
-  .attendance-card { border-radius: 10px; border-color: rgba(71,86,133,.78); background: rgba(7,16,30,.50); }
-  .attendance-list { display: flex; flex-direction: column; }
-  .attendance-row {
-    display: grid;
-    grid-template-columns: 30px minmax(0, 1fr) 70px 54px;
-    gap: 10px;
-    align-items: center;
-    padding: 11px 16px;
-    border-bottom: 1px solid var(--border);
-  }
-  .attendance-row:last-child { border-bottom: 0; }
-  .attendance-rank {
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 12px;
-    font-weight: 900;
-    color: var(--dim);
-  }
-  .attendance-name {
-    min-width: 0;
-    font-family:'Manrope',sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .attendance-name span {
-    display:block;
-    margin-top: 2px;
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 9px;
-    letter-spacing:.18em;
-    text-transform: uppercase;
-    color: var(--dim);
-  }
-  .attendance-count, .attendance-pct {
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 16px;
-    font-weight: 900;
-    color: var(--paper);
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-  }
-  .attendance-pct { color: var(--win); }
-  .attendance-empty {
-    padding: 28px 18px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.55;
-  }
-  .attendance-latest-box { padding: 16px; }
-  .attendance-latest-title {
-    font-family:'Fraunces',serif;
-    font-size: 20px;
-    font-weight: 650;
-    color: var(--paper);
-    margin-bottom: 7px;
-  }
-  .attendance-latest-meta {
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing:.2em;
-    text-transform: uppercase;
-    color: var(--azz-bright);
-    margin-bottom: 12px;
-  }
-  .attendance-chip-row { display:flex; flex-wrap:wrap; gap:6px; }
-  .attendance-chip {
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 10px;
-    font-weight: 850;
-    letter-spacing:.14em;
-    text-transform: uppercase;
-    color: var(--text);
-    background: rgba(255,255,255,.045);
-    border: 1px solid rgba(255,255,255,.09);
-    border-radius: 999px;
-    padding: 5px 8px;
-  }
-  @media (max-width: 900px) {
-    .attendance-summary { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .attendance-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 520px) {
-    .attendance-summary { grid-template-columns: 1fr; }
-    .attendance-row { grid-template-columns: 24px minmax(0,1fr) 56px 48px; padding: 10px 12px; }
-  }
 
   /* ───── Fixture list ───── */
   .fixture-list { display: flex; flex-direction: column; }
@@ -2459,8 +2319,6 @@
         <div class="next-match-tag-row">
           <div class="next-match-tag">Next Up</div>
           <div class="fix-comp-pill" id="nmCompPill">OSL</div>
-          <div class="match-header-chip gold">Round of 64</div>
-          <div class="match-header-chip source">Source: OSL</div>
         </div>
         <div class="nm-countdown">
           <div class="num"><span id="nmDays">&mdash;</span></div>
@@ -2491,10 +2349,6 @@
             <div class="lab">Venue</div>
             <div class="val" id="nmVenue">&mdash;</div>
           </div>
-          <div class="nm-attendance">
-            <div class="nm-att-lab">Predicted Attendance</div>
-            <div class="nm-att-num">5</div>
-          </div>
         </div>
 
         <div class="match-preview">
@@ -2512,6 +2366,12 @@
           </div>
         </div>
 
+        <div class="nm-attendance">
+          <div class="nm-att-stat">
+            <div class="nm-att-num">5</div>
+            <div class="nm-att-lab">Predicted Attendance</div>
+          </div>
+        </div>
 
         <div class="sub-strip">
           <div class="sub-cal-label">Subscribe to <b>VAUGHAN AZZURRI SCHEDULE</b></div>
@@ -2585,14 +2445,28 @@
           <div class="rank-list">
             <div class="rank-row">
               <div class="rank-pos">1</div>
-              <div class="rank-name">Robert Ursu <span class="nick">Rob</span></div>
+              <div class="rank-name">Robert Ursu <span class="nick">Robert</span></div>
               <div class="rank-val">0</div>
             </div>
             <div class="rank-row">
               <div class="rank-pos">2</div>
-              <div class="rank-name">Sotiri Varlokostas <span class="nick">Soti</span></div>
+              <div class="rank-name">Sotiri Varlokostas <span class="nick">Sotiri</span></div>
               <div class="rank-val">0</div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card fade-up">
+        <div class="card-h">
+          <div class="card-h-title">Attendance</div>
+          <div class="card-h-meta">Most Reliable</div>
+        </div>
+        <div class="card-body tight">
+          <div class="empty">
+            <div class="empty-icon">&mdash;</div>
+            Attendance tracking begins Matchweek 1.
+            <div class="empty-tip">Top 5 will surface here</div>
           </div>
         </div>
       </div>
@@ -2670,54 +2544,6 @@
 
   <div class="squad-grid" id="squadGrid"></div>
 
-  <!-- ─────────── ATTENDANCE HUB ─────────── -->
-  <div class="section-h">
-    <h2>Attendance Hub</h2>
-    <div class="h-line"></div>
-    <div class="h-meta"><span id="attendanceEventCount">0</span> sessions logged</div>
-  </div>
-
-  <div class="attendance-hub">
-    <div class="attendance-summary">
-      <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attTotalEvents">0</div>
-        <div class="attendance-stat-lab">Total Events</div>
-      </div>
-      <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attTrainingEvents">0</div>
-        <div class="attendance-stat-lab">Training</div>
-      </div>
-      <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attMatchEvents">0</div>
-        <div class="attendance-stat-lab">Matches</div>
-      </div>
-      <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attLatestLabel">—</div>
-        <div class="attendance-stat-lab">Latest</div>
-      </div>
-    </div>
-    <div class="attendance-grid">
-      <div class="card attendance-card">
-        <div class="card-h">
-          <div class="card-h-title">Reliability Table</div>
-          <div class="card-h-meta">Present / Logged</div>
-        </div>
-        <div class="card-body tight">
-          <div class="attendance-list" id="attendanceLeaders"></div>
-        </div>
-      </div>
-      <div class="card attendance-card">
-        <div class="card-h">
-          <div class="card-h-title">Latest Session</div>
-          <div class="card-h-meta" id="attendanceLatestMeta">Awaiting Data</div>
-        </div>
-        <div class="card-body tight">
-          <div id="attendanceLatest"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ─────────── COACHING STAFF ─────────── -->
   <div class="section-h">
     <h2>Coaching &amp; Football Staff</h2>
@@ -2745,6 +2571,13 @@
       <div class="staff-text">
         <div class="staff-name">Vincent Accettola</div>
         <div class="staff-title">Head of Recruitment &amp; Performance</div>
+      </div>
+    </div>
+    <div class="staff-card">
+      <div class="staff-avatar">TD</div>
+      <div class="staff-text">
+        <div class="staff-name">Tony De Thomasis</div>
+        <div class="staff-title">Senior Football Strategist</div>
       </div>
     </div>
   </div>
@@ -2794,32 +2627,29 @@
   // ============================================================
   const roster = [
     // OSL-registered (20)
-    { first: 'Julian',     last: 'Accettola',   nick: 'Acc',      dob: '2002-05-22', pos: 'ST', num: 9,  nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/Julian_Accettola_medium.jpg' },
-    { first: 'Sven',       last: 'Arapovic',    nick: 'Sven',     dob: '1991-01-23', pos: 'CB', num: 4,  nat: '🇭🇷', natName: 'Croatian', photo: 'assets/images/players/sven.jpg' },
-    { first: 'Matthew',    last: 'Arnone',      nick: 'Nonners',   dob: '1994-02-28', pos: 'DM', num: 6,  nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/arnone.jpeg' },
-    { first: 'Yigal',      last: 'Bruk',        nick: 'Yigal',    dob: '2002-02-04', pos: 'RW', num: 21, nat: '🇺🇦', natName: 'Ukrainian', photo: 'assets/images/players/yigal bruk.webp' },
-    { first: 'Dylan',      last: 'Carreiro',    nick: 'Dylan',    dob: '1995-01-20', pos: 'CM', num: 8,  nat: '🇵🇹', natName: 'Portuguese', photo: 'assets/images/players/dylan carreiro.jpg' },
-    { first: 'Daniel',     last: 'Cramarossa',  nick: 'Cram',     dob: '1995-08-03', pos: 'LB', num: 2,  nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/daniel cram.webp' },
-    { first: 'Milo',       last: 'Djuricic',    nick: 'Milo',     dob: '2000-07-28', pos: 'CB',  num: 5,  nat: '🇷🇸', natName: 'Serbian', photo: 'assets/images/players/milo.jpeg' },
-    { first: 'Chris',      last: 'Duenas',      nick: 'Noodles',  dob: null,         pos: 'CDM', num: 24, nat: '🇪🇨', natName: 'Ecuadorian', photo: 'assets/images/players/chris duenas.jpeg' },
-    { first: 'Gianfranco', last: 'Gileppo',     nick: 'G',        dob: '2000-05-03', pos: 'CM',  num: 19, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/gianfranco.webp' },
-    { first: 'Agostino',   last: 'Greco',       nick: 'Ago',      dob: '1999-11-11', pos: 'CM', num: 14, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/ago greco.jpeg' },
-    { first: 'Nikita',     last: 'Ivanov',      nick: 'Nick',     dob: '2000-06-15', pos: 'CB', num: 13, nat: '🇷🇺', natName: 'Russian', photo: 'assets/images/players/nikita ivanov.webp' },
-    { first: 'Mario',      last: 'Kovacevic',   nick: 'Mario',    dob: '1990-12-25', pos: 'ST', num: 10, nat: '🇧🇦', natName: 'Bosnian', photo: 'assets/images/players/mario kovacevic.webp', captain: true, role: 'Sporting Director' },
-    { first: 'Michael',    last: 'Petitti',     nick: 'Petiti',   dob: '2001-08-21', pos: 'LW', num: 11, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/michael petiti.webp' },
-    { first: 'Jarred',     last: 'Phillips',    nick: 'JP',       dob: '1995-05-14', pos: 'RB', num: 7,  nat: '🇯🇲', natName: 'Jamaican', photo: 'assets/images/players/jarred phillips.jpeg' },
-    { first: 'Kelvin',     last: 'Ramirez',     nick: 'Kelvinho', dob: '2004-01-01', pos: 'CB', num: 16, nat: '🇧🇷', natName: 'Brazilian', photo: 'assets/images/players/kelvin.webp' },
-    { first: 'Gabriel',    last: 'Poles',       nick: 'Poles',    dob: '2002-12-05', pos: 'LW', num: 17, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/gabriel poles soccer.webp' },
-    { first: 'Lucas',      last: 'Puntillo',    nick: 'Punti',    dob: '1997-09-15', pos: 'RW', num: 15, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/lucas puntillo.webp' },
-    { first: 'Alain',      last: 'Sargeant',    nick: 'Alain',    dob: '1995-11-27', pos: 'CB', num: 3,  nat: '🇯🇲', natName: 'Jamaican', photo: 'assets/images/players/alain.webp' },
-    { first: 'Robert',     last: 'Ursu',        nick: 'Rob',   dob: '2003-04-09', pos: 'GK', num: 1,  nat: '🇷🇴', natName: 'Romanian', photo: 'assets/images/players/robert ursu.webp', startingGK: true },
-    { first: 'Sotiri',     last: 'Varlokostas', nick: 'Soti',     dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', photo: 'assets/images/players/sotiri.jpeg', backupGK: true },
-    { first: 'Jonathan',   last: 'Lao',         nick: 'Lao',      dob: null,         pos: 'CM', num: 20, nat: '🇨🇦', natName: 'Canadian', photo: 'assets/images/players/jonathan lao.webp' },
-    { first: 'Andron',     last: 'Kagramanyan', nick: 'Andron',   dob: null,         pos: 'CM', num: 22, nat: '🇦🇲', natName: 'Armenian', photo: 'assets/images/players/andron.jpeg' },
-    { first: 'Christian',  last: 'Curti',       nick: 'Curti',    dob: null,         pos: 'CB', num: 23, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/chris curti.webp' },
+    { first: 'Julian',     last: 'Accettola',   nick: 'Acc',      dob: '2002-05-22', pos: 'ST', num: 9,  nat: '🇮🇹', natName: 'Italian' },
+    { first: 'Sven',       last: 'Arapovic',    nick: 'Sven',     dob: '1991-01-23', pos: 'CB', num: 4,  nat: '🇭🇷', natName: 'Croatian' },
+    { first: 'Matthew',    last: 'Arnone',      nick: 'Arnone',   dob: '1994-02-28', pos: 'DM', num: 6,  nat: '🇮🇹', natName: 'Italian' },
+    { first: 'Yigal',      last: 'Bruk',        nick: 'Yigal',    dob: '2002-02-04', pos: 'RW', num: 21, nat: '🇺🇦', natName: 'Ukrainian' },
+    { first: 'Dylan',      last: 'Carreiro',    nick: 'Dylan',    dob: '1995-01-20', pos: 'CM', num: 8,  nat: '🇵🇹', natName: 'Portuguese' },
+    { first: 'Daniel',     last: 'Cramarossa',  nick: 'Cram',     dob: '1995-08-03', pos: 'LB', num: 2,  nat: '🇮🇹', natName: 'Italian' },
+    { first: 'Milo',       last: 'Djuricic',    nick: 'Milo',     dob: '2000-07-28', pos: 'CB',  num: 5,  nat: '🇷🇸', natName: 'Serbian' },
+    { first: 'Chris',      last: 'Duenas',      nick: 'Noodles',  dob: null,         pos: 'CDM', num: 24, nat: '🇪🇨', natName: 'Ecuadorian' },
+    { first: 'Gianfranco', last: 'Gileppo',     nick: 'G',        dob: '2000-05-03', pos: 'CM',  num: 19, nat: '🇮🇹', natName: 'Italian' },
+    { first: 'Agostino',   last: 'Greco',       nick: 'Ago',      dob: '1999-11-11', pos: 'CM', num: 14, nat: '🇮🇹', natName: 'Italian' },
+    { first: 'Nikita',     last: 'Ivanov',      nick: 'Nick',     dob: '2000-06-15', pos: 'CB', num: 13, nat: '🇷🇺', natName: 'Russian' },
+    { first: 'Mario',      last: 'Kovacevic',   nick: 'Mario',    dob: '1990-12-25', pos: 'ST', num: 10, nat: '🇧🇦', natName: 'Bosnian', captain: true, role: 'Sporting Director' },
+    { first: 'Michael',    last: 'Petitti',     nick: 'Petiti',   dob: '2001-08-21', pos: 'LW', num: 11, nat: '🇮🇹', natName: 'Italian' },
+    { first: 'Jarred',     last: 'Phillips',    nick: 'JP',       dob: '1995-05-14', pos: 'RB', num: 7,  nat: '🇯🇲', natName: 'Jamaican' },
+    { first: 'Kelvin',     last: 'Ramirez',     nick: 'Kelvinho', dob: '2004-01-01', pos: 'CB', num: 16, nat: '🇧🇷', natName: 'Brazilian' },
+    { first: 'Gabriel',    last: 'Poles',       nick: 'Poles',    dob: '2002-12-05', pos: 'LW', num: 17, nat: '🇮🇹', natName: 'Italian' },
+    { first: 'Lucas',      last: 'Puntillo',    nick: 'Punti',    dob: '1997-09-15', pos: 'RW', num: 15, nat: '🇮🇹', natName: 'Italian' },
+    { first: 'Alain',      last: 'Sargeant',    nick: 'Alain',    dob: '1995-11-27', pos: 'CB', num: 3,  nat: '🇯🇲', natName: 'Jamaican' },
+    { first: 'Robert',     last: 'Ursu',        nick: 'Robert',   dob: '2003-04-09', pos: 'GK', num: 1,  nat: '🇷🇴', natName: 'Romanian', startingGK: true },
+    { first: 'Sotiri',     last: 'Varlokostas', nick: 'Sotiri',   dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', photo: 'assets/images/players/sotiri.jpeg', backupGK: true },
     // Squad members (not on OSL registration sheet)
-    { first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW', num: 45, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/austin.webp', vc: true },
-    { first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB', num: 18, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/Joseph_Amato_medium.jpg', vc2: true },
+    { first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW', num: 45, nat: '🇮🇹', natName: 'Italian', vc: true },
+    { first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB', num: 18, nat: '🇮🇹', natName: 'Italian', vc2: true },
   ];
 
   // ============================================================
@@ -3118,94 +2948,6 @@
     `;
     squadGrid.appendChild(card);
   });
-
-  // Attendance hub — binary present/not-present tracking from data/attendance.json
-  const playerAliases = new Map();
-  roster.forEach(p => {
-    const full = [p.first, p.last].filter(Boolean).join(' ');
-    [full, p.nick, p.first, p.last].filter(Boolean).forEach(v => playerAliases.set(v.trim().toLowerCase(), full));
-  });
-
-  function playerFullName(p) { return [p.first, p.last].filter(Boolean).join(' ') || p.nick; }
-  function resolvePlayerName(name) { return playerAliases.get(String(name || '').trim().toLowerCase()) || String(name || '').trim(); }
-  function fmtAttendanceDate(dateStr) {
-    if (!dateStr) return 'Date TBD';
-    const d = new Date(`${dateStr}T12:00:00`);
-    if (Number.isNaN(d.getTime())) return dateStr;
-    return d.toLocaleDateString('en-CA', { month: 'short', day: 'numeric', year: 'numeric' });
-  }
-
-  function renderAttendance(data) {
-    const events = Array.isArray(data?.events) ? data.events : [];
-    const players = roster.map(p => ({ ...p, fullName: playerFullName(p), overall: 0, training: 0, match: 0 }));
-    const byName = new Map(players.map(p => [p.fullName, p]));
-
-    events.forEach(ev => {
-      const type = String(ev.type || '').toLowerCase();
-      const present = Array.isArray(ev.present) ? ev.present : [];
-      const seen = new Set(present.map(resolvePlayerName).filter(Boolean));
-      seen.forEach(name => {
-        const p = byName.get(name);
-        if (!p) return;
-        p.overall += 1;
-        if (type === 'training') p.training += 1;
-        if (type === 'match') p.match += 1;
-      });
-    });
-
-    const total = events.length;
-    const trainingTotal = events.filter(e => String(e.type || '').toLowerCase() === 'training').length;
-    const matchTotal = events.filter(e => String(e.type || '').toLowerCase() === 'match').length;
-    const latest = [...events].sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))[0];
-
-    document.getElementById('attendanceEventCount').textContent = total;
-    document.getElementById('attTotalEvents').textContent = total;
-    document.getElementById('attTrainingEvents').textContent = trainingTotal;
-    document.getElementById('attMatchEvents').textContent = matchTotal;
-    document.getElementById('attLatestLabel').textContent = latest ? fmtAttendanceDate(latest.date).replace(/, 2026$/, '') : '—';
-
-    const leadersEl = document.getElementById('attendanceLeaders');
-    if (!total) {
-      const emptyHTML = '<div class="attendance-empty">No attendance logged yet.<br><span class="empty-tip">After training or games, send: Present: Mario, Rob, Soti…</span></div>';
-      leadersEl.innerHTML = emptyHTML;
-    } else {
-      const leaders = [...players].sort((a, b) => (b.overall - a.overall) || (a.num - b.num)).slice(0, 10);
-      leadersEl.innerHTML = leaders.map((p, idx) => {
-        const pct = Math.round((p.overall / total) * 100);
-        return `<div class="attendance-row"><div class="attendance-rank">${idx + 1}</div><div class="attendance-name">${p.fullName}<span>${p.nick} · #${p.num}</span></div><div class="attendance-count">${p.overall}/${total}</div><div class="attendance-pct">${pct}%</div></div>`;
-      }).join('');
-    }
-
-    const latestEl = document.getElementById('attendanceLatest');
-    const latestMeta = document.getElementById('attendanceLatestMeta');
-    if (!latest) {
-      latestMeta.textContent = 'Awaiting Data';
-      latestEl.innerHTML = '<div class="attendance-empty">No session has been logged yet.</div>';
-      return;
-    }
-    const presentNames = (Array.isArray(latest.present) ? latest.present : []).map(resolvePlayerName).filter(Boolean);
-    const presentSet = new Set(presentNames);
-    const missing = players.map(p => p.fullName).filter(name => !presentSet.has(name));
-    latestMeta.textContent = `${String(latest.type || 'Session').toUpperCase()} · ${presentNames.length}/${players.length}`;
-    latestEl.innerHTML = `
-      <div class="attendance-latest-box">
-        <div class="attendance-latest-title">${latest.label || latest.opponent || latest.location || 'Latest Session'}</div>
-        <div class="attendance-latest-meta">${fmtAttendanceDate(latest.date)} · ${presentNames.length} present · ${missing.length} absent</div>
-        <div class="attendance-chip-row">${presentNames.slice(0, 18).map(n => `<span class="attendance-chip">${n}</span>`).join('')}</div>
-      </div>`;
-  }
-
-  async function loadAttendance() {
-    try {
-      const res = await fetch('data/attendance.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error(`Attendance fetch failed: ${res.status}`);
-      renderAttendance(await res.json());
-    } catch (err) {
-      console.warn(err);
-      renderAttendance({ events: [] });
-    }
-  }
-  loadAttendance();
 
   // ============================================================
   // Subscribe button device priority (for the calendar buttons)
