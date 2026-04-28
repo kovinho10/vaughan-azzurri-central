@@ -1904,18 +1904,6 @@
     color: var(--azz-bright);
     margin-bottom: 12px;
   }
-  .attendance-recap {
-    margin-top: 12px;
-    padding: 12px 14px;
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    background: rgba(15, 23, 42, 0.42);
-    border-radius: 10px;
-    color: var(--paper);
-    font-size: 12px;
-    line-height: 1.55;
-  }
-  .attendance-recap ul { margin: 0; padding-left: 18px; }
-  .attendance-recap li + li { margin-top: 4px; }
   .attendance-chip-row { display:flex; flex-wrap:wrap; gap:6px; }
   .attendance-chip {
     font-family:'Barlow Condensed',sans-serif;
@@ -2268,7 +2256,7 @@
           <div>
             <div class="hero-eyebrow">Season Snapshot</div>
             <div class="hero-title">Vaughan <em>Azzurri</em></div>
-            <div class="hero-sub">20 matches · 4 competitions · Ontario Cup draw confirmed.</div>
+            <div class="hero-sub">19 matches · 4 competitions · Ontario Cup draw confirmed.</div>
             <div class="hero-chips">
               <span class="hero-chip">Pre-season</span>
               <span class="hero-chip">OSL 2026</span>
@@ -2313,7 +2301,7 @@
   <div class="source-stamp" id="competitionSourceStamp">
     <span>League Cup: <a href="https://ontariosl.com/mens-cup/" target="_blank" rel="noopener">OSL</a></span>
     <span>Ontario Cup: <a href="https://www.ontariosoccer.net/ontario-cup-outdoor-schedule-and-draw-charts" target="_blank" rel="noopener">Ontario Soccer</a></span>
-    <span>Last checked: Apr 28</span>
+    <span>Last checked: Apr 27</span>
   </div>
 
   <div class="comps">
@@ -2364,7 +2352,7 @@
         <div class="comp-stage">
           <div>
             <div class="comp-stage-lab">Second Round</div>
-            <div class="comp-stage-val">Niagara Club Italia Juventus</div>
+            <div class="comp-stage-val">Niagara CIJ</div>
           </div>
           <div class="comp-stage-note">July 5 · Home · KO TBD</div>
         </div>
@@ -2432,7 +2420,7 @@
         <div>
           <div class="fm-briefing-label">Boardroom Briefing</div>
           <div class="fm-briefing-title">Cup campaign begins</div>
-          <div class="fm-briefing-text">Ontario Cup draw complete: <b>Niagara Club Italia Juventus at home</b> on July 5, kickoff TBD. Board expectation: survive July without inventing excuses.</div>
+          <div class="fm-briefing-text">Ontario Cup draw complete: <b>Niagara at home</b> on July 5, kickoff TBD. Board expectation: survive July without inventing excuses.</div>
           <div class="briefing-pills"><span>Objective: survive July</span><span>Home draw</span></div>
         </div>
       </div>
@@ -2443,13 +2431,13 @@
         <div class="manager-photo"><img src="assets/images/embedded/embedded-cf10074b187a.jpg" alt="Hieu Quach" loading="lazy"></div>
         <div>
           <div class="fm-briefing-label">Manager Security</div>
-          <div class="fm-briefing-title">Safe, but the cones are under review</div>
-          <div class="fm-briefing-text">Hieu Quach still has board backing, but one oversized possession drill caused mild unrest. Training staff have been reminded that width is not a personality.</div>
-          <div class="manager-stamp">Board confidence mostly stable</div>
+          <div class="fm-briefing-title">Untouchable</div>
+          <div class="fm-briefing-text">Hieu Quach has maximum backing. Results may eventually test the board, but for now the head coach is secure.</div>
+          <div class="manager-stamp">Board confidence locked</div>
         </div>
       </div>
       <div class="security-meter">
-        <div class="security-row"><span>Job security</span><b>Mostly stable</b></div>
+        <div class="security-row"><span>Job security</span><b>Untouchable</b></div>
         <div class="security-track"><div class="security-fill"></div></div>
       </div>
     </div>
@@ -2458,9 +2446,9 @@
       <div class="atmosphere-top">
         <div>
           <div class="fm-briefing-label">Club Atmosphere</div>
-          <div class="fm-briefing-title">Training Ground Chaos</div>
+          <div class="fm-briefing-title">Cautiously Delusional</div>
         </div>
-        <div class="atmosphere-status">Dressing room: mildly divided by cone placement</div>
+        <div class="atmosphere-status">Dressing room: buzzing</div>
       </div>
       <div class="atmosphere-grid">
         <div class="atmo-tile">
@@ -2484,7 +2472,7 @@
           <div class="atmo-track"><div class="atmo-fill delusion"></div></div>
         </div>
       </div>
-      <div class="atmo-note"><b>Current vibe:</b> possession drill stretched wider than the players&rsquo; patience. Morale remains intact, but several players have requested a formal review of field dimensions.</div>
+      <div class="atmo-note"><b>Current vibe:</b> first match, cup money available, and squad optimism not yet damaged by reality.</div>
     </div>
   </div>
 
@@ -2676,7 +2664,7 @@
   </div>
   <div class="source-stamp" id="standingsSourceStamp">
     <span>Source: <a href="https://ontariosl.com/standings/" target="_blank" rel="noopener">OSL Standings</a></span>
-    <span>Last checked: Apr 28</span>
+    <span>Last checked: Apr 27</span>
     <span>Team: VSC Elite</span>
   </div>
 
@@ -2777,7 +2765,6 @@
               <div class="attendance-latest-title">Training</div>
               <div class="attendance-latest-meta">Apr 27, 2026 · 17 present · 8 absent</div>
               <div class="attendance-chip-row"><span class="attendance-chip">Gianfranco Gileppo</span><span class="attendance-chip">Milo Djuricic</span><span class="attendance-chip">Austin Ricci</span><span class="attendance-chip">Nikita Ivanov</span><span class="attendance-chip">Chris Duenas</span><span class="attendance-chip">Sven Arapovic</span><span class="attendance-chip">Alain Sargeant</span><span class="attendance-chip">Agostino Greco</span><span class="attendance-chip">Jarred Phillips</span><span class="attendance-chip">Daniel Cramarossa</span><span class="attendance-chip">Julian Accettola</span><span class="attendance-chip">Lucas Puntillo</span><span class="attendance-chip">Mario Kovacevic</span><span class="attendance-chip">Michael Petitti</span><span class="attendance-chip">Gabriel Poles</span><span class="attendance-chip">Kelvin Ramirez</span><span class="attendance-chip">Jonathan Lao</span></div>
-              <div class="attendance-recap"><ul><li>17 present.</li><li>Two properly pumped balls.</li><li>One completely empty facility after being told a field would be hard to find.</li><li>Andron dropped in from a higher level and was welcomed by Alain with a tackle that required no formal introduction.</li></ul></div>
             </div>
           </div>
         </div>
@@ -3231,12 +3218,6 @@
         "Gabriel Poles",
         "Kelvin Ramirez",
         "Jonathan Lao"
-      ],
-      "recap": [
-        "17 present.",
-        "Two properly pumped balls.",
-        "One completely empty facility after being told a field would be hard to find.",
-        "Andron dropped in from a higher level and was welcomed by Alain with a tackle that required no formal introduction."
       ]
     }
   ]
@@ -3309,14 +3290,11 @@
     const presentSet = new Set(presentNames);
     const missing = players.map(p => p.fullName).filter(name => !presentSet.has(name));
     latestMeta.textContent = `${String(latest.type || 'Session').toUpperCase()} · ${presentNames.length}/${players.length}`;
-    const recap = Array.isArray(latest.recap) ? latest.recap.filter(Boolean) : [];
-    const recapHtml = recap.length ? `<div class="attendance-recap"><ul>${recap.map(item => `<li>${item}</li>`).join('')}</ul></div>` : '';
     latestEl.innerHTML = `
       <div class="attendance-latest-box">
         <div class="attendance-latest-title">${latest.label || latest.opponent || latest.location || 'Latest Session'}</div>
         <div class="attendance-latest-meta">${fmtAttendanceDate(latest.date)} · ${presentNames.length} present · ${missing.length} absent</div>
         <div class="attendance-chip-row">${presentNames.slice(0, 18).map(n => `<span class="attendance-chip">${n}</span>`).join('')}</div>
-        ${recapHtml}
       </div>`;
   }
 

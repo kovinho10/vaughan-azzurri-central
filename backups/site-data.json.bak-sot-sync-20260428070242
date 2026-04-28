@@ -1,21 +1,21 @@
 {
   "meta": {
-    "updated": "2026-04-28",
+    "updated": "2026-04-27",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-04-28"
+        "lastChecked": "2026-04-27"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-04-28"
+        "lastChecked": "2026-04-27"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
         "url": "https://www.ontariosoccer.net/ontario-cup-outdoor-schedule-and-draw-charts",
-        "lastChecked": "2026-04-28"
+        "lastChecked": "2026-04-27"
       }
     }
   },
@@ -88,8 +88,8 @@
       "d": "2026-07-05",
       "t": "TBD",
       "home": true,
-      "opp": "Niagara Club Italia Juventus",
-      "venue": "TBD",
+      "opp": "Niagara",
+      "venue": "North Maple Regional Park Turf #1",
       "comp": "OntCup"
     },
     {
@@ -466,35 +466,35 @@
   ],
   "standings": [
     {
-      "team": "Croatia Norval"
-    },
-    {
-      "team": "GS United"
-    },
-    {
-      "team": "Guelph Royals"
-    },
-    {
-      "team": "Hrvat St. Catharines"
-    },
-    {
-      "team": "Olimpia"
-    },
-    {
-      "team": "Panathinaikos"
-    },
-    {
-      "team": "Peniche CC"
+      "team": "Vaughan Azzurri",
+      "us": true
     },
     {
       "team": "Scarboro Azzurri Blues"
     },
     {
+      "team": "Panathinaikos"
+    },
+    {
+      "team": "Croatia Norval"
+    },
+    {
+      "team": "Olimpia"
+    },
+    {
+      "team": "Hrvat St. Catharines"
+    },
+    {
+      "team": "Peniche CC"
+    },
+    {
+      "team": "GS United"
+    },
+    {
       "team": "Toronto Celtic"
     },
     {
-      "team": "Vaughan Azzurri",
-      "us": true
+      "team": "Guelph Royals"
     }
   ],
   "teamLogos": {
