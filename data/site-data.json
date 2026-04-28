@@ -21,6 +21,14 @@
   },
   "fixtures": [
     {
+      "d": "2026-05-03",
+      "t": "12:00",
+      "home": true,
+      "opp": "Olimpia",
+      "venue": "Weston Lions Field",
+      "comp": "Friendly"
+    },
+    {
       "d": "2026-05-11",
       "t": "19:00",
       "home": true,

@@ -92,6 +92,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    flex: 0 0 auto;
   }
   /* ───── Universal crest badge ───── */
   /* Every logo lives inside a .crest-badge &mdash; white circular plate so any logo
@@ -144,6 +145,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    flex: 0 0 auto;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 12px;
     letter-spacing: 0.16em;
@@ -181,66 +183,77 @@
     .topbar-meta .meta-hide { display: none; }
   }
 
-  /* ───── News ticker ───── */
-  .ticker-wrap {
-    background: var(--bg-deep);
-    border-bottom: 1px solid var(--border);
+  /* ───── Topbar ticker ───── */
+  .topbar-ticker {
+    flex: 1 1 auto;
+    min-width: 160px;
+    max-width: 620px;
+    height: 34px;
+    margin: 0 4px;
+    border: 1px solid rgba(96, 165, 250, 0.22);
+    border-radius: 999px;
+    background:
+      linear-gradient(90deg, rgba(15, 23, 42, 0.96), rgba(12, 28, 54, 0.76), rgba(15, 23, 42, 0.96));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 10px 30px -24px rgba(96, 165, 250, 0.9);
     overflow: hidden;
     position: relative;
-    z-index: 2;
   }
-  .ticker-wrap::before, .ticker-wrap::after {
+  .topbar-ticker::before, .topbar-ticker::after {
     content: '';
     position: absolute;
     top: 0; bottom: 0;
-    width: 80px;
+    width: 64px;
     z-index: 2;
     pointer-events: none;
   }
-  .ticker-wrap::before { left: 0;  background: linear-gradient(90deg, var(--bg-deep), transparent); }
-  .ticker-wrap::after  { right: 0; background: linear-gradient(-90deg, var(--bg-deep), transparent); }
-  .ticker {
+  .topbar-ticker::before { left: 0; background: linear-gradient(90deg, rgba(15,23,42,1), transparent); }
+  .topbar-ticker::after { right: 0; background: linear-gradient(-90deg, rgba(15,23,42,1), transparent); }
+  .topbar-ticker .ticker {
     display: flex;
-    gap: 36px;
+    gap: 34px;
     align-items: center;
-    padding: 9px 0;
+    height: 100%;
     white-space: nowrap;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.14em;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: rgba(203, 213, 225, 0.78);
     width: max-content;
-    animation: tickerScroll 110s linear infinite;
+    animation: tickerScroll 95s linear infinite;
+    will-change: transform;
   }
-  .ticker:hover { animation-play-state: paused; }
-  .ticker-item {
+  .topbar-ticker .ticker:hover { animation-play-state: paused; }
+  .topbar-ticker .ticker-item {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
     flex-shrink: 0;
+    text-shadow: 0 0 16px rgba(96, 165, 250, 0.18);
   }
-  .ticker-item::before {
+  .topbar-ticker .ticker-item::before {
     content: '';
-    width: 5px; height: 5px;
+    width: 4px; height: 4px;
     border-radius: 50%;
-    background: var(--azz-bright);
-    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.18);
+    background: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.12), 0 0 12px rgba(96, 165, 250, 0.75);
     flex-shrink: 0;
   }
-  .ticker-item b {
-    font-weight: 800;
-    color: var(--rosso);
-    letter-spacing: 0.18em;
-  }
-  .ticker-item .breaking {
-    color: var(--rosso);
-    font-weight: 800;
-    letter-spacing: 0.2em;
+  .topbar-ticker .ticker-item b {
+    font-weight: 900;
+    color: #f8fafc;
+    letter-spacing: 0.22em;
   }
   @keyframes tickerScroll {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
+  }
+  @media (max-width: 980px) {
+    .topbar-inner { flex-wrap: wrap; }
+    .topbar-ticker { order: 3; flex-basis: 100%; max-width: none; margin: 2px 0 0; }
   }
 
   /* ───── Main ───── */
@@ -1327,8 +1340,8 @@
   .manager-photo { width:66px; height:66px; border-radius:50%; background:#fff; padding:3px; flex-shrink:0; box-shadow: 0 0 0 1px rgba(255,255,255,.65), 0 10px 22px -10px rgba(0,0,0,.85), 0 0 26px -18px rgba(34,197,94,.9); }
   .manager-photo img { width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
   .atmosphere-card { padding: 16px; }
-  .atmosphere-top { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; position: relative; z-index: 1; margin-bottom: 12px; }
-  .atmosphere-status { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--draw); border: 1px solid rgba(234, 179, 8, 0.38); background: rgba(234, 179, 8, 0.11); padding: 5px 10px; border-radius: 4px; white-space: nowrap; box-shadow: inset 0 1px 0 rgba(255,255,255,.05); }
+  .atmosphere-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, auto); gap: 12px; align-items: center; position: relative; z-index: 1; margin-bottom: 12px; min-width: 0; }
+  .atmosphere-status { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(8px, 1.25vw, 11px); letter-spacing: clamp(0.10em, 0.9vw, 0.18em); text-transform: uppercase; color: var(--draw); border: 1px solid rgba(234, 179, 8, 0.38); background: rgba(234, 179, 8, 0.11); padding: 5px 10px; border-radius: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; min-width: 0; box-shadow: inset 0 1px 0 rgba(255,255,255,.05); }
   .atmosphere-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; position: relative; z-index: 1; }
   .atmo-tile { background: rgba(4, 10, 20, 0.66); border: 1px solid rgba(71,86,133,.82); border-radius: 7px; padding: 10px; min-width: 0; box-shadow: inset 0 1px 0 rgba(255,255,255,.035); }
   .atmo-num { font-family: 'Barlow Condensed', sans-serif; font-size: 27px; font-weight: 900; line-height: 1; color: var(--paper); font-variant-numeric: tabular-nums; }
@@ -1364,6 +1377,7 @@
   .comp-badge img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .comp-badge--cup img, .comp-badge--osl img { border-radius: 50%; }
   .comp-badge--nat { background: linear-gradient(135deg, #c8102e, #1e40af); color: var(--paper); font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:900; letter-spacing:.08em; }
+  .comp-badge--friendly { background: linear-gradient(135deg, #0f766e, #60a5fa); color: var(--paper); font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:900; letter-spacing:.08em; }
   .comp-lockup { display: inline-flex; align-items: center; gap: 8px; }
   .comp-mini {
     width: 22px; height: 22px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center;
@@ -1373,6 +1387,7 @@
   .comp-mini img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .comp-mini.comp-badge--cup img, .comp-mini.comp-badge--osl img { border-radius: 50%; }
   .comp-mini.comp-badge--nat { background: linear-gradient(135deg,#c8102e,#1e40af); color:var(--paper); font-family:'Barlow Condensed',sans-serif; font-size:7px; font-weight:900; letter-spacing:.05em; padding:0; }
+  .comp-mini.comp-badge--friendly { background: linear-gradient(135deg,#0f766e,#60a5fa); color:var(--paper); font-family:'Barlow Condensed',sans-serif; font-size:7px; font-weight:900; letter-spacing:.05em; padding:0; }
   .campaign-wall {
     display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin: -10px 0 20px;
   }
@@ -2011,6 +2026,7 @@
   .fix-comp-cup  { background: rgba(234, 179, 8, 0.12);  color: var(--draw); border: 1px solid rgba(234, 179, 8, 0.3); }
   .fix-comp-ont  { background: rgba(220, 38, 56, 0.12);  color: #f87171; border: 1px solid rgba(220, 38, 56, 0.3); }
   .fix-comp-nat  { background: rgba(220, 38, 56, 0.18);  color: #fca5a5; border: 1px solid rgba(220, 38, 56, 0.4); }
+  .fix-comp-friendly { background: rgba(20, 184, 166, 0.12); color: #5eead4; border: 1px solid rgba(20, 184, 166, 0.3); }
   .fix-loc {
     font-size: 11px;
     color: var(--muted);
@@ -2439,6 +2455,50 @@
         <div class="brand-sub">2026 Season · Men Provincial</div>
       </div>
     </div>
+    <div class="topbar-ticker" aria-label="Azzurri news ticker">
+    <div class="ticker" aria-hidden="true">
+      <span class="ticker-item"><b>Azzurri Wire</b> Fitness under review</span>
+      <span class="ticker-item">Vaughan complete 42 passes, advance three yards</span>
+      <span class="ticker-item">Alain-Andron incident ruled football</span>
+      <span class="ticker-item">Two match balls properly inflated</span>
+      <span class="ticker-item">Mario requests service to feet</span>
+      <span class="ticker-item">Barça comparisons resume before warmup</span>
+      <span class="ticker-item">GTA United prep begins at Zanchin</span>
+      <span class="ticker-item">Scarboro Azzurri name dispute continues</span>
+      <span class="ticker-item">Recovery runs remain optional in spirit</span>
+      <span class="ticker-item">Possession stats elite, distance covered sealed</span>
+      <span class="ticker-item">Noodles understands the system and regrets it</span>
+      <span class="ticker-item">JP overlap upgraded to probable</span>
+      <span class="ticker-item">Kelvinho calm because sprinting has not started</span>
+      <span class="ticker-item">Acc movement spotted beyond passing range</span>
+      <span class="ticker-item">Petiti asks for switch, receives square ball</span>
+      <span class="ticker-item">G and Ago midfield audit pending oxygen report</span>
+      <span class="ticker-item">Rob and Soti request fewer hospital passes</span>
+      <span class="ticker-item">Punti and Poles width declared controversial</span>
+      <span class="ticker-item">Seventeen at training, underdog narrative shaken</span>
+      <span class="ticker-item">Cones survive another group chat</span>
+      <span class="ticker-item"><b>Azzurri Wire</b> Fitness under review</span>
+      <span class="ticker-item">Vaughan complete 42 passes, advance three yards</span>
+      <span class="ticker-item">Alain-Andron incident ruled football</span>
+      <span class="ticker-item">Two match balls properly inflated</span>
+      <span class="ticker-item">Mario requests service to feet</span>
+      <span class="ticker-item">Barça comparisons resume before warmup</span>
+      <span class="ticker-item">GTA United prep begins at Zanchin</span>
+      <span class="ticker-item">Scarboro Azzurri name dispute continues</span>
+      <span class="ticker-item">Recovery runs remain optional in spirit</span>
+      <span class="ticker-item">Possession stats elite, distance covered sealed</span>
+      <span class="ticker-item">Noodles understands the system and regrets it</span>
+      <span class="ticker-item">JP overlap upgraded to probable</span>
+      <span class="ticker-item">Kelvinho calm because sprinting has not started</span>
+      <span class="ticker-item">Acc movement spotted beyond passing range</span>
+      <span class="ticker-item">Petiti asks for switch, receives square ball</span>
+      <span class="ticker-item">G and Ago midfield audit pending oxygen report</span>
+      <span class="ticker-item">Rob and Soti request fewer hospital passes</span>
+      <span class="ticker-item">Punti and Poles width declared controversial</span>
+      <span class="ticker-item">Seventeen at training, underdog narrative shaken</span>
+      <span class="ticker-item">Cones survive another group chat</span>
+      </div>
+    </div>
     <div class="topbar-meta">
       <span class="meta-hide"><span class="live-dot"></span><b>Pre-season</b></span>
       <span id="topWeather" class="weather-chip" aria-live="polite"><span class="weather-icon">⛅</span><span class="weather-label">Vaughan</span><span class="weather-temp">--°C</span></span>
@@ -2651,7 +2711,7 @@
           <div class="fm-briefing-label">Club Atmosphere</div>
           <div class="fm-briefing-title">Training Ground Chaos</div>
         </div>
-        <div class="atmosphere-status">Dressing room: mildly divided by cone placement</div>
+        <div class="atmosphere-status">Dressing room: cone debate</div>
       </div>
       <div class="atmosphere-grid">
         <div class="atmo-tile">
@@ -2687,8 +2747,8 @@
         <div class="next-match-tag-row">
           <div class="next-match-tag">Next Up</div>
           <div class="fix-comp-pill" id="nmCompPill">OSL</div>
-          <div class="match-header-chip gold">Round of 64</div>
-          <div class="match-header-chip source">Source: OSL</div>
+          <div class="match-header-chip gold" id="nmStageChip">Round of 64</div>
+          <div class="match-header-chip source" id="nmSourceChip">Source: OSL</div>
         </div>
         <div class="nm-countdown">
           <div class="num"><span id="nmDays">&mdash;</span></div>
@@ -2728,15 +2788,15 @@
         <div class="match-preview">
           <div class="preview-block">
             <div class="preview-label">Match Storyline</div>
-            <div class="preview-text">The cup campaign opens with <b>$10,000</b> on the line. Vaughan enter from the highest division against lower-division GTA United, looking to erase last year’s first-round exit.</div>
+            <div class="preview-text" id="previewStoryline">The cup campaign opens with <b>$10,000</b> on the line. Vaughan enter from the highest division against lower-division GTA United, looking to erase last year’s first-round exit.</div>
           </div>
           <div class="preview-block">
             <div class="preview-label">Player to Watch</div>
-            <div class="preview-text"><b>Dylan Carreiro</b> has not played in a while, but the new signing has the quality to change the game if he gets rolling.</div>
+            <div class="preview-text" id="previewPlayer">The squad legs. Exhibition minutes arrive before anyone can claim they are still “building fitness.”</div>
           </div>
           <div class="preview-block">
             <div class="preview-label">What’s at Stake</div>
-            <div class="preview-text">First game of the season for both teams. Winner moves on. Loser starts preparing a very convincing “we’re focused on league” statement.</div>
+            <div class="preview-text" id="previewStakes">Pre-season rhythm, match legs, and whether the short-passing project survives a noon kickoff.</div>
           </div>
         </div>
 
@@ -2839,7 +2899,7 @@
   <div class="card">
     <div class="fixture-list" id="fixtureList"></div>
     <div class="show-more-row">
-      <button class="show-more" id="showMoreBtn">Show all 18 fixtures</button>
+      <button class="show-more" id="showMoreBtn">Show all fixtures</button>
     </div>
   </div>
 
@@ -3157,7 +3217,8 @@
       'Cup': { cls: 'cup', src: 'assets/images/embedded/embedded-34487ca7c248.png', alt: 'League Cup logo', fallback: 'CUP' },
       'OSL': { cls: 'osl', src: 'assets/images/embedded/embedded-34487ca7c248.png', alt: 'OSL League logo', fallback: 'OSL' },
       'OntCup': { cls: 'ont', src: 'assets/images/embedded/embedded-d9dcc05e45a7.png', alt: 'Ontario Cup logo', fallback: 'ONT' },
-      'Nat': { cls: 'nat', src: '', alt: 'National Championship', fallback: 'CAN' }
+      'Nat': { cls: 'nat', src: '', alt: 'National Championship', fallback: 'CAN' },
+      'Friendly': { cls: 'friendly', src: '', alt: 'Exhibition match', fallback: 'EXH' }
     };
     const item = logos[comp] || logos.OSL;
     if (item.src) return `<span class="${cls} comp-badge--${item.cls}"><img src="${item.src}" alt="${item.alt}" loading="lazy"></span>`;
@@ -3298,10 +3359,54 @@
     document.getElementById('nmAwayTag').textContent = next.home ? 'Away' : 'Home';
     // Set comp pill
     const compPill = document.getElementById('nmCompPill');
-    const compMap = { 'Cup': ['League Cup', 'fix-comp-cup'], 'OntCup': ['Ontario Cup', 'fix-comp-ont'], 'Nat': ['Nationals', 'fix-comp-nat'], 'OSL': ['OSL League', 'fix-comp-osl'] };
+    const stageChip = document.getElementById('nmStageChip');
+    const sourceChip = document.getElementById('nmSourceChip');
+    const compMap = { 'Cup': ['League Cup', 'fix-comp-cup'], 'OntCup': ['Ontario Cup', 'fix-comp-ont'], 'Nat': ['Nationals', 'fix-comp-nat'], 'Friendly': ['Exhibition', 'fix-comp-friendly'], 'OSL': ['OSL League', 'fix-comp-osl'] };
     const [label, cls] = compMap[next.comp] || compMap['OSL'];
     compPill.innerHTML = compBadgeHTML(next.comp, 'mini') + label;
     compPill.className = 'fix-comp-pill ' + cls;
+    if (stageChip && sourceChip) {
+      if (next.comp === 'Cup' && next.opp === 'GTA United') {
+        stageChip.textContent = 'Round of 64';
+        stageChip.style.display = '';
+        sourceChip.textContent = 'Source: OSL';
+        sourceChip.style.display = '';
+      } else if (next.comp === 'OntCup') {
+        stageChip.textContent = 'Ontario Cup';
+        stageChip.style.display = '';
+        sourceChip.textContent = 'Source: Ontario Soccer';
+        sourceChip.style.display = '';
+      } else if (next.comp === 'Friendly') {
+        stageChip.textContent = 'Friendly';
+        stageChip.style.display = '';
+        sourceChip.textContent = 'Source: Club';
+        sourceChip.style.display = '';
+      } else {
+        stageChip.textContent = 'League Match';
+        stageChip.style.display = '';
+        sourceChip.textContent = 'Source: OSL';
+        sourceChip.style.display = '';
+      }
+    }
+    const previewStoryline = document.getElementById('previewStoryline');
+    const previewPlayer = document.getElementById('previewPlayer');
+    const previewStakes = document.getElementById('previewStakes');
+    if (previewStoryline && previewPlayer && previewStakes) {
+      if (next.comp === 'Cup' && next.opp === 'GTA United') {
+        previewStoryline.innerHTML = 'The cup campaign opens with <b>$10,000</b> on the line. Vaughan enter from the highest division against lower-division GTA United, looking to erase last year’s first-round exit.';
+        previewPlayer.innerHTML = '<b>Dylan Carreiro</b> has not played in a while, but the new signing has the quality to change the game if he gets rolling.';
+        previewStakes.innerHTML = 'First game of the season for both teams. Winner moves on. Loser starts preparing a very convincing “we’re focused on league” statement.';
+      } else if (next.comp === 'Friendly') {
+        previewStoryline.innerHTML = `A Sunday noon exhibition against <b>${canonicalTeamName(next.opp)}</b> at ${next.venue}. Officially friendly, unofficially a fitness audit.`;
+        previewPlayer.innerHTML = 'The squad legs. Exhibition minutes arrive before anyone can claim they are still “building fitness.”';
+        previewStakes.innerHTML = 'Pre-season rhythm, match legs, and whether the short-passing project survives a noon kickoff.';
+      } else {
+        previewStoryline.innerHTML = `Vaughan continue the 2026 campaign against <b>${canonicalTeamName(next.opp)}</b>, with the possession project again requesting fresh legs.`;
+        previewPlayer.innerHTML = 'The midfield. If the ball keeps moving, the running can remain someone else’s problem.';
+        previewStakes.innerHTML = 'Points, rhythm, and another public test of the club’s relationship with recovery runs.';
+      }
+    }
+
     if (next.home) {
       // Vaughan listed first as home
     } else {
@@ -3321,8 +3426,8 @@
     list.forEach(f => {
       const div = document.createElement('div');
       div.className = 'fixture';
-      const compLabel = f.comp === 'Cup' ? 'League Cup' : (f.comp === 'OntCup' ? 'Ontario Cup' : (f.comp === 'Nat' ? 'Nationals' : 'OSL League'));
-      const compClass = f.comp === 'Cup' ? 'fix-comp-cup' : (f.comp === 'OntCup' ? 'fix-comp-ont' : (f.comp === 'Nat' ? 'fix-comp-nat' : 'fix-comp-osl'));
+      const compLabel = f.comp === 'Cup' ? 'League Cup' : (f.comp === 'OntCup' ? 'Ontario Cup' : (f.comp === 'Nat' ? 'Nationals' : (f.comp === 'Friendly' ? 'Exhibition' : 'OSL League')));
+      const compClass = f.comp === 'Cup' ? 'fix-comp-cup' : (f.comp === 'OntCup' ? 'fix-comp-ont' : (f.comp === 'Nat' ? 'fix-comp-nat' : (f.comp === 'Friendly' ? 'fix-comp-friendly' : 'fix-comp-osl')));
       div.innerHTML = `
         <div class="fix-date">
           <div class="fix-day">${dayName(f.when)}</div>
@@ -3348,7 +3453,7 @@
 
   document.getElementById('showMoreBtn').addEventListener('click', (e) => {
     showingAll = !showingAll;
-    e.target.textContent = showingAll ? 'Show next 5 only' : 'Show all 19 fixtures';
+    e.target.textContent = showingAll ? 'Show next 5 only' : `Show all ${upcoming.length} fixtures`;
     renderFixtures();
   });
 
