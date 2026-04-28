@@ -287,26 +287,6 @@
     text-transform: uppercase;
     color: var(--dim);
   }
-  .source-stamp {
-    margin: -6px 0 14px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .source-stamp span {
-    border: 1px solid rgba(255,255,255,.08);
-    background: rgba(255,255,255,.035);
-    border-radius: 999px;
-    padding: 5px 8px;
-  }
-  .source-stamp a { color: var(--azz-bright); text-decoration: none; }
-  .source-stamp a:hover { text-decoration: underline; }
 
   /* ───── Card ───── */
   .card {
@@ -2298,11 +2278,6 @@
     <div class="h-line"></div>
     <div class="h-meta">4 active fronts</div>
   </div>
-  <div class="source-stamp" id="competitionSourceStamp">
-    <span>League Cup: <a href="https://ontariosl.com/mens-cup/" target="_blank" rel="noopener">OSL</a></span>
-    <span>Ontario Cup: <a href="https://www.ontariosoccer.net/ontario-cup-outdoor-schedule-and-draw-charts" target="_blank" rel="noopener">Ontario Soccer</a></span>
-    <span>Last checked: Apr 27</span>
-  </div>
 
   <div class="comps">
     <div class="comp-card comp-card-fm comp-card--league fade-up">
@@ -2662,11 +2637,6 @@
     <div class="h-line"></div>
     <div class="h-meta">OSL Men Provincial · 2026</div>
   </div>
-  <div class="source-stamp" id="standingsSourceStamp">
-    <span>Source: <a href="https://ontariosl.com/standings/" target="_blank" rel="noopener">OSL Standings</a></span>
-    <span>Last checked: Apr 27</span>
-    <span>Team: VSC Elite</span>
-  </div>
 
   <div class="card">
     <div class="card-body tight" style="overflow-x: auto;">
@@ -2704,17 +2674,17 @@
   <div class="section-h">
     <h2>Attendance Hub</h2>
     <div class="h-line"></div>
-    <div class="h-meta"><span id="attendanceEventCount">1</span> session logged</div>
+    <div class="h-meta"><span id="attendanceEventCount">0</span> sessions logged</div>
   </div>
 
   <div class="attendance-hub">
     <div class="attendance-summary">
       <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attTotalEvents">1</div>
+        <div class="attendance-stat-num" id="attTotalEvents">0</div>
         <div class="attendance-stat-lab">Total Events</div>
       </div>
       <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attTrainingEvents">1</div>
+        <div class="attendance-stat-num" id="attTrainingEvents">0</div>
         <div class="attendance-stat-lab">Training</div>
       </div>
       <div class="attendance-stat-card">
@@ -2722,7 +2692,7 @@
         <div class="attendance-stat-lab">Matches</div>
       </div>
       <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attLatestLabel">Apr 27</div>
+        <div class="attendance-stat-num" id="attLatestLabel">—</div>
         <div class="attendance-stat-lab">Latest</div>
       </div>
     </div>
@@ -2733,40 +2703,16 @@
           <div class="card-h-meta">Present / Logged</div>
         </div>
         <div class="card-body tight">
-          <div class="attendance-list" id="attendanceLeaders">
-            <div class="attendance-row"><div class="attendance-rank">1</div><div class="attendance-name">Gianfranco Gileppo<span>G · #19</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">2</div><div class="attendance-name">Milo Djuricic<span>Milo · #5</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">3</div><div class="attendance-name">Austin Ricci<span>Ricci · #45</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">4</div><div class="attendance-name">Nikita Ivanov<span>Nick · #13</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">5</div><div class="attendance-name">Chris Duenas<span>Noodles · #24</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">6</div><div class="attendance-name">Sven Arapovic<span>Sven · #4</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">7</div><div class="attendance-name">Alain Sargeant<span>Alain · #3</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">8</div><div class="attendance-name">Agostino Greco<span>Ago · #14</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">9</div><div class="attendance-name">Jarred Phillips<span>JP · #7</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">10</div><div class="attendance-name">Daniel Cramarossa<span>Cram · #2</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">11</div><div class="attendance-name">Julian Accettola<span>Acc · #9</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">12</div><div class="attendance-name">Lucas Puntillo<span>Punti · #15</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">13</div><div class="attendance-name">Mario Kovacevic<span>Mario · #10</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">14</div><div class="attendance-name">Michael Petitti<span>Petiti · #11</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">15</div><div class="attendance-name">Gabriel Poles<span>Poles · #17</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">16</div><div class="attendance-name">Kelvin Ramirez<span>Kelvinho · #16</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">17</div><div class="attendance-name">Jonathan Lao<span>Lao · #20</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-          </div>
+          <div class="attendance-list" id="attendanceLeaders"></div>
         </div>
       </div>
       <div class="card attendance-card">
         <div class="card-h">
           <div class="card-h-title">Latest Session</div>
-          <div class="card-h-meta" id="attendanceLatestMeta">TRAINING · 17/25</div>
+          <div class="card-h-meta" id="attendanceLatestMeta">Awaiting Data</div>
         </div>
         <div class="card-body tight">
-          <div id="attendanceLatest">
-            <div class="attendance-latest-box">
-              <div class="attendance-latest-title">Training</div>
-              <div class="attendance-latest-meta">Apr 27, 2026 · 17 present · 8 absent</div>
-              <div class="attendance-chip-row"><span class="attendance-chip">Gianfranco Gileppo</span><span class="attendance-chip">Milo Djuricic</span><span class="attendance-chip">Austin Ricci</span><span class="attendance-chip">Nikita Ivanov</span><span class="attendance-chip">Chris Duenas</span><span class="attendance-chip">Sven Arapovic</span><span class="attendance-chip">Alain Sargeant</span><span class="attendance-chip">Agostino Greco</span><span class="attendance-chip">Jarred Phillips</span><span class="attendance-chip">Daniel Cramarossa</span><span class="attendance-chip">Julian Accettola</span><span class="attendance-chip">Lucas Puntillo</span><span class="attendance-chip">Mario Kovacevic</span><span class="attendance-chip">Michael Petitti</span><span class="attendance-chip">Gabriel Poles</span><span class="attendance-chip">Kelvin Ramirez</span><span class="attendance-chip">Jonathan Lao</span></div>
-            </div>
-          </div>
+          <div id="attendanceLatest"></div>
         </div>
       </div>
     </div>
@@ -2816,46 +2762,83 @@
 
 <script>
   // ============================================================
-  // SITE DATA — loaded from /data/site-data.json
+  // SCHEDULE &mdash; fixtures (edit through the season as needed)
   // ============================================================
-  let fixtures = [];
-  let roster = [];
-  let standings = [];
-  let teamLogos = {};
-  let siteMeta = {};
+  const fixtures = [
+    // League Cup
+    { d: '2026-05-11', t: '19:00', home: true,  opp: 'GTA United',       venue: 'Zanchin Automotive Soccer Centre Stadium', comp: 'Cup' },
+    // OSL Regular Season
+    { d: '2026-05-21', t: '21:15', home: true,  opp: 'Scarboro Azzurri', venue: 'North Maple Regional Park Turf #1', comp: 'OSL' },
+    { d: '2026-05-31', t: '19:00', home: false, opp: 'Pana',             venue: "L'Amoreaux #1", comp: 'OSL' },
+    { d: '2026-06-04', t: '21:15', home: true,  opp: 'Norval',           venue: 'North Maple Regional Park Turf #1', comp: 'OSL' },
+    { d: '2026-06-12', t: '21:00', home: false, opp: 'Olimpia',          venue: 'Paramount Fine Foods Centre 1', comp: 'OSL' },
+    { d: '2026-06-18', t: '20:45', home: false, opp: 'St Kitts',         venue: 'Southward 1, Grassie', comp: 'OSL' },
+    { d: '2026-06-23', t: '21:10', home: false, opp: 'Peniche',          venue: 'Earlscourt Park', comp: 'OSL' },
+    { d: '2026-07-02', t: '21:15', home: true,  opp: 'GS United',        venue: 'North Maple Regional Park Turf #2', comp: 'OSL' },
+    { d: '2026-07-05', t: 'TBD',   home: true,  opp: 'Niagara',          venue: 'North Maple Regional Park Turf #1', comp: 'OntCup' },
+    { d: '2026-07-10', t: '20:30', home: false, opp: 'Celtic',           venue: 'Centennial College Turf', comp: 'OSL' },
+    { d: '2026-07-16', t: '21:15', home: true,  opp: 'Guelph',           venue: 'North Maple Regional Park Turf #1', comp: 'OSL' },
+    { d: '2026-07-30', t: '21:15', home: true,  opp: 'Pana',             venue: 'North Maple Regional Park Turf #1', comp: 'OSL' },
+    { d: '2026-08-07', t: '21:00', home: false, opp: 'Scarboro Azzurri', venue: "L'Amoreaux #1", comp: 'OSL' },
+    { d: '2026-08-18', t: '21:15', home: true,  opp: 'Peniche',          venue: 'North Maple Regional Park Turf #1', comp: 'OSL' },
+    { d: '2026-08-23', t: '21:00', home: false, opp: 'GS United',        venue: "L'Amoreaux #1", comp: 'OSL' },
+    { d: '2026-08-27', t: '21:15', home: true,  opp: 'Olimpia',          venue: 'North Maple Regional Park Turf #1', comp: 'OSL' },
+    { d: '2026-09-10', t: '21:15', home: true,  opp: 'Celtic',           venue: 'North Maple Regional Park Turf #1', comp: 'OSL' },
+    { d: '2026-09-17', t: '21:15', home: true,  opp: 'St Kitts',         venue: 'North Maple Regional Park Turf #1', comp: 'OSL' },
+    { d: '2026-09-20', t: '18:00', home: false, opp: 'Norval',           venue: 'Norval Centre 1', comp: 'OSL' },
+    { d: '2026-09-24', t: '21:00', home: false, opp: 'Guelph',           venue: 'Centennial Bowl Guelph', comp: 'OSL' },
+  ];
 
-  async function loadSiteData() {
-    const res = await fetch('data/site-data.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error(`Site data fetch failed: ${res.status}`);
-    const data = await res.json();
-    fixtures = data.fixtures || [];
-    roster = data.roster || [];
-    standings = data.standings || [];
-    teamLogos = data.teamLogos || {};
-    siteMeta = data.meta || {};
-    renderSourceStamps();
-  }
+  // ============================================================
+  // ROSTER &mdash; from OSL registration sheet (edit nicknames as desired)
+  // ============================================================
+  const roster = [
+    // OSL-registered (20)
+    { first: 'Julian',     last: 'Accettola',   nick: 'Acc',      dob: '2002-05-22', pos: 'ST', num: 9,  nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/Julian_Accettola_medium.jpg' },
+    { first: 'Sven',       last: 'Arapovic',    nick: 'Sven',     dob: '1991-01-23', pos: 'CB', num: 4,  nat: '🇭🇷', natName: 'Croatian', photo: 'assets/images/players/sven.jpg' },
+    { first: 'Matthew',    last: 'Arnone',      nick: 'Nonners',   dob: '1994-02-28', pos: 'DM', num: 6,  nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/arnone.jpeg' },
+    { first: 'Yigal',      last: 'Bruk',        nick: 'Yigal',    dob: '2002-02-04', pos: 'RW', num: 21, nat: '🇺🇦', natName: 'Ukrainian', photo: 'assets/images/players/yigal bruk.webp' },
+    { first: 'Dylan',      last: 'Carreiro',    nick: 'Dylan',    dob: '1995-01-20', pos: 'CM', num: 8,  nat: '🇵🇹', natName: 'Portuguese', photo: 'assets/images/players/dylan carreiro.jpg' },
+    { first: 'Daniel',     last: 'Cramarossa',  nick: 'Cram',     dob: '1995-08-03', pos: 'LB', num: 2,  nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/daniel cram.webp' },
+    { first: 'Milo',       last: 'Djuricic',    nick: 'Milo',     dob: '2000-07-28', pos: 'CB',  num: 5,  nat: '🇷🇸', natName: 'Serbian', photo: 'assets/images/players/milo.jpeg' },
+    { first: 'Chris',      last: 'Duenas',      nick: 'Noodles',  dob: null,         pos: 'CDM', num: 24, nat: '🇪🇨', natName: 'Ecuadorian', photo: 'assets/images/players/chris duenas.jpeg' },
+    { first: 'Gianfranco', last: 'Gileppo',     nick: 'G',        dob: '2000-05-03', pos: 'CM',  num: 19, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/gianfranco.webp' },
+    { first: 'Agostino',   last: 'Greco',       nick: 'Ago',      dob: '1999-11-11', pos: 'CM', num: 14, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/ago greco.jpeg' },
+    { first: 'Nikita',     last: 'Ivanov',      nick: 'Nick',     dob: '2000-06-15', pos: 'CB', num: 13, nat: '🇷🇺', natName: 'Russian', photo: 'assets/images/players/nikita ivanov.webp' },
+    { first: 'Mario',      last: 'Kovacevic',   nick: 'Mario',    dob: '1990-12-25', pos: 'ST', num: 10, nat: '🇧🇦', natName: 'Bosnian', photo: 'assets/images/players/mario kovacevic.webp', captain: true, role: 'Sporting Director' },
+    { first: 'Michael',    last: 'Petitti',     nick: 'Petiti',   dob: '2001-08-21', pos: 'LW', num: 11, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/michael petiti.webp' },
+    { first: 'Jarred',     last: 'Phillips',    nick: 'JP',       dob: '1995-05-14', pos: 'RB', num: 7,  nat: '🇯🇲', natName: 'Jamaican', photo: 'assets/images/players/jarred phillips.jpeg' },
+    { first: 'Kelvin',     last: 'Ramirez',     nick: 'Kelvinho', dob: '2004-01-01', pos: 'CB', num: 16, nat: '🇧🇷', natName: 'Brazilian', photo: 'assets/images/players/kelvin.webp' },
+    { first: 'Gabriel',    last: 'Poles',       nick: 'Poles',    dob: '2002-12-05', pos: 'LW', num: 17, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/gabriel poles soccer.webp' },
+    { first: 'Lucas',      last: 'Puntillo',    nick: 'Punti',    dob: '1997-09-15', pos: 'RW', num: 15, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/lucas puntillo.webp' },
+    { first: 'Alain',      last: 'Sargeant',    nick: 'Alain',    dob: '1995-11-27', pos: 'CB', num: 3,  nat: '🇯🇲', natName: 'Jamaican', photo: 'assets/images/players/alain.webp' },
+    { first: 'Robert',     last: 'Ursu',        nick: 'Rob',   dob: '2003-04-09', pos: 'GK', num: 1,  nat: '🇷🇴', natName: 'Romanian', photo: 'assets/images/players/robert ursu.webp', startingGK: true },
+    { first: 'Sotiri',     last: 'Varlokostas', nick: 'Soti',     dob: '1991-07-05', pos: 'GK', num: 12, nat: '🇬🇷', natName: 'Greek', photo: 'assets/images/players/sotiri.jpeg', backupGK: true },
+    { first: 'Jonathan',   last: 'Lao',         nick: 'Lao',      dob: null,         pos: 'CM', num: 20, nat: '🇨🇦', natName: 'Canadian', photo: 'assets/images/players/jonathan lao.webp' },
+    { first: 'Andron',     last: 'Kagramanyan', nick: 'Andron',   dob: null,         pos: 'CM', num: 22, nat: '🇦🇲', natName: 'Armenian', photo: 'assets/images/players/andron.jpeg' },
+    { first: 'Christian',  last: 'Curti',       nick: 'Curti',    dob: null,         pos: 'CB', num: 23, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/chris curti.webp' },
+    // Squad members (not on OSL registration sheet)
+    { first: 'Austin',     last: 'Ricci',       nick: 'Ricci',    dob: null,         pos: 'RW', num: 45, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/austin.webp', vc: true },
+    { first: 'Joseph',     last: 'Amato',       nick: 'AMATO',    dob: null,         pos: 'LB', num: 18, nat: '🇮🇹', natName: 'Italian', photo: 'assets/images/players/Joseph_Amato_medium.jpg', vc2: true },
+  ];
 
-  function shortSourceDate(value) {
-    if (!value) return 'TBD';
-    const d = new Date(`${value}T12:00:00`);
-    if (Number.isNaN(d.getTime())) return value;
-    return d.toLocaleDateString('en-CA', { month: 'short', day: 'numeric' });
-  }
+  // ============================================================
+  // LEAGUE &mdash; 10-team table (pre-season, all zeros)
+  // ============================================================
+  const standings = [
+    { team: 'Vaughan Azzurri',      us: true },
+    { team: 'Scarboro Azzurri Blues' },
+    { team: 'Panathinaikos' },
+    { team: 'Croatia Norval' },
+    { team: 'Olimpia' },
+    { team: 'Hrvat St. Catharines' },
+    { team: 'Peniche CC' },
+    { team: 'GS United' },
+    { team: 'Toronto Celtic' },
+    { team: 'Guelph Royals' },
+  ];
 
-  function renderSourceStamps() {
-    const sources = siteMeta.sources || {};
-    const standingsEl = document.getElementById('standingsSourceStamp');
-    if (standingsEl && sources.standings) {
-      standingsEl.innerHTML = `<span>Source: <a href="${sources.standings.url}" target="_blank" rel="noopener">${sources.standings.label}</a></span><span>Last checked: ${shortSourceDate(sources.standings.lastChecked)}</span><span>Team: VSC Elite</span>`;
-    }
-    const compEl = document.getElementById('competitionSourceStamp');
-    if (compEl) {
-      const cup = sources.leagueCup;
-      const ont = sources.ontarioCup;
-      compEl.innerHTML = `${cup ? `<span>League Cup: <a href="${cup.url}" target="_blank" rel="noopener">OSL</a></span><span>Last checked: ${shortSourceDate(cup.lastChecked)}</span>` : ''}${ont ? `<span>Ontario Cup: <a href="${ont.url}" target="_blank" rel="noopener">Ontario Soccer</a></span>` : ''}`;
-    }
-  }
+  const teamLogos = {"Vaughan Azzurri": "assets/images/embedded/embedded-8af3853f4db4.png", "Toronto Celtic": "assets/images/embedded/embedded-ce0ad6498e1a.jpg", "Scarboro Azzurri Blues": "assets/images/embedded/embedded-a58832074c85.png", "Peniche CC": "assets/images/embedded/embedded-124041fb3c27.png", "Panathinaikos": "assets/images/embedded/embedded-f2a6b3ad1462.png", "Olimpia": "assets/images/embedded/embedded-975ae713329b.jpg", "Croatia Norval": "assets/images/embedded/embedded-3176b4740f83.png", "Hrvat St. Catharines": "assets/images/embedded/embedded-a41df5caf92f.png", "Guelph Royals": "assets/images/embedded/embedded-5d7edc83e84f.png", "GS United": "assets/images/embedded/embedded-93d9ed3e5cd2.jpg", "GTA United": "assets/images/embedded/embedded-8a6f684491cc.png"};
 
   function canonicalTeamName(name) {
     const aliases = {
@@ -3000,16 +2983,6 @@
     }
   }
   renderWeather();
-
-  async function initSite() {
-    try {
-      await loadSiteData();
-    } catch (err) {
-      console.error(err);
-      const main = document.querySelector('main');
-      if (main) main.insertAdjacentHTML('afterbegin', '<div class="card" style="margin-bottom:16px;"><div class="card-body">Site data failed to load. Use a local server or check data/site-data.json.</div></div>');
-      return;
-    }
 
   // Find next fixture
   function fixtureDateTime(f) {
@@ -3193,36 +3166,6 @@
   });
 
   // Attendance hub — binary present/not-present tracking from data/attendance.json
-  // Inline fallback keeps the site populated if the JSON file is not deployed yet or local file fetch is blocked.
-  const ATTENDANCE_FALLBACK = {
-  "events": [
-    {
-      "date": "2026-04-27",
-      "type": "training",
-      "label": "Training",
-      "present": [
-        "Gianfranco Gileppo",
-        "Milo Djuricic",
-        "Austin Ricci",
-        "Nikita Ivanov",
-        "Chris Duenas",
-        "Sven Arapovic",
-        "Alain Sargeant",
-        "Agostino Greco",
-        "Jarred Phillips",
-        "Daniel Cramarossa",
-        "Julian Accettola",
-        "Lucas Puntillo",
-        "Mario Kovacevic",
-        "Michael Petitti",
-        "Gabriel Poles",
-        "Kelvin Ramirez",
-        "Jonathan Lao"
-      ]
-    }
-  ]
-};
-
   const playerAliases = new Map();
   roster.forEach(p => {
     const full = [p.first, p.last].filter(Boolean).join(' ');
@@ -3305,14 +3248,10 @@
       renderAttendance(await res.json());
     } catch (err) {
       console.warn(err);
-      renderAttendance(ATTENDANCE_FALLBACK);
+      renderAttendance({ events: [] });
     }
   }
   loadAttendance();
-
-
-  }
-  initSite();
 
   // ============================================================
   // Subscribe button device priority (for the calendar buttons)
