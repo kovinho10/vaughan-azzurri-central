@@ -1,21 +1,21 @@
 {
   "meta": {
-    "updated": "2026-04-28",
+    "updated": "2026-04-29",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-04-28"
+        "lastChecked": "2026-04-29"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-04-28"
+        "lastChecked": "2026-04-29"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
         "url": "https://www.ontariosoccer.net/ontario-cup-outdoor-schedule-and-draw-charts",
-        "lastChecked": "2026-04-28"
+        "lastChecked": "2026-04-29"
       }
     }
   },
@@ -33,7 +33,7 @@
       "t": "19:00",
       "home": true,
       "opp": "GTA United",
-      "venue": "Zanchin Automotive Soccer Centre Stadium",
+      "venue": "Zanchin Automotive Soccer Centre",
       "comp": "Cup"
     },
     {
@@ -93,10 +93,10 @@
       "comp": "OSL"
     },
     {
-      "d": "2026-07-05",
+      "d": "2026-06-21",
       "t": "TBD",
       "home": true,
-      "opp": "Niagara Club Italia Juventus",
+      "opp": "Panathinaikos Toronto",
       "venue": "TBD",
       "comp": "OntCup"
     },

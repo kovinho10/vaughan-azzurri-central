@@ -2176,81 +2176,6 @@
   }
   .fix-tag-home { background: rgba(59, 130, 246, 0.15); color: var(--azz-bright); }
   .fix-tag-away { background: rgba(138, 155, 189, 0.1); color: var(--muted); }
-  .fix-context-row {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-top: 5px;
-  }
-  .match-context-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    background: rgba(138, 155, 189, 0.09);
-    border: 1px solid rgba(138, 155, 189, 0.20);
-    border-radius: 3px;
-    padding: 2px 6px;
-    white-space: nowrap;
-  }
-  .match-context-pill.gold { color: var(--draw); background: rgba(234, 179, 8, 0.10); border-color: rgba(234, 179, 8, 0.26); }
-  .match-context-pill.blue { color: var(--azz-bright); background: rgba(59, 130, 246, 0.11); border-color: rgba(59, 130, 246, 0.26); }
-  .match-context-pill.teal { color: #5eead4; background: rgba(20, 184, 166, 0.10); border-color: rgba(20, 184, 166, 0.25); }
-
-  .opponent-scout {
-    margin-top: 12px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    padding: 10px;
-    border: 1px solid rgba(71, 86, 133, 0.62);
-    border-radius: 8px;
-    background: rgba(7,16,30,.38);
-  }
-  .scout-kicker {
-    grid-column: 1 / -1;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .scout-stat { min-width: 0; }
-  .scout-lab {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--dim);
-    margin-bottom: 2px;
-  }
-  .scout-val {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .scout-note {
-    grid-column: 1 / -1;
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.4;
-    border-top: 1px solid rgba(71, 86, 133, 0.45);
-    padding-top: 8px;
-  }
-  @media (max-width: 620px) {
-    .opponent-scout { grid-template-columns: 1fr; }
-  }
 
   /* Show all fixtures toggle */
   .show-more-row {
@@ -2649,47 +2574,47 @@
     </div>
     <div class="topbar-ticker" aria-label="Azzurri news ticker">
     <div class="ticker" aria-hidden="true">
-      <span class="ticker-item"><b>Azzurri Wire</b> Olimpia friendly Sunday; legs already filing complaints.</span>
-      <span class="ticker-item">Weston Lions Field expects 12:00 kickoff, 11:59 chaos.</span>
-      <span class="ticker-item">Seventeen at training; attendance committee briefly stunned.</span>
-      <span class="ticker-item">Two pumped balls confirmed, standards dangerously rising.</span>
-      <span class="ticker-item">Alain welcomed Andron with traditional border control.</span>
-      <span class="ticker-item">Short passing remains elite; forward running remains optional.</span>
-      <span class="ticker-item">Mario demands tempo, group chat demands screenshots.</span>
-      <span class="ticker-item">Ricci listed fit until first recovery sprint.</span>
-      <span class="ticker-item">Kelvinho preparing Brazilian composure, Vaughan-level complaining.</span>
-      <span class="ticker-item">Cram sighted overlapping, hamstrings monitoring situation.</span>
-      <span class="ticker-item">G still wants one more pass before shooting.</span>
-      <span class="ticker-item">Noodles anchoring midfield, cones requesting hazard pay.</span>
-      <span class="ticker-item">Acc nearing striker duties, offside line placed on alert.</span>
-      <span class="ticker-item">Punti and Petitti ready to overcook both wings.</span>
-      <span class="ticker-item">Sven and Milo rehearsing calm, aging centre-back theatre.</span>
-      <span class="ticker-item">JP brings pace, knees bring legal representation.</span>
-      <span class="ticker-item">Rob starts keeper union talks before Cup opener.</span>
-      <span class="ticker-item">GTA United Cup tie May 11: admin panic pending.</span>
-      <span class="ticker-item">Scarboro Azzurri visit May 21, identity crisis guaranteed.</span>
-      <span class="ticker-item">North Maple late kickoffs remain hostile to employment.</span>
-      <span class="ticker-item">Olimpia friendly Sunday; legs already filing complaints.</span>
-      <span class="ticker-item">Weston Lions Field expects 12:00 kickoff, 11:59 chaos.</span>
-      <span class="ticker-item">Seventeen at training; attendance committee briefly stunned.</span>
-      <span class="ticker-item">Two pumped balls confirmed, standards dangerously rising.</span>
-      <span class="ticker-item">Alain welcomed Andron with traditional border control.</span>
-      <span class="ticker-item">Short passing remains elite; forward running remains optional.</span>
-      <span class="ticker-item">Mario demands tempo, group chat demands screenshots.</span>
-      <span class="ticker-item">Ricci listed fit until first recovery sprint.</span>
-      <span class="ticker-item">Kelvinho preparing Brazilian composure, Vaughan-level complaining.</span>
-      <span class="ticker-item">Cram sighted overlapping, hamstrings monitoring situation.</span>
-      <span class="ticker-item">G still wants one more pass before shooting.</span>
-      <span class="ticker-item">Noodles anchoring midfield, cones requesting hazard pay.</span>
-      <span class="ticker-item">Acc nearing striker duties, offside line placed on alert.</span>
-      <span class="ticker-item">Punti and Petitti ready to overcook both wings.</span>
-      <span class="ticker-item">Sven and Milo rehearsing calm, aging centre-back theatre.</span>
-      <span class="ticker-item">JP brings pace, knees bring legal representation.</span>
-      <span class="ticker-item">Rob starts keeper union talks before Cup opener.</span>
-      <span class="ticker-item">GTA United Cup tie May 11: admin panic pending.</span>
-      <span class="ticker-item">Scarboro Azzurri visit May 21, identity crisis guaranteed.</span>
-      <span class="ticker-item">North Maple late kickoffs remain hostile to employment.</span>
-    </div>
+      <span class="ticker-item"><b>Azzurri Wire</b> Fitness under review</span>
+      <span class="ticker-item">Vaughan complete 42 passes, advance three yards</span>
+      <span class="ticker-item">Alain-Andron incident ruled football</span>
+      <span class="ticker-item">Two match balls properly inflated</span>
+      <span class="ticker-item">Mario requests service to feet</span>
+      <span class="ticker-item">Barça comparisons resume before warmup</span>
+      <span class="ticker-item">GTA United prep begins at Zanchin</span>
+      <span class="ticker-item">Scarboro Azzurri name dispute continues</span>
+      <span class="ticker-item">Recovery runs remain optional in spirit</span>
+      <span class="ticker-item">Possession stats elite, distance covered sealed</span>
+      <span class="ticker-item">Noodles understands the system and regrets it</span>
+      <span class="ticker-item">JP overlap upgraded to probable</span>
+      <span class="ticker-item">Kelvinho calm because sprinting has not started</span>
+      <span class="ticker-item">Acc movement spotted beyond passing range</span>
+      <span class="ticker-item">Petiti asks for switch, receives square ball</span>
+      <span class="ticker-item">G and Ago midfield audit pending oxygen report</span>
+      <span class="ticker-item">Rob and Soti request fewer hospital passes</span>
+      <span class="ticker-item">Punti and Poles width declared controversial</span>
+      <span class="ticker-item">Seventeen at training, underdog narrative shaken</span>
+      <span class="ticker-item">Cones survive another group chat</span>
+      <span class="ticker-item"><b>Azzurri Wire</b> Fitness under review</span>
+      <span class="ticker-item">Vaughan complete 42 passes, advance three yards</span>
+      <span class="ticker-item">Alain-Andron incident ruled football</span>
+      <span class="ticker-item">Two match balls properly inflated</span>
+      <span class="ticker-item">Mario requests service to feet</span>
+      <span class="ticker-item">Barça comparisons resume before warmup</span>
+      <span class="ticker-item">GTA United prep begins at Zanchin</span>
+      <span class="ticker-item">Scarboro Azzurri name dispute continues</span>
+      <span class="ticker-item">Recovery runs remain optional in spirit</span>
+      <span class="ticker-item">Possession stats elite, distance covered sealed</span>
+      <span class="ticker-item">Noodles understands the system and regrets it</span>
+      <span class="ticker-item">JP overlap upgraded to probable</span>
+      <span class="ticker-item">Kelvinho calm because sprinting has not started</span>
+      <span class="ticker-item">Acc movement spotted beyond passing range</span>
+      <span class="ticker-item">Petiti asks for switch, receives square ball</span>
+      <span class="ticker-item">G and Ago midfield audit pending oxygen report</span>
+      <span class="ticker-item">Rob and Soti request fewer hospital passes</span>
+      <span class="ticker-item">Punti and Poles width declared controversial</span>
+      <span class="ticker-item">Seventeen at training, underdog narrative shaken</span>
+      <span class="ticker-item">Cones survive another group chat</span>
+      </div>
     </div>
     <div class="topbar-meta">
       <span class="meta-hide"><span class="live-dot"></span><b>Pre-season</b></span>
@@ -3010,7 +2935,6 @@
           </div>
         </div>
 
-        <div class="opponent-scout" id="opponentScout" aria-label="Opponent scouting snapshot"></div>
 
         <div class="sub-strip">
           <div class="sub-cal-label">Subscribe to <b>VAUGHAN AZZURRI SCHEDULE</b></div>
@@ -3501,70 +3425,6 @@
     return `<span class="team-lockup">${teamLogoHTML(name, size)}<span class="team-name">${canonical}</span></span>`;
   }
 
-  function standingIndex(name) {
-    const canonical = canonicalTeamName(name);
-    return standings.findIndex(s => canonicalTeamName(s.team) === canonical);
-  }
-
-  function standingRank(name) {
-    const idx = standingIndex(name);
-    return idx >= 0 ? idx + 1 : null;
-  }
-
-  function ordinal(n) {
-    if (!n) return 'TBD';
-    const v = n % 100;
-    const suffix = v >= 11 && v <= 13 ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' }[n % 10] || 'th');
-    return `${n}${suffix}`;
-  }
-
-  function teamRankLabel(name) {
-    const rank = standingRank(name);
-    return rank ? `${canonicalTeamName(name)} (${ordinal(rank)})` : canonicalTeamName(name);
-  }
-
-  function fixtureTeamsLine(f) {
-    if (f.comp !== 'OSL') return `${f.home ? 'vs' : '@'} ${teamNameHTML(f.opp, 'xs')}`;
-    const vaughan = `Vaughan (${ordinal(standingRank('Vaughan'))})`;
-    const opponent = `${canonicalTeamName(f.opp)} (${ordinal(standingRank(f.opp))})`;
-    return f.home ? `${vaughan} vs ${opponent}` : `${opponent} vs ${vaughan}`;
-  }
-
-  function compactForm(team) {
-    const row = standings.find(s => canonicalTeamName(s.team) === canonicalTeamName(team));
-    if (!row) return 'Pending';
-    const form = row.form || row.last5 || row.results;
-    if (Array.isArray(form) && form.length) return form.join('-').toUpperCase();
-    if (typeof form === 'string' && form.trim()) return form.trim().toUpperCase().replace(/\s+/g, '-');
-    return 'Pending';
-  }
-
-  function matchImportance(f) {
-    if (f.comp === 'Friendly') return { text: 'Cup prep', tone: 'teal' };
-    if (f.comp === 'Cup') return { text: 'Knockout money', tone: 'gold' };
-    if (f.comp === 'OntCup') return { text: 'Ontario Cup path', tone: 'gold' };
-    const us = standingRank('Vaughan');
-    const opp = standingRank(f.opp);
-    if (!us || !opp) return { text: 'League test', tone: 'blue' };
-    const gap = Math.abs(us - opp);
-    if (gap <= 2) return { text: 'Table neighbour', tone: 'gold' };
-    if (opp <= 3) return { text: 'Top-table test', tone: 'gold' };
-    if (us >= standings.length - 2 || opp >= standings.length - 2) return { text: 'Basement weather', tone: 'blue' };
-    return { text: 'League points', tone: 'blue' };
-  }
-
-  function scoutingNote(f) {
-    if (f.comp === 'Friendly') return 'Useful minutes, dangerous if anyone treats noon like preseason sleep therapy.';
-    if (f.comp === 'Cup') return 'Lower-division cup trap: control the ball, avoid the headline.';
-    if (f.comp === 'OntCup') return 'Cup draw says home game; legs say please define “home advantage”.';
-    const oppRank = standingRank(f.opp);
-    const usRank = standingRank('Vaughan');
-    if (!oppRank || !usRank) return 'Official standings pending; vibes department standing by.';
-    if (oppRank < usRank) return 'Above Vaughan for now, which means the scouting report will be read twice.';
-    if (oppRank === usRank) return 'Same table postcode. Small margins, loud group chat.';
-    return 'Below Vaughan on paper. Dangerous phrase, historically.';
-  }
-
 
   function compBadgeHTML(comp, size = 'mini') {
     const cls = size === 'mini' ? 'comp-mini' : 'comp-badge';
@@ -3704,7 +3564,7 @@
     document.getElementById('daysToFirstLabel').textContent = isMatchDay ? 'Match Status' : 'Days to Kickoff';
     document.getElementById('nmDays').textContent = isMatchDay ? 'MATCH DAY' : days;
     document.getElementById('nmCountdownLabel').textContent = isMatchDay ? 'Fixture is live today' : 'Days until kickoff';
-    document.getElementById('nmOpp').innerHTML = `${teamLogoHTML(next.opp, 'lg')}${next.comp === 'OSL' ? teamRankLabel(next.opp) : canonicalTeamName(next.opp)}`;
+    document.getElementById('nmOpp').innerHTML = `${teamLogoHTML(next.opp, 'lg')}${canonicalTeamName(next.opp)}`;
     const ph = document.getElementById('previewHomeLogo'); if (ph) ph.innerHTML = teamLogoHTML('Vaughan', 'md');
     const po = document.getElementById('previewOppLogo'); if (po) po.innerHTML = teamLogoHTML(next.opp, 'md');
     document.getElementById('nmDate').textContent = next.when.toLocaleDateString('en-CA', { weekday: 'long', month: 'short', day: 'numeric' });
@@ -3756,24 +3616,10 @@
         previewPlayer.innerHTML = 'The squad legs. Exhibition minutes arrive before anyone can claim they are still “building fitness.”';
         previewStakes.innerHTML = 'Pre-season rhythm, match legs, and whether the short-passing project survives a noon kickoff.';
       } else {
-        const leagueName = next.comp === 'OSL' ? teamRankLabel(next.opp) : canonicalTeamName(next.opp);
-        previewStoryline.innerHTML = `Vaughan continue the 2026 campaign against <b>${leagueName}</b>, with the possession project again requesting fresh legs.`;
+        previewStoryline.innerHTML = `Vaughan continue the 2026 campaign against <b>${canonicalTeamName(next.opp)}</b>, with the possession project again requesting fresh legs.`;
         previewPlayer.innerHTML = 'The midfield. If the ball keeps moving, the running can remain someone else’s problem.';
         previewStakes.innerHTML = 'Points, rhythm, and another public test of the club’s relationship with recovery runs.';
       }
-    }
-
-    const scout = document.getElementById('opponentScout');
-    if (scout) {
-      const importance = matchImportance(next);
-      const oppRank = next.comp === 'OSL' ? ordinal(standingRank(next.opp)) : (next.comp === 'Friendly' ? 'Exhibition' : 'Cup opponent');
-      scout.innerHTML = `
-        <div class="scout-kicker">Opponent Snapshot</div>
-        <div class="scout-stat"><div class="scout-lab">Standing</div><div class="scout-val">${escapeHTML(oppRank)}</div></div>
-        <div class="scout-stat"><div class="scout-lab">Form</div><div class="scout-val">${escapeHTML(compactForm(next.opp))}</div></div>
-        <div class="scout-stat"><div class="scout-lab">Tag</div><div class="scout-val">${escapeHTML(importance.text)}</div></div>
-        <div class="scout-note">${escapeHTML(scoutingNote(next))}</div>
-      `;
     }
 
     if (next.home) {
@@ -3797,7 +3643,6 @@
       div.className = 'fixture';
       const compLabel = f.comp === 'Cup' ? 'League Cup' : (f.comp === 'OntCup' ? 'Ontario Cup' : (f.comp === 'Nat' ? 'Nationals' : (f.comp === 'Friendly' ? 'Exhibition' : 'OSL League')));
       const compClass = f.comp === 'Cup' ? 'fix-comp-cup' : (f.comp === 'OntCup' ? 'fix-comp-ont' : (f.comp === 'Nat' ? 'fix-comp-nat' : (f.comp === 'Friendly' ? 'fix-comp-friendly' : 'fix-comp-osl')));
-      const importance = matchImportance(f);
       div.innerHTML = `
         <div class="fix-date">
           <div class="fix-day">${dayName(f.when)}</div>
@@ -3807,13 +3652,9 @@
         <div class="fix-info">
           <div class="fix-opp-row">
             <span class="fix-comp-pill ${compClass}">${compBadgeHTML(f.comp, 'mini')}${compLabel}</span>
-            <span class="fix-opp">${fixtureTeamsLine(f)}</span>
+            <span class="fix-opp">${f.home ? 'vs' : '@'} ${teamNameHTML(f.opp, 'xs')}</span>
           </div>
           <div class="fix-loc">${f.venue}</div>
-          <div class="fix-context-row">
-            <span class="match-context-pill ${importance.tone}">${importance.text}</span>
-            <span class="match-context-pill">Form: ${escapeHTML(compactForm(f.opp))}</span>
-          </div>
         </div>
         <div class="fix-time">
           <div class="fix-time-num">${f.t}</div>
