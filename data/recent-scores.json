@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "updated": "2026-04-28",
+    "windowDays": 7,
+    "maxResults": 20,
+    "sources": [
+      "https://ontariosl.com/game-results/",
+      "https://ontariosl.com/mens-cup/",
+      "https://www.ontariocup.ca/Games.aspx"
+    ],
+    "status": "awaiting_verified_scores"
+  },
+  "scores": []
+}
