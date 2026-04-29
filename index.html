@@ -305,7 +305,7 @@
   .score-centre-item {
     display: inline-flex;
     align-items: center;
-    gap: 9px;
+    gap: 10px;
     min-width: 0;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 14px;
@@ -315,15 +315,45 @@
     color: var(--paper);
   }
   .score-comp {
-    color: var(--draw);
+    color: #facc15;
     font-size: 10px;
     letter-spacing: .18em;
+    min-width: 42px;
   }
-  .score-teams { overflow: hidden; text-overflow: ellipsis; }
+  .score-match {
+    display: inline-grid;
+    grid-template-columns: minmax(72px, auto) auto minmax(72px, auto);
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  .score-team {
+    color: rgba(203, 213, 225, 0.74);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .score-team.home { text-align: right; }
+  .score-team.away { text-align: left; }
+  .score-result {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(248, 250, 252, 0.10);
+    border: 1px solid rgba(248, 250, 252, 0.16);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 950;
+    letter-spacing: .08em;
+    box-shadow: 0 0 22px -14px rgba(255,255,255,.9);
+  }
+  .score-teams { overflow: hidden; text-overflow: ellipsis; color: rgba(203, 213, 225, 0.82); }
   .score-status {
-    color: var(--muted);
-    font-size: 10px;
-    letter-spacing: .18em;
+    color: rgba(148, 163, 184, 0.72);
+    font-size: 9px;
+    letter-spacing: .20em;
   }
   .score-centre-meta {
     font-family: 'Barlow Condensed', sans-serif;
@@ -339,6 +369,8 @@
     .score-centre-inner { grid-template-columns: 1fr; gap: 8px; }
     .score-centre-meta { display: none; }
     .score-centre-item { font-size: 12px; }
+    .score-match { grid-template-columns: minmax(54px, auto) auto minmax(54px, auto); gap: 7px; }
+    .score-result { min-width: 44px; font-size: 14px; padding: 2px 7px; }
   }
 
   /* ───── Main ───── */
@@ -3283,6 +3315,17 @@
     return score.text || score.line || 'Verified score pending';
   }
 
+  function scoreHTML(score) {
+    const home = score.home || score.homeTeam || score.teamA || '';
+    const away = score.away || score.awayTeam || score.teamB || '';
+    const hs = score.homeScore ?? score.homeGoals ?? score.scoreHome;
+    const as = score.awayScore ?? score.awayGoals ?? score.scoreAway;
+    if (home && away && hs !== undefined && as !== undefined) {
+      return `<span class="score-match"><span class="score-team home">${escapeHTML(home)}</span><span class="score-result">${escapeHTML(hs)}–${escapeHTML(as)}</span><span class="score-team away">${escapeHTML(away)}</span></span>`;
+    }
+    return `<span class="score-teams">${escapeHTML(scoreLine(score))}</span>`;
+  }
+
   function renderScoreCentre() {
     const centre = document.getElementById('scoreCentre');
     const track = document.getElementById('scoreCentreTrack');
@@ -3297,9 +3340,9 @@
     centre.classList.remove('empty');
     const items = recentScores.slice(0, 20).map(score => {
       const comp = escapeHTML(score.comp || score.competition || 'Result');
-      const line = escapeHTML(scoreLine(score));
+      const line = scoreHTML(score);
       const status = escapeHTML(score.status || 'Final');
-      return `<div class="score-centre-item"><span class="score-comp">${comp}</span><span class="score-teams">${line}</span><span class="score-status">${status}</span></div>`;
+      return `<div class="score-centre-item"><span class="score-comp">${comp}</span>${line}<span class="score-status">${status}</span></div>`;
     });
     track.innerHTML = items.join('');
     if (meta) meta.textContent = `${recentScores.length} verified · ${recentScoresMeta.updated ? shortSourceDate(recentScoresMeta.updated) : 'Latest sync'}`;
@@ -3309,12 +3352,12 @@
         i = (i + 1) % recentScores.length;
         const score = recentScores[i];
         const comp = escapeHTML(score.comp || score.competition || 'Result');
-        const line = escapeHTML(scoreLine(score));
+        const line = scoreHTML(score);
         const status = escapeHTML(score.status || 'Final');
         track.style.opacity = '0';
         track.style.transform = 'translateY(4px)';
         setTimeout(() => {
-          track.innerHTML = `<div class="score-centre-item"><span class="score-comp">${comp}</span><span class="score-teams">${line}</span><span class="score-status">${status}</span></div>`;
+          track.innerHTML = `<div class="score-centre-item"><span class="score-comp">${comp}</span>${line}<span class="score-status">${status}</span></div>`;
           track.style.opacity = '1';
           track.style.transform = 'translateY(0)';
         }, 220);
