@@ -314,12 +314,12 @@
     {
       "first": "Mario",
       "last": "Kovacevic",
-      "nick": "Mario",
+      "nick": "Kovinho",
       "dob": "1990-12-25",
       "pos": "ST",
       "num": 10,
-      "nat": "🇧🇦",
-      "natName": "Bosnian",
+      "nat": "🇧🇷",
+      "natName": "Brazilian",
       "photo": "assets/images/players/mario kovacevic.webp",
       "captain": true,
       "role": "Sporting Director"
@@ -517,5 +517,212 @@
     "Guelph Royals": "assets/images/embedded/embedded-5d7edc83e84f.png",
     "GS United": "assets/images/embedded/embedded-93d9ed3e5cd2.jpg",
     "GTA United": "assets/images/embedded/embedded-8a6f684491cc.png"
+  },
+  "dashboard": {
+    "tickerItems": [
+      "Palace interested in Wolves' Joao Gomes",
+      "Cambridge sign goalkeeper Walton on emergency loan",
+      "Gateshead bring in Middlesbrough duo on loan",
+      "Rochdale sign Gordon and Baptiste on loan deals",
+      "Blackburn sign ex-Southampton winger Redmond",
+      "Tranmere re-sign Vaughan's Acc on short-term deal",
+      "Carlisle sign Bristol City forward Yeboah on loan",
+      "Kovinho to make Stuttgart move permanent",
+      "Griezmann to join MLS side Orlando from Atletico",
+      "Solihull sign Harriers striker Sho-Silva on loan",
+      "Sutton sign Vaughan defender Milo from Worthing",
+      "Rochdale sign Oldham winger Hannant",
+      "Tranmere re-sign forward Woolery",
+      "Truro City sign Exeter City duo on loan",
+      "Scunthorpe sign ex-Chester's Lao on two-year deal",
+      "Southend sign Preston midfielder Mawene on loan",
+      "Defender MacDonald joins Barrow until end of season",
+      "Aldershot sign Shrewsbury forward Stewart on loan",
+      "Vaughan winger Punti signs for Molde",
+      "Corinthians in talks with ex-Man Utd midfielder Lingard"
+    ],
+    "hero": {
+      "brandSub": "2026 Season · Men Provincial",
+      "status": "Pre-season",
+      "eyebrow": "Season Snapshot",
+      "titleHtml": "Vaughan <em>Azzurri</em>",
+      "subtitle": "20 matches · 4 competitions · Ontario Cup draw confirmed.",
+      "chips": [
+        "Pre-season",
+        "OSL 2026",
+        "Cup path set"
+      ],
+      "leaguePlayed": "0/18",
+      "record": "0–0–0",
+      "goals": "0:0"
+    },
+    "competitions": [
+      {
+        "key": "league",
+        "title": "OSL League",
+        "phase": "Live table",
+        "phaseClass": "",
+        "lineLabel": "Status",
+        "lineValue": "Pre-season table live",
+        "stageLabel": "Men Provincial Elite",
+        "stageValue": "0 / 18",
+        "stageNote": "Truth source: OSL standings",
+        "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
+        "alt": "OSL",
+        "cardClass": "comp-card--league"
+      },
+      {
+        "key": "leagueCup",
+        "title": "League Cup",
+        "phase": "R64",
+        "phaseClass": "gold",
+        "lineLabel": "Cup target",
+        "lineValue": "$10,000 winner prize",
+        "stageLabel": "Round of 64",
+        "stageValue": "GTA United",
+        "stageNote": "May 11 · 19:00 · Home",
+        "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
+        "alt": "OSL",
+        "cardClass": "comp-card--cup"
+      },
+      {
+        "key": "ontarioCup",
+        "title": "Ontario Cup",
+        "phase": "First Rnd",
+        "phaseClass": "gold",
+        "lineLabel": "Draw",
+        "lineValue": "Men’s bracket confirmed",
+        "stageLabel": "First Round",
+        "stageValue": "Panathinaikos Toronto",
+        "stageNote": "June 21 · Home · KO TBD",
+        "logo": "assets/images/embedded/embedded-8758c2d88ee6.png",
+        "alt": "Ontario Cup",
+        "cardClass": "comp-card--ont"
+      },
+      {
+        "key": "nationals",
+        "title": "Nationals",
+        "phase": "Pathway",
+        "phaseClass": "locked",
+        "lineLabel": "Status",
+        "lineValue": "Ontario Cup route",
+        "stageLabel": "Qualification",
+        "stageValue": "Win Ontario Cup",
+        "stageNote": "Path decided through cup run",
+        "logo": "assets/images/embedded/embedded-e25c22fa7cc0.png",
+        "alt": "Canada Soccer",
+        "cardClass": "comp-card--nat"
+      }
+    ],
+    "recentResultsEmpty": {
+      "title": "No matches played yet.",
+      "tip": "Results, scorers, and clean sheets will populate here as the season unfolds."
+    },
+    "staff": [
+      {
+        "name": "Hieu Quach",
+        "title": "Head Coach",
+        "avatar": "assets/images/embedded/embedded-cf10074b187a.jpg",
+        "initials": "HQ"
+      },
+      {
+        "name": "Lui Amato",
+        "title": "Director of Football Operations",
+        "initials": "LA"
+      },
+      {
+        "name": "Vincent Accettola",
+        "title": "Head of Recruitment & Performance",
+        "initials": "VA"
+      }
+    ],
+    "sponsors": [
+      {
+        "name": "SLC",
+        "logo": "assets/logos/slc logo.jpg",
+        "alt": "SLC logo"
+      },
+      {
+        "name": "The Mills TapHouse + Grill",
+        "logo": "assets/logos/mills taphouse.png",
+        "alt": "The Mills TapHouse + Grill logo"
+      }
+    ],
+    "teamAliases": {
+      "Scarboro Azzurri": "Scarboro Azzurri Blues",
+      "Pana": "Panathinaikos",
+      "Norval": "Croatia Norval",
+      "Olimpia": "Olimpia",
+      "Peniche": "Peniche CC",
+      "GS United": "GS United",
+      "GTA United": "GTA United",
+      "St Kitts": "Hrvat St. Catharines",
+      "Celtic": "Toronto Celtic",
+      "Guelph": "Guelph Royals",
+      "Vaughan": "Vaughan Azzurri",
+      "Vaughan Azzurri": "Vaughan Azzurri",
+      "Hrvat St. Catharines": "Hrvat St. Catharines",
+      "Croatia Norval": "Croatia Norval",
+      "Toronto Celtic": "Toronto Celtic",
+      "Peniche CC": "Peniche CC",
+      "Guelph Royals": "Guelph Royals",
+      "Scarboro Azzurri Blues": "Scarboro Azzurri Blues"
+    },
+    "matchdayModules": {
+      "briefing": {
+        "code": "BRD-01",
+        "label": "Boardroom Briefing",
+        "title": "Cup campaign begins",
+        "logo": "assets/images/embedded/embedded-34487ca7c248.png",
+        "alt": "League Cup logo",
+        "textHtml": "Ontario Cup draw complete: <b>Panathinaikos Toronto at home</b> on June 21, kickoff TBD. Board expectation: survive the first round without inventing excuses.",
+        "pills": [
+          "Objective: survive Round 1",
+          "Home draw"
+        ]
+      },
+      "security": {
+        "code": "SEC-99",
+        "label": "Manager Security",
+        "title": "Safe, but the cones are under review",
+        "photo": "assets/images/embedded/embedded-cf10074b187a.jpg",
+        "alt": "Hieu Quach",
+        "text": "Hieu Quach still has board backing, but one oversized possession drill caused mild unrest. Training staff have been reminded that width is not a personality.",
+        "stamp": "Board confidence mostly stable",
+        "metricLabel": "Job security",
+        "metricValue": "Mostly stable"
+      },
+      "atmosphere": {
+        "code": "ATM-04",
+        "label": "Club Atmosphere",
+        "title": "Training Ground Chaos",
+        "status": "Dressing room: cone debate",
+        "tiles": [
+          {
+            "num": "94%",
+            "label": "Supporter confidence",
+            "fill": "confidence"
+          },
+          {
+            "num": "High",
+            "small": true,
+            "label": "Group chat activity",
+            "fill": "chat"
+          },
+          {
+            "num": "Low",
+            "small": true,
+            "label": "Pressure level",
+            "fill": "pressure"
+          },
+          {
+            "num": "97%",
+            "label": "Preseason belief",
+            "fill": "delusion"
+          }
+        ],
+        "noteHtml": "<b>Current vibe:</b> possession drill stretched wider than the players&rsquo; patience. Morale remains intact, but several players have requested a formal review of field dimensions."
+      }
+    }
   }
 }

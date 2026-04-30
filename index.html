@@ -2518,55 +2518,16 @@
       <div class="brand-mark crest-badge crest-badge--sm"><img src="assets/images/embedded/embedded-b671de13e01f.png" alt="Vaughan SC" /></div>
       <div class="brand-text">
         <div class="brand-name">Vaughan Azzurri Central</div>
-        <div class="brand-sub">2026 Season · Men Provincial</div>
+        <div class="brand-sub" id="brandSub">2026 Season · Men Provincial</div>
       </div>
     </div>
     <div class="topbar-ticker" aria-label="Azzurri news ticker">
-    <div class="ticker" aria-hidden="true">
-      <span class="ticker-item"><b>Azzurri Wire</b> Olimpia friendly Sunday; legs already filing complaints.</span>
-      <span class="ticker-item">Weston Lions Field expects 12:00 kickoff, 11:59 chaos.</span>
-      <span class="ticker-item">Seventeen at training; attendance committee briefly stunned.</span>
-      <span class="ticker-item">Two pumped balls confirmed, standards dangerously rising.</span>
-      <span class="ticker-item">Alain welcomed Andron with traditional border control.</span>
-      <span class="ticker-item">Short passing remains elite; forward running remains optional.</span>
-      <span class="ticker-item">Mario demands tempo, group chat demands screenshots.</span>
-      <span class="ticker-item">Ricci listed fit until first recovery sprint.</span>
-      <span class="ticker-item">Kelvinho preparing Brazilian composure, Vaughan-level complaining.</span>
-      <span class="ticker-item">Cram sighted overlapping, hamstrings monitoring situation.</span>
-      <span class="ticker-item">G still wants one more pass before shooting.</span>
-      <span class="ticker-item">Noodles anchoring midfield, cones requesting hazard pay.</span>
-      <span class="ticker-item">Acc nearing striker duties, offside line placed on alert.</span>
-      <span class="ticker-item">Punti and Petitti ready to overcook both wings.</span>
-      <span class="ticker-item">Sven and Milo rehearsing calm, aging centre-back theatre.</span>
-      <span class="ticker-item">JP brings pace, knees bring legal representation.</span>
-      <span class="ticker-item">Rob starts keeper union talks before Cup opener.</span>
-      <span class="ticker-item">GTA United Cup tie May 11: admin panic pending.</span>
-      <span class="ticker-item">Scarboro Azzurri visit May 21, identity crisis guaranteed.</span>
-      <span class="ticker-item">North Maple late kickoffs remain hostile to employment.</span>
-      <span class="ticker-item">Olimpia friendly Sunday; legs already filing complaints.</span>
-      <span class="ticker-item">Weston Lions Field expects 12:00 kickoff, 11:59 chaos.</span>
-      <span class="ticker-item">Seventeen at training; attendance committee briefly stunned.</span>
-      <span class="ticker-item">Two pumped balls confirmed, standards dangerously rising.</span>
-      <span class="ticker-item">Alain welcomed Andron with traditional border control.</span>
-      <span class="ticker-item">Short passing remains elite; forward running remains optional.</span>
-      <span class="ticker-item">Mario demands tempo, group chat demands screenshots.</span>
-      <span class="ticker-item">Ricci listed fit until first recovery sprint.</span>
-      <span class="ticker-item">Kelvinho preparing Brazilian composure, Vaughan-level complaining.</span>
-      <span class="ticker-item">Cram sighted overlapping, hamstrings monitoring situation.</span>
-      <span class="ticker-item">G still wants one more pass before shooting.</span>
-      <span class="ticker-item">Noodles anchoring midfield, cones requesting hazard pay.</span>
-      <span class="ticker-item">Acc nearing striker duties, offside line placed on alert.</span>
-      <span class="ticker-item">Punti and Petitti ready to overcook both wings.</span>
-      <span class="ticker-item">Sven and Milo rehearsing calm, aging centre-back theatre.</span>
-      <span class="ticker-item">JP brings pace, knees bring legal representation.</span>
-      <span class="ticker-item">Rob starts keeper union talks before Cup opener.</span>
-      <span class="ticker-item">GTA United Cup tie May 11: admin panic pending.</span>
-      <span class="ticker-item">Scarboro Azzurri visit May 21, identity crisis guaranteed.</span>
-      <span class="ticker-item">North Maple late kickoffs remain hostile to employment.</span>
+    <div class="ticker" id="tickerTrack" aria-hidden="true">
+      <span class="ticker-item"><b>Azzurri Wire</b> Loading latest crawl...</span>
     </div>
     </div>
     <div class="topbar-meta">
-      <span class="meta-hide"><span class="live-dot"></span><b>Pre-season</b></span>
+      <span class="meta-hide"><span class="live-dot"></span><b id="seasonStatus">Pre-season</b></span>
       <span id="topWeather" class="weather-chip" aria-live="polite"><span class="weather-icon">⛅</span><span class="weather-label">Vaughan</span><span class="weather-temp">--°C</span></span>
       <span><b id="topDate">&mdash;</b></span>
     </div>
@@ -2590,7 +2551,7 @@
           </div>
         </div>
       </div>
-      <div class="score-centre-meta" id="scoreCentreMeta">Daily 7 AM sync</div>
+      <div class="score-centre-meta" id="scoreCentreMeta">Daily 4 AM sync</div>
     </div>
   </section>
 
@@ -2601,14 +2562,10 @@
         <div class="hero-title-flex">
           <div class="crest-badge crest-badge--lg"><img src="assets/images/embedded/embedded-b671de13e01f.png" alt="Vaughan SC" /></div>
           <div>
-            <div class="hero-eyebrow">Season Snapshot</div>
-            <div class="hero-title">Vaughan <em>Azzurri</em></div>
-            <div class="hero-sub">20 matches · 4 competitions · Ontario Cup draw confirmed.</div>
-            <div class="hero-chips">
-              <span class="hero-chip">Pre-season</span>
-              <span class="hero-chip">OSL 2026</span>
-              <span class="hero-chip">Cup path set</span>
-            </div>
+            <div class="hero-eyebrow" id="heroEyebrow">Season Snapshot</div>
+            <div class="hero-title" id="heroTitle">Vaughan <em>Azzurri</em></div>
+            <div class="hero-sub" id="heroSub">20 matches · 4 competitions · Ontario Cup draw confirmed.</div>
+            <div class="hero-chips" id="heroChips"></div>
           </div>
         </div>
       </div>
@@ -2617,15 +2574,15 @@
         <div class="stat-lab" id="daysToFirstLabel">Days to Kickoff</div>
       </div>
       <div class="stat">
-        <div class="stat-num muted">0<span class="frac">/18</span></div>
+        <div class="stat-num muted" id="leaguePlayedStat">0<span class="frac">/18</span></div>
         <div class="stat-lab">League Played</div>
       </div>
       <div class="stat">
-        <div class="stat-num muted">0–0–0</div>
+        <div class="stat-num muted" id="recordStat">0–0–0</div>
         <div class="stat-lab">W–D–L</div>
       </div>
       <div class="stat">
-        <div class="stat-num muted">0:0</div>
+        <div class="stat-num muted" id="goalsStat">0:0</div>
         <div class="stat-lab">GF:GA</div>
       </div>
       <div class="stat">
@@ -2651,79 +2608,7 @@
     <span>Last checked: Apr 30</span>
   </div>
 
-  <div class="comps">
-    <div class="comp-card comp-card-fm comp-card--league fade-up">
-      <div class="crest-badge crest-badge--md"><img src="assets/images/embedded/embedded-311a0a1407d6.png" alt="OSL" /></div>
-      <div class="comp-main">
-        <div class="comp-topline">
-          <div class="comp-title">OSL League</div>
-          <div class="comp-phase">Live table</div>
-        </div>
-        <div class="comp-line">Status: <b>Pre-season table live</b></div>
-        <div class="comp-stage">
-          <div>
-            <div class="comp-stage-lab">Men Provincial Elite</div>
-            <div class="comp-stage-val">0 / 18</div>
-          </div>
-          <div class="comp-stage-note">Truth source: OSL standings</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="comp-card comp-card-fm comp-card--cup fade-up">
-      <div class="crest-badge crest-badge--md"><img src="assets/images/embedded/embedded-311a0a1407d6.png" alt="OSL" /></div>
-      <div class="comp-main">
-        <div class="comp-topline">
-          <div class="comp-title">League Cup</div>
-          <div class="comp-phase gold">R64</div>
-        </div>
-        <div class="comp-line">Cup target: <b>$10,000 winner prize</b></div>
-        <div class="comp-stage">
-          <div>
-            <div class="comp-stage-lab">Round of 64</div>
-            <div class="comp-stage-val">GTA United</div>
-          </div>
-          <div class="comp-stage-note">May 11 · 19:00 · Home</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="comp-card comp-card-fm comp-card--ont fade-up">
-      <div class="crest-badge crest-badge--md"><img src="assets/images/embedded/embedded-8758c2d88ee6.png" alt="Ontario Cup" /></div>
-      <div class="comp-main">
-        <div class="comp-topline">
-          <div class="comp-title">Ontario Cup</div>
-          <div class="comp-phase gold">First Rnd</div>
-        </div>
-        <div class="comp-line">Draw: <b>Men’s bracket confirmed</b></div>
-        <div class="comp-stage">
-          <div>
-            <div class="comp-stage-lab">First Round</div>
-            <div class="comp-stage-val">Panathinaikos Toronto</div>
-          </div>
-          <div class="comp-stage-note">June 21 · Home · KO TBD</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="comp-card comp-card-fm comp-card--nat fade-up">
-      <div class="crest-badge crest-badge--md"><img src="assets/images/embedded/embedded-e25c22fa7cc0.png" alt="Canada Soccer" /></div>
-      <div class="comp-main">
-        <div class="comp-topline">
-          <div class="comp-title">Nationals</div>
-          <div class="comp-phase locked">Pathway</div>
-        </div>
-        <div class="comp-line">Status: <b>Ontario Cup route</b></div>
-        <div class="comp-stage">
-          <div>
-            <div class="comp-stage-lab">Qualification</div>
-            <div class="comp-stage-val">Win Ontario Cup</div>
-          </div>
-          <div class="comp-stage-note">Path decided through cup run</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="comps" id="competitionGrid"></div>
 
   <!-- ─────────── MATCHDAY HQ ─────────── -->
   <div class="section-h section-h--hq">
@@ -2759,69 +2644,7 @@
     </div>
   </div>
 
-  <div class="fm-briefing-grid fade-up">
-    <div class="fm-briefing-card">
-      <div class="module-code">BRD-01</div>
-      <div class="cup-briefing">
-        <span class="comp-badge comp-badge--cup"><img src="assets/images/embedded/embedded-34487ca7c248.png" alt="League Cup logo"></span>
-        <div>
-          <div class="fm-briefing-label">Boardroom Briefing</div>
-          <div class="fm-briefing-title">Cup campaign begins</div>
-          <div class="fm-briefing-text">Ontario Cup draw complete: <b>Panathinaikos Toronto at home</b> on June 21, kickoff TBD. Board expectation: survive the first round without inventing excuses.</div>
-          <div class="briefing-pills"><span>Objective: survive Round 1</span><span>Home draw</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="fm-briefing-card security-card">
-      <div class="module-code">SEC-99</div>
-      <div class="hieu-security">
-        <div class="manager-photo"><img src="assets/images/embedded/embedded-cf10074b187a.jpg" alt="Hieu Quach" loading="lazy"></div>
-        <div>
-          <div class="fm-briefing-label">Manager Security</div>
-          <div class="fm-briefing-title">Safe, but the cones are under review</div>
-          <div class="fm-briefing-text">Hieu Quach still has board backing, but one oversized possession drill caused mild unrest. Training staff have been reminded that width is not a personality.</div>
-          <div class="manager-stamp">Board confidence mostly stable</div>
-        </div>
-      </div>
-      <div class="security-meter">
-        <div class="security-row"><span>Job security</span><b>Mostly stable</b></div>
-        <div class="security-track"><div class="security-fill"></div></div>
-      </div>
-    </div>
-    <div class="fm-briefing-card atmosphere-card">
-      <div class="module-code">ATM-04</div>
-      <div class="atmosphere-top">
-        <div>
-          <div class="fm-briefing-label">Club Atmosphere</div>
-          <div class="fm-briefing-title">Training Ground Chaos</div>
-        </div>
-        <div class="atmosphere-status">Dressing room: cone debate</div>
-      </div>
-      <div class="atmosphere-grid">
-        <div class="atmo-tile">
-          <div class="atmo-num">94%</div>
-          <div class="atmo-lab">Supporter confidence</div>
-          <div class="atmo-track"><div class="atmo-fill confidence"></div></div>
-        </div>
-        <div class="atmo-tile">
-          <div class="atmo-num small">High</div>
-          <div class="atmo-lab">Group chat activity</div>
-          <div class="atmo-track"><div class="atmo-fill chat"></div></div>
-        </div>
-        <div class="atmo-tile">
-          <div class="atmo-num small">Low</div>
-          <div class="atmo-lab">Pressure level</div>
-          <div class="atmo-track"><div class="atmo-fill pressure"></div></div>
-        </div>
-        <div class="atmo-tile">
-          <div class="atmo-num">97%</div>
-          <div class="atmo-lab">Preseason belief</div>
-          <div class="atmo-track"><div class="atmo-fill delusion"></div></div>
-        </div>
-      </div>
-      <div class="atmo-note"><b>Current vibe:</b> possession drill stretched wider than the players&rsquo; patience. Morale remains intact, but several players have requested a formal review of field dimensions.</div>
-    </div>
-  </div>
+  <div class="fm-briefing-grid fade-up" id="matchdayModules"></div>
 
   <!-- ─────────── NEXT MATCH + SIDE STATS ─────────── -->
   <div class="grid-2">
@@ -2995,10 +2818,10 @@
     <div class="h-meta">Last 5 matches</div>
   </div>
 
-  <div class="card">
+  <div class="card" id="recentResultsCard">
     <div class="empty">
       <div class="empty-icon">∅</div>
-      No matches played yet &mdash; first kickoff is May 21 vs Scarboro Azzurri.
+      No matches played yet.
       <div class="empty-tip">Results, scorers, and clean sheets will populate here as the season unfolds.</div>
     </div>
   </div>
@@ -3052,17 +2875,17 @@
   <div class="section-h">
     <h2>Attendance Hub</h2>
     <div class="h-line"></div>
-    <div class="h-meta"><span id="attendanceEventCount">1</span> session logged</div>
+    <div class="h-meta"><span id="attendanceEventCount">0</span> sessions logged</div>
   </div>
 
   <div class="attendance-hub">
     <div class="attendance-summary">
       <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attTotalEvents">1</div>
+        <div class="attendance-stat-num" id="attTotalEvents">0</div>
         <div class="attendance-stat-lab">Total Events</div>
       </div>
       <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attTrainingEvents">1</div>
+        <div class="attendance-stat-num" id="attTrainingEvents">0</div>
         <div class="attendance-stat-lab">Training</div>
       </div>
       <div class="attendance-stat-card">
@@ -3070,7 +2893,7 @@
         <div class="attendance-stat-lab">Matches</div>
       </div>
       <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attLatestLabel">Apr 27</div>
+        <div class="attendance-stat-num" id="attLatestLabel">—</div>
         <div class="attendance-stat-lab">Latest</div>
       </div>
     </div>
@@ -3081,41 +2904,16 @@
           <div class="card-h-meta">Present / Logged</div>
         </div>
         <div class="card-body tight">
-          <div class="attendance-list" id="attendanceLeaders">
-            <div class="attendance-row"><div class="attendance-rank">1</div><div class="attendance-name">Gianfranco Gileppo<span>G · #19</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">2</div><div class="attendance-name">Milo Djuricic<span>Milo · #5</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">3</div><div class="attendance-name">Austin Ricci<span>Ricci · #45</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">4</div><div class="attendance-name">Nikita Ivanov<span>Nick · #13</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">5</div><div class="attendance-name">Chris Duenas<span>Noodles · #24</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">6</div><div class="attendance-name">Sven Arapovic<span>Sven · #4</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">7</div><div class="attendance-name">Alain Sargeant<span>Alain · #3</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">8</div><div class="attendance-name">Agostino Greco<span>Ago · #14</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">9</div><div class="attendance-name">Jarred Phillips<span>JP · #7</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">10</div><div class="attendance-name">Daniel Cramarossa<span>Cram · #2</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">11</div><div class="attendance-name">Julian Accettola<span>Acc · #9</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">12</div><div class="attendance-name">Lucas Puntillo<span>Punti · #15</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">13</div><div class="attendance-name">Mario Kovacevic<span>Mario · #10</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">14</div><div class="attendance-name">Michael Petitti<span>Petiti · #11</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">15</div><div class="attendance-name">Gabriel Poles<span>Poles · #17</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">16</div><div class="attendance-name">Kelvin Ramirez<span>Kelvinho · #16</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-            <div class="attendance-row"><div class="attendance-rank">17</div><div class="attendance-name">Jonathan Lao<span>Lao · #20</span></div><div class="attendance-count">1/1</div><div class="attendance-pct">100%</div></div>
-          </div>
+          <div class="attendance-list" id="attendanceLeaders"><div class="attendance-empty">Attendance loading...</div></div>
         </div>
       </div>
       <div class="card attendance-card">
         <div class="card-h">
           <div class="card-h-title">Latest Session</div>
-          <div class="card-h-meta" id="attendanceLatestMeta">TRAINING · 17/25</div>
+          <div class="card-h-meta" id="attendanceLatestMeta">Loading</div>
         </div>
         <div class="card-body tight">
-          <div id="attendanceLatest">
-            <div class="attendance-latest-box">
-              <div class="attendance-latest-title">Training</div>
-              <div class="attendance-latest-meta">Apr 27, 2026 · 17 present · 8 absent</div>
-              <div class="attendance-chip-row"><span class="attendance-chip">Gianfranco Gileppo</span><span class="attendance-chip">Milo Djuricic</span><span class="attendance-chip">Austin Ricci</span><span class="attendance-chip">Nikita Ivanov</span><span class="attendance-chip">Chris Duenas</span><span class="attendance-chip">Sven Arapovic</span><span class="attendance-chip">Alain Sargeant</span><span class="attendance-chip">Agostino Greco</span><span class="attendance-chip">Jarred Phillips</span><span class="attendance-chip">Daniel Cramarossa</span><span class="attendance-chip">Julian Accettola</span><span class="attendance-chip">Lucas Puntillo</span><span class="attendance-chip">Mario Kovacevic</span><span class="attendance-chip">Michael Petitti</span><span class="attendance-chip">Gabriel Poles</span><span class="attendance-chip">Kelvin Ramirez</span><span class="attendance-chip">Jonathan Lao</span></div>
-              <div class="attendance-recap"><ul><li>17 present.</li><li>Two properly pumped balls.</li><li>One completely empty facility after being told a field would be hard to find.</li><li>Andron dropped in from a higher level and was welcomed by Alain with a tackle that required no formal introduction.</li></ul></div>
-            </div>
-          </div>
+          <div id="attendanceLatest"><div class="attendance-empty">Attendance loading...</div></div>
         </div>
       </div>
     </div>
@@ -3128,29 +2926,7 @@
     <div class="h-meta">The Brain Trust</div>
   </div>
 
-  <div class="staff-grid">
-    <div class="staff-card">
-      <div class="staff-avatar staff-avatar-photo"><img src="assets/images/embedded/embedded-cf10074b187a.jpg" alt="Hieu Quach" loading="lazy"></div>
-      <div class="staff-text">
-        <div class="staff-name">Hieu Quach</div>
-        <div class="staff-title">Head Coach</div>
-      </div>
-    </div>
-    <div class="staff-card">
-      <div class="staff-avatar">LA</div>
-      <div class="staff-text">
-        <div class="staff-name">Lui Amato</div>
-        <div class="staff-title">Director of Football Operations</div>
-      </div>
-    </div>
-    <div class="staff-card">
-      <div class="staff-avatar">VA</div>
-      <div class="staff-text">
-        <div class="staff-name">Vincent Accettola</div>
-        <div class="staff-title">Head of Recruitment &amp; Performance</div>
-      </div>
-    </div>
-  </div>
+  <div class="staff-grid" id="staffGrid"></div>
 
   <!-- ─────────── SPONSORS ─────────── -->
   <div class="section-h">
@@ -3169,19 +2945,7 @@
         <div class="sponsor-tag">2026 Sponsors</div>
       </div>
 
-      <div class="sponsor-grid">
-        <article class="sponsor-card" aria-label="SLC">
-          <div class="sponsor-logo-frame">
-            <img src="assets/logos/slc logo.jpg" alt="SLC logo" loading="lazy">
-          </div>
-        </article>
-
-        <article class="sponsor-card" aria-label="The Mills TapHouse + Grill">
-          <div class="sponsor-logo-frame">
-            <img src="assets/logos/mills taphouse.png" alt="The Mills TapHouse + Grill logo" loading="lazy">
-          </div>
-        </article>
-      </div>
+      <div class="sponsor-grid" id="sponsorGrid"></div>
     </div>
   </section>
 
@@ -3207,6 +2971,7 @@
   let siteMeta = {};
   let recentScores = [];
   let recentScoresMeta = {};
+  let dashboard = {};
 
   async function loadSiteData() {
     const res = await fetch('data/site-data.json', { cache: 'no-store' });
@@ -3217,7 +2982,9 @@
     standings = data.standings || [];
     teamLogos = data.teamLogos || {};
     siteMeta = data.meta || {};
+    dashboard = data.dashboard || {};
     renderSourceStamps();
+    renderDashboard();
     await loadRecentScores();
   }
 
@@ -3267,7 +3034,7 @@
     if (!recentScores.length) {
       centre.classList.add('empty');
       track.innerHTML = '<div class="score-centre-item"><span class="score-comp">Scores</span><span class="score-teams">Awaiting verified league and cup results</span><span class="score-status">Official sources only</span></div>';
-      if (meta) meta.textContent = recentScoresMeta.updated ? `Checked ${shortSourceDate(recentScoresMeta.updated)}` : 'Daily 7 AM sync';
+      if (meta) meta.textContent = recentScoresMeta.updated ? `Checked ${shortSourceDate(recentScoresMeta.updated)}` : 'Daily 4 AM sync';
       return;
     }
     centre.classList.remove('empty');
@@ -3320,26 +3087,7 @@
   }
 
   function canonicalTeamName(name) {
-    const aliases = {
-      'Scarboro Azzurri': 'Scarboro Azzurri Blues',
-      'Pana': 'Panathinaikos',
-      'Norval': 'Croatia Norval',
-      'Olimpia': 'Olimpia',
-      'Peniche': 'Peniche CC',
-      'GS United': 'GS United',
-      'GTA United': 'GTA United',
-      'St Kitts': 'Hrvat St. Catharines',
-      'Celtic': 'Toronto Celtic',
-      'Guelph': 'Guelph Royals',
-      'Vaughan': 'Vaughan Azzurri',
-      'Vaughan Azzurri': 'Vaughan Azzurri',
-      'Hrvat St. Catharines': 'Hrvat St. Catharines',
-      'Croatia Norval': 'Croatia Norval',
-      'Toronto Celtic': 'Toronto Celtic',
-      'Peniche CC': 'Peniche CC',
-      'Guelph Royals': 'Guelph Royals',
-      'Scarboro Azzurri Blues': 'Scarboro Azzurri Blues'
-    };
+    const aliases = dashboard.teamAliases || {};
     return aliases[name] || name;
   }
 
@@ -3422,6 +3170,110 @@
     return 'Below Vaughan on paper. Dangerous phrase, historically.';
   }
 
+
+  function renderDashboard() {
+    const hero = dashboard.hero || {};
+    const setText = (id, value) => { const el = document.getElementById(id); if (el && value !== undefined) el.textContent = value; };
+    const setHTML = (id, value) => { const el = document.getElementById(id); if (el && value !== undefined) el.innerHTML = value; };
+
+    setText('brandSub', hero.brandSub);
+    setText('seasonStatus', hero.status);
+    setText('heroEyebrow', hero.eyebrow);
+    setHTML('heroTitle', hero.titleHtml);
+    setText('heroSub', hero.subtitle);
+    setHTML('leaguePlayedStat', hero.leaguePlayed ? hero.leaguePlayed.replace('/', '<span class="frac">/') + '</span>' : undefined);
+    setText('recordStat', hero.record);
+    setText('goalsStat', hero.goals);
+    const chips = document.getElementById('heroChips');
+    if (chips && Array.isArray(hero.chips)) chips.innerHTML = hero.chips.map(chip => `<span class="hero-chip">${escapeHTML(chip)}</span>`).join('');
+
+    const ticker = document.getElementById('tickerTrack');
+    if (ticker && Array.isArray(dashboard.tickerItems) && dashboard.tickerItems.length) {
+      const items = [...dashboard.tickerItems, ...dashboard.tickerItems];
+      ticker.innerHTML = items.map((item, idx) => `<span class="ticker-item">${idx === 0 ? '<b>Azzurri Wire</b> ' : ''}${escapeHTML(item)}</span>`).join('');
+    }
+
+    const comps = document.getElementById('competitionGrid');
+    if (comps && Array.isArray(dashboard.competitions)) {
+      comps.innerHTML = dashboard.competitions.map(comp => `
+        <div class="comp-card comp-card-fm ${escapeHTML(comp.cardClass || '')} fade-up">
+          <div class="crest-badge crest-badge--md"><img src="${escapeHTML(comp.logo || '')}" alt="${escapeHTML(comp.alt || comp.title || 'Competition')}" /></div>
+          <div class="comp-main">
+            <div class="comp-topline">
+              <div class="comp-title">${escapeHTML(comp.title)}</div>
+              <div class="comp-phase ${escapeHTML(comp.phaseClass || '')}">${escapeHTML(comp.phase)}</div>
+            </div>
+            <div class="comp-line">${escapeHTML(comp.lineLabel)}: <b>${escapeHTML(comp.lineValue)}</b></div>
+            <div class="comp-stage">
+              <div>
+                <div class="comp-stage-lab">${escapeHTML(comp.stageLabel)}</div>
+                <div class="comp-stage-val">${escapeHTML(comp.stageValue)}</div>
+              </div>
+              <div class="comp-stage-note">${escapeHTML(comp.stageNote)}</div>
+            </div>
+          </div>
+        </div>`).join('');
+    }
+
+    const recent = document.getElementById('recentResultsCard');
+    if (recent && dashboard.recentResultsEmpty) {
+      recent.innerHTML = `<div class="empty"><div class="empty-icon">∅</div>${escapeHTML(dashboard.recentResultsEmpty.title || 'No matches played yet.')}<div class="empty-tip">${escapeHTML(dashboard.recentResultsEmpty.tip || '')}</div></div>`;
+    }
+
+    const matchday = document.getElementById('matchdayModules');
+    if (matchday && dashboard.matchdayModules) {
+      const m = dashboard.matchdayModules;
+      const b = m.briefing || {};
+      const s = m.security || {};
+      const a = m.atmosphere || {};
+      const tiles = Array.isArray(a.tiles) ? a.tiles : [];
+      matchday.innerHTML = `
+        <div class="fm-briefing-card">
+          <div class="module-code">${escapeHTML(b.code || '')}</div>
+          <div class="cup-briefing">
+            <span class="comp-badge comp-badge--cup"><img src="${escapeHTML(b.logo || '')}" alt="${escapeHTML(b.alt || '')}"></span>
+            <div>
+              <div class="fm-briefing-label">${escapeHTML(b.label || '')}</div>
+              <div class="fm-briefing-title">${escapeHTML(b.title || '')}</div>
+              <div class="fm-briefing-text">${b.textHtml || ''}</div>
+              <div class="briefing-pills">${(Array.isArray(b.pills) ? b.pills : []).map(p => `<span>${escapeHTML(p)}</span>`).join('')}</div>
+            </div>
+          </div>
+        </div>
+        <div class="fm-briefing-card security-card">
+          <div class="module-code">${escapeHTML(s.code || '')}</div>
+          <div class="hieu-security">
+            <div class="manager-photo"><img src="${escapeHTML(s.photo || '')}" alt="${escapeHTML(s.alt || '')}" loading="lazy"></div>
+            <div>
+              <div class="fm-briefing-label">${escapeHTML(s.label || '')}</div>
+              <div class="fm-briefing-title">${escapeHTML(s.title || '')}</div>
+              <div class="fm-briefing-text">${escapeHTML(s.text || '')}</div>
+              <div class="manager-stamp">${escapeHTML(s.stamp || '')}</div>
+            </div>
+          </div>
+          <div class="security-meter"><div class="security-row"><span>${escapeHTML(s.metricLabel || '')}</span><b>${escapeHTML(s.metricValue || '')}</b></div><div class="security-track"><div class="security-fill"></div></div></div>
+        </div>
+        <div class="fm-briefing-card atmosphere-card">
+          <div class="module-code">${escapeHTML(a.code || '')}</div>
+          <div class="atmosphere-top"><div><div class="fm-briefing-label">${escapeHTML(a.label || '')}</div><div class="fm-briefing-title">${escapeHTML(a.title || '')}</div></div><div class="atmosphere-status">${escapeHTML(a.status || '')}</div></div>
+          <div class="atmosphere-grid">${tiles.map(t => `<div class="atmo-tile"><div class="atmo-num ${t.small ? 'small' : ''}">${escapeHTML(t.num || '')}</div><div class="atmo-lab">${escapeHTML(t.label || '')}</div><div class="atmo-track"><div class="atmo-fill ${escapeHTML(t.fill || '')}"></div></div></div>`).join('')}</div>
+          <div class="atmo-note">${a.noteHtml || ''}</div>
+        </div>`;
+    }
+
+    const staff = document.getElementById('staffGrid');
+    if (staff && Array.isArray(dashboard.staff)) {
+      staff.innerHTML = dashboard.staff.map(person => {
+        const avatar = person.avatar ? `<div class="staff-avatar staff-avatar-photo"><img src="${escapeHTML(person.avatar)}" alt="${escapeHTML(person.name)}" loading="lazy"></div>` : `<div class="staff-avatar">${escapeHTML(person.initials || '')}</div>`;
+        return `<div class="staff-card">${avatar}<div class="staff-text"><div class="staff-name">${escapeHTML(person.name)}</div><div class="staff-title">${escapeHTML(person.title)}</div></div></div>`;
+      }).join('');
+    }
+
+    const sponsors = document.getElementById('sponsorGrid');
+    if (sponsors && Array.isArray(dashboard.sponsors)) {
+      sponsors.innerHTML = dashboard.sponsors.map(sponsor => `<article class="sponsor-card" aria-label="${escapeHTML(sponsor.name)}"><div class="sponsor-logo-frame"><img src="${escapeHTML(sponsor.logo)}" alt="${escapeHTML(sponsor.alt || sponsor.name)}" loading="lazy"></div></article>`).join('');
+    }
+  }
 
   function compBadgeHTML(comp, size = 'mini') {
     const cls = size === 'mini' ? 'comp-mini' : 'comp-badge';
@@ -3783,41 +3635,6 @@
   });
 
   // Attendance hub — binary present/not-present tracking from data/attendance.json
-  // Inline fallback keeps the site populated if the JSON file is not deployed yet or local file fetch is blocked.
-  const ATTENDANCE_FALLBACK = {
-  "events": [
-    {
-      "date": "2026-04-27",
-      "type": "training",
-      "label": "Training",
-      "present": [
-        "Gianfranco Gileppo",
-        "Milo Djuricic",
-        "Austin Ricci",
-        "Nikita Ivanov",
-        "Chris Duenas",
-        "Sven Arapovic",
-        "Alain Sargeant",
-        "Agostino Greco",
-        "Jarred Phillips",
-        "Daniel Cramarossa",
-        "Julian Accettola",
-        "Lucas Puntillo",
-        "Mario Kovacevic",
-        "Michael Petitti",
-        "Gabriel Poles",
-        "Kelvin Ramirez",
-        "Jonathan Lao"
-      ],
-      "recap": [
-        "17 present.",
-        "Two properly pumped balls.",
-        "One completely empty facility after being told a field would be hard to find.",
-        "Andron dropped in from a higher level and was welcomed by Alain with a tackle that required no formal introduction."
-      ]
-    }
-  ]
-};
 
   const playerAliases = new Map();
   roster.forEach(p => {
@@ -3904,7 +3721,7 @@
       renderAttendance(await res.json());
     } catch (err) {
       console.warn(err);
-      renderAttendance(ATTENDANCE_FALLBACK);
+      renderAttendance({ events: [] });
     }
   }
   loadAttendance();
