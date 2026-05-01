@@ -2539,9 +2539,9 @@
 
 
   <!-- ─────────── AROUND THE LEAGUE SCORE CENTRE ─────────── -->
-  <section class="score-centre fade-up empty" id="scoreCentre" aria-label="Around the League recent scores">
+  <section class="score-centre fade-up empty" id="scoreCentre" aria-label="Around the League and World Football score centre">
     <div class="score-centre-inner">
-      <div class="score-centre-kicker">Around the League</div>
+      <div class="score-centre-kicker">World Football Desk</div>
       <div class="score-centre-main">
         <div class="score-centre-track" id="scoreCentreTrack">
           <div class="score-centre-item">
@@ -3033,7 +3033,7 @@
     if (!centre || !track) return;
     if (!recentScores.length) {
       centre.classList.add('empty');
-      track.innerHTML = '<div class="score-centre-item"><span class="score-comp">Scores</span><span class="score-teams">Awaiting verified league and cup results</span><span class="score-status">Official sources only</span></div>';
+      track.innerHTML = '<div class="score-centre-item"><span class="score-comp">Results</span><span class="score-teams">Awaiting verified local and world football results</span><span class="score-status">Final scores only</span></div>';
       if (meta) meta.textContent = recentScoresMeta.updated ? `Checked ${shortSourceDate(recentScoresMeta.updated)}` : 'Daily 4 AM sync';
       return;
     }
