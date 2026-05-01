@@ -22,10 +22,52 @@
       "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260501",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260501",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260501",
-      "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20260501"
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20260501",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260430"
     ],
-    "status": "no_verified_recent_results_found",
+    "status": "world_results_only",
     "worldSource": "ESPN soccer scoreboard APIs"
   },
-  "scores": []
+  "scores": [
+    {
+      "comp": "Europa League",
+      "source": "ESPN World Football",
+      "date": "2026-04-30",
+      "home": "Braga",
+      "away": "Freiburg",
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "Final"
+    },
+    {
+      "comp": "Europa League",
+      "source": "ESPN World Football",
+      "date": "2026-04-30",
+      "home": "Nottm Forest",
+      "away": "Aston Villa",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Final"
+    },
+    {
+      "comp": "Conference League",
+      "source": "ESPN World Football",
+      "date": "2026-04-30",
+      "home": "Rayo",
+      "away": "Strasbourg",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Final"
+    },
+    {
+      "comp": "Conference League",
+      "source": "ESPN World Football",
+      "date": "2026-04-30",
+      "home": "Shakhtar",
+      "away": "C Palace",
+      "homeScore": 1,
+      "awayScore": 3,
+      "status": "Final"
+    }
+  ]
 }

@@ -10,12 +10,14 @@ from __future__ import annotations
 import json
 import sys
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCORES_PATH = ROOT / "data" / "recent-scores.json"
-TODAY = datetime.now(timezone.utc).astimezone().strftime("%Y%m%d")
+# At 4 AM ET, ESPN "today" is usually still upcoming fixtures.
+# Use the previous local day so the desk only sees completed finals.
+TARGET_DATE = (datetime.now(timezone.utc).astimezone() - timedelta(days=1)).strftime("%Y%m%d")
 UPDATED = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d")
 MAX_RESULTS = 20
 
@@ -27,7 +29,7 @@ LEAGUES = [
     ("fra.1", "Ligue 1"),
     ("uefa.champions", "Champions League"),
     ("uefa.europa", "Europa League"),
-    ("usa.1", "MLS"),
+    ("uefa.europa.conf", "Conference League"),
 ]
 
 
@@ -84,7 +86,7 @@ def main() -> int:
     world_scores = []
     sources = []
     for slug, label in LEAGUES:
-        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={TODAY}"
+        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={TARGET_DATE}"
         sources.append(url)
         try:
             data = fetch_json(url)
