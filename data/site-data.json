@@ -93,11 +93,11 @@
       "comp": "OSL"
     },
     {
-      "d": "2026-06-21",
+      "d": "2026-07-05",
       "t": "TBD",
       "home": true,
-      "opp": "Panathinaikos Toronto",
-      "venue": "TBD",
+      "opp": "Niagara Italia",
+      "venue": "North Maple",
       "comp": "OntCup"
     },
     {
@@ -546,7 +546,7 @@
       "status": "Pre-season",
       "eyebrow": "Season Snapshot",
       "titleHtml": "Vaughan <em>Azzurri</em>",
-      "subtitle": "20 matches · 4 competitions · Ontario Cup draw confirmed.",
+      "subtitle": "20 matches · 4 competitions · Ontario Cup opener set.",
       "chips": [
         "Pre-season",
         "OSL 2026",
@@ -593,8 +593,8 @@
         "lineLabel": "Draw",
         "lineValue": "Men’s bracket confirmed",
         "stageLabel": "First Round",
-        "stageValue": "Panathinaikos Toronto",
-        "stageNote": "June 21 · Home · KO TBD",
+        "stageValue": "Niagara Italia",
+        "stageNote": "July 5 · North Maple · KO TBD",
         "logo": "assets/images/embedded/embedded-8758c2d88ee6.png",
         "alt": "Ontario Cup",
         "cardClass": "comp-card--ont"
@@ -675,10 +675,10 @@
         "title": "Cup campaign begins",
         "logo": "assets/images/embedded/embedded-34487ca7c248.png",
         "alt": "League Cup logo",
-        "textHtml": "Ontario Cup draw complete: <b>Panathinaikos Toronto at home</b> on June 21, kickoff TBD. Board expectation: survive the first round without inventing excuses.",
+        "textHtml": "Ontario Cup draw complete: <b>Niagara Italia at North Maple</b> on July 5, kickoff TBD. Board expectation: survive the first round without inventing excuses.",
         "pills": [
           "Objective: survive Round 1",
-          "Home draw"
+          "North Maple home draw"
         ]
       },
       "security": {
@@ -699,7 +699,7 @@
         "status": "Dressing room: cone debate",
         "tiles": [
           {
-            "num": "94%",
+            "num": "85%",
             "label": "Supporter confidence",
             "fill": "confidence"
           },

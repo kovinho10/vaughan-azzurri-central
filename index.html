@@ -1466,7 +1466,7 @@
   .atmo-lab { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .atmo-track { height: 6px; margin-top: 9px; background: rgba(4,10,20,.85); border: 1px solid rgba(71,86,133,.78); border-radius: 999px; overflow: hidden; }
   .atmo-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--azz), var(--draw)); box-shadow: 0 0 11px rgba(234,179,8,.26); }
-  .atmo-fill.confidence { width: 94%; }
+  .atmo-fill.confidence { width: 85%; }
   .atmo-fill.chat { width: 88%; }
   .atmo-fill.pressure { width: 38%; background: linear-gradient(90deg, var(--win), var(--draw)); }
   .atmo-fill.delusion { width: 97%; background: linear-gradient(90deg, var(--draw), var(--rosso)); }
@@ -2610,42 +2610,6 @@
 
   <div class="comps" id="competitionGrid"></div>
 
-  <!-- ─────────── MATCHDAY HQ ─────────── -->
-  <div class="section-h section-h--hq">
-    <h2>Matchday HQ</h2>
-    <div class="h-line"></div>
-    <div class="h-meta">Home turf · boardroom · atmosphere</div>
-  </div>
-
-  <div class="venues-row">
-    <div class="venue-card venue-card-photo">
-      <div class="venue-media"><img src="assets/images/embedded/embedded-4568ee3fb640.webp" alt="North Maple Regional Park soccer fields"></div>
-      <div class="venue-content">
-        <div class="venue-brand-row">
-          <div class="venue-tag">Home Ground</div>
-        </div>
-        <div class="venue-name"><a href="https://www.google.com/maps/search/?api=1&query=North+Maple+Regional+Park+11085+Keele+St+Maple+ON" target="_blank" rel="noopener">North Maple Regional Park</a></div>
-        <div class="venue-note">Main pitch · home base · where everyone finds out whether preseason running was real</div>
-        <div class="venue-pulse"><span></span> Primary matchday base</div>
-        <div class="venue-facts venue-facts--badges"><div class="venue-fact"><div class="venue-fact-icon">HB</div><div><div class="lab">Role</div><div class="val">Home</div></div></div><div class="venue-fact"><div class="venue-fact-icon">TF</div><div><div class="lab">Surface</div><div class="val">Turf</div></div></div><div class="venue-fact"><div class="venue-fact-icon">FIT</div><div><div class="lab">Mood</div><div class="val">Fitness Test</div></div></div></div>
-      </div>
-    </div>
-    <div class="venue-card venue-card-photo venue-card-bar">
-      <div class="venue-media"><img src="assets/images/embedded/embedded-e2d113da3011.jpg" alt="The Mills TapHouse + Grill bar interior"></div>
-      <div class="venue-content">
-        <div class="venue-brand-row">
-          <div class="venue-tag venue-tag-bar">Team Bar</div>
-        </div>
-        <div class="venue-name"><a href="https://www.google.com/maps/search/?api=1&query=The+Mills+TapHouse+Grill+9100+Jane+St+Vaughan+ON" target="_blank" rel="noopener">The Mills TapHouse + Grill</a></div>
-        <div class="venue-note">Post-match HQ · tactical autopsies · hydration decisions of variable quality</div>
-        <div class="venue-pulse venue-pulse--gold"><span></span> Result-dependent morale hub</div>
-        <div class="venue-facts venue-facts--badges"><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">HQ</div><div><div class="lab">Role</div><div class="val">HQ</div></div></div><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">8</div><div><div class="lab">Drive</div><div class="val">8 min</div></div></div><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">FT</div><div><div class="lab">Mood</div><div class="val">Full Time</div></div></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="fm-briefing-grid fade-up" id="matchdayModules"></div>
-
   <!-- ─────────── NEXT MATCH + SIDE STATS ─────────── -->
   <div class="grid-2">
     <!-- Next match (left) -->
@@ -2796,6 +2760,42 @@
 
     </div>
   </div>
+
+  <!-- ─────────── MATCHDAY HQ ─────────── -->
+  <div class="section-h section-h--hq">
+    <h2>Matchday HQ</h2>
+    <div class="h-line"></div>
+    <div class="h-meta">Home turf · boardroom · atmosphere</div>
+  </div>
+
+  <div class="venues-row">
+    <div class="venue-card venue-card-photo">
+      <div class="venue-media"><img src="assets/images/embedded/embedded-4568ee3fb640.webp" alt="North Maple Regional Park soccer fields"></div>
+      <div class="venue-content">
+        <div class="venue-brand-row">
+          <div class="venue-tag">Home Ground</div>
+        </div>
+        <div class="venue-name"><a href="https://www.google.com/maps/search/?api=1&query=North+Maple+Regional+Park+11085+Keele+St+Maple+ON" target="_blank" rel="noopener">North Maple Regional Park</a></div>
+        <div class="venue-note">Main pitch · home base · where everyone finds out whether preseason running was real</div>
+        <div class="venue-pulse"><span></span> Primary matchday base</div>
+        <div class="venue-facts venue-facts--badges"><div class="venue-fact"><div class="venue-fact-icon">HB</div><div><div class="lab">Role</div><div class="val">Home</div></div></div><div class="venue-fact"><div class="venue-fact-icon">TF</div><div><div class="lab">Surface</div><div class="val">Turf</div></div></div><div class="venue-fact"><div class="venue-fact-icon">FIT</div><div><div class="lab">Mood</div><div class="val">Fitness Test</div></div></div></div>
+      </div>
+    </div>
+    <div class="venue-card venue-card-photo venue-card-bar">
+      <div class="venue-media"><img src="assets/images/embedded/embedded-e2d113da3011.jpg" alt="The Mills TapHouse + Grill bar interior"></div>
+      <div class="venue-content">
+        <div class="venue-brand-row">
+          <div class="venue-tag venue-tag-bar">Team Bar</div>
+        </div>
+        <div class="venue-name"><a href="https://www.google.com/maps/search/?api=1&query=The+Mills+TapHouse+Grill+9100+Jane+St+Vaughan+ON" target="_blank" rel="noopener">The Mills TapHouse + Grill</a></div>
+        <div class="venue-note">Post-match HQ · tactical autopsies · hydration decisions of variable quality</div>
+        <div class="venue-pulse venue-pulse--gold"><span></span> Result-dependent morale hub</div>
+        <div class="venue-facts venue-facts--badges"><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">HQ</div><div><div class="lab">Role</div><div class="val">HQ</div></div></div><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">8</div><div><div class="lab">Drive</div><div class="val">8 min</div></div></div><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">FT</div><div><div class="lab">Mood</div><div class="val">Full Time</div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fm-briefing-grid fade-up" id="matchdayModules"></div>
 
   <!-- ─────────── FIXTURES ─────────── -->
   <div class="section-h">
