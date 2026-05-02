@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-05-01",
+    "updated": "2026-05-02",
     "windowDays": 10,
     "maxResults": 20,
     "sources": [
@@ -23,50 +23,41 @@
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260501",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260501",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20260501",
-      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260430"
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260430",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260501"
     ],
     "status": "world_results_only",
     "worldSource": "ESPN soccer scoreboard APIs"
   },
   "scores": [
     {
-      "comp": "Europa League",
+      "comp": "Premier League",
       "source": "ESPN World Football",
-      "date": "2026-04-30",
-      "home": "Braga",
-      "away": "Freiburg",
-      "homeScore": 2,
+      "date": "2026-05-01",
+      "home": "Leeds",
+      "away": "Burnley",
+      "homeScore": 3,
       "awayScore": 1,
       "status": "Final"
     },
     {
-      "comp": "Europa League",
+      "comp": "La Liga",
       "source": "ESPN World Football",
-      "date": "2026-04-30",
-      "home": "Nottm Forest",
-      "away": "Aston Villa",
-      "homeScore": 1,
-      "awayScore": 0,
+      "date": "2026-05-01",
+      "home": "Girona",
+      "away": "Mallorca",
+      "homeScore": 0,
+      "awayScore": 1,
       "status": "Final"
     },
     {
-      "comp": "Conference League",
+      "comp": "Serie A",
       "source": "ESPN World Football",
-      "date": "2026-04-30",
-      "home": "Rayo",
-      "away": "Strasbourg",
+      "date": "2026-05-01",
+      "home": "Pisa",
+      "away": "Lecce",
       "homeScore": 1,
-      "awayScore": 0,
-      "status": "Final"
-    },
-    {
-      "comp": "Conference League",
-      "source": "ESPN World Football",
-      "date": "2026-04-30",
-      "home": "Shakhtar",
-      "away": "C Palace",
-      "homeScore": 1,
-      "awayScore": 3,
+      "awayScore": 2,
       "status": "Final"
     }
   ]
