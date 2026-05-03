@@ -487,6 +487,40 @@
   }
   .card-body { padding: 16px 18px; }
   .card-body.tight { padding: 0; }
+  .recent-results-list {
+    display: grid;
+    gap: 10px;
+  }
+  .recent-result {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.02);
+    padding: 14px 16px;
+    display: grid;
+    gap: 8px;
+  }
+  .recent-result-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .recent-result-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .recent-result-score { color: var(--text); font-size: 18px; }
+  .recent-result-meta {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
+  }
 
   /* ───── Hero command centre ───── */
   .hero {
@@ -3227,8 +3261,20 @@
     }
 
     const recent = document.getElementById('recentResultsCard');
-    if (recent && dashboard.recentResultsEmpty) {
-      recent.innerHTML = `<div class="empty"><div class="empty-icon">∅</div>${escapeHTML(dashboard.recentResultsEmpty.title || 'No matches played yet.')}<div class="empty-tip">${escapeHTML(dashboard.recentResultsEmpty.tip || '')}</div></div>`;
+    if (recent) {
+      const recentResults = Array.isArray(dashboard.recentResults) ? dashboard.recentResults : [];
+      if (recentResults.length) {
+        recent.innerHTML = `<div class="card-body"><div class="recent-results-list">${recentResults.slice(0, 5).map(r => {
+          const home = r.home || 'Vaughan Azzurri';
+          const away = r.away || r.opp || '';
+          const hs = r.homeScore ?? r.scoreHome ?? '';
+          const as = r.awayScore ?? r.scoreAway ?? '';
+          const metaBits = [r.date, r.venue, r.motm ? `MOTM ${r.motm}` : ''].filter(Boolean).map(escapeHTML).join(' · ');
+          return `<div class="recent-result"><div class="recent-result-top"><span class="match-context-pill blue">${escapeHTML(r.comp || 'Result')}</span><span class="recent-result-meta">${escapeHTML(r.status || 'Final')}</span></div><div class="recent-result-line"><span>${escapeHTML(home)}</span><span class="recent-result-score">${escapeHTML(hs)}–${escapeHTML(as)}</span><span>${escapeHTML(away)}</span></div><div class="recent-result-meta">${metaBits}</div>${r.summary ? `<div class="recent-result-meta">${escapeHTML(r.summary)}</div>` : ''}</div>`;
+        }).join('')}</div></div>`;
+      } else if (dashboard.recentResultsEmpty) {
+        recent.innerHTML = `<div class="empty"><div class="empty-icon">∅</div>${escapeHTML(dashboard.recentResultsEmpty.title || 'No matches played yet.')}<div class="empty-tip">${escapeHTML(dashboard.recentResultsEmpty.tip || '')}</div></div>`;
+      }
     }
 
     const matchday = document.getElementById('matchdayModules');
