@@ -3093,7 +3093,14 @@
     };
     const items = recentScores.slice(0, 20);
     track.innerHTML = renderItem(items[0]);
-    if (meta) meta.textContent = `${recentScores.length} verified · ${recentScoresMeta.updated ? shortSourceDate(recentScoresMeta.updated) : 'Latest sync'}`;
+    if (meta) {
+      const local = items[0];
+      if (local && String(local.source || '').toLowerCase().includes('vaughan')) {
+        meta.textContent = `${scoreLine(local)} · ${local.motm ? `MOTM ${local.motm}` : 'Local result'}`;
+      } else {
+        meta.textContent = `${recentScores.length} verified · ${recentScoresMeta.updated ? shortSourceDate(recentScoresMeta.updated) : 'Latest sync'}`;
+      }
+    }
     let i = 0;
     if (recentScores.length > 1) {
       setInterval(() => {
