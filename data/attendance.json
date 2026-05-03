@@ -1,6 +1,30 @@
 {
   "events": [
     {
+      "date": "2026-04-28",
+      "type": "training",
+      "label": "Training Poll",
+      "present": [
+        "Mario Kovacevic",
+        "Matthew Arnone",
+        "Jonathan Lao",
+        "Dylan Carreiro",
+        "Nikita Ivanov",
+        "Robert Ursu",
+        "Agostino Greco",
+        "Daniel Cramarossa",
+        "Julian Accettola",
+        "Chris Duenas",
+        "Michael Petitti",
+        "Lucas Puntillo",
+        "Jarred Phillips"
+      ],
+      "recap": [
+        "13 present.",
+        "Carm Isacco and Vince Accetola ignored per instruction."
+      ]
+    },
+    {
       "date": "2026-04-27",
       "type": "training",
       "label": "Training",

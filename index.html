@@ -3019,7 +3019,6 @@
     dashboard = data.dashboard || {};
     renderSourceStamps();
     renderDashboard();
-    await loadAttendance();
     await loadRecentScores();
   }
 
@@ -3532,11 +3531,12 @@
     const previewPlayer = document.getElementById('previewPlayer');
     const previewStakes = document.getElementById('previewStakes');
     if (previewStoryline && previewPlayer && previewStakes) {
-      const previewMatch = featuredMatch || next;
-      if (featuredMatch && featuredMatch.comp === 'Friendly') {
-        previewStoryline.innerHTML = `Won ${featuredMatch.homeScore}–${featuredMatch.awayScore} vs <b>${canonicalTeamName(featuredMatch.away || '')}</b> at ${featuredMatch.venue}.`;
-        previewPlayer.innerHTML = `<b>${escapeHTML(featuredMatch.motm || 'MOTM')}</b> was the difference.`;
-        previewStakes.innerHTML = `Final on ${shortSourceDate(featuredMatch.date)}. The next fixture now rolls into the main area automatically.`;
+      const featured = getFeaturedMatch();
+      const previewMatch = featured || next;
+      if (featured && featured.comp === 'Friendly') {
+        previewStoryline.innerHTML = `Won ${featured.homeScore}–${featured.awayScore} vs <b>${canonicalTeamName(featured.away || '')}</b> at ${featured.venue}.`;
+        previewPlayer.innerHTML = `<b>${escapeHTML(featured.motm || 'MOTM')}</b> was the difference.`;
+        previewStakes.innerHTML = `Final on ${shortSourceDate(featured.date)}. The next fixture now rolls into the main area automatically.`;
       } else if (previewMatch.comp === 'Cup' && previewMatch.opp === 'GTA United') {
         previewStoryline.innerHTML = 'The cup campaign opens with <b>$10,000</b> on the line. Vaughan enter from the highest division against lower-division GTA United, looking to erase last year’s first-round exit.';
         previewPlayer.innerHTML = '<b>Dylan Carreiro</b> has not played in a while, but the new signing has the quality to change the game if he gets rolling.';
