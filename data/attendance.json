@@ -1,9 +1,11 @@
 {
   "events": [
     {
-      "date": "2026-04-28",
-      "type": "training",
-      "label": "Training Poll",
+      "date": "2026-05-03",
+      "type": "match",
+      "label": "Exhibition vs Olimpia",
+      "opponent": "Olimpia",
+      "result": "W 6-4",
       "present": [
         "Mario Kovacevic",
         "Matthew Arnone",
@@ -21,7 +23,8 @@
       ],
       "recap": [
         "13 present.",
-        "Carm Isacco and Vince Accetola ignored per instruction."
+        "Exhibition win: Vaughan 6-4 Olimpia.",
+        "Man of the match: Dylan Carreiro."
       ]
     },
     {
