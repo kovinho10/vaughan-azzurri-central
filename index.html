@@ -3073,6 +3073,23 @@
     return `<span class="score-teams">${escapeHTML(scoreLine(score))}</span>`;
   }
 
+  function getFeaturedMatch() {
+    if (dashboard.featuredMatch) return dashboard.featuredMatch;
+    const local = recentScores.find(score => String(score.source || '').toLowerCase().includes('vaughan'));
+    return local || recentScores[0] || null;
+  }
+
+  function featuredMatchText(match) {
+    if (!match) return '';
+    const parts = [];
+    const line = scoreLine(match);
+    if (line) parts.push(line);
+    if (match.date) parts.push(shortSourceDate(match.date));
+    if (match.venue) parts.push(match.venue);
+    if (match.motm) parts.push(`MOTM ${match.motm}`);
+    return parts.join(' · ');
+  }
+
   function renderScoreCentre() {
     const centre = document.getElementById('scoreCentre');
     const track = document.getElementById('scoreCentreTrack');
@@ -3092,28 +3109,14 @@
       return `<div class="score-centre-item"><span class="score-comp">${comp}</span>${line}<span class="score-status">${status}</span></div>`;
     };
     const items = recentScores.slice(0, 20);
-    track.innerHTML = renderItem(items[0]);
+    const featured = getFeaturedMatch();
+    track.innerHTML = featured ? renderItem(featured) : renderItem(items[0]);
     if (meta) {
-      const local = items[0];
-      if (local && String(local.source || '').toLowerCase().includes('vaughan')) {
-        meta.textContent = `${scoreLine(local)} · ${local.motm ? `MOTM ${local.motm}` : 'Local result'}`;
+      if (featured) {
+        meta.textContent = featuredMatchText(featured);
       } else {
         meta.textContent = `${recentScores.length} verified · ${recentScoresMeta.updated ? shortSourceDate(recentScoresMeta.updated) : 'Latest sync'}`;
       }
-    }
-    let i = 0;
-    if (recentScores.length > 1) {
-      setInterval(() => {
-        i = (i + 1) % recentScores.length;
-        const score = recentScores[i];
-        track.style.opacity = '0';
-        track.style.transform = 'translateY(4px)';
-        setTimeout(() => {
-          track.innerHTML = renderItem(score);
-          track.style.opacity = '1';
-          track.style.transform = 'translateY(0)';
-        }, 220);
-      }, 5200);
     }
   }
 
@@ -3232,7 +3235,8 @@
     setText('seasonStatus', hero.status);
     setText('heroEyebrow', hero.eyebrow);
     setHTML('heroTitle', hero.titleHtml);
-    setText('heroSub', hero.subtitle);
+    const featuredMatch = getFeaturedMatch();
+    setText('heroSub', featuredMatch ? featuredMatchText(featuredMatch) : hero.subtitle);
     setHTML('leaguePlayedStat', hero.leaguePlayed ? hero.leaguePlayed.replace('/', '<span class="frac">/') + '</span>' : undefined);
     setText('recordStat', hero.record);
     setText('goalsStat', hero.goals);
@@ -3269,16 +3273,14 @@
 
     const recent = document.getElementById('recentResultsCard');
     if (recent) {
-      const recentResults = Array.isArray(dashboard.recentResults) ? dashboard.recentResults : [];
-      if (recentResults.length) {
-        recent.innerHTML = `<div class="card-body"><div class="recent-results-list">${recentResults.slice(0, 5).map(r => {
-          const home = r.home || 'Vaughan Azzurri';
-          const away = r.away || r.opp || '';
-          const hs = r.homeScore ?? r.scoreHome ?? '';
-          const as = r.awayScore ?? r.scoreAway ?? '';
-          const metaBits = [r.date, r.venue, r.motm ? `MOTM ${r.motm}` : ''].filter(Boolean).map(escapeHTML).join(' · ');
-          return `<div class="recent-result"><div class="recent-result-top"><span class="match-context-pill blue">${escapeHTML(r.comp || 'Result')}</span><span class="recent-result-meta">${escapeHTML(r.status || 'Final')}</span></div><div class="recent-result-line"><span>${escapeHTML(home)}</span><span class="recent-result-score">${escapeHTML(hs)}–${escapeHTML(as)}</span><span>${escapeHTML(away)}</span></div><div class="recent-result-meta">${metaBits}</div>${r.summary ? `<div class="recent-result-meta">${escapeHTML(r.summary)}</div>` : ''}</div>`;
-        }).join('')}</div></div>`;
+      const featured = getFeaturedMatch();
+      if (featured) {
+        const home = featured.home || 'Vaughan Azzurri';
+        const away = featured.away || featured.opp || '';
+        const hs = featured.homeScore ?? featured.scoreHome ?? '';
+        const as = featured.awayScore ?? featured.scoreAway ?? '';
+        const metaBits = [featured.date, featured.venue, featured.motm ? `MOTM ${featured.motm}` : ''].filter(Boolean).map(escapeHTML).join(' · ');
+        recent.innerHTML = `<div class="card-body"><div class="recent-results-list"><div class="recent-result"><div class="recent-result-top"><span class="match-context-pill blue">${escapeHTML(featured.comp || 'Result')}</span><span class="recent-result-meta">${escapeHTML(featured.status || 'Final')}</span></div><div class="recent-result-line"><span>${escapeHTML(home)}</span><span class="recent-result-score">${escapeHTML(hs)}–${escapeHTML(as)}</span><span>${escapeHTML(away)}</span></div><div class="recent-result-meta">${metaBits}</div>${featured.summary ? `<div class="recent-result-meta">${escapeHTML(featured.summary)}</div>` : ''}</div></div></div>`;
       } else if (dashboard.recentResultsEmpty) {
         recent.innerHTML = `<div class="empty"><div class="empty-icon">∅</div>${escapeHTML(dashboard.recentResultsEmpty.title || 'No matches played yet.')}<div class="empty-tip">${escapeHTML(dashboard.recentResultsEmpty.tip || '')}</div></div>`;
       }
@@ -3459,6 +3461,15 @@
     const kickoff = /^\d{2}:\d{2}$/.test(f.t) ? f.t : '12:00';
     return new Date(`${f.d}T${kickoff}:00-04:00`);
   }
+  function fixtureCutoffDateTime(f) {
+    return new Date(fixtureDateTime(f).getTime() + 2 * 60 * 60 * 1000);
+  }
+  function selectNextFixture(now, list) {
+    for (const f of list) {
+      if (now < fixtureCutoffDateTime(f)) return f;
+    }
+    return list[list.length - 1] || null;
+  }
 
   const todayParts = torontoDateParts(TODAY);
   const todayKey = dateKeyFromParts(todayParts);
@@ -3469,7 +3480,7 @@
     .filter(f => f.d >= todayKey)
     .sort((a, b) => a.when - b.when);
 
-  const next = upcoming[0];
+  const next = selectNextFixture(TODAY, upcoming);
   if (next) {
     const days = calendarDayDiff(todayParts, next.dateParts);
     const isMatchDay = days === 0;
@@ -3520,16 +3531,21 @@
     const previewPlayer = document.getElementById('previewPlayer');
     const previewStakes = document.getElementById('previewStakes');
     if (previewStoryline && previewPlayer && previewStakes) {
-      if (next.comp === 'Cup' && next.opp === 'GTA United') {
+      const previewMatch = featuredMatch || next;
+      if (featuredMatch && featuredMatch.comp === 'Friendly') {
+        previewStoryline.innerHTML = `Won ${featuredMatch.homeScore}–${featuredMatch.awayScore} vs <b>${canonicalTeamName(featuredMatch.away || '')}</b> at ${featuredMatch.venue}.`;
+        previewPlayer.innerHTML = `<b>${escapeHTML(featuredMatch.motm || 'MOTM')}</b> was the difference.`;
+        previewStakes.innerHTML = `Final on ${shortSourceDate(featuredMatch.date)}. The next fixture now rolls into the main area automatically.`;
+      } else if (previewMatch.comp === 'Cup' && previewMatch.opp === 'GTA United') {
         previewStoryline.innerHTML = 'The cup campaign opens with <b>$10,000</b> on the line. Vaughan enter from the highest division against lower-division GTA United, looking to erase last year’s first-round exit.';
         previewPlayer.innerHTML = '<b>Dylan Carreiro</b> has not played in a while, but the new signing has the quality to change the game if he gets rolling.';
         previewStakes.innerHTML = 'First game of the season for both teams. Winner moves on. Loser starts preparing a very convincing “we’re focused on league” statement.';
-      } else if (next.comp === 'Friendly') {
-        previewStoryline.innerHTML = `A Sunday noon exhibition against <b>${canonicalTeamName(next.opp)}</b> at ${next.venue}. Officially friendly, unofficially a fitness audit.`;
+      } else if (previewMatch.comp === 'Friendly') {
+        previewStoryline.innerHTML = `A Sunday noon exhibition against <b>${canonicalTeamName(previewMatch.opp)}</b> at ${previewMatch.venue}. Officially friendly, unofficially a fitness audit.`;
         previewPlayer.innerHTML = 'The squad legs. Exhibition minutes arrive before anyone can claim they are still “building fitness.”';
         previewStakes.innerHTML = 'Pre-season rhythm, match legs, and whether the short-passing project survives a noon kickoff.';
       } else {
-        const leagueName = next.comp === 'OSL' ? teamRankLabel(next.opp) : canonicalTeamName(next.opp);
+        const leagueName = previewMatch.comp === 'OSL' ? teamRankLabel(previewMatch.opp) : canonicalTeamName(previewMatch.opp);
         previewStoryline.innerHTML = `Vaughan continue the 2026 campaign against <b>${leagueName}</b>, with the possession project again requesting fresh legs.`;
         previewPlayer.innerHTML = 'The midfield. If the ball keeps moving, the running can remain someone else’s problem.';
         previewStakes.innerHTML = 'Points, rhythm, and another public test of the club’s relationship with recovery runs.';
@@ -3547,6 +3563,11 @@
         <div class="scout-stat"><div class="scout-lab">Tag</div><div class="scout-val">${escapeHTML(importance.text)}</div></div>
         <div class="scout-note">${escapeHTML(scoutingNote(next))}</div>
       `;
+    }
+
+    const refreshDelay = fixtureCutoffDateTime(next).getTime() - Date.now();
+    if (refreshDelay > 0) {
+      setTimeout(() => window.location.reload(), refreshDelay + 60000);
     }
 
     if (next.home) {

@@ -618,6 +618,18 @@
       "title": "No matches played yet.",
       "tip": "Results, scorers, and clean sheets will populate here as the season unfolds."
     },
+    "featuredMatch": {
+      "date": "2026-05-03",
+      "comp": "Friendly",
+      "home": "Vaughan Azzurri",
+      "away": "Olimpia",
+      "homeScore": 6,
+      "awayScore": 4,
+      "status": "Final",
+      "motm": "Dylan Carreiro",
+      "venue": "Weston Lions Field",
+      "summary": "Won 6-4 vs Olimpia. Dylan Carreiro MOTM."
+    },
     "recentResults": [
       {
         "date": "2026-05-03",
