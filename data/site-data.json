@@ -644,6 +644,64 @@
         "summary": "Won 6-4 vs Olimpia. Dylan Carreiro MOTM."
       }
     ],
+    "attendance": {
+      "events": [
+        {
+          "date": "2026-04-28",
+          "type": "training",
+          "label": "Training Poll",
+          "present": [
+            "Mario Kovacevic",
+            "Matthew Arnone",
+            "Jonathan Lao",
+            "Dylan Carreiro",
+            "Nikita Ivanov",
+            "Robert Ursu",
+            "Agostino Greco",
+            "Daniel Cramarossa",
+            "Julian Accettola",
+            "Chris Duenas",
+            "Michael Petitti",
+            "Lucas Puntillo",
+            "Jarred Phillips"
+          ],
+          "recap": [
+            "13 present.",
+            "Carm Isacco and Vince Accetola ignored per instruction."
+          ]
+        },
+        {
+          "date": "2026-04-27",
+          "type": "training",
+          "label": "Training",
+          "present": [
+            "Gianfranco Gileppo",
+            "Milo Djuricic",
+            "Austin Ricci",
+            "Nikita Ivanov",
+            "Chris Duenas",
+            "Sven Arapovic",
+            "Alain Sargeant",
+            "Agostino Greco",
+            "Jarred Phillips",
+            "Daniel Cramarossa",
+            "Julian Accettola",
+            "Lucas Puntillo",
+            "Mario Kovacevic",
+            "Michael Petitti",
+            "Gabriel Poles",
+            "Kelvin Ramirez",
+            "Jonathan Lao"
+          ],
+          "recap": [
+            "17 present.",
+            "Two properly pumped balls.",
+            "One completely empty facility after being told a field would be hard to find.",
+            "Andron dropped in from a higher level and was welcomed by Alain with a tackle that required no formal introduction."
+          ]
+        }
+      ]
+    },
     "staff": [
       {
         "name": "Hieu Quach",

@@ -3019,6 +3019,7 @@
     dashboard = data.dashboard || {};
     renderSourceStamps();
     renderDashboard();
+    await loadAttendance();
     await loadRecentScores();
   }
 
@@ -3800,6 +3801,10 @@
   }
 
   async function loadAttendance() {
+    if (dashboard && dashboard.attendance && Array.isArray(dashboard.attendance.events)) {
+      renderAttendance(dashboard.attendance);
+      return;
+    }
     try {
       const res = await fetch('data/attendance.json', { cache: 'no-store' });
       if (!res.ok) throw new Error(`Attendance fetch failed: ${res.status}`);
