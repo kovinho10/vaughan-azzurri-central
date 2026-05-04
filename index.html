@@ -3477,7 +3477,7 @@
   if (seasonTicketsEl) seasonTicketsEl.textContent = seasonTicketsSold(todayParts);
   const upcoming = fixtures
     .map(f => ({ ...f, when: fixtureDateTime(f), dateParts: fixtureDateParts(f) }))
-    .filter(f => f.d >= todayKey)
+    .filter(f => TODAY < fixtureCutoffDateTime(f))
     .sort((a, b) => a.when - b.when);
 
   const next = selectNextFixture(TODAY, upcoming);
