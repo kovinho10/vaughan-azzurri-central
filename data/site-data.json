@@ -764,31 +764,31 @@
       "briefing": {
         "code": "BRD-01",
         "label": "Boardroom Briefing",
-        "title": "Boardroom in Italy",
+        "title": "Italian Scouting Mission",
         "logo": "assets/images/embedded/embedded-34487ca7c248.png",
         "alt": "League Cup logo",
-        "textHtml": "A board member is currently in <b>Italy</b> with one of the youth teams, bravely monitoring development pathways while the club credit card experiences European minutes.",
+        "textHtml": "Club directors have filed the Italy youth-team trip under <b>strategic development</b>. Finance has filed it under “please attach receipts.” The board insists the espresso-to-player-development ratio remains within acceptable limits.",
         "pills": [
-          "International audit: espresso-based",
-          "Club money: in active circulation"
+          "Board trip: Italy",
+          "Expense category: development pathway"
         ]
       },
       "security": {
         "code": "SEC-99",
         "label": "Manager Security",
-        "title": "Untouchable after the 6-4",
+        "title": "Manager Status: Untouchable",
         "photo": "assets/images/embedded/embedded-cf10074b187a.jpg",
         "alt": "Hieu Quach",
-        "text": "Hieu Quach has maximum job stability. Six goals, group-chat approval, and just enough chaos to convince the board this was all part of the tactical periodization.",
+        "text": "Hieu Quach exits the 6-4 exhibition with maximum backing. The board saw goals, the players saw vibes, and the group chat saw enough evidence to extend the mandate indefinitely.",
         "stamp": "Job security maxed out",
-        "metricLabel": "Job security",
+        "metricLabel": "Board confidence",
         "metricValue": "Maximum"
       },
       "atmosphere": {
         "code": "ATM-04",
         "label": "Club Atmosphere",
-        "title": "Group Chat at Full Blast",
-        "status": "Dressing room: maximum activity",
+        "title": "Squad Morale Surge",
+        "status": "Dressing room: flying",
         "tiles": [
           {
             "num": "100%",
@@ -802,19 +802,19 @@
             "fill": "chat"
           },
           {
-            "num": "High",
+            "num": "MAX",
             "small": true,
-            "label": "Petiti 34-min sub panic",
-            "fill": "pressure"
+            "label": "Manager support",
+            "fill": "security"
           },
           {
-            "num": "Dylan",
+            "num": "HOT",
             "small": true,
-            "label": "MOTM futures market",
-            "fill": "delusion"
+            "label": "MOTM conversation",
+            "fill": "form"
           }
         ],
-        "noteHtml": "<b>Current vibe:</b> Nonners has been promoted to Head of Geeve Science, Dylan is being priced as the likely MOTM in most games, Cram donated thigh skin to a slide tackle, and Petiti needed a desperate 34-minute substitution intervention."
+        "noteHtml": "<b>Current vibe:</b> The club feels dangerous again. Nonners has been quietly elevated to Head of Geeve Science, Dylan is already becoming the default man-of-the-match betting market, Cram’s slide tackle came with a thigh-scrape injury report, and Petiti’s 34-minute emergency sub lives in the medical/comedy file — not as its own KPI."
       }
     }
   }
