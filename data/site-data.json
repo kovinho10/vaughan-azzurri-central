@@ -721,6 +721,11 @@
         "name": "Vincent Accettola",
         "title": "Head of Recruitment & Performance",
         "initials": "VA"
+      },
+      {
+        "name": "Matthew Arnone",
+        "title": "Head of Geeve Science",
+        "initials": "MA"
       }
     ],
     "sponsors": [
@@ -759,56 +764,57 @@
       "briefing": {
         "code": "BRD-01",
         "label": "Boardroom Briefing",
-        "title": "Cup campaign begins",
+        "title": "Boardroom in Italy",
         "logo": "assets/images/embedded/embedded-34487ca7c248.png",
         "alt": "League Cup logo",
-        "textHtml": "Ontario Cup draw complete: <b>Niagara Italia at North Maple</b> on July 5, kickoff TBD. Board expectation: survive the first round without inventing excuses.",
+        "textHtml": "A board member is currently in <b>Italy</b> with one of the youth teams, bravely monitoring development pathways while the club credit card experiences European minutes.",
         "pills": [
-          "Objective: survive Round 1",
-          "North Maple home draw"
+          "International audit: espresso-based",
+          "Club money: in active circulation"
         ]
       },
       "security": {
         "code": "SEC-99",
         "label": "Manager Security",
-        "title": "Safe, but the cones are under review",
+        "title": "Untouchable after the 6-4",
         "photo": "assets/images/embedded/embedded-cf10074b187a.jpg",
         "alt": "Hieu Quach",
-        "text": "Hieu Quach still has board backing, but one oversized possession drill caused mild unrest. Training staff have been reminded that width is not a personality.",
-        "stamp": "Board confidence mostly stable",
+        "text": "Hieu Quach has maximum job stability. Six goals, group-chat approval, and just enough chaos to convince the board this was all part of the tactical periodization.",
+        "stamp": "Job security maxed out",
         "metricLabel": "Job security",
-        "metricValue": "Mostly stable"
+        "metricValue": "Maximum"
       },
       "atmosphere": {
         "code": "ATM-04",
         "label": "Club Atmosphere",
-        "title": "Training Ground Chaos",
-        "status": "Dressing room: cone debate",
+        "title": "Group Chat at Full Blast",
+        "status": "Dressing room: maximum activity",
         "tiles": [
           {
-            "num": "85%",
+            "num": "100%",
             "label": "Supporter confidence",
             "fill": "confidence"
           },
           {
-            "num": "High",
+            "num": "MAX",
             "small": true,
             "label": "Group chat activity",
             "fill": "chat"
           },
           {
-            "num": "Low",
+            "num": "High",
             "small": true,
-            "label": "Pressure level",
+            "label": "Petiti 34-min sub panic",
             "fill": "pressure"
           },
           {
-            "num": "97%",
-            "label": "Preseason belief",
+            "num": "Dylan",
+            "small": true,
+            "label": "MOTM futures market",
             "fill": "delusion"
           }
         ],
-        "noteHtml": "<b>Current vibe:</b> possession drill stretched wider than the players&rsquo; patience. Morale remains intact, but several players have requested a formal review of field dimensions."
+        "noteHtml": "<b>Current vibe:</b> Nonners has been promoted to Head of Geeve Science, Dylan is being priced as the likely MOTM in most games, Cram donated thigh skin to a slide tackle, and Petiti needed a desperate 34-minute substitution intervention."
       }
     }
   }
