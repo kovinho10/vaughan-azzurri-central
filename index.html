@@ -3108,15 +3108,26 @@
       const status = escapeHTML(score.status || 'Final');
       return `<div class="score-centre-item"><span class="score-comp">${comp}</span>${line}<span class="score-status">${status}</span></div>`;
     };
-    const items = recentScores.slice(0, 20);
     const featured = getFeaturedMatch();
-    track.innerHTML = featured ? renderItem(featured) : renderItem(items[0]);
-    if (meta) {
-      if (featured) {
-        meta.textContent = featuredMatchText(featured);
-      } else {
-        meta.textContent = `${recentScores.length} verified · ${recentScoresMeta.updated ? shortSourceDate(recentScoresMeta.updated) : 'Latest sync'}`;
-      }
+    const worldItems = recentScores
+      .filter(score => !featured || scoreLine(score) !== scoreLine(featured))
+      .slice(0, 19);
+    const items = featured ? [featured, ...worldItems] : recentScores.slice(0, 20);
+    track.innerHTML = renderItem(items[0]);
+    if (meta) meta.textContent = `${items.length} mixed results · ${recentScoresMeta.updated ? shortSourceDate(recentScoresMeta.updated) : 'Latest sync'}`;
+    let i = 0;
+    if (items.length > 1) {
+      setInterval(() => {
+        i = (i + 1) % items.length;
+        const score = items[i];
+        track.style.opacity = '0';
+        track.style.transform = 'translateY(4px)';
+        setTimeout(() => {
+          track.innerHTML = renderItem(score);
+          track.style.opacity = '1';
+          track.style.transform = 'translateY(0)';
+        }, 220);
+      }, 5200);
     }
   }
 
