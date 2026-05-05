@@ -11,14 +11,18 @@ import json
 import sys
 import urllib.request
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCORES_PATH = ROOT / "data" / "recent-scores.json"
-# At 4 AM ET, ESPN "today" is usually still upcoming fixtures.
-# Use the previous local day so the desk only sees completed finals.
-TARGET_DATE = (datetime.now(timezone.utc).astimezone() - timedelta(days=1)).strftime("%Y%m%d")
-UPDATED = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d")
+TORONTO = ZoneInfo("America/Toronto")
+# At 4 AM Toronto time, ESPN "today" is usually still upcoming fixtures.
+# Query a small Toronto-local date range so late finals and previous-day results are not missed.
+LOCAL_NOW = datetime.now(TORONTO)
+WINDOW_DAYS = 3
+TARGET_DATES = [(LOCAL_NOW - timedelta(days=offset)).strftime("%Y%m%d") for offset in range(1, WINDOW_DAYS + 1)]
+UPDATED = LOCAL_NOW.strftime("%Y-%m-%d")
 MAX_RESULTS = 20
 
 LEAGUES = [
@@ -85,24 +89,31 @@ def main() -> int:
 
     world_scores = []
     sources = []
+    seen_world = set()
     for slug, label in LEAGUES:
-        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={TARGET_DATE}"
-        sources.append(url)
-        try:
-            data = fetch_json(url)
-        except Exception as exc:
-            print(f"warn: failed {slug}: {exc}", file=sys.stderr)
-            continue
-        for event in data.get("events") or []:
-            item = event_to_score(event, label)
-            if item:
+        for target_date in TARGET_DATES:
+            url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={target_date}"
+            sources.append(url)
+            try:
+                data = fetch_json(url)
+            except Exception as exc:
+                print(f"warn: failed {slug} {target_date}: {exc}", file=sys.stderr)
+                continue
+            for event in data.get("events") or []:
+                item = event_to_score(event, label)
+                if not item:
+                    continue
+                key = (item["comp"], item["date"], item["home"], item["away"])
+                if key in seen_world:
+                    continue
+                seen_world.add(key)
                 world_scores.append(item)
 
     combined = (local_scores + world_scores)[:MAX_RESULTS]
     meta = existing.get("meta") if isinstance(existing.get("meta"), dict) else {}
     meta.update({
         "updated": UPDATED,
-        "windowDays": 10,
+        "windowDays": WINDOW_DAYS,
         "maxResults": MAX_RESULTS,
         "status": "local_plus_world_results" if local_scores and world_scores else ("world_results_only" if world_scores else "no_verified_recent_results_found"),
         "worldSource": "ESPN soccer scoreboard APIs",

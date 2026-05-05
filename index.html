@@ -9,7 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&amp;family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -2693,6 +2693,11 @@
         </div>
 
         <div class="match-preview">
+          <div class="preview-header">
+            <span id="previewHomeLogo" aria-hidden="true"></span>
+            <div class="preview-header-title"><b>Match Preview</b></div>
+            <span id="previewOppLogo" aria-hidden="true"></span>
+          </div>
           <div class="preview-block">
             <div class="preview-label">Match Storyline</div>
             <div class="preview-text" id="previewStoryline">The cup campaign opens with <b>$10,000</b> on the line. Vaughan enter from the highest division against lower-division GTA United, looking to erase last year’s first-round exit.</div>
@@ -3042,6 +3047,15 @@
     return String(value ?? '').replace(/[&<>'"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[ch]));
   }
 
+  function safeURLPath(value) {
+    const raw = String(value ?? '').trim();
+    if (!raw) return '';
+    if (/^https?:\/\//i.test(raw)) return escapeHTML(raw);
+    if (/^(assets|data)\/[A-Za-z0-9._~\/-]+$/.test(raw)) return escapeHTML(raw);
+    if (/^[A-Za-z0-9._~\/-]+\.(?:png|jpe?g|webp|gif|svg|json|ics)$/i.test(raw)) return escapeHTML(raw);
+    return '';
+  }
+
   function scoreTeamName(name) {
     const aliases = {
       'Nottm Forest': 'Nottingham Forest',
@@ -3161,17 +3175,17 @@
 
   function teamLogoHTML(name, size = 'xs') {
     const canonical = canonicalTeamName(name);
-    const logo = teamLogos[canonical];
+    const logo = safeURLPath(teamLogos[canonical]);
     if (!logo) {
       const initials = canonical.split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
-      return `<span class="team-logo-plate team-logo-plate--${size}"><span class="team-logo-initials">${initials}</span></span>`;
+      return `<span class="team-logo-plate team-logo-plate--${escapeHTML(size)}"><span class="team-logo-initials">${escapeHTML(initials)}</span></span>`;
     }
-    return `<span class="team-logo-plate team-logo-plate--${size}"><img src="${logo}" alt="${canonical} logo" loading="lazy"></span>`;
+    return `<span class="team-logo-plate team-logo-plate--${escapeHTML(size)}"><img src="${logo}" alt="${escapeHTML(canonical)} logo" loading="lazy"></span>`;
   }
 
   function teamNameHTML(name, size = 'xs') {
     const canonical = canonicalTeamName(name);
-    return `<span class="team-lockup">${teamLogoHTML(name, size)}<span class="team-name">${canonical}</span></span>`;
+    return `<span class="team-lockup">${teamLogoHTML(name, size)}<span class="team-name">${escapeHTML(canonical)}</span></span>`;
   }
 
   function standingIndex(name) {
@@ -3364,8 +3378,8 @@
       'Friendly': { cls: 'friendly', src: '', alt: 'Exhibition match', fallback: 'EXH' }
     };
     const item = logos[comp] || logos.OSL;
-    if (item.src) return `<span class="${cls} comp-badge--${item.cls}"><img src="${item.src}" alt="${item.alt}" loading="lazy"></span>`;
-    return `<span class="${cls} comp-badge--${item.cls}">${item.fallback}</span>`;
+    if (item.src) return `<span class="${escapeHTML(cls)} comp-badge--${escapeHTML(item.cls)}"><img src="${safeURLPath(item.src)}" alt="${escapeHTML(item.alt)}" loading="lazy"></span>`;
+    return `<span class="${escapeHTML(cls)} comp-badge--${escapeHTML(item.cls)}">${escapeHTML(item.fallback)}</span>`;
   }
 
 
@@ -3547,7 +3561,7 @@
       const featured = getFeaturedMatch();
       const previewMatch = featured || next;
       if (featured && featured.comp === 'Friendly') {
-        previewStoryline.innerHTML = `Won ${featured.homeScore}–${featured.awayScore} vs <b>${canonicalTeamName(featured.away || '')}</b> at ${featured.venue}.`;
+        previewStoryline.innerHTML = `Won ${escapeHTML(featured.homeScore)}–${escapeHTML(featured.awayScore)} vs <b>${escapeHTML(canonicalTeamName(featured.away || ''))}</b> at ${escapeHTML(featured.venue)}.`;
         previewPlayer.innerHTML = `<b>${escapeHTML(featured.motm || 'MOTM')}</b> was the difference.`;
         previewStakes.innerHTML = `Final on ${shortSourceDate(featured.date)}. The next fixture now rolls into the main area automatically.`;
       } else if (previewMatch.comp === 'Cup' && previewMatch.opp === 'GTA United') {
@@ -3555,12 +3569,12 @@
         previewPlayer.innerHTML = '<b>Dylan Carreiro</b> has not played in a while, but the new signing has the quality to change the game if he gets rolling.';
         previewStakes.innerHTML = 'First game of the season for both teams. Winner moves on. Loser starts preparing a very convincing “we’re focused on league” statement.';
       } else if (previewMatch.comp === 'Friendly') {
-        previewStoryline.innerHTML = `A Sunday noon exhibition against <b>${canonicalTeamName(previewMatch.opp)}</b> at ${previewMatch.venue}. Officially friendly, unofficially a fitness audit.`;
+        previewStoryline.innerHTML = `A Sunday noon exhibition against <b>${escapeHTML(canonicalTeamName(previewMatch.opp))}</b> at ${escapeHTML(previewMatch.venue)}. Officially friendly, unofficially a fitness audit.`;
         previewPlayer.innerHTML = 'The squad legs. Exhibition minutes arrive before anyone can claim they are still “building fitness.”';
         previewStakes.innerHTML = 'Pre-season rhythm, match legs, and whether the short-passing project survives a noon kickoff.';
       } else {
         const leagueName = previewMatch.comp === 'OSL' ? teamRankLabel(previewMatch.opp) : canonicalTeamName(previewMatch.opp);
-        previewStoryline.innerHTML = `Vaughan continue the 2026 campaign against <b>${leagueName}</b>, with the possession project again requesting fresh legs.`;
+        previewStoryline.innerHTML = `Vaughan continue the 2026 campaign against <b>${escapeHTML(leagueName)}</b>, with the possession project again requesting fresh legs.`;
         previewPlayer.innerHTML = 'The midfield. If the ball keeps moving, the running can remain someone else’s problem.';
         previewStakes.innerHTML = 'Points, rhythm, and another public test of the club’s relationship with recovery runs.';
       }
@@ -3787,7 +3801,7 @@
       const leaders = [...players].sort((a, b) => (b.overall - a.overall) || (a.num - b.num)).slice(0, 10);
       leadersEl.innerHTML = leaders.map((p, idx) => {
         const pct = Math.round((p.overall / total) * 100);
-        return `<div class="attendance-row"><div class="attendance-rank">${idx + 1}</div><div class="attendance-name">${p.fullName}<span>${p.nick} · #${p.num}</span></div><div class="attendance-count">${p.overall}/${total}</div><div class="attendance-pct">${pct}%</div></div>`;
+        return `<div class="attendance-row"><div class="attendance-rank">${idx + 1}</div><div class="attendance-name">${escapeHTML(p.fullName)}<span>${escapeHTML(p.nick)} · #${escapeHTML(p.num)}</span></div><div class="attendance-count">${escapeHTML(p.overall)}/${escapeHTML(total)}</div><div class="attendance-pct">${escapeHTML(pct)}%</div></div>`;
       }).join('');
     }
 
@@ -3803,12 +3817,12 @@
     const missing = players.map(p => p.fullName).filter(name => !presentSet.has(name));
     latestMeta.textContent = `${String(latest.type || 'Session').toUpperCase()} · ${presentNames.length}/${players.length}`;
     const recap = Array.isArray(latest.recap) ? latest.recap.filter(Boolean) : [];
-    const recapHtml = recap.length ? `<div class="attendance-recap"><ul>${recap.map(item => `<li>${item}</li>`).join('')}</ul></div>` : '';
+    const recapHtml = recap.length ? `<div class="attendance-recap"><ul>${recap.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul></div>` : '';
     latestEl.innerHTML = `
       <div class="attendance-latest-box">
-        <div class="attendance-latest-title">${latest.label || latest.opponent || latest.location || 'Latest Session'}</div>
-        <div class="attendance-latest-meta">${fmtAttendanceDate(latest.date)} · ${presentNames.length} present · ${missing.length} absent</div>
-        <div class="attendance-chip-row">${presentNames.slice(0, 18).map(n => `<span class="attendance-chip">${n}</span>`).join('')}</div>
+        <div class="attendance-latest-title">${escapeHTML(latest.label || latest.opponent || latest.location || 'Latest Session')}</div>
+        <div class="attendance-latest-meta">${escapeHTML(fmtAttendanceDate(latest.date))} · ${escapeHTML(presentNames.length)} present · ${escapeHTML(missing.length)} absent</div>
+        <div class="attendance-chip-row">${presentNames.slice(0, 18).map(n => `<span class="attendance-chip">${escapeHTML(n)}</span>`).join('')}</div>
         ${recapHtml}
       </div>`;
   }
