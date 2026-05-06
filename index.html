@@ -183,196 +183,6 @@
     .topbar-meta .meta-hide { display: none; }
   }
 
-  /* ───── Topbar ticker ───── */
-  .topbar-ticker {
-    flex: 1 1 auto;
-    min-width: 160px;
-    max-width: 620px;
-    height: 34px;
-    margin: 0 4px;
-    border: 1px solid rgba(96, 165, 250, 0.22);
-    border-radius: 999px;
-    background:
-      linear-gradient(90deg, rgba(15, 23, 42, 0.96), rgba(12, 28, 54, 0.76), rgba(15, 23, 42, 0.96));
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 10px 30px -24px rgba(96, 165, 250, 0.9);
-    overflow: hidden;
-    position: relative;
-  }
-  .topbar-ticker::before, .topbar-ticker::after {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0;
-    width: 64px;
-    z-index: 2;
-    pointer-events: none;
-  }
-  .topbar-ticker::before { left: 0; background: linear-gradient(90deg, rgba(15,23,42,1), transparent); }
-  .topbar-ticker::after { right: 0; background: linear-gradient(-90deg, rgba(15,23,42,1), transparent); }
-  .topbar-ticker .ticker {
-    display: flex;
-    gap: 34px;
-    align-items: center;
-    height: 100%;
-    white-space: nowrap;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px;
-    line-height: 1;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(203, 213, 225, 0.78);
-    width: max-content;
-    animation: tickerScroll 95s linear infinite;
-    will-change: transform;
-  }
-  .topbar-ticker .ticker:hover { animation-play-state: paused; }
-  .topbar-ticker .ticker-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    flex-shrink: 0;
-    text-shadow: 0 0 16px rgba(96, 165, 250, 0.18);
-  }
-  .topbar-ticker .ticker-item::before {
-    content: '';
-    width: 4px; height: 4px;
-    border-radius: 50%;
-    background: #60a5fa;
-    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.12), 0 0 12px rgba(96, 165, 250, 0.75);
-    flex-shrink: 0;
-  }
-  .topbar-ticker .ticker-item b {
-    font-weight: 900;
-    color: #f8fafc;
-    letter-spacing: 0.22em;
-  }
-  @keyframes tickerScroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-  @media (max-width: 980px) {
-    .topbar-inner { flex-wrap: wrap; }
-    .topbar-ticker { order: 3; flex-basis: 100%; max-width: none; margin: 2px 0 0; }
-  }
-
-
-  /* ───── Around the League score centre ───── */
-  .score-centre {
-    margin: -8px 0 18px;
-    border: 1px solid rgba(96, 165, 250, 0.16);
-    border-radius: 16px;
-    background:
-      linear-gradient(135deg, rgba(7, 16, 30, 0.92), rgba(11, 28, 55, 0.62)),
-      radial-gradient(circle at 10% 0%, rgba(96, 165, 250, 0.12), transparent 38%);
-    box-shadow: 0 18px 42px -34px rgba(96, 165, 250, 0.8), inset 0 1px 0 rgba(255,255,255,0.04);
-    overflow: hidden;
-    position: relative;
-  }
-  .score-centre::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--azz-bright), var(--rosso));
-  }
-  .score-centre-inner {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 16px;
-    padding: 12px 15px 12px 18px;
-    position: relative;
-    z-index: 1;
-  }
-  .score-centre-kicker {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--azz-bright);
-    white-space: nowrap;
-  }
-  .score-centre-main { min-width: 0; overflow: hidden; }
-  .score-centre-track {
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    white-space: nowrap;
-    transition: opacity .22s ease, transform .22s ease;
-  }
-  .score-centre-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: .10em;
-    text-transform: uppercase;
-    color: var(--paper);
-  }
-  .score-comp {
-    color: #facc15;
-    font-size: 10px;
-    letter-spacing: .18em;
-    min-width: 42px;
-  }
-  .score-match {
-    display: inline-grid;
-    grid-template-columns: minmax(72px, auto) auto minmax(72px, auto);
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-  }
-  .score-team {
-    color: rgba(203, 213, 225, 0.74);
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .score-team.home { text-align: right; }
-  .score-team.away { text-align: left; }
-  .score-result {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 52px;
-    padding: 3px 9px;
-    border-radius: 999px;
-    background: rgba(248, 250, 252, 0.10);
-    border: 1px solid rgba(248, 250, 252, 0.16);
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 950;
-    letter-spacing: .08em;
-    box-shadow: 0 0 22px -14px rgba(255,255,255,.9);
-  }
-  .score-teams { overflow: hidden; text-overflow: ellipsis; color: rgba(203, 213, 225, 0.82); }
-  .score-status {
-    color: rgba(148, 163, 184, 0.72);
-    font-size: 9px;
-    letter-spacing: .20em;
-  }
-  .score-centre-meta {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--dim);
-    white-space: nowrap;
-  }
-  .score-centre.empty .score-centre-track { opacity: .72; }
-  @media (max-width: 780px) {
-    .score-centre-inner { grid-template-columns: 1fr; gap: 8px; }
-    .score-centre-meta { display: none; }
-    .score-centre-item { font-size: 12px; }
-    .score-match { grid-template-columns: minmax(54px, auto) auto minmax(54px, auto); gap: 7px; }
-    .score-result { min-width: 44px; font-size: 14px; padding: 2px 7px; }
-  }
-
   /* ───── Main ───── */
   main {
     max-width: 1400px;
@@ -2557,11 +2367,6 @@
         <div class="brand-sub" id="brandSub">2026 Season · Men Provincial</div>
       </div>
     </div>
-    <div class="topbar-ticker" aria-label="Azzurri news ticker">
-    <div class="ticker" id="tickerTrack" aria-hidden="true">
-      <span class="ticker-item"><b>Azzurri Wire</b> Loading latest crawl...</span>
-    </div>
-    </div>
     <div class="topbar-meta">
       <span class="meta-hide"><span class="live-dot"></span><b id="seasonStatus">Pre-season</b></span>
       <span id="topWeather" class="weather-chip" aria-live="polite"><span class="weather-icon">⛅</span><span class="weather-label">Vaughan</span><span class="weather-temp">--°C</span></span>
@@ -2573,23 +2378,6 @@
 
 <main>
 
-
-  <!-- ─────────── AROUND THE LEAGUE SCORE CENTRE ─────────── -->
-  <section class="score-centre fade-up empty" id="scoreCentre" aria-label="Around the League and World Football score centre">
-    <div class="score-centre-inner">
-      <div class="score-centre-kicker">World Football Desk</div>
-      <div class="score-centre-main">
-        <div class="score-centre-track" id="scoreCentreTrack">
-          <div class="score-centre-item">
-            <span class="score-comp">Scores</span>
-            <span class="score-teams">Awaiting verified league and cup results</span>
-            <span class="score-status">Official sources only</span>
-          </div>
-        </div>
-      </div>
-      <div class="score-centre-meta" id="scoreCentreMeta">Daily 4 AM sync</div>
-    </div>
-  </section>
 
   <!-- ─────────── HERO STATUS ─────────── -->
   <div class="hero fade-up">
@@ -3010,8 +2798,6 @@
   let standings = [];
   let teamLogos = {};
   let siteMeta = {};
-  let recentScores = [];
-  let recentScoresMeta = {};
   let dashboard = {};
 
   async function loadSiteData() {
@@ -3026,21 +2812,6 @@
     dashboard = data.dashboard || {};
     renderSourceStamps();
     renderDashboard();
-    await loadRecentScores();
-  }
-
-  async function loadRecentScores() {
-    try {
-      const res = await fetch('data/recent-scores.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error(`Recent scores fetch failed: ${res.status}`);
-      const data = await res.json();
-      recentScores = Array.isArray(data.scores) ? data.scores : [];
-      recentScoresMeta = data.meta || {};
-    } catch (err) {
-      recentScores = [];
-      recentScoresMeta = { status: 'unavailable' };
-    }
-    renderScoreCentre();
   }
 
   function escapeHTML(value) {
@@ -3078,21 +2849,8 @@
     return score.text || score.line || 'Verified score pending';
   }
 
-  function scoreHTML(score) {
-    const home = scoreTeamName(score.home || score.homeTeam || score.teamA || '');
-    const away = scoreTeamName(score.away || score.awayTeam || score.teamB || '');
-    const hs = score.homeScore ?? score.homeGoals ?? score.scoreHome;
-    const as = score.awayScore ?? score.awayGoals ?? score.scoreAway;
-    if (home && away && hs !== undefined && as !== undefined) {
-      return `<span class="score-match"><span class="score-team home">${escapeHTML(home)}</span><span class="score-result">${escapeHTML(hs)}–${escapeHTML(as)}</span><span class="score-team away">${escapeHTML(away)}</span></span>`;
-    }
-    return `<span class="score-teams">${escapeHTML(scoreLine(score))}</span>`;
-  }
-
   function getFeaturedMatch() {
-    if (dashboard.featuredMatch) return dashboard.featuredMatch;
-    const local = recentScores.find(score => String(score.source || '').toLowerCase().includes('vaughan'));
-    return local || recentScores[0] || null;
+    return dashboard.featuredMatch || null;
   }
 
   function featuredMatchText(match) {
@@ -3104,47 +2862,6 @@
     if (match.venue) parts.push(match.venue);
     if (match.motm) parts.push(`MOTM ${match.motm}`);
     return parts.join(' · ');
-  }
-
-  function renderScoreCentre() {
-    const centre = document.getElementById('scoreCentre');
-    const track = document.getElementById('scoreCentreTrack');
-    const meta = document.getElementById('scoreCentreMeta');
-    if (!centre || !track) return;
-    if (!recentScores.length) {
-      centre.classList.add('empty');
-      track.innerHTML = '<div class="score-centre-item"><span class="score-comp">Results</span><span class="score-teams">Awaiting verified local and world football results</span><span class="score-status">Final scores only</span></div>';
-      if (meta) meta.textContent = recentScoresMeta.updated ? `Checked ${shortSourceDate(recentScoresMeta.updated)}` : 'Daily 4 AM sync';
-      return;
-    }
-    centre.classList.remove('empty');
-    const renderItem = score => {
-      const comp = escapeHTML(score.comp || score.competition || 'Result');
-      const line = scoreHTML(score);
-      const status = escapeHTML(score.status || 'Final');
-      return `<div class="score-centre-item"><span class="score-comp">${comp}</span>${line}<span class="score-status">${status}</span></div>`;
-    };
-    const featured = getFeaturedMatch();
-    const worldItems = recentScores
-      .filter(score => !featured || scoreLine(score) !== scoreLine(featured))
-      .slice(0, 19);
-    const items = featured ? [featured, ...worldItems] : recentScores.slice(0, 20);
-    track.innerHTML = renderItem(items[0]);
-    if (meta) meta.textContent = `${items.length} mixed results · ${recentScoresMeta.updated ? shortSourceDate(recentScoresMeta.updated) : 'Latest sync'}`;
-    let i = 0;
-    if (items.length > 1) {
-      setInterval(() => {
-        i = (i + 1) % items.length;
-        const score = items[i];
-        track.style.opacity = '0';
-        track.style.transform = 'translateY(4px)';
-        setTimeout(() => {
-          track.innerHTML = renderItem(score);
-          track.style.opacity = '1';
-          track.style.transform = 'translateY(0)';
-        }, 220);
-      }, 5200);
-    }
   }
 
   function shortSourceDate(value) {
@@ -3270,11 +2987,6 @@
     const chips = document.getElementById('heroChips');
     if (chips && Array.isArray(hero.chips)) chips.innerHTML = hero.chips.map(chip => `<span class="hero-chip">${escapeHTML(chip)}</span>`).join('');
 
-    const ticker = document.getElementById('tickerTrack');
-    if (ticker && Array.isArray(dashboard.tickerItems) && dashboard.tickerItems.length) {
-      const items = [...dashboard.tickerItems, ...dashboard.tickerItems];
-      ticker.innerHTML = items.map((item, idx) => `<span class="ticker-item">${idx === 0 ? '<b>Azzurri Wire</b> ' : ''}${escapeHTML(item)}</span>`).join('');
-    }
 
     const comps = document.getElementById('competitionGrid');
     if (comps && Array.isArray(dashboard.competitions)) {
@@ -3661,14 +3373,14 @@
     tr.innerHTML = `
       <td class="num">${i + 1}</td>
       <td class="standings-team">${teamNameHTML(s.team, 'md')}</td>
-      <td class="c num">0</td>
-      <td class="c num">0</td>
-      <td class="c num">0</td>
-      <td class="c num">0</td>
-      <td class="c num">0</td>
-      <td class="c num">0</td>
-      <td class="c num">0</td>
-      <td class="r num"><b>0</b></td>
+      <td class="c num">${s.gp ?? 0}</td>
+      <td class="c num">${s.w ?? 0}</td>
+      <td class="c num">${s.t ?? 0}</td>
+      <td class="c num">${s.l ?? 0}</td>
+      <td class="c num">${s.gf ?? 0}</td>
+      <td class="c num">${s.ga ?? 0}</td>
+      <td class="c num">${s.gd ?? 0}</td>
+      <td class="r num"><b>${s.pts ?? 0}</b></td>
       <td>
         <span class="form">
           <span class="pip pip-empty"></span>

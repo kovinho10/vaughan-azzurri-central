@@ -49,7 +49,7 @@ def main() -> int:
     if duplicates:
         fail(f"duplicate ids: {', '.join(duplicates)}")
 
-    for target in ("previewHomeLogo", "previewOppLogo", "tickerTrack"):
+    for target in ("previewHomeLogo", "previewOppLogo"):
         if target not in parser.ids:
             fail(f"missing expected id: {target}")
 
