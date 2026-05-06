@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updated": "2026-05-04",
-    "windowDays": 10,
+    "updated": "2026-05-06",
+    "windowDays": 3,
     "maxResults": 20,
     "sources": [
       "https://ontariosl.com/game-results/",
@@ -40,7 +40,23 @@
       "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260503",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260503",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260503",
-      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260503"
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260503",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260504",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260504",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260504",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260504",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260504",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260504",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260504",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260504",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260505",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260505",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260505",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260505",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260505",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260505",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260505",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260505"
     ],
     "status": "local_plus_world_results",
     "worldSource": "ESPN soccer scoreboard APIs"
@@ -56,6 +72,26 @@
       "awayScore": 4,
       "status": "Final",
       "motm": "Dylan Carreiro"
+    },
+    {
+      "comp": "Premier League",
+      "source": "ESPN World Football",
+      "date": "2026-05-04",
+      "home": "Chelsea",
+      "away": "Nottm Forest",
+      "homeScore": 1,
+      "awayScore": 3,
+      "status": "Final"
+    },
+    {
+      "comp": "Premier League",
+      "source": "ESPN World Football",
+      "date": "2026-05-04",
+      "home": "Everton",
+      "away": "Man City",
+      "homeScore": 3,
+      "awayScore": 3,
+      "status": "Final"
     },
     {
       "comp": "Premier League",
@@ -85,6 +121,16 @@
       "away": "Spurs",
       "homeScore": 1,
       "awayScore": 2,
+      "status": "Final"
+    },
+    {
+      "comp": "La Liga",
+      "source": "ESPN World Football",
+      "date": "2026-05-04",
+      "home": "Sevilla",
+      "away": "Real Sociedad",
+      "homeScore": 1,
+      "awayScore": 0,
       "status": "Final"
     },
     {
@@ -125,6 +171,26 @@
       "away": "Real Madrid",
       "homeScore": 0,
       "awayScore": 2,
+      "status": "Final"
+    },
+    {
+      "comp": "Serie A",
+      "source": "ESPN World Football",
+      "date": "2026-05-04",
+      "home": "Cremonese",
+      "away": "Lazio",
+      "homeScore": 1,
+      "awayScore": 2,
+      "status": "Final"
+    },
+    {
+      "comp": "Serie A",
+      "source": "ESPN World Football",
+      "date": "2026-05-04",
+      "home": "AS Roma",
+      "away": "Fiorentina",
+      "homeScore": 4,
+      "awayScore": 0,
       "status": "Final"
     },
     {
@@ -195,56 +261,6 @@
       "away": "Wolfsburg",
       "homeScore": 1,
       "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "Ligue 1",
-      "source": "ESPN World Football",
-      "date": "2026-05-03",
-      "home": "Lille",
-      "away": "Le Havre AC",
-      "homeScore": 1,
-      "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "Ligue 1",
-      "source": "ESPN World Football",
-      "date": "2026-05-03",
-      "home": "Auxerre",
-      "away": "Angers",
-      "homeScore": 3,
-      "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "Ligue 1",
-      "source": "ESPN World Football",
-      "date": "2026-05-03",
-      "home": "Paris FC",
-      "away": "Brest",
-      "homeScore": 4,
-      "awayScore": 0,
-      "status": "Final"
-    },
-    {
-      "comp": "Ligue 1",
-      "source": "ESPN World Football",
-      "date": "2026-05-03",
-      "home": "Strasbourg",
-      "away": "Toulouse",
-      "homeScore": 1,
-      "awayScore": 2,
-      "status": "Final"
-    },
-    {
-      "comp": "Ligue 1",
-      "source": "ESPN World Football",
-      "date": "2026-05-03",
-      "home": "Lyon",
-      "away": "Rennes",
-      "homeScore": 4,
-      "awayScore": 2,
       "status": "Final"
     }
   ]

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "updated": "2026-05-04",
+    "updated": "2026-05-06",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-05-04"
+        "lastChecked": "2026-05-06"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
@@ -474,34 +474,114 @@
   ],
   "standings": [
     {
-      "team": "Croatia Norval"
+      "team": "Croatia Norval",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
     },
     {
-      "team": "GS United"
+      "team": "GS United",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
     },
     {
-      "team": "Guelph Royals"
+      "team": "Guelph Royals",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
     },
     {
-      "team": "Hrvat St. Catharines"
+      "team": "Hrvat St. Catharines",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
     },
     {
-      "team": "Olimpia"
+      "team": "Olimpia",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
     },
     {
-      "team": "Panathinaikos"
+      "team": "Panathinaikos",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
     },
     {
-      "team": "Peniche CC"
+      "team": "Peniche CC",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
     },
     {
-      "team": "Scarboro Azzurri Blues"
+      "team": "Scarboro Azzurri Blues",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
     },
     {
-      "team": "Toronto Celtic"
+      "team": "Toronto Celtic",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0
     },
     {
       "team": "Vaughan Azzurri",
+      "gp": 0,
+      "w": 0,
+      "t": 0,
+      "l": 0,
+      "gf": 0,
+      "ga": 0,
+      "gd": 0,
+      "pts": 0,
       "us": true
     }
   ],

@@ -92,7 +92,8 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    flex: 0 0 auto;
+    flex: 1 1 auto;
+    min-width: 0;
   }
   /* ───── Universal crest badge ───── */
   /* Every logo lives inside a .crest-badge &mdash; white circular plate so any logo
@@ -125,12 +126,15 @@
   .brand-mark {
     flex-shrink: 0;
   }
-  .brand-text { line-height: 1.1; }
+  .brand-text { line-height: 1.1; min-width: 0; }
   .brand-name {
     font-family: 'Fraunces', serif;
     font-weight: 700;
     font-size: 17px;
     letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .brand-sub {
     font-family: 'Barlow Condensed', sans-serif;
@@ -180,7 +184,18 @@
     50% { opacity: 0.4; }
   }
   @media (max-width: 700px) {
+    .topbar-inner { gap: 10px; padding: 12px 14px; }
+    .brand { gap: 9px; }
+    .brand-name { font-size: 16px; }
+    .topbar-meta { gap: 8px; flex-shrink: 0; }
     .topbar-meta .meta-hide { display: none; }
+  }
+  @media (max-width: 520px) {
+    .weather-chip .weather-label { display: none; }
+  }
+  @media (max-width: 390px) {
+    .brand-name { max-width: 170px; }
+    .brand-sub { font-size: 10px; letter-spacing: 0.14em; }
   }
 
   /* ───── Main ───── */
