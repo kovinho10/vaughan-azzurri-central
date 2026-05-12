@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-05-11",
+    "updated": "2026-05-12",
     "windowDays": 3,
     "maxResults": 20,
     "sources": [
@@ -96,7 +96,15 @@
       "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260510",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260510",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260510",
-      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260510"
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260510",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260511",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260511",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260511",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260511",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260511",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260511",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260511",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260511"
     ],
     "status": "local_plus_world_results",
     "worldSource": "ESPN soccer scoreboard APIs"
@@ -112,6 +120,16 @@
       "awayScore": 4,
       "status": "Final",
       "motm": "Dylan Carreiro"
+    },
+    {
+      "comp": "Premier League",
+      "source": "ESPN World Football",
+      "date": "2026-05-11",
+      "home": "Spurs",
+      "away": "Leeds",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Final"
     },
     {
       "comp": "Premier League",
@@ -206,6 +224,16 @@
     {
       "comp": "La Liga",
       "source": "ESPN World Football",
+      "date": "2026-05-11",
+      "home": "Rayo",
+      "away": "Girona",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "Final"
+    },
+    {
+      "comp": "La Liga",
+      "source": "ESPN World Football",
       "date": "2026-05-10",
       "home": "Mallorca",
       "away": "Villarreal",
@@ -281,26 +309,6 @@
       "away": "Betis",
       "homeScore": 2,
       "awayScore": 2,
-      "status": "Final"
-    },
-    {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-08",
-      "home": "Levante",
-      "away": "Osasuna",
-      "homeScore": 3,
-      "awayScore": 2,
-      "status": "Final"
-    },
-    {
-      "comp": "Serie A",
-      "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Verona",
-      "away": "Como",
-      "homeScore": 0,
-      "awayScore": 1,
       "status": "Final"
     }
   ]
