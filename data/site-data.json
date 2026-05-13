@@ -26,7 +26,10 @@
       "home": true,
       "opp": "Olimpia",
       "venue": "Weston Lions Field",
-      "comp": "Friendly"
+      "comp": "Friendly",
+      "homeScore": 6,
+      "awayScore": 4,
+      "status": "Final"
     },
     {
       "d": "2026-05-11",
@@ -34,7 +37,14 @@
       "home": true,
       "opp": "GTA United",
       "venue": "Zanchin Automotive Soccer Centre",
-      "comp": "Cup"
+      "comp": "Cup",
+      "homeScore": 4,
+      "awayScore": 2,
+      "status": "Final",
+      "scorers": [
+        "Julian Accettola x3",
+        "Lucas Puntillo"
+      ]
     },
     {
       "d": "2026-05-21",
@@ -301,17 +311,6 @@
       "photo": "assets/images/players/ago greco.jpeg"
     },
     {
-      "first": "Nikita",
-      "last": "Ivanov",
-      "nick": "Nick",
-      "dob": "2000-06-15",
-      "pos": "CB",
-      "num": 13,
-      "nat": "🇷🇺",
-      "natName": "Russian",
-      "photo": "assets/images/players/nikita ivanov.webp"
-    },
-    {
       "first": "Mario",
       "last": "Kovacevic",
       "nick": "Kovinho",
@@ -427,7 +426,7 @@
     },
     {
       "first": "Andron",
-      "last": "Kagramanyan",
+      "last": "Karagamaryian",
       "nick": "Andron",
       "dob": null,
       "pos": "CM",
@@ -435,17 +434,6 @@
       "nat": "🇦🇲",
       "natName": "Armenian",
       "photo": "assets/images/players/andron.jpeg"
-    },
-    {
-      "first": "Christian",
-      "last": "Curti",
-      "nick": "Curti",
-      "dob": null,
-      "pos": "CB",
-      "num": 23,
-      "nat": "🇮🇹",
-      "natName": "Italian",
-      "photo": "assets/images/players/chris curti.webp"
     },
     {
       "first": "Austin",
@@ -470,6 +458,50 @@
       "natName": "Italian",
       "photo": "assets/images/players/Joseph_Amato_medium.jpg",
       "vc2": true
+    },
+    {
+      "first": "Aziah",
+      "last": "Reid",
+      "nick": "Aziah",
+      "dob": null,
+      "pos": "TBD",
+      "num": null,
+      "nat": "",
+      "natName": "",
+      "photo": ""
+    },
+    {
+      "first": "Saahb",
+      "last": "Kular",
+      "nick": "Saahb",
+      "dob": null,
+      "pos": "TBD",
+      "num": null,
+      "nat": "",
+      "natName": "",
+      "photo": ""
+    },
+    {
+      "first": "Jarek",
+      "last": "Whiteman",
+      "nick": "Jarek",
+      "dob": null,
+      "pos": "TBD",
+      "num": null,
+      "nat": "",
+      "natName": "",
+      "photo": ""
+    },
+    {
+      "first": "Eric",
+      "last": "Amato",
+      "nick": "Eric",
+      "dob": null,
+      "pos": "TBD",
+      "num": null,
+      "nat": "",
+      "natName": "",
+      "photo": ""
     }
   ],
   "standings": [
@@ -601,18 +633,20 @@
   "dashboard": {
     "hero": {
       "brandSub": "2026 Season · Men Provincial",
-      "status": "Pre-season",
+      "status": "Season underway",
       "eyebrow": "Season Snapshot",
       "titleHtml": "Vaughan <em>Azzurri</em>",
-      "subtitle": "Won 6-4 vs Olimpia. Dylan Carreiro MOTM.",
+      "subtitle": "",
       "chips": [
-        "Pre-season",
+        "Season underway",
         "OSL 2026",
-        "Cup path set"
+        "Cup run alive"
       ],
       "leaguePlayed": "0/18",
-      "record": "0–0–0",
-      "goals": "0:0"
+      "record": "1–0–0",
+      "goals": "4:2",
+      "leagueCupPlayed": "1",
+      "leagueCupTotal": "6"
     },
     "competitions": [
       {
@@ -621,10 +655,10 @@
         "phase": "Live table",
         "phaseClass": "",
         "lineLabel": "Status",
-        "lineValue": "Pre-season table live",
+        "lineValue": "Title chase still alive",
         "stageLabel": "Men Provincial Elite",
         "stageValue": "0 / 18",
-        "stageNote": "Truth source: OSL standings",
+        "stageNote": "0 matches played",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--league"
@@ -632,13 +666,13 @@
       {
         "key": "leagueCup",
         "title": "League Cup",
-        "phase": "R64",
+        "phase": "R32",
         "phaseClass": "gold",
         "lineLabel": "Cup target",
         "lineValue": "$10,000 winner prize",
-        "stageLabel": "Round of 64",
-        "stageValue": "GTA United",
-        "stageNote": "May 11 · 19:00 · Home",
+        "stageLabel": "Round of 32",
+        "stageValue": "TBD",
+        "stageNote": "Date TBD · KO TBD",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--cup"
@@ -677,18 +711,34 @@
       "tip": "Results, scorers, and clean sheets will populate here as the season unfolds."
     },
     "featuredMatch": {
-      "date": "2026-05-03",
-      "comp": "Friendly",
+      "date": "2026-05-11",
+      "comp": "League Cup",
       "home": "Vaughan Azzurri",
-      "away": "Olimpia",
-      "homeScore": 6,
-      "awayScore": 4,
+      "away": "GTA United",
+      "homeScore": 4,
+      "awayScore": 2,
       "status": "Final",
-      "motm": "Dylan Carreiro",
-      "venue": "Weston Lions Field",
-      "summary": "Won 6-4 vs Olimpia. Dylan Carreiro MOTM."
+      "venue": "Zanchin Automotive Soccer Centre",
+      "scorers": [
+        "Julian Accettola x3",
+        "Lucas Puntillo"
+      ]
     },
     "recentResults": [
+      {
+        "date": "2026-05-11",
+        "comp": "League Cup",
+        "home": "Vaughan Azzurri",
+        "away": "GTA United",
+        "homeScore": 4,
+        "awayScore": 2,
+        "status": "Final",
+        "venue": "Zanchin Automotive Soccer Centre",
+        "scorers": [
+          "Julian Accettola x3",
+          "Lucas Puntillo"
+        ]
+      },
       {
         "date": "2026-05-03",
         "comp": "Friendly",
@@ -697,9 +747,7 @@
         "homeScore": 6,
         "awayScore": 4,
         "status": "Final",
-        "motm": "Dylan Carreiro",
-        "venue": "Weston Lions Field",
-        "summary": "Won 6-4 vs Olimpia. Dylan Carreiro MOTM."
+        "venue": "Weston Lions Field"
       }
     ],
     "attendance": {
@@ -727,8 +775,7 @@
           ],
           "recap": [
             "13 present.",
-            "Exhibition win: Vaughan 6-4 Olimpia.",
-            "Man of the match: Dylan Carreiro."
+            "Exhibition win: Vaughan 6-4 Olimpia."
           ]
         },
         {
@@ -817,63 +864,6 @@
       "Peniche CC": "Peniche CC",
       "Guelph Royals": "Guelph Royals",
       "Scarboro Azzurri Blues": "Scarboro Azzurri Blues"
-    },
-    "matchdayModules": {
-      "briefing": {
-        "code": "BRD-01",
-        "label": "Boardroom Briefing",
-        "title": "Italian Scouting Mission",
-        "logo": "assets/images/embedded/embedded-34487ca7c248.png",
-        "alt": "League Cup logo",
-        "textHtml": "Club directors have filed the Italy youth-team trip under <b>strategic development</b>. Finance has filed it under “please attach receipts.” The board insists the espresso-to-player-development ratio remains within acceptable limits.",
-        "pills": [
-          "Board trip: Italy",
-          "Expense category: development pathway"
-        ]
-      },
-      "security": {
-        "code": "SEC-99",
-        "label": "Manager Security",
-        "title": "Manager Status: Untouchable",
-        "photo": "assets/images/embedded/embedded-cf10074b187a.jpg",
-        "alt": "Hieu Quach",
-        "text": "Hieu Quach exits the 6-4 exhibition with maximum backing. The board saw goals, the players saw vibes, and the group chat saw enough evidence to extend the mandate indefinitely.",
-        "stamp": "Job security maxed out",
-        "metricLabel": "Board confidence",
-        "metricValue": "Maximum"
-      },
-      "atmosphere": {
-        "code": "ATM-04",
-        "label": "Club Atmosphere",
-        "title": "Squad Morale Surge",
-        "status": "Dressing room: flying",
-        "tiles": [
-          {
-            "num": "100%",
-            "label": "Supporter confidence",
-            "fill": "confidence"
-          },
-          {
-            "num": "MAX",
-            "small": true,
-            "label": "Group chat activity",
-            "fill": "chat"
-          },
-          {
-            "num": "MAX",
-            "small": true,
-            "label": "Manager support",
-            "fill": "security"
-          },
-          {
-            "num": "HOT",
-            "small": true,
-            "label": "MOTM conversation",
-            "fill": "form"
-          }
-        ],
-        "noteHtml": "<b>Current vibe:</b> The club feels dangerous again. Nonners has been quietly elevated to Head of Geeve Science, Dylan is already becoming the default man-of-the-match betting market, Cram’s slide tackle came with a thigh-scrape injury report, and Petiti’s 34-minute emergency sub lives in the medical/comedy file — not as its own KPI."
-      }
     }
   }
 }

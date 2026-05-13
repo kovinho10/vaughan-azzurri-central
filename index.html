@@ -315,10 +315,10 @@
   .recent-results-list { display: flex; flex-direction: column; }
   .recent-result {
     display: grid;
-    grid-template-columns: 64px 1fr auto;
+    grid-template-columns: 58px minmax(0, 1fr);
     gap: 14px;
     align-items: center;
-    padding: 12px 18px;
+    padding: 14px 16px;
     border-bottom: 1px solid var(--border);
     background:
       linear-gradient(90deg, rgba(59,130,246,.07), transparent 34%),
@@ -330,7 +330,7 @@
   .recent-date {
     text-align: center;
     border-right: 1px solid var(--border);
-    padding-right: 14px;
+    padding-right: 12px;
   }
   .recent-day,
   .recent-mon,
@@ -354,19 +354,21 @@
   .recent-result-top {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
+    min-width: 0;
   }
   .recent-result-line {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     min-width: 0;
     font-family: 'Fraunces', serif;
     font-weight: 650;
-    font-size: 15px;
+    font-size: clamp(13px, 1.45vw, 16px);
     color: var(--text);
-    letter-spacing: -0.005em;
+    letter-spacing: -0.015em;
   }
   .recent-result-line .team-lockup { min-width: 0; }
   .recent-result-line .team-name {
@@ -376,10 +378,10 @@
   }
   .recent-result-score {
     font-family: 'Barlow Condensed', sans-serif;
-    color: var(--text);
-    font-size: 22px;
-    font-weight: 850;
-    letter-spacing: .08em;
+    color: var(--paper);
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 900;
+    letter-spacing: .04em;
     white-space: nowrap;
     font-variant-numeric: tabular-nums;
   }
@@ -397,10 +399,11 @@
     white-space: normal;
   }
   .recent-result-outcome {
-    text-align: right;
-    display: grid;
-    gap: 5px;
-    justify-items: end;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .result-badge {
     font-family: 'Barlow Condensed', sans-serif;
@@ -415,10 +418,9 @@
     padding: 2px 7px;
   }
   @media (max-width: 640px) {
-    .recent-result { grid-template-columns: 52px 1fr; gap: 10px; padding: 12px 14px; }
+    .recent-result { grid-template-columns: 52px minmax(0, 1fr); gap: 10px; padding: 12px 14px; }
     .recent-date { padding-right: 10px; }
-    .recent-result-outcome { grid-column: 2; display: flex; justify-content: space-between; align-items: center; }
-    .recent-result-line { flex-wrap: wrap; gap: 7px; }
+    .recent-result-line { gap: 7px; }
   }
 
   /* ───── Hero command centre ───── */
@@ -585,6 +587,52 @@
   }
   .stat-num.muted { color: rgba(231,238,252,0.58); }
   .stat-num .frac { font-size: 0.55em; color: var(--muted); margin-left: 2px; }
+  .competition-progress {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 12px;
+    width: 100%;
+  }
+  .competition-progress-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    align-items: end;
+  }
+  .competition-progress-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .competition-progress-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: .9;
+    color: var(--paper);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .competition-progress-value span { color: var(--muted); font-size: .56em; margin: 0 1px; }
+  .competition-progress-track {
+    grid-column: 1 / -1;
+    height: 5px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.06);
+  }
+  .competition-progress-fill {
+    display: block;
+    height: 100%;
+    width: var(--progress, 0%);
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--azz), var(--azz-bright));
+  }
   .stat-lab {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 600;
@@ -1184,41 +1232,6 @@
     letter-spacing: -0.02em;
     font-variant-numeric: tabular-nums;
   }
-  .match-preview {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(71,86,133,.62);
-    display: grid;
-    grid-template-columns: 1.25fr 1fr 1fr;
-    gap: 10px;
-  }
-  .preview-block {
-    background: rgba(4, 10, 20, 0.50);
-    border: 1px solid rgba(71,86,133,.64);
-    border-radius: 9px;
-    padding: 13px 14px;
-    position: relative;
-    overflow: hidden;
-  }
-  .preview-block::before {
-    content:'';
-    position:absolute;
-    left:0; top:0; bottom:0;
-    width:2px;
-    background: var(--azz-bright);
-    opacity:.65;
-  }
-  .preview-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--azz-bright);
-    margin-bottom: 8px;
-  }
-  .preview-text { font-size: 13px; color: var(--text); line-height: 1.52; }
-  .preview-text b { color: var(--paper); font-weight: 850; }
   .sub-strip {
     margin-top: 12px;
     padding-top: 12px;
@@ -1261,7 +1274,6 @@
     .next-match-vs { grid-template-columns: 1fr; }
     .nm-vs { width: auto; height: auto; padding: 7px 12px; }
     .nm-meta { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .match-preview { grid-template-columns: 1fr; }
     .match-header-chip.source { margin-left: 0; }
     .next-match-tag-row { flex-wrap: wrap; }
   }
@@ -2138,55 +2150,6 @@
   .match-context-pill.blue { color: var(--azz-bright); background: rgba(59, 130, 246, 0.11); border-color: rgba(59, 130, 246, 0.26); }
   .match-context-pill.teal { color: #5eead4; background: rgba(20, 184, 166, 0.10); border-color: rgba(20, 184, 166, 0.25); }
 
-  .opponent-scout {
-    margin-top: 12px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    padding: 10px;
-    border: 1px solid rgba(71, 86, 133, 0.62);
-    border-radius: 8px;
-    background: rgba(7,16,30,.38);
-  }
-  .scout-kicker {
-    grid-column: 1 / -1;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .scout-stat { min-width: 0; }
-  .scout-lab {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--dim);
-    margin-bottom: 2px;
-  }
-  .scout-val {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .scout-note {
-    grid-column: 1 / -1;
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.4;
-    border-top: 1px solid rgba(71, 86, 133, 0.45);
-    padding-top: 8px;
-  }
-  @media (max-width: 620px) {
-    .opponent-scout { grid-template-columns: 1fr; }
-  }
-
   /* Show all fixtures toggle */
   .show-more-row {
     text-align: center;
@@ -2457,7 +2420,7 @@
       </div>
     </div>
     <div class="topbar-meta">
-      <span class="meta-hide"><span class="live-dot"></span><b id="seasonStatus">Pre-season</b></span>
+      <span class="meta-hide"><span class="live-dot"></span><b id="seasonStatus">Season underway</b></span>
       <span id="topWeather" class="weather-chip" aria-live="polite"><span class="weather-icon">⛅</span><span class="weather-label">Vaughan</span><span class="weather-temp">--°C</span></span>
       <span><b id="topDate">&mdash;</b></span>
     </div>
@@ -2477,7 +2440,6 @@
           <div>
             <div class="hero-eyebrow" id="heroEyebrow">Season Snapshot</div>
             <div class="hero-title" id="heroTitle">Vaughan <em>Azzurri</em></div>
-            <div class="hero-sub" id="heroSub">20 matches · 4 competitions · Ontario Cup draw confirmed.</div>
             <div class="hero-chips" id="heroChips"></div>
           </div>
         </div>
@@ -2486,16 +2448,27 @@
         <div class="stat-num"><span id="daysToFirst">&mdash;</span></div>
         <div class="stat-lab" id="daysToFirstLabel">Days to Kickoff</div>
       </div>
-      <div class="stat">
-        <div class="stat-num muted" id="leaguePlayedStat">0<span class="frac">/18</span></div>
-        <div class="stat-lab">League Played</div>
+      <div class="stat stat-competition-progress">
+        <div class="competition-progress" aria-label="Competition progress">
+          <div class="competition-progress-row">
+            <div class="competition-progress-name">League</div>
+            <div class="competition-progress-value"><span id="leaguePlayedDone">0</span><span>/</span><span id="leaguePlayedTotal">18</span></div>
+            <div class="competition-progress-track"><span class="competition-progress-fill" id="leaguePlayedFill"></span></div>
+          </div>
+          <div class="competition-progress-row">
+            <div class="competition-progress-name">League Cup</div>
+            <div class="competition-progress-value"><span id="leagueCupPlayedStat">1</span><span>/</span><span id="leagueCupTotalStat">6</span></div>
+            <div class="competition-progress-track"><span class="competition-progress-fill" id="leagueCupPlayedFill"></span></div>
+          </div>
+        </div>
+        <div class="stat-lab">Competition Progress</div>
       </div>
       <div class="stat">
-        <div class="stat-num muted" id="recordStat">0–0–0</div>
+        <div class="stat-num muted" id="recordStat">1–0–0</div>
         <div class="stat-lab">W–D–L</div>
       </div>
       <div class="stat">
-        <div class="stat-num muted" id="goalsStat">0:0</div>
+        <div class="stat-num muted" id="goalsStat">4:2</div>
         <div class="stat-lab">GF:GA</div>
       </div>
       <div class="stat">
@@ -2510,20 +2483,13 @@
     </div>
   </div>
 
+  <!-- ─────────── MATCH CENTRE ─────────── -->
   <div class="section-h">
-    <h2>Competitions</h2>
+    <h2>Match Centre</h2>
     <div class="h-line"></div>
-    <div class="h-meta">4 active fronts</div>
-  </div>
-  <div class="source-stamp" id="competitionSourceStamp">
-    <span>League Cup: <a href="https://ontariosl.com/mens-cup/" target="_blank" rel="noopener">OSL</a></span>
-    <span>Ontario Cup: <a href="https://www.ontariosoccer.net/ontario-cup-outdoor-schedule-and-draw-charts" target="_blank" rel="noopener">Ontario Soccer</a></span>
-    <span>Last checked: May 4</span>
+    <div class="h-meta">Next fixture · latest result · form</div>
   </div>
 
-  <div class="comps" id="competitionGrid"></div>
-
-  <!-- ─────────── NEXT MATCH + SIDE STATS ─────────── -->
   <div class="grid-2">
     <!-- Next match (left) -->
     <div class="next-match fade-up" id="nextMatchPanel">
@@ -2541,7 +2507,7 @@
         <div class="next-match-vs">
           <div class="nm-team">
             <div class="nm-team-logo team-logo-plate team-logo-plate--lg"><img src="assets/images/embedded/embedded-8af3853f4db4.png" alt="Vaughan Azzurri logo" loading="lazy"></div>
-            <div class="nm-team-name us">Vaughan</div>
+            <div class="nm-team-name us" id="nmHomeName">Vaughan</div>
             <div class="nm-team-tag" id="nmHomeTag">Home</div>
           </div>
           <div class="nm-vs">vs</div>
@@ -2569,28 +2535,6 @@
           </div>
         </div>
 
-        <div class="match-preview">
-          <div class="preview-header">
-            <span id="previewHomeLogo" aria-hidden="true"></span>
-            <div class="preview-header-title"><b>Match Preview</b></div>
-            <span id="previewOppLogo" aria-hidden="true"></span>
-          </div>
-          <div class="preview-block">
-            <div class="preview-label">Match Storyline</div>
-            <div class="preview-text" id="previewStoryline">The cup campaign opens with <b>$10,000</b> on the line. Vaughan enter from the highest division against lower-division GTA United, looking to erase last year’s first-round exit.</div>
-          </div>
-          <div class="preview-block">
-            <div class="preview-label">Player to Watch</div>
-            <div class="preview-text" id="previewPlayer">The squad legs. Exhibition minutes arrive before anyone can claim they are still “building fitness.”</div>
-          </div>
-          <div class="preview-block">
-            <div class="preview-label">What’s at Stake</div>
-            <div class="preview-text" id="previewStakes">Pre-season rhythm, match legs, and whether the short-passing project survives a noon kickoff.</div>
-          </div>
-        </div>
-
-        <div class="opponent-scout" id="opponentScout" aria-label="Opponent scouting snapshot"></div>
-
         <div class="sub-strip">
           <div class="sub-cal-label">Subscribe to <b>VAUGHAN AZZURRI SCHEDULE</b></div>
           <div class="sub-buttons">
@@ -2600,7 +2544,7 @@
             <span>iPhone & Mac</span>
           </a>
           <a class="sub-btn sub-btn-google"
-             href="https://calendar.google.com/calendar/r?cid=https://p172-caldav.icloud.com/published/2/MjAzMzYwMzU1ODIwMzM2MAdn8h-9mYH7-pY7Hvd-U0CXDG_rf-9GmekQgTR_xjbZVxT-TNQm28XLVTD2Ak0D3WDizU5JJhzWgPL8IDQyq_4">
+             href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fp172-caldav.icloud.com%2Fpublished%2F2%2FMjAzMzYwMzU1ODIwMzM2MAdn8h-9mYH7-pY7Hvd-U0CXDG_rf-9GmekQgTR_xjbZVxT-TNQm28XLVTD2Ak0D3WDizU5JJhzWgPL8IDQyq_4">
             <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
             <span>Google Cal</span>
           </a>
@@ -2614,42 +2558,35 @@
 
       <div class="card fade-up">
         <div class="card-h">
+          <div class="card-h-title">Recent Result</div>
+          <div class="card-h-meta">Latest</div>
+        </div>
+        <div class="card-body tight" id="recentResultsCard">
+          <div class="empty">
+            <div class="empty-icon">∅</div>
+            No matches played yet.
+            <div class="empty-tip">Results and scorers will populate here as the season unfolds.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card fade-up">
+        <div class="card-h">
           <div class="card-h-title">Top Scorers</div>
           <div class="card-h-meta">All Comps</div>
         </div>
-        <div class="card-body tight">
-          <div class="empty">
-            <div class="empty-icon">&mdash;</div>
-            No goals yet.
-            <div class="empty-tip">First update after Matchweek 1</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card fade-up">
-        <div class="card-h">
-          <div class="card-h-title">Assists</div>
-          <div class="card-h-meta">Creators</div>
-        </div>
-        <div class="card-body tight">
-          <div class="empty">
-            <div class="empty-icon">&mdash;</div>
-            No assists yet.
-            <div class="empty-tip">First through ball that actually works gets logged here</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card fade-up">
-        <div class="card-h">
-          <div class="card-h-title">Man of the Match</div>
-          <div class="card-h-meta">Tally</div>
-        </div>
-        <div class="card-body tight">
-          <div class="empty">
-            <div class="empty-icon">&mdash;</div>
-            No awards yet.
-            <div class="empty-tip">First winner announced after Matchweek 1</div>
+        <div class="card-body tight" id="topScorersCard">
+          <div class="rank-list">
+            <div class="rank-row">
+              <div class="rank-pos">1</div>
+              <div class="rank-name">Julian Accettola</div>
+              <div class="rank-val">3</div>
+            </div>
+            <div class="rank-row">
+              <div class="rank-pos">2</div>
+              <div class="rank-name">Lucas Puntillo</div>
+              <div class="rank-val">1</div>
+            </div>
           </div>
         </div>
       </div>
@@ -2679,41 +2616,19 @@
     </div>
   </div>
 
-  <!-- ─────────── MATCHDAY HQ ─────────── -->
-  <div class="section-h section-h--hq">
-    <h2>Matchday HQ</h2>
+
+  <!-- ─────────── COMPETITIONS ─────────── -->
+  <div class="section-h">
+    <h2>Competitions</h2>
     <div class="h-line"></div>
-    <div class="h-meta">Home turf · boardroom · atmosphere</div>
+    <div class="h-meta">Season and cup routes</div>
+  </div>
+  <div class="source-stamp" id="competitionSourceStamp">
+    <span>League Cup: <a href="https://ontariosl.com/mens-cup/" target="_blank" rel="noopener">OSL</a></span>
+    <span>Ontario Cup: <a href="https://www.ontariosoccer.net/ontario-cup-outdoor-schedule-and-draw-charts" target="_blank" rel="noopener">Ontario Soccer</a></span>
   </div>
 
-  <div class="venues-row">
-    <div class="venue-card venue-card-photo">
-      <div class="venue-media"><img src="assets/images/embedded/embedded-4568ee3fb640.webp" alt="North Maple Regional Park soccer fields"></div>
-      <div class="venue-content">
-        <div class="venue-brand-row">
-          <div class="venue-tag">Home Ground</div>
-        </div>
-        <div class="venue-name"><a href="https://www.google.com/maps/search/?api=1&query=North+Maple+Regional+Park+11085+Keele+St+Maple+ON" target="_blank" rel="noopener">North Maple Regional Park</a></div>
-        <div class="venue-note">Main pitch · home base · where everyone finds out whether preseason running was real</div>
-        <div class="venue-pulse"><span></span> Primary matchday base</div>
-        <div class="venue-facts venue-facts--badges"><div class="venue-fact"><div class="venue-fact-icon">HB</div><div><div class="lab">Role</div><div class="val">Home</div></div></div><div class="venue-fact"><div class="venue-fact-icon">TF</div><div><div class="lab">Surface</div><div class="val">Turf</div></div></div><div class="venue-fact"><div class="venue-fact-icon">FIT</div><div><div class="lab">Mood</div><div class="val">Fitness Test</div></div></div></div>
-      </div>
-    </div>
-    <div class="venue-card venue-card-photo venue-card-bar">
-      <div class="venue-media"><img src="assets/images/embedded/embedded-e2d113da3011.jpg" alt="The Mills TapHouse + Grill bar interior"></div>
-      <div class="venue-content">
-        <div class="venue-brand-row">
-          <div class="venue-tag venue-tag-bar">Team Bar</div>
-        </div>
-        <div class="venue-name"><a href="https://www.google.com/maps/search/?api=1&query=The+Mills+TapHouse+Grill+9100+Jane+St+Vaughan+ON" target="_blank" rel="noopener">The Mills TapHouse + Grill</a></div>
-        <div class="venue-note">Post-match HQ · tactical autopsies · hydration decisions of variable quality</div>
-        <div class="venue-pulse venue-pulse--gold"><span></span> Result-dependent morale hub</div>
-        <div class="venue-facts venue-facts--badges"><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">HQ</div><div><div class="lab">Role</div><div class="val">HQ</div></div></div><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">8</div><div><div class="lab">Drive</div><div class="val">8 min</div></div></div><div class="venue-fact"><div class="venue-fact-icon venue-fact-icon--gold">FT</div><div><div class="lab">Mood</div><div class="val">Full Time</div></div></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="fm-briefing-grid fade-up" id="matchdayModules"></div>
+  <div class="comps" id="competitionGrid"></div>
 
   <!-- ─────────── FIXTURES ─────────── -->
   <div class="section-h">
@@ -2726,21 +2641,6 @@
     <div class="fixture-list" id="fixtureList"></div>
     <div class="show-more-row">
       <button class="show-more" id="showMoreBtn">Show all fixtures</button>
-    </div>
-  </div>
-
-  <!-- ─────────── RECENT RESULTS ─────────── -->
-  <div class="section-h">
-    <h2>Recent Results</h2>
-    <div class="h-line"></div>
-    <div class="h-meta">Last 5 matches</div>
-  </div>
-
-  <div class="card" id="recentResultsCard">
-    <div class="empty">
-      <div class="empty-icon">∅</div>
-      No matches played yet.
-      <div class="empty-tip">Results, scorers, and clean sheets will populate here as the season unfolds.</div>
     </div>
   </div>
 
@@ -2779,15 +2679,6 @@
       </table>
     </div>
   </div>
-
-  <!-- ─────────── SQUAD ─────────── -->
-  <div class="section-h">
-    <h2>Squad</h2>
-    <div class="h-line"></div>
-    <div class="h-meta"><span id="squadCount">&mdash;</span> registered</div>
-  </div>
-
-  <div class="squad-grid" id="squadGrid"></div>
 
   <!-- ─────────── ATTENDANCE HUB ─────────── -->
   <div class="section-h">
@@ -2888,6 +2779,7 @@
   let teamLogos = {};
   let siteMeta = {};
   let dashboard = {};
+  let matchResults = [];
 
   async function loadSiteData() {
     const res = await fetch('data/site-data.json', { cache: 'no-store' });
@@ -2899,8 +2791,69 @@
     teamLogos = data.teamLogos || {};
     siteMeta = data.meta || {};
     dashboard = data.dashboard || {};
+    matchResults = await loadMatchResults();
+    applyMatchResults();
     renderSourceStamps();
     renderDashboard();
+  }
+
+  async function loadMatchResults() {
+    try {
+      const res = await fetch('data/match-results.csv', { cache: 'no-store' });
+      if (!res.ok) return [];
+      return parseCSV(await res.text());
+    } catch (_) {
+      return [];
+    }
+  }
+
+  async function loadCSV(path) {
+    try {
+      const res = await fetch(path, { cache: 'no-store' });
+      if (!res.ok) return [];
+      return parseCSV(await res.text());
+    } catch (_) {
+      return [];
+    }
+  }
+
+  function parseCSV(text) {
+    const rows = [];
+    let row = [], field = '', quoted = false;
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+      const next = text[i + 1];
+      if (quoted && ch === '"' && next === '"') { field += '"'; i++; continue; }
+      if (ch === '"') { quoted = !quoted; continue; }
+      if (!quoted && ch === ',') { row.push(field); field = ''; continue; }
+      if (!quoted && (ch === '\n' || ch === '\r')) {
+        if (ch === '\r' && next === '\n') i++;
+        row.push(field); field = '';
+        if (row.some(v => v.trim())) rows.push(row);
+        row = [];
+        continue;
+      }
+      field += ch;
+    }
+    if (field || row.length) { row.push(field); if (row.some(v => v.trim())) rows.push(row); }
+    const headers = (rows.shift() || []).map(h => h.trim());
+    return rows.map(cols => Object.fromEntries(headers.map((h, i) => [h, (cols[i] || '').trim()])));
+  }
+
+  function applyMatchResults() {
+    if (!matchResults.length) return;
+    const hero = dashboard.hero || (dashboard.hero = {});
+    let w = 0, d = 0, l = 0, gf = 0, ga = 0, leagueCupPlayed = 0;
+    matchResults.forEach(r => {
+      const vs = Number(r.vaughan_score || 0);
+      const against = Number(r.opponent_score || 0);
+      gf += vs; ga += against;
+      if (vs > against) w++; else if (vs === against) d++; else l++;
+      if ((r.competition || '').toLowerCase() === 'league cup') leagueCupPlayed++;
+    });
+    hero.record = `${w}–${d}–${l}`;
+    hero.goals = `${gf}:${ga}`;
+    hero.leagueCupPlayed = String(leagueCupPlayed);
   }
 
   function escapeHTML(value) {
@@ -2916,41 +2869,8 @@
     return '';
   }
 
-  function scoreTeamName(name) {
-    const aliases = {
-      'Nottm Forest': 'Nottingham Forest',
-      'C Palace': 'Crystal Palace',
-      'Man Utd': 'Manchester United',
-      'Spurs': 'Tottenham Hotspur',
-      'Boro': 'Middlesbrough',
-      'PSG': 'Paris Saint-Germain',
-      'Inter Milan': 'Inter'
-    };
-    return aliases[name] || name;
-  }
-
-  function scoreLine(score) {
-    const home = scoreTeamName(score.home || score.homeTeam || score.teamA || '');
-    const away = scoreTeamName(score.away || score.awayTeam || score.teamB || '');
-    const hs = score.homeScore ?? score.homeGoals ?? score.scoreHome;
-    const as = score.awayScore ?? score.awayGoals ?? score.scoreAway;
-    if (home && away && hs !== undefined && as !== undefined) return `${home} ${hs}–${as} ${away}`;
-    return score.text || score.line || 'Verified score pending';
-  }
-
   function getFeaturedMatch() {
     return dashboard.featuredMatch || null;
-  }
-
-  function featuredMatchText(match) {
-    if (!match) return '';
-    const parts = [];
-    const line = scoreLine(match);
-    if (line) parts.push(line);
-    if (match.date) parts.push(shortSourceDate(match.date));
-    if (match.venue) parts.push(match.venue);
-    if (match.motm) parts.push(`MOTM ${match.motm}`);
-    return parts.join(' · ');
   }
 
   function shortSourceDate(value) {
@@ -2970,7 +2890,7 @@
     if (compEl) {
       const cup = sources.leagueCup;
       const ont = sources.ontarioCup;
-      compEl.innerHTML = `${cup ? `<span>League Cup: <a href="${cup.url}" target="_blank" rel="noopener">OSL</a></span><span>Last checked: ${shortSourceDate(cup.lastChecked)}</span>` : ''}${ont ? `<span>Ontario Cup: <a href="${ont.url}" target="_blank" rel="noopener">Ontario Soccer</a></span>` : ''}`;
+      compEl.innerHTML = `${cup ? `<span>League Cup: <a href="${cup.url}" target="_blank" rel="noopener">OSL</a></span>` : ''}${ont ? `<span>Ontario Cup: <a href="${ont.url}" target="_blank" rel="noopener">Ontario Soccer</a></span>` : ''}`;
     }
   }
 
@@ -3036,6 +2956,7 @@
     if (f.comp === 'Friendly') return { text: 'Cup prep', tone: 'teal' };
     if (f.comp === 'Cup') return { text: 'Knockout money', tone: 'gold' };
     if (f.comp === 'OntCup') return { text: 'Ontario Cup path', tone: 'gold' };
+    if (f.comp === 'OSL' && canonicalTeamName(f.opp) === 'Scarboro Azzurri Blues') return { text: 'Home opener', tone: 'gold' };
     const us = standingRank('Vaughan');
     const opp = standingRank(f.opp);
     if (!us || !opp) return { text: 'League test', tone: 'blue' };
@@ -3047,17 +2968,36 @@
   }
 
   function scoutingNote(f) {
-    if (f.comp === 'Friendly') return 'Useful minutes, dangerous if anyone treats noon like preseason sleep therapy.';
+    if (f.comp === 'Friendly') return 'Useful minutes, dangerous if anyone treats noon like matchday sleep therapy.';
     if (f.comp === 'Cup') return 'Lower-division cup trap: control the ball, avoid the headline.';
     if (f.comp === 'OntCup') return 'Cup draw says home game; legs say please define “home advantage”.';
     const oppRank = standingRank(f.opp);
     const usRank = standingRank('Vaughan');
+    if (canonicalTeamName(f.opp) === 'Scarboro Azzurri Blues') return 'Familiar opener: two draws last year, counters are the danger, but Vaughan should back the football.';
     if (!oppRank || !usRank) return 'Official standings pending; vibes department standing by.';
     if (oppRank < usRank) return 'Above Vaughan for now, which means the scouting report will be read twice.';
     if (oppRank === usRank) return 'Same table postcode. Small margins, loud group chat.';
     return 'Below Vaughan on paper. Dangerous phrase, historically.';
   }
 
+
+  function renderTopScorers() {
+    const card = document.getElementById('topScorersCard');
+    if (!card || !matchResults.length) return;
+    const rosterNames = new Set(roster.map(p => `${p.first || ''} ${p.last || ''}`.trim()).filter(Boolean));
+    const totals = new Map();
+    matchResults.forEach(r => {
+      (r.scorers || '').split(';').map(s => s.trim()).filter(Boolean).forEach(item => {
+        const [nameRaw, goalsRaw] = item.split(':');
+        const name = (nameRaw || '').trim();
+        const goals = Number((goalsRaw || '1').trim()) || 1;
+        if (name && rosterNames.has(name)) totals.set(name, (totals.get(name) || 0) + goals);
+      });
+    });
+    const scorers = [...totals.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    if (!scorers.length) return;
+    card.innerHTML = `<div class="rank-list">${scorers.map(([name, goals], idx) => `<div class="rank-row"><div class="rank-pos">${idx + 1}</div><div class="rank-name">${escapeHTML(name)}</div><div class="rank-val">${goals}</div></div>`).join('')}</div>`;
+  }
 
   function renderDashboard() {
     const hero = dashboard.hero || {};
@@ -3068,11 +3008,21 @@
     setText('seasonStatus', hero.status);
     setText('heroEyebrow', hero.eyebrow);
     setHTML('heroTitle', hero.titleHtml);
-    const featuredMatch = getFeaturedMatch();
-    setText('heroSub', featuredMatch ? featuredMatchText(featuredMatch) : hero.subtitle);
-    setHTML('leaguePlayedStat', hero.leaguePlayed ? hero.leaguePlayed.replace('/', '<span class="frac">/') + '</span>' : undefined);
+    const [leagueDone = '0', leagueTotal = '18'] = String(hero.leaguePlayed || '0/18').split('/');
+    setText('leaguePlayedDone', leagueDone);
+    setText('leaguePlayedTotal', leagueTotal);
+    setText('leagueCupPlayedStat', hero.leagueCupPlayed);
+    setText('leagueCupTotalStat', hero.leagueCupTotal || '6');
+    const setProgress = (id, done, total) => {
+      const el = document.getElementById(id);
+      const pct = Math.max(0, Math.min(100, (Number(done) / Math.max(1, Number(total))) * 100));
+      if (el) el.style.setProperty('--progress', `${pct}%`);
+    };
+    setProgress('leaguePlayedFill', leagueDone, leagueTotal);
+    setProgress('leagueCupPlayedFill', hero.leagueCupPlayed || 0, hero.leagueCupTotal || 6);
     setText('recordStat', hero.record);
     setText('goalsStat', hero.goals);
+    renderTopScorers();
     const chips = document.getElementById('heroChips');
     if (chips && Array.isArray(hero.chips)) chips.innerHTML = hero.chips.map(chip => `<span class="hero-chip">${escapeHTML(chip)}</span>`).join('');
 
@@ -3113,52 +3063,11 @@
         const num = dateOK ? d.toLocaleDateString('en-CA', { day: '2-digit' }) : '—';
         const mon = dateOK ? d.toLocaleDateString('en-CA', { month: 'short' }) : '';
         const outcome = Number(hs) > Number(as) ? 'Win' : Number(hs) === Number(as) ? 'Draw' : 'Result';
-        const metaBits = [featured.venue, featured.motm ? `MOTM ${featured.motm}` : ''].filter(Boolean).map(escapeHTML).join(' · ');
-        recent.innerHTML = `<div class="recent-results-list"><div class="recent-result"><div class="recent-date"><div class="recent-day">${escapeHTML(day)}</div><div class="recent-num">${escapeHTML(num)}</div><div class="recent-mon">${escapeHTML(mon)}</div></div><div class="recent-result-main"><div class="recent-result-top"><span class="match-context-pill blue">${escapeHTML(featured.comp || 'Result')}</span></div><div class="recent-result-line"><span>${teamNameHTML(home, 'xs')}</span><span class="recent-result-score">${escapeHTML(hs)}–${escapeHTML(as)}</span><span>${teamNameHTML(away, 'xs')}</span></div><div class="recent-result-meta">${metaBits}</div>${featured.summary ? `<div class="recent-result-meta recent-result-note">${escapeHTML(featured.summary)}</div>` : ''}</div><div class="recent-result-outcome"><span class="result-badge">${escapeHTML(outcome)}</span><span class="recent-result-status">${escapeHTML(featured.status || 'Final')}</span></div></div></div>`;
+        const metaBits = [featured.venue].filter(Boolean).map(escapeHTML).join(' · ');
+        recent.innerHTML = `<div class="recent-results-list"><div class="recent-result"><div class="recent-date"><div class="recent-day">${escapeHTML(day)}</div><div class="recent-num">${escapeHTML(num)}</div><div class="recent-mon">${escapeHTML(mon)}</div></div><div class="recent-result-main"><div class="recent-result-top"><span class="match-context-pill blue">${escapeHTML(featured.comp || 'Result')}</span><span class="recent-result-outcome"><span class="result-badge">${escapeHTML(outcome)}</span><span class="recent-result-status">${escapeHTML(featured.status || 'Final')}</span></span></div><div class="recent-result-line"><span>${teamNameHTML(home, 'xs')}</span><span class="recent-result-score">${escapeHTML(hs)}–${escapeHTML(as)}</span><span>${teamNameHTML(away, 'xs')}</span></div><div class="recent-result-meta">${metaBits}</div></div></div></div>`;
       } else if (dashboard.recentResultsEmpty) {
         recent.innerHTML = `<div class="empty"><div class="empty-icon">∅</div>${escapeHTML(dashboard.recentResultsEmpty.title || 'No matches played yet.')}<div class="empty-tip">${escapeHTML(dashboard.recentResultsEmpty.tip || '')}</div></div>`;
       }
-    }
-
-    const matchday = document.getElementById('matchdayModules');
-    if (matchday && dashboard.matchdayModules) {
-      const m = dashboard.matchdayModules;
-      const b = m.briefing || {};
-      const s = m.security || {};
-      const a = m.atmosphere || {};
-      const tiles = Array.isArray(a.tiles) ? a.tiles : [];
-      matchday.innerHTML = `
-        <div class="fm-briefing-card">
-          <div class="module-code">${escapeHTML(b.code || '')}</div>
-          <div class="cup-briefing">
-            <span class="comp-badge comp-badge--cup"><img src="${escapeHTML(b.logo || '')}" alt="${escapeHTML(b.alt || '')}"></span>
-            <div>
-              <div class="fm-briefing-label">${escapeHTML(b.label || '')}</div>
-              <div class="fm-briefing-title">${escapeHTML(b.title || '')}</div>
-              <div class="fm-briefing-text">${b.textHtml || ''}</div>
-              <div class="briefing-pills">${(Array.isArray(b.pills) ? b.pills : []).map(p => `<span>${escapeHTML(p)}</span>`).join('')}</div>
-            </div>
-          </div>
-        </div>
-        <div class="fm-briefing-card security-card">
-          <div class="module-code">${escapeHTML(s.code || '')}</div>
-          <div class="hieu-security">
-            <div class="manager-photo"><img src="${escapeHTML(s.photo || '')}" alt="${escapeHTML(s.alt || '')}" loading="lazy"></div>
-            <div>
-              <div class="fm-briefing-label">${escapeHTML(s.label || '')}</div>
-              <div class="fm-briefing-title">${escapeHTML(s.title || '')}</div>
-              <div class="fm-briefing-text">${escapeHTML(s.text || '')}</div>
-              <div class="manager-stamp">${escapeHTML(s.stamp || '')}</div>
-            </div>
-          </div>
-          <div class="security-meter"><div class="security-row"><span>${escapeHTML(s.metricLabel || '')}</span><b>${escapeHTML(s.metricValue || '')}</b></div><div class="security-track"><div class="security-fill"></div></div></div>
-        </div>
-        <div class="fm-briefing-card atmosphere-card">
-          <div class="module-code">${escapeHTML(a.code || '')}</div>
-          <div class="atmosphere-top"><div><div class="fm-briefing-label">${escapeHTML(a.label || '')}</div><div class="fm-briefing-title">${escapeHTML(a.title || '')}</div></div><div class="atmosphere-status">${escapeHTML(a.status || '')}</div></div>
-          <div class="atmosphere-grid">${tiles.map(t => `<div class="atmo-tile"><div class="atmo-num ${t.small ? 'small' : ''}">${escapeHTML(t.num || '')}</div><div class="atmo-lab">${escapeHTML(t.label || '')}</div><div class="atmo-track"><div class="atmo-fill ${escapeHTML(t.fill || '')}"></div></div></div>`).join('')}</div>
-          <div class="atmo-note">${a.noteHtml || ''}</div>
-        </div>`;
     }
 
     const staff = document.getElementById('staffGrid');
@@ -3323,8 +3232,8 @@
     document.getElementById('nmDays').textContent = isMatchDay ? 'MATCH DAY' : days;
     document.getElementById('nmCountdownLabel').textContent = isMatchDay ? 'Fixture is live today' : 'Days until kickoff';
     document.getElementById('nmOpp').innerHTML = `${teamLogoHTML(next.opp, 'lg')}${next.comp === 'OSL' ? teamRankLabel(next.opp) : canonicalTeamName(next.opp)}`;
-    const ph = document.getElementById('previewHomeLogo'); if (ph) ph.innerHTML = teamLogoHTML('Vaughan', 'md');
-    const po = document.getElementById('previewOppLogo'); if (po) po.innerHTML = teamLogoHTML(next.opp, 'md');
+    const homeNameEl = document.getElementById('nmHomeName');
+    if (homeNameEl) homeNameEl.textContent = next.comp === 'OSL' ? `Vaughan (${ordinal(standingRank('Vaughan'))})` : 'Vaughan';
     document.getElementById('nmDate').textContent = next.when.toLocaleDateString('en-CA', { weekday: 'long', month: 'short', day: 'numeric' });
     document.getElementById('nmTime').textContent = next.t === 'TBD' ? 'TBD' : next.t + ' ET';
     document.getElementById('nmVenue').textContent = next.venue;
@@ -3361,45 +3270,6 @@
         sourceChip.style.display = '';
       }
     }
-    const previewStoryline = document.getElementById('previewStoryline');
-    const previewPlayer = document.getElementById('previewPlayer');
-    const previewStakes = document.getElementById('previewStakes');
-    if (previewStoryline && previewPlayer && previewStakes) {
-      const featured = getFeaturedMatch();
-      const previewMatch = featured || next;
-      if (featured && featured.comp === 'Friendly') {
-        previewStoryline.innerHTML = `Won ${escapeHTML(featured.homeScore)}–${escapeHTML(featured.awayScore)} vs <b>${escapeHTML(canonicalTeamName(featured.away || ''))}</b> at ${escapeHTML(featured.venue)}.`;
-        previewPlayer.innerHTML = `<b>${escapeHTML(featured.motm || 'MOTM')}</b> was the difference.`;
-        previewStakes.innerHTML = `Final on ${shortSourceDate(featured.date)}. The next fixture now rolls into the main area automatically.`;
-      } else if (previewMatch.comp === 'Cup' && previewMatch.opp === 'GTA United') {
-        previewStoryline.innerHTML = 'The cup campaign opens with <b>$10,000</b> on the line. Vaughan enter from the highest division against lower-division GTA United, looking to erase last year’s first-round exit.';
-        previewPlayer.innerHTML = '<b>Dylan Carreiro</b> has not played in a while, but the new signing has the quality to change the game if he gets rolling.';
-        previewStakes.innerHTML = 'First game of the season for both teams. Winner moves on. Loser starts preparing a very convincing “we’re focused on league” statement.';
-      } else if (previewMatch.comp === 'Friendly') {
-        previewStoryline.innerHTML = `A Sunday noon exhibition against <b>${escapeHTML(canonicalTeamName(previewMatch.opp))}</b> at ${escapeHTML(previewMatch.venue)}. Officially friendly, unofficially a fitness audit.`;
-        previewPlayer.innerHTML = 'The squad legs. Exhibition minutes arrive before anyone can claim they are still “building fitness.”';
-        previewStakes.innerHTML = 'Pre-season rhythm, match legs, and whether the short-passing project survives a noon kickoff.';
-      } else {
-        const leagueName = previewMatch.comp === 'OSL' ? teamRankLabel(previewMatch.opp) : canonicalTeamName(previewMatch.opp);
-        previewStoryline.innerHTML = `Vaughan continue the 2026 campaign against <b>${escapeHTML(leagueName)}</b>, with the possession project again requesting fresh legs.`;
-        previewPlayer.innerHTML = 'The midfield. If the ball keeps moving, the running can remain someone else’s problem.';
-        previewStakes.innerHTML = 'Points, rhythm, and another public test of the club’s relationship with recovery runs.';
-      }
-    }
-
-    const scout = document.getElementById('opponentScout');
-    if (scout) {
-      const importance = matchImportance(next);
-      const oppRank = next.comp === 'OSL' ? ordinal(standingRank(next.opp)) : (next.comp === 'Friendly' ? 'Exhibition' : 'Cup opponent');
-      scout.innerHTML = `
-        <div class="scout-kicker">Opponent Snapshot</div>
-        <div class="scout-stat"><div class="scout-lab">Standing</div><div class="scout-val">${escapeHTML(oppRank)}</div></div>
-        <div class="scout-stat"><div class="scout-lab">Form</div><div class="scout-val">${escapeHTML(compactForm(next.opp))}</div></div>
-        <div class="scout-stat"><div class="scout-lab">Tag</div><div class="scout-val">${escapeHTML(importance.text)}</div></div>
-        <div class="scout-note">${escapeHTML(scoutingNote(next))}</div>
-      `;
-    }
-
     const refreshDelay = fixtureCutoffDateTime(next).getTime() - Date.now();
     if (refreshDelay > 0) {
       setTimeout(() => window.location.reload(), refreshDelay + 60000);
@@ -3489,71 +3359,6 @@
     standingsBody.appendChild(tr);
   });
 
-  // Squad
-  const squadGrid = document.getElementById('squadGrid');
-  document.getElementById('squadCount').textContent = roster.length;
-  // Sort: GK first, then by squad number
-  const sorted = [...roster].sort((a, b) => {
-    if (a.pos !== b.pos) {
-      if (a.pos === 'GK') return -1;
-      if (b.pos === 'GK') return 1;
-    }
-    return (a.num || 999) - (b.num || 999);
-  });
-  sorted.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'player-card';
-    const ageStr = p.dob ? `${ageOn(p.dob, TODAY)} yrs` : '&mdash;';
-    const fullName = [p.first, p.last].filter(Boolean).join(' ') || p.nick;
-    const isGK = p.pos === 'GK';
-    const posClass = isGK ? 'gk' : 'outfield';
-
-    // Role badges
-    const roles = [];
-    if (p.captain) roles.push('<span class="pc-role-badge pc-role-capt">© Captain</span>');
-    if (p.vc)      roles.push('<span class="pc-role-badge pc-role-vc">Vice Capt</span>');
-    if (p.vc2)     roles.push('<span class="pc-role-badge pc-role-vc">2nd VC</span>');
-    if (p.role === 'Sporting Director') roles.push('<span class="pc-role-badge pc-role-sd">Sporting Dir</span>');
-    if (p.startingGK) roles.push('<span class="pc-role-badge pc-role-gk1">★ Starting GK</span>');
-    if (p.backupGK)   roles.push('<span class="pc-role-badge pc-role-gk2">Backup GK</span>');
-    const rolesHTML = roles.length ? `<div class="pc-roles">${roles.join('')}</div>` : '';
-
-    const status = p.startingGK ? 'First Choice' : p.backupGK ? 'Backup' : p.captain ? 'Captain' : p.vc ? 'Vice Captain' : p.role === 'Sporting Director' ? 'Staff / Player' : 'Squad';
-    const avatarHTML = p.photo
-      ? `<div class="pc-avatar has-photo"><img src="${p.photo}" alt="${fullName}" loading="lazy"></div>`
-      : `<div class="pc-avatar ${isGK ? '' : 'outfield'}">${isGK ? 'GK' : p.pos}</div>`;
-
-    card.innerHTML = `
-      <div class="player-card-top">
-        <div class="pc-ident">
-          ${avatarHTML}
-          <div style="min-width:0;">
-            <div class="pc-kicker">Squad Dossier</div>
-            <div class="pc-nick">${p.nick}</div>
-            <div class="pc-fullname">${fullName}</div>
-          </div>
-        </div>
-        <div class="pc-pos-box">
-          <div class="pc-num">${p.num}</div>
-          <div class="pc-pos ${posClass}">${p.pos}</div>
-        </div>
-      </div>
-      ${rolesHTML}
-      <div class="pc-meta-grid">
-        <div class="pc-meta-item"><div class="pc-meta-lab">Status</div><div class="pc-meta-val">${status}</div></div>
-        <div class="pc-meta-item"><div class="pc-meta-lab">Nation</div><div class="pc-meta-val pc-nat-lockup"><span class="pc-flag" title="${p.natName}">${p.nat}</span><span class="pc-nat-name">${p.natName}</span></div></div>
-        <div class="pc-meta-item"><div class="pc-meta-lab">Age</div><div class="pc-meta-val">${ageStr}</div></div>
-      </div>
-      <div class="pc-stats">
-        <div class="pc-stat"><div class="pc-stat-num">0</div><div class="pc-stat-lab">App</div></div>
-        <div class="pc-stat"><div class="pc-stat-num">0</div><div class="pc-stat-lab">Gls</div></div>
-        <div class="pc-stat"><div class="pc-stat-num">0</div><div class="pc-stat-lab">Ast</div></div>
-        <div class="pc-stat"><div class="pc-stat-num">0</div><div class="pc-stat-lab">${isGK ? 'CS' : 'YC'}</div></div>
-      </div>
-    `;
-    squadGrid.appendChild(card);
-  });
-
   // Attendance hub — binary present/not-present tracking from data/attendance.json
 
   const playerAliases = new Map();
@@ -3573,13 +3378,20 @@
 
   function renderAttendance(data) {
     const events = Array.isArray(data?.events) ? data.events : [];
-    const players = roster.map(p => ({ ...p, fullName: playerFullName(p), overall: 0, training: 0, match: 0 }));
+    const players = roster.map(p => ({ ...p, fullName: playerFullName(p), overall: 0, eligible: 0, training: 0, match: 0 }));
     const byName = new Map(players.map(p => [p.fullName, p]));
 
     events.forEach(ev => {
       const type = String(ev.type || '').toLowerCase();
       const present = Array.isArray(ev.present) ? ev.present : [];
+      const absent = Array.isArray(ev.absent) ? ev.absent : [];
       const seen = new Set(present.map(resolvePlayerName).filter(Boolean));
+      const absentSet = new Set(absent.map(resolvePlayerName).filter(Boolean));
+      const eligible = absentSet.size ? new Set([...seen, ...absentSet]) : new Set(players.map(p => p.fullName));
+      eligible.forEach(name => {
+        const p = byName.get(name);
+        if (p) p.eligible += 1;
+      });
       seen.forEach(name => {
         const p = byName.get(name);
         if (!p) return;
@@ -3605,10 +3417,10 @@
       const emptyHTML = '<div class="attendance-empty">No attendance logged yet.<br><span class="empty-tip">After training or games, send: Present: Mario, Rob, Soti…</span></div>';
       leadersEl.innerHTML = emptyHTML;
     } else {
-      const leaders = [...players].sort((a, b) => (b.overall - a.overall) || (a.num - b.num)).slice(0, 10);
+      const leaders = [...players].filter(p => p.eligible > 0).sort((a, b) => ((b.overall / b.eligible) - (a.overall / a.eligible)) || (b.overall - a.overall) || (a.num - b.num)).slice(0, 10);
       leadersEl.innerHTML = leaders.map((p, idx) => {
-        const pct = Math.round((p.overall / total) * 100);
-        return `<div class="attendance-row"><div class="attendance-rank">${idx + 1}</div><div class="attendance-name">${escapeHTML(p.fullName)}<span>${escapeHTML(p.nick)} · #${escapeHTML(p.num)}</span></div><div class="attendance-count">${escapeHTML(p.overall)}/${escapeHTML(total)}</div><div class="attendance-pct">${escapeHTML(pct)}%</div></div>`;
+        const pct = Math.round((p.overall / Math.max(1, p.eligible)) * 100);
+        return `<div class="attendance-row"><div class="attendance-rank">${idx + 1}</div><div class="attendance-name">${escapeHTML(p.fullName)}<span>${escapeHTML(p.nick)} · #${escapeHTML(p.num || '—')}</span></div><div class="attendance-count">${escapeHTML(p.overall)}/${escapeHTML(p.eligible)}</div><div class="attendance-pct">${escapeHTML(pct)}%</div></div>`;
       }).join('');
     }
 
@@ -3621,8 +3433,10 @@
     }
     const presentNames = (Array.isArray(latest.present) ? latest.present : []).map(resolvePlayerName).filter(Boolean);
     const presentSet = new Set(presentNames);
-    const missing = players.map(p => p.fullName).filter(name => !presentSet.has(name));
-    latestMeta.textContent = `${String(latest.type || 'Session').toUpperCase()} · ${presentNames.length}/${players.length}`;
+    const explicitAbsent = (Array.isArray(latest.absent) ? latest.absent : []).map(resolvePlayerName).filter(Boolean);
+    const missing = explicitAbsent.length ? explicitAbsent : players.map(p => p.fullName).filter(name => !presentSet.has(name));
+    const eligibleCount = explicitAbsent.length ? presentNames.length + explicitAbsent.length : players.length;
+    latestMeta.textContent = `${String(latest.type || 'Session').toUpperCase()} · ${presentNames.length}/${eligibleCount}`;
     const recap = Array.isArray(latest.recap) ? latest.recap.filter(Boolean) : [];
     const recapHtml = recap.length ? `<div class="attendance-recap"><ul>${recap.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul></div>` : '';
     latestEl.innerHTML = `
@@ -3634,7 +3448,25 @@
       </div>`;
   }
 
+  function attendanceEventsFromRows(rows) {
+    return rows.map(row => ({
+      date: row.date,
+      type: row.type,
+      label: row.label,
+      opponent: row.opponent,
+      result: row.result,
+      present: (row.present || '').split(';').map(v => v.trim()).filter(Boolean),
+      absent: (row.absent || '').split(';').map(v => v.trim()).filter(Boolean),
+      recap: (row.recap || '').split('|').map(v => v.trim()).filter(Boolean)
+    })).filter(ev => ev.date || ev.label || ev.present.length || ev.absent.length);
+  }
+
   async function loadAttendance() {
+    const rows = await loadCSV('data/attendance.csv');
+    if (rows.length) {
+      renderAttendance({ events: attendanceEventsFromRows(rows) });
+      return;
+    }
     if (dashboard && dashboard.attendance && Array.isArray(dashboard.attendance.events)) {
       renderAttendance(dashboard.attendance);
       return;

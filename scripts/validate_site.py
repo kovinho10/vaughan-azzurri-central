@@ -2,6 +2,7 @@
 """Lightweight static validation for the Vaughan Azzurri Central site."""
 from __future__ import annotations
 
+import csv
 import json
 import re
 import subprocess
@@ -49,18 +50,51 @@ def main() -> int:
     if duplicates:
         fail(f"duplicate ids: {', '.join(duplicates)}")
 
-    for target in ("previewHomeLogo", "previewOppLogo"):
-        if target not in parser.ids:
-            fail(f"missing expected id: {target}")
-
     for rel in parser.assets:
         if rel.startswith(("/", "//")):
             continue
         if not (ROOT / rel).exists():
             fail(f"missing asset referenced by HTML: {rel}")
 
+    site_data = None
     for path in sorted(DATA_DIR.glob("*.json")):
-        json.loads(path.read_text(encoding="utf-8"))
+        parsed = json.loads(path.read_text(encoding="utf-8"))
+        if path.name == "site-data.json":
+            site_data = parsed
+
+    roster_names = set()
+    roster_csv = DATA_DIR / "roster.csv"
+    if roster_csv.exists():
+        with roster_csv.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                name = (row.get("full_name") or "").strip()
+                if name:
+                    roster_names.add(name)
+    elif site_data:
+        roster_names = {
+            f"{player.get('first', '')} {player.get('last', '')}".strip()
+            for player in site_data.get("roster", [])
+            if f"{player.get('first', '')} {player.get('last', '')}".strip()
+        }
+
+    results_csv = DATA_DIR / "match-results.csv"
+    if results_csv.exists() and roster_names:
+        with results_csv.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                for item in filter(None, (row.get("scorers") or "").split(";")):
+                    name = item.split(":", 1)[0].strip()
+                    if name and name not in roster_names:
+                        fail(f"match-results.csv scorer is not on roster: {name}")
+
+    attendance_csv = DATA_DIR / "attendance.csv"
+    if attendance_csv.exists() and roster_names:
+        with attendance_csv.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                for column in ("present", "absent"):
+                    for name in filter(None, (row.get(column) or "").split(";")):
+                        name = name.strip()
+                        if name and name not in roster_names:
+                            fail(f"attendance.csv {column} player is not on roster: {name}")
 
     if parser.scripts:
         with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as tmp:
