@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-05-13",
+    "updated": "2026-05-14",
     "windowDays": 3,
     "maxResults": 20,
     "sources": [
@@ -112,7 +112,15 @@
       "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260512",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260512",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260512",
-      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260512"
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260512",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260513",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260513",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260513",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260513",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260513",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260513",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260513",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260513"
     ],
     "status": "local_plus_world_results",
     "worldSource": "ESPN soccer scoreboard APIs"
@@ -132,6 +140,16 @@
     {
       "comp": "Premier League",
       "source": "ESPN World Football",
+      "date": "2026-05-13",
+      "home": "Man City",
+      "away": "C Palace",
+      "homeScore": 3,
+      "awayScore": 0,
+      "status": "Final"
+    },
+    {
+      "comp": "Premier League",
+      "source": "ESPN World Football",
       "date": "2026-05-11",
       "home": "Spurs",
       "away": "Leeds",
@@ -140,42 +158,42 @@
       "status": "Final"
     },
     {
-      "comp": "Premier League",
+      "comp": "La Liga",
       "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Burnley",
-      "away": "Aston Villa",
+      "date": "2026-05-13",
+      "home": "Espanyol",
+      "away": "Athletic",
       "homeScore": 2,
-      "awayScore": 2,
+      "awayScore": 0,
       "status": "Final"
     },
     {
-      "comp": "Premier League",
+      "comp": "La Liga",
       "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "C Palace",
-      "away": "Everton",
+      "date": "2026-05-13",
+      "home": "Villarreal",
+      "away": "Sevilla",
       "homeScore": 2,
-      "awayScore": 2,
+      "awayScore": 3,
       "status": "Final"
     },
     {
-      "comp": "Premier League",
+      "comp": "La Liga",
       "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Nottm Forest",
-      "away": "Newcastle",
+      "date": "2026-05-13",
+      "home": "Alavés",
+      "away": "Barcelona",
       "homeScore": 1,
-      "awayScore": 1,
+      "awayScore": 0,
       "status": "Final"
     },
     {
-      "comp": "Premier League",
+      "comp": "La Liga",
       "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "West Ham",
-      "away": "Arsenal",
-      "homeScore": 0,
+      "date": "2026-05-13",
+      "home": "Getafe",
+      "away": "Mallorca",
+      "homeScore": 3,
       "awayScore": 1,
       "status": "Final"
     },
@@ -220,46 +238,6 @@
       "status": "Final"
     },
     {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Mallorca",
-      "away": "Villarreal",
-      "homeScore": 1,
-      "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Athletic",
-      "away": "Valencia",
-      "homeScore": 0,
-      "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Real Oviedo",
-      "away": "Getafe",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "Final"
-    },
-    {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Barcelona",
-      "away": "Real Madrid",
-      "homeScore": 2,
-      "awayScore": 0,
-      "status": "Final"
-    },
-    {
       "comp": "Serie A",
       "source": "ESPN World Football",
       "date": "2026-05-11",
@@ -270,53 +248,23 @@
       "status": "Final"
     },
     {
-      "comp": "Serie A",
+      "comp": "Ligue 1",
       "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Verona",
-      "away": "Como",
+      "date": "2026-05-13",
+      "home": "Brest",
+      "away": "Strasbourg",
+      "homeScore": 1,
+      "awayScore": 2,
+      "status": "Final"
+    },
+    {
+      "comp": "Ligue 1",
+      "source": "ESPN World Football",
+      "date": "2026-05-13",
+      "home": "Lens",
+      "away": "PSG",
       "homeScore": 0,
-      "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "Serie A",
-      "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Cremonese",
-      "away": "Pisa",
-      "homeScore": 3,
-      "awayScore": 0,
-      "status": "Final"
-    },
-    {
-      "comp": "Serie A",
-      "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Fiorentina",
-      "away": "Genoa",
-      "homeScore": 0,
-      "awayScore": 0,
-      "status": "Final"
-    },
-    {
-      "comp": "Serie A",
-      "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Parma",
-      "away": "AS Roma",
-      "homeScore": 2,
-      "awayScore": 3,
-      "status": "Final"
-    },
-    {
-      "comp": "Serie A",
-      "source": "ESPN World Football",
-      "date": "2026-05-10",
-      "home": "Milan",
-      "away": "Atalanta",
-      "homeScore": 2,
-      "awayScore": 3,
+      "awayScore": 2,
       "status": "Final"
     }
   ]
