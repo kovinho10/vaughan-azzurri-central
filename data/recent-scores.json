@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-05-18",
+    "updated": "2026-05-19",
     "windowDays": 3,
     "maxResults": 20,
     "sources": [
@@ -152,7 +152,15 @@
       "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260517",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260517",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260517",
-      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260517"
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260517",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260518",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260518",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260518",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260518",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260518",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260518",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260518",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260518"
     ],
     "status": "local_plus_world_results",
     "worldSource": "ESPN soccer scoreboard APIs"
@@ -168,6 +176,16 @@
       "awayScore": 4,
       "status": "Final",
       "motm": "Dylan Carreiro"
+    },
+    {
+      "comp": "Premier League",
+      "source": "ESPN World Football",
+      "date": "2026-05-18",
+      "home": "Arsenal",
+      "away": "Burnley",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Final"
     },
     {
       "comp": "Premier League",
@@ -227,16 +245,6 @@
       "away": "West Ham",
       "homeScore": 3,
       "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "Premier League",
-      "source": "ESPN World Football",
-      "date": "2026-05-15",
-      "home": "Aston Villa",
-      "away": "Liverpool",
-      "homeScore": 4,
-      "awayScore": 2,
       "status": "Final"
     },
     {
