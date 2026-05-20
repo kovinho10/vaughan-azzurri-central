@@ -1,11 +1,11 @@
 {
   "meta": {
-    "updated": "2026-05-19",
+    "updated": "2026-05-20",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-05-19"
+        "lastChecked": "2026-05-20"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
