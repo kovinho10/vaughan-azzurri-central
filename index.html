@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Vaughan Azzurri Central &mdash; 2026 Season</title>
-<meta name="description" content="Vaughan Azzurri season dashboard &mdash; calendar, standings, top scorers, clean sheets, attendance, and squad." />
+<meta name="description" content="Vaughan Azzurri season dashboard &mdash; calendar, standings, top scorers, clean sheets, fixtures, and squad." />
 <meta name="theme-color" content="#0a1428" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1165,6 +1165,39 @@
     color: var(--paper);
   }
   .nm-team-name.us { color: #dbeafe; }
+  .team-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    transform: translateY(-1px);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .52em;
+    font-weight: 850;
+    line-height: 1;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--azz-bright);
+    opacity: .78;
+    white-space: nowrap;
+  }
+  .nm-team-name .team-rank {
+    display: block;
+    width: fit-content;
+    margin: 8px auto 0;
+    padding: 4px 8px;
+    border: 1px solid rgba(96,165,250,.24);
+    border-radius: 4px;
+    background: rgba(59,130,246,.08);
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: .20em;
+    transform: none;
+  }
+  .fix-opp .team-rank {
+    color: var(--muted);
+    opacity: .9;
+  }
   .nm-team-tag {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 10px;
@@ -1571,6 +1604,45 @@
   .pip-D { background: var(--draw); color: #1a1a1a; }
   .pip-L { background: var(--loss); }
   .pip-empty { background: var(--border); }
+  .form-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 16px 18px;
+  }
+  .form-card .form {
+    gap: 8px;
+  }
+  .form-card .pip {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 8px 18px -12px rgba(0,0,0,.8);
+  }
+  .form-summary {
+    min-width: 0;
+    text-align: right;
+  }
+  .form-summary-main {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .08em;
+    color: var(--paper);
+  }
+  .form-summary-sub {
+    margin-top: 4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    white-space: nowrap;
+  }
 
   /* ───── Empty state ───── */
   .empty {
@@ -1863,159 +1935,6 @@
     font-variant-numeric: tabular-nums;
   }
   .pc-stat-lab { margin-top: 4px; }
-
-  /* ───── Attendance hub ───── */
-  .attendance-hub { margin-bottom: 24px; }
-  .attendance-summary {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-  .attendance-stat-card {
-    background: linear-gradient(135deg, rgba(16, 27, 50, 0.94), rgba(7,16,30,.98));
-    border: 1px solid rgba(71,86,133,.78);
-    border-radius: 10px;
-    padding: 14px 16px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.045);
-  }
-  .attendance-stat-card::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--win), var(--azz-bright));
-  }
-  .attendance-stat-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 1;
-    color: var(--paper);
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .attendance-stat-lab {
-    margin-top: 6px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--dim);
-  }
-  .attendance-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
-    gap: 12px;
-    align-items: stretch;
-  }
-  .attendance-card { border-radius: 10px; border-color: rgba(71,86,133,.78); background: rgba(7,16,30,.50); }
-  .attendance-list { display: flex; flex-direction: column; }
-  .attendance-row {
-    display: grid;
-    grid-template-columns: 30px minmax(0, 1fr) 70px 54px;
-    gap: 10px;
-    align-items: center;
-    padding: 11px 16px;
-    border-bottom: 1px solid var(--border);
-  }
-  .attendance-row:last-child { border-bottom: 0; }
-  .attendance-rank {
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 12px;
-    font-weight: 900;
-    color: var(--dim);
-  }
-  .attendance-name {
-    min-width: 0;
-    font-family:'Manrope',sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .attendance-name span {
-    display:block;
-    margin-top: 2px;
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 9px;
-    letter-spacing:.18em;
-    text-transform: uppercase;
-    color: var(--dim);
-  }
-  .attendance-count, .attendance-pct {
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 16px;
-    font-weight: 900;
-    color: var(--paper);
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-  }
-  .attendance-pct { color: var(--win); }
-  .attendance-empty {
-    padding: 28px 18px;
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.55;
-  }
-  .attendance-latest-box { padding: 16px; }
-  .attendance-latest-title {
-    font-family:'Fraunces',serif;
-    font-size: 20px;
-    font-weight: 650;
-    color: var(--paper);
-    margin-bottom: 7px;
-  }
-  .attendance-latest-meta {
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing:.2em;
-    text-transform: uppercase;
-    color: var(--azz-bright);
-    margin-bottom: 12px;
-  }
-  .attendance-recap {
-    margin-top: 12px;
-    padding: 12px 14px;
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    background: rgba(15, 23, 42, 0.42);
-    border-radius: 10px;
-    color: var(--paper);
-    font-size: 12px;
-    line-height: 1.55;
-  }
-  .attendance-recap ul { margin: 0; padding-left: 18px; }
-  .attendance-recap li + li { margin-top: 4px; }
-  .attendance-chip-row { display:flex; flex-wrap:wrap; gap:6px; }
-  .attendance-chip {
-    font-family:'Barlow Condensed',sans-serif;
-    font-size: 10px;
-    font-weight: 850;
-    letter-spacing:.14em;
-    text-transform: uppercase;
-    color: var(--text);
-    background: rgba(255,255,255,.045);
-    border: 1px solid rgba(255,255,255,.09);
-    border-radius: 999px;
-    padding: 5px 8px;
-  }
-  @media (max-width: 900px) {
-    .attendance-summary { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .attendance-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 520px) {
-    .attendance-summary { grid-template-columns: 1fr; }
-    .attendance-row { grid-template-columns: 24px minmax(0,1fr) 56px 48px; padding: 10px 12px; }
-  }
 
   /* ───── Fixture list ───── */
   .fixture-list { display: flex; flex-direction: column; }
@@ -2553,8 +2472,28 @@
       </div>
     </div>
 
-    <!-- Side stack: top scorers + clean sheets + attendance (right) -->
+    <!-- Side stack: form + latest result + leaders (right) -->
     <div class="side-stack">
+
+      <div class="card fade-up">
+        <div class="card-h">
+          <div class="card-h-title">Form</div>
+          <div class="card-h-meta">Last 5</div>
+        </div>
+        <div class="card-body tight form-card" id="formCard">
+          <span class="form" aria-label="Current form loading">
+            <span class="pip pip-empty"></span>
+            <span class="pip pip-empty"></span>
+            <span class="pip pip-empty"></span>
+            <span class="pip pip-empty"></span>
+            <span class="pip pip-empty"></span>
+          </span>
+          <div class="form-summary">
+            <div class="form-summary-main">—</div>
+            <div class="form-summary-sub">Current Run</div>
+          </div>
+        </div>
+      </div>
 
       <div class="card fade-up">
         <div class="card-h">
@@ -2680,54 +2619,6 @@
     </div>
   </div>
 
-  <!-- ─────────── ATTENDANCE HUB ─────────── -->
-  <div class="section-h">
-    <h2>Attendance Hub</h2>
-    <div class="h-line"></div>
-    <div class="h-meta"><span id="attendanceEventCount">0</span> sessions logged</div>
-  </div>
-
-  <div class="attendance-hub">
-    <div class="attendance-summary">
-      <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attTotalEvents">0</div>
-        <div class="attendance-stat-lab">Total Events</div>
-      </div>
-      <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attTrainingEvents">0</div>
-        <div class="attendance-stat-lab">Training</div>
-      </div>
-      <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attMatchEvents">0</div>
-        <div class="attendance-stat-lab">Matches</div>
-      </div>
-      <div class="attendance-stat-card">
-        <div class="attendance-stat-num" id="attLatestLabel">—</div>
-        <div class="attendance-stat-lab">Latest</div>
-      </div>
-    </div>
-    <div class="attendance-grid">
-      <div class="card attendance-card">
-        <div class="card-h">
-          <div class="card-h-title">Reliability Table</div>
-          <div class="card-h-meta">Present / Logged</div>
-        </div>
-        <div class="card-body tight">
-          <div class="attendance-list" id="attendanceLeaders"><div class="attendance-empty">Attendance loading...</div></div>
-        </div>
-      </div>
-      <div class="card attendance-card">
-        <div class="card-h">
-          <div class="card-h-title">Latest Session</div>
-          <div class="card-h-meta" id="attendanceLatestMeta">Loading</div>
-        </div>
-        <div class="card-body tight">
-          <div id="attendanceLatest"><div class="attendance-empty">Attendance loading...</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ─────────── COACHING STAFF ─────────── -->
   <div class="section-h">
     <h2>Coaching &amp; Football Staff</h2>
@@ -2807,16 +2698,6 @@
     }
   }
 
-  async function loadCSV(path) {
-    try {
-      const res = await fetch(path, { cache: 'no-store' });
-      if (!res.ok) return [];
-      return parseCSV(await res.text());
-    } catch (_) {
-      return [];
-    }
-  }
-
   function parseCSV(text) {
     const rows = [];
     let row = [], field = '', quoted = false;
@@ -2869,8 +2750,37 @@
     return '';
   }
 
+  function resultScore(result, field) {
+    return result[field] ?? result[field === 'homeScore' ? 'scoreHome' : 'scoreAway'] ?? '';
+  }
+
+  function resultOutcome(result) {
+    const home = canonicalTeamName(result.home || '');
+    const away = canonicalTeamName(result.away || result.opp || '');
+    const homeRaw = resultScore(result, 'homeScore');
+    const awayRaw = resultScore(result, 'awayScore');
+    if (homeRaw === '' || awayRaw === '') return null;
+    const homeScore = Number(homeRaw);
+    const awayScore = Number(awayRaw);
+    if (!Number.isFinite(homeScore) || !Number.isFinite(awayScore)) return null;
+    const vaughanHome = /vaughan/i.test(home);
+    const vaughanAway = /vaughan/i.test(away);
+    const vaughanScore = vaughanHome ? homeScore : vaughanAway ? awayScore : homeScore;
+    const opponentScore = vaughanHome ? awayScore : vaughanAway ? homeScore : awayScore;
+    if (vaughanScore > opponentScore) return 'W';
+    if (vaughanScore < opponentScore) return 'L';
+    return 'D';
+  }
+
+  function completedRecentResults() {
+    return (dashboard.recentResults || [])
+      .filter(result => result && resultOutcome(result))
+      .slice()
+      .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+  }
+
   function getFeaturedMatch() {
-    return dashboard.featuredMatch || null;
+    return completedRecentResults()[0] || dashboard.featuredMatch || null;
   }
 
   function shortSourceDate(value) {
@@ -2933,13 +2843,14 @@
 
   function teamRankLabel(name) {
     const rank = standingRank(name);
-    return rank ? `${canonicalTeamName(name)} (${ordinal(rank)})` : canonicalTeamName(name);
+    const team = escapeHTML(canonicalTeamName(name));
+    return rank ? `${team} <span class="team-rank">${escapeHTML(ordinal(rank))}</span>` : team;
   }
 
   function fixtureTeamsLine(f) {
     if (f.comp !== 'OSL') return `${f.home ? 'vs' : '@'} ${teamNameHTML(f.opp, 'xs')}`;
-    const vaughan = `Vaughan (${ordinal(standingRank('Vaughan'))})`;
-    const opponent = `${canonicalTeamName(f.opp)} (${ordinal(standingRank(f.opp))})`;
+    const vaughan = teamRankLabel('Vaughan');
+    const opponent = teamRankLabel(f.opp);
     return f.home ? `${vaughan} vs ${opponent}` : `${opponent} vs ${vaughan}`;
   }
 
@@ -2999,6 +2910,24 @@
     card.innerHTML = `<div class="rank-list">${scorers.map(([name, goals], idx) => `<div class="rank-row"><div class="rank-pos">${idx + 1}</div><div class="rank-name">${escapeHTML(name)}</div><div class="rank-val">${goals}</div></div>`).join('')}</div>`;
   }
 
+  function renderFormCard() {
+    const card = document.getElementById('formCard');
+    if (!card) return;
+    const form = completedRecentResults().slice(0, 5).map(resultOutcome);
+    const pips = [...form, ...Array(Math.max(0, 5 - form.length)).fill('')];
+    const aria = form.length
+      ? `Current form: ${form.map(letter => ({ W: 'win', D: 'draw', L: 'loss' }[letter])).join(', ')}`
+      : 'Current form: no completed results';
+    card.innerHTML = `
+      <span class="form" aria-label="${escapeHTML(aria)}">
+        ${pips.map(letter => letter ? `<span class="pip pip-${letter}">${letter}</span>` : '<span class="pip pip-empty"></span>').join('')}
+      </span>
+      <div class="form-summary">
+        <div class="form-summary-main">${escapeHTML(form.join('') || '—')}</div>
+        <div class="form-summary-sub">Current Run</div>
+      </div>`;
+  }
+
   function renderDashboard() {
     const hero = dashboard.hero || {};
     const setText = (id, value) => { const el = document.getElementById(id); if (el && value !== undefined) el.textContent = value; };
@@ -3022,6 +2951,7 @@
     setProgress('leagueCupPlayedFill', hero.leagueCupPlayed || 0, hero.leagueCupTotal || 6);
     setText('recordStat', hero.record);
     setText('goalsStat', hero.goals);
+    renderFormCard();
     renderTopScorers();
     const chips = document.getElementById('heroChips');
     if (chips && Array.isArray(hero.chips)) chips.innerHTML = hero.chips.map(chip => `<span class="hero-chip">${escapeHTML(chip)}</span>`).join('');
@@ -3233,7 +3163,7 @@
     document.getElementById('nmCountdownLabel').textContent = isMatchDay ? 'Fixture is live today' : 'Days until kickoff';
     document.getElementById('nmOpp').innerHTML = `${teamLogoHTML(next.opp, 'lg')}${next.comp === 'OSL' ? teamRankLabel(next.opp) : canonicalTeamName(next.opp)}`;
     const homeNameEl = document.getElementById('nmHomeName');
-    if (homeNameEl) homeNameEl.textContent = next.comp === 'OSL' ? `Vaughan (${ordinal(standingRank('Vaughan'))})` : 'Vaughan';
+    if (homeNameEl) homeNameEl.innerHTML = next.comp === 'OSL' ? teamRankLabel('Vaughan') : 'Vaughan';
     document.getElementById('nmDate').textContent = next.when.toLocaleDateString('en-CA', { weekday: 'long', month: 'short', day: 'numeric' });
     document.getElementById('nmTime').textContent = next.t === 'TBD' ? 'TBD' : next.t + ' ET';
     document.getElementById('nmVenue').textContent = next.venue;
@@ -3358,130 +3288,6 @@
     `;
     standingsBody.appendChild(tr);
   });
-
-  // Attendance hub — binary present/not-present tracking from data/attendance.json
-
-  const playerAliases = new Map();
-  roster.forEach(p => {
-    const full = [p.first, p.last].filter(Boolean).join(' ');
-    [full, p.nick, p.first, p.last].filter(Boolean).forEach(v => playerAliases.set(v.trim().toLowerCase(), full));
-  });
-
-  function playerFullName(p) { return [p.first, p.last].filter(Boolean).join(' ') || p.nick; }
-  function resolvePlayerName(name) { return playerAliases.get(String(name || '').trim().toLowerCase()) || String(name || '').trim(); }
-  function fmtAttendanceDate(dateStr) {
-    if (!dateStr) return 'Date TBD';
-    const d = new Date(`${dateStr}T12:00:00`);
-    if (Number.isNaN(d.getTime())) return dateStr;
-    return d.toLocaleDateString('en-CA', { month: 'short', day: 'numeric', year: 'numeric' });
-  }
-
-  function renderAttendance(data) {
-    const events = Array.isArray(data?.events) ? data.events : [];
-    const players = roster.map(p => ({ ...p, fullName: playerFullName(p), overall: 0, eligible: 0, training: 0, match: 0 }));
-    const byName = new Map(players.map(p => [p.fullName, p]));
-
-    events.forEach(ev => {
-      const type = String(ev.type || '').toLowerCase();
-      const present = Array.isArray(ev.present) ? ev.present : [];
-      const absent = Array.isArray(ev.absent) ? ev.absent : [];
-      const seen = new Set(present.map(resolvePlayerName).filter(Boolean));
-      const absentSet = new Set(absent.map(resolvePlayerName).filter(Boolean));
-      const eligible = absentSet.size ? new Set([...seen, ...absentSet]) : new Set(players.map(p => p.fullName));
-      eligible.forEach(name => {
-        const p = byName.get(name);
-        if (p) p.eligible += 1;
-      });
-      seen.forEach(name => {
-        const p = byName.get(name);
-        if (!p) return;
-        p.overall += 1;
-        if (type === 'training') p.training += 1;
-        if (type === 'match') p.match += 1;
-      });
-    });
-
-    const total = events.length;
-    const trainingTotal = events.filter(e => String(e.type || '').toLowerCase() === 'training').length;
-    const matchTotal = events.filter(e => String(e.type || '').toLowerCase() === 'match').length;
-    const latest = [...events].sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))[0];
-
-    document.getElementById('attendanceEventCount').textContent = total;
-    document.getElementById('attTotalEvents').textContent = total;
-    document.getElementById('attTrainingEvents').textContent = trainingTotal;
-    document.getElementById('attMatchEvents').textContent = matchTotal;
-    document.getElementById('attLatestLabel').textContent = latest ? fmtAttendanceDate(latest.date).replace(/, 2026$/, '') : '—';
-
-    const leadersEl = document.getElementById('attendanceLeaders');
-    if (!total) {
-      const emptyHTML = '<div class="attendance-empty">No attendance logged yet.<br><span class="empty-tip">After training or games, send: Present: Mario, Rob, Soti…</span></div>';
-      leadersEl.innerHTML = emptyHTML;
-    } else {
-      const leaders = [...players].filter(p => p.eligible > 0).sort((a, b) => ((b.overall / b.eligible) - (a.overall / a.eligible)) || (b.overall - a.overall) || (a.num - b.num)).slice(0, 10);
-      leadersEl.innerHTML = leaders.map((p, idx) => {
-        const pct = Math.round((p.overall / Math.max(1, p.eligible)) * 100);
-        return `<div class="attendance-row"><div class="attendance-rank">${idx + 1}</div><div class="attendance-name">${escapeHTML(p.fullName)}<span>${escapeHTML(p.nick)} · #${escapeHTML(p.num || '—')}</span></div><div class="attendance-count">${escapeHTML(p.overall)}/${escapeHTML(p.eligible)}</div><div class="attendance-pct">${escapeHTML(pct)}%</div></div>`;
-      }).join('');
-    }
-
-    const latestEl = document.getElementById('attendanceLatest');
-    const latestMeta = document.getElementById('attendanceLatestMeta');
-    if (!latest) {
-      latestMeta.textContent = 'Awaiting Data';
-      latestEl.innerHTML = '<div class="attendance-empty">No session has been logged yet.</div>';
-      return;
-    }
-    const presentNames = (Array.isArray(latest.present) ? latest.present : []).map(resolvePlayerName).filter(Boolean);
-    const presentSet = new Set(presentNames);
-    const explicitAbsent = (Array.isArray(latest.absent) ? latest.absent : []).map(resolvePlayerName).filter(Boolean);
-    const missing = explicitAbsent.length ? explicitAbsent : players.map(p => p.fullName).filter(name => !presentSet.has(name));
-    const eligibleCount = explicitAbsent.length ? presentNames.length + explicitAbsent.length : players.length;
-    latestMeta.textContent = `${String(latest.type || 'Session').toUpperCase()} · ${presentNames.length}/${eligibleCount}`;
-    const recap = Array.isArray(latest.recap) ? latest.recap.filter(Boolean) : [];
-    const recapHtml = recap.length ? `<div class="attendance-recap"><ul>${recap.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul></div>` : '';
-    latestEl.innerHTML = `
-      <div class="attendance-latest-box">
-        <div class="attendance-latest-title">${escapeHTML(latest.label || latest.opponent || latest.location || 'Latest Session')}</div>
-        <div class="attendance-latest-meta">${escapeHTML(fmtAttendanceDate(latest.date))} · ${escapeHTML(presentNames.length)} present · ${escapeHTML(missing.length)} absent</div>
-        <div class="attendance-chip-row">${presentNames.slice(0, 18).map(n => `<span class="attendance-chip">${escapeHTML(n)}</span>`).join('')}</div>
-        ${recapHtml}
-      </div>`;
-  }
-
-  function attendanceEventsFromRows(rows) {
-    return rows.map(row => ({
-      date: row.date,
-      type: row.type,
-      label: row.label,
-      opponent: row.opponent,
-      result: row.result,
-      present: (row.present || '').split(';').map(v => v.trim()).filter(Boolean),
-      absent: (row.absent || '').split(';').map(v => v.trim()).filter(Boolean),
-      recap: (row.recap || '').split('|').map(v => v.trim()).filter(Boolean)
-    })).filter(ev => ev.date || ev.label || ev.present.length || ev.absent.length);
-  }
-
-  async function loadAttendance() {
-    const rows = await loadCSV('data/attendance.csv');
-    if (rows.length) {
-      renderAttendance({ events: attendanceEventsFromRows(rows) });
-      return;
-    }
-    if (dashboard && dashboard.attendance && Array.isArray(dashboard.attendance.events)) {
-      renderAttendance(dashboard.attendance);
-      return;
-    }
-    try {
-      const res = await fetch('data/attendance.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error(`Attendance fetch failed: ${res.status}`);
-      renderAttendance(await res.json());
-    } catch (err) {
-      console.warn(err);
-      renderAttendance({ events: [] });
-    }
-  }
-  loadAttendance();
-
 
   }
   initSite();
