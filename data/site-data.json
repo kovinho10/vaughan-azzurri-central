@@ -1,11 +1,11 @@
 {
   "meta": {
-    "updated": "2026-05-21",
+    "updated": "2026-05-22",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-05-21"
+        "lastChecked": "2026-05-22"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
@@ -506,18 +506,18 @@
   ],
   "standings": [
     {
-      "team": "Croatia Norval",
-      "gp": 0,
-      "w": 0,
+      "team": "Peniche CC",
+      "gp": 1,
+      "w": 1,
       "t": 0,
       "l": 0,
-      "gf": 0,
-      "ga": 0,
-      "gd": 0,
-      "pts": 0
+      "gf": 3,
+      "ga": 2,
+      "gd": 1,
+      "pts": 3
     },
     {
-      "team": "GS United",
+      "team": "Croatia Norval",
       "gp": 0,
       "w": 0,
       "t": 0,
@@ -572,17 +572,6 @@
       "pts": 0
     },
     {
-      "team": "Peniche CC",
-      "gp": 0,
-      "w": 0,
-      "t": 0,
-      "l": 0,
-      "gf": 0,
-      "ga": 0,
-      "gd": 0,
-      "pts": 0
-    },
-    {
       "team": "Scarboro Azzurri Blues",
       "gp": 0,
       "w": 0,
@@ -615,6 +604,17 @@
       "gd": 0,
       "pts": 0,
       "us": true
+    },
+    {
+      "team": "GS United",
+      "gp": 1,
+      "w": 0,
+      "t": 0,
+      "l": 1,
+      "gf": 2,
+      "ga": 3,
+      "gd": -1,
+      "pts": 0
     }
   ],
   "teamLogos": {
