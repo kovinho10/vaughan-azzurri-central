@@ -2992,7 +2992,8 @@
         const day = dateOK ? d.toLocaleDateString('en-CA', { weekday: 'short' }) : 'TBD';
         const num = dateOK ? d.toLocaleDateString('en-CA', { day: '2-digit' }) : '—';
         const mon = dateOK ? d.toLocaleDateString('en-CA', { month: 'short' }) : '';
-        const outcome = Number(hs) > Number(as) ? 'Win' : Number(hs) === Number(as) ? 'Draw' : 'Result';
+        const outcomeLetter = resultOutcome(featured);
+        const outcome = outcomeLetter === 'W' ? 'Win' : outcomeLetter === 'D' ? 'Draw' : outcomeLetter === 'L' ? 'Loss' : 'Result';
         const metaBits = [featured.venue].filter(Boolean).map(escapeHTML).join(' · ');
         recent.innerHTML = `<div class="recent-results-list"><div class="recent-result"><div class="recent-date"><div class="recent-day">${escapeHTML(day)}</div><div class="recent-num">${escapeHTML(num)}</div><div class="recent-mon">${escapeHTML(mon)}</div></div><div class="recent-result-main"><div class="recent-result-top"><span class="match-context-pill blue">${escapeHTML(featured.comp || 'Result')}</span><span class="recent-result-outcome"><span class="result-badge">${escapeHTML(outcome)}</span><span class="recent-result-status">${escapeHTML(featured.status || 'Final')}</span></span></div><div class="recent-result-line"><span>${teamNameHTML(home, 'xs')}</span><span class="recent-result-score">${escapeHTML(hs)}–${escapeHTML(as)}</span><span>${teamNameHTML(away, 'xs')}</span></div><div class="recent-result-meta">${metaBits}</div></div></div></div>`;
       } else if (dashboard.recentResultsEmpty) {

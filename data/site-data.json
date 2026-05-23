@@ -16,6 +16,11 @@
         "label": "Ontario Cup",
         "url": "https://www.ontariosoccer.net/ontario-cup-outdoor-schedule-and-draw-charts",
         "lastChecked": "2026-05-04"
+      },
+      "teamResults": {
+        "label": "OSL Team Results",
+        "url": "https://ontariosl.com/team-results/",
+        "lastChecked": "2026-05-23"
       }
     }
   },
@@ -642,9 +647,9 @@
         "OSL 2026",
         "Cup run alive"
       ],
-      "leaguePlayed": "0/18",
-      "record": "1–0–0",
-      "goals": "4:2",
+      "leaguePlayed": "1/18",
+      "record": "2–0–0",
+      "goals": "8:4",
       "leagueCupPlayed": "1",
       "leagueCupTotal": "6"
     },
@@ -711,20 +716,36 @@
       "tip": "Results, scorers, and clean sheets will populate here as the season unfolds."
     },
     "featuredMatch": {
-      "date": "2026-05-11",
-      "comp": "League Cup",
+      "date": "2026-05-21",
+      "comp": "OSL",
       "home": "Vaughan Azzurri",
-      "away": "GTA United",
+      "away": "Scarboro Azzurri Blues",
       "homeScore": 4,
       "awayScore": 2,
       "status": "Final",
-      "venue": "Zanchin Automotive Soccer Centre",
       "scorers": [
-        "Julian Accettola x3",
-        "Lucas Puntillo"
+        "Jarred Phillips",
+        "Julian Accettola",
+        "Lucas Puntillo",
+        "Michael Petitti"
       ]
     },
     "recentResults": [
+      {
+        "date": "2026-05-21",
+        "comp": "OSL",
+        "home": "Vaughan Azzurri",
+        "away": "Scarboro Azzurri Blues",
+        "homeScore": 4,
+        "awayScore": 2,
+        "status": "Final",
+        "scorers": [
+          "Jarred Phillips",
+          "Julian Accettola",
+          "Lucas Puntillo",
+          "Michael Petitti"
+        ]
+      },
       {
         "date": "2026-05-11",
         "comp": "League Cup",
