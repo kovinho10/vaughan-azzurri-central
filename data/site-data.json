@@ -10,7 +10,7 @@
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-05-04"
+        "lastChecked": "2026-05-23"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -681,11 +681,11 @@
         "title": "OSL League",
         "phase": "Live table",
         "phaseClass": "",
-        "lineLabel": "Status",
-        "lineValue": "Title chase still alive",
+        "lineLabel": "Position",
+        "lineValue": "2 of 10 · 3 pts",
         "stageLabel": "Men Provincial Elite",
-        "stageValue": "0 / 18",
-        "stageNote": "0 matches played",
+        "stageValue": "1/18",
+        "stageNote": "1 match played · 1W-0D-0L · +2 GD",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--league"
@@ -693,13 +693,13 @@
       {
         "key": "leagueCup",
         "title": "League Cup",
-        "phase": "R32",
+        "phase": "Game 47",
         "phaseClass": "gold",
         "lineLabel": "Cup target",
         "lineValue": "$10,000 winner prize",
-        "stageLabel": "Round of 32",
-        "stageValue": "TBD",
-        "stageNote": "Date TBD · KO TBD",
+        "stageLabel": "3rd Round",
+        "stageValue": "Winner Game 15",
+        "stageNote": "By June 30, 2026 · Atletico Toronto/Panathinaikos winner",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--cup"
