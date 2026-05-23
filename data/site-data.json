@@ -519,7 +519,10 @@
       "gf": 5,
       "ga": 0,
       "gd": 5,
-      "pts": 3
+      "pts": 3,
+      "form": [
+        "W"
+      ]
     },
     {
       "team": "Vaughan Azzurri",
@@ -531,7 +534,10 @@
       "ga": 2,
       "gd": 2,
       "pts": 3,
-      "us": true
+      "us": true,
+      "form": [
+        "W"
+      ]
     },
     {
       "team": "Peniche CC",
@@ -542,7 +548,10 @@
       "gf": 3,
       "ga": 2,
       "gd": 1,
-      "pts": 3
+      "pts": 3,
+      "form": [
+        "W"
+      ]
     },
     {
       "team": "Hrvat St. Catharines",
@@ -553,7 +562,8 @@
       "gf": 0,
       "ga": 0,
       "gd": 0,
-      "pts": 0
+      "pts": 0,
+      "form": []
     },
     {
       "team": "Olimpia",
@@ -564,7 +574,8 @@
       "gf": 0,
       "ga": 0,
       "gd": 0,
-      "pts": 0
+      "pts": 0,
+      "form": []
     },
     {
       "team": "Panathinaikos",
@@ -575,7 +586,8 @@
       "gf": 0,
       "ga": 0,
       "gd": 0,
-      "pts": 0
+      "pts": 0,
+      "form": []
     },
     {
       "team": "Toronto Celtic",
@@ -586,7 +598,8 @@
       "gf": 0,
       "ga": 0,
       "gd": 0,
-      "pts": 0
+      "pts": 0,
+      "form": []
     },
     {
       "team": "GS United",
@@ -597,7 +610,10 @@
       "gf": 2,
       "ga": 3,
       "gd": -1,
-      "pts": 0
+      "pts": 0,
+      "form": [
+        "L"
+      ]
     },
     {
       "team": "Scarboro Azzurri Blues",
@@ -608,7 +624,10 @@
       "gf": 2,
       "ga": 4,
       "gd": -2,
-      "pts": 0
+      "pts": 0,
+      "form": [
+        "L"
+      ]
     },
     {
       "team": "Guelph Royals",
@@ -619,7 +638,10 @@
       "gf": 0,
       "ga": 5,
       "gd": -5,
-      "pts": 0
+      "pts": 0,
+      "form": [
+        "L"
+      ]
     }
   ],
   "teamLogos": {

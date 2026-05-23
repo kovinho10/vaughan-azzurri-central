@@ -3266,6 +3266,10 @@
   standings.forEach((s, i) => {
     const tr = document.createElement('tr');
     if (s.us) tr.className = 'us';
+    const formLetters = Array.isArray(s.form) ? s.form.slice(-5) : [];
+    const formPips = [...formLetters, ...Array(Math.max(0, 5 - formLetters.length)).fill('')]
+      .map(letter => letter ? `<span class="pip pip-${escapeHTML(letter)}">${escapeHTML(letter)}</span>` : '<span class="pip pip-empty"></span>')
+      .join('');
     tr.innerHTML = `
       <td class="num">${i + 1}</td>
       <td class="standings-team">${teamNameHTML(s.team, 'md')}</td>
@@ -3277,15 +3281,7 @@
       <td class="c num">${s.ga ?? 0}</td>
       <td class="c num">${s.gd ?? 0}</td>
       <td class="r num"><b>${s.pts ?? 0}</b></td>
-      <td>
-        <span class="form">
-          <span class="pip pip-empty"></span>
-          <span class="pip pip-empty"></span>
-          <span class="pip pip-empty"></span>
-          <span class="pip pip-empty"></span>
-          <span class="pip pip-empty"></span>
-        </span>
-      </td>
+      <td><span class="form">${formPips}</span></td>
     `;
     standingsBody.appendChild(tr);
   });
