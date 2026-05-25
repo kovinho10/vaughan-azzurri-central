@@ -21,6 +21,16 @@
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
         "lastChecked": "2026-05-25"
+      },
+      "divisionResults": {
+        "label": "OSL Men Provincial Elite Results",
+        "url": "https://ontariosl.com/game-results/",
+        "lastChecked": "2026-05-25"
+      },
+      "divisionSchedule": {
+        "label": "OSL Men Provincial Elite Schedule",
+        "url": "https://ontariosl.com/schedule/",
+        "lastChecked": "2026-05-25"
       }
     }
   },
@@ -908,5 +918,37 @@
       "Guelph Royals": "Guelph Royals",
       "Scarboro Azzurri Blues": "Scarboro Azzurri Blues"
     }
+  },
+  "oslTicker": {
+    "updated": "2026-05-25",
+    "source": "https://ontariosl.com/game-results/",
+    "scheduleSource": "https://ontariosl.com/schedule/",
+    "recentScores": [
+      {
+        "gameNumber": "391",
+        "date": "2026-05-21",
+        "home": "Vaughan Azzurri",
+        "away": "Scarboro Azzurri Blues",
+        "homeScore": 4,
+        "awayScore": 2
+      },
+      {
+        "gameNumber": "390",
+        "date": "2026-05-21",
+        "home": "Guelph Royals",
+        "away": "Croatia Norval",
+        "homeScore": 0,
+        "awayScore": 5
+      },
+      {
+        "gameNumber": "389",
+        "date": "2026-05-20",
+        "home": "GS United",
+        "away": "Peniche CC",
+        "homeScore": 2,
+        "awayScore": 3
+      }
+    ],
+    "todayGames": []
   }
 }

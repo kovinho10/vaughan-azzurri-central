@@ -2281,6 +2281,100 @@
     .standings-team { min-width: 160px; }
   }
 
+  /* ───── OSL ticker ───── */
+  .osl-ticker {
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(96,165,250,.24);
+    background:
+      radial-gradient(circle at 8% 50%, rgba(59,130,246,.18), transparent 30%),
+      linear-gradient(90deg, rgba(4,10,20,.98), rgba(10,24,46,.98) 45%, rgba(4,10,20,.98));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 14px 28px -28px rgba(0,0,0,.9);
+  }
+  .osl-ticker::before,
+  .osl-ticker::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .osl-ticker::before { left: 0; background: linear-gradient(90deg, rgba(4,10,20,1), transparent); }
+  .osl-ticker::after { right: 0; background: linear-gradient(270deg, rgba(4,10,20,1), transparent); }
+  .osl-ticker-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    min-height: 42px;
+  }
+  .osl-ticker-label {
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+    padding: 0 14px 0 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #bfdbfe;
+    background: linear-gradient(90deg, rgba(15,23,42,.96), rgba(15,23,42,.72));
+    border-right: 1px solid rgba(96,165,250,.20);
+    white-space: nowrap;
+  }
+  .osl-ticker-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--azz-bright); box-shadow: 0 0 12px rgba(96,165,250,.85); }
+  .osl-ticker-viewport { overflow: hidden; min-width: 0; }
+  .osl-ticker-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    width: max-content;
+    padding: 0 22px;
+    animation: oslTickerSlide 55s linear infinite;
+    will-change: transform;
+  }
+  .osl-ticker-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 7px;
+    white-space: nowrap;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    color: var(--text);
+  }
+  .osl-ticker-item b { color: var(--paper); font-weight: 900; }
+  .osl-ticker-item .score { color: var(--draw); font-weight: 900; font-variant-numeric: tabular-nums; }
+  .osl-ticker-item .tag {
+    font-size: 9px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--azz-bright);
+    border: 1px solid rgba(96,165,250,.25);
+    background: rgba(59,130,246,.10);
+    border-radius: 999px;
+    padding: 3px 6px;
+  }
+  .osl-ticker-item .muted { color: var(--muted); font-weight: 700; }
+  @keyframes oslTickerSlide {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+  @media (max-width: 720px) {
+    .osl-ticker-inner { grid-template-columns: 1fr; min-height: auto; }
+    .osl-ticker-label { height: 28px; padding-left: 14px; border-right: 0; border-bottom: 1px solid rgba(96,165,250,.15); }
+    .osl-ticker-track { animation-duration: 45s; padding: 8px 18px; }
+    .osl-ticker::before, .osl-ticker::after { width: 42px; }
+  }
+
   /* ───── Footer ───── */
   footer {
     margin-top: 56px;
@@ -2345,6 +2439,19 @@
     </div>
   </div>
 </header>
+
+
+<!-- ─────────── OSL TICKER ─────────── -->
+<section class="osl-ticker" aria-label="OSL scores and games today">
+  <div class="osl-ticker-inner">
+    <div class="osl-ticker-label"><span class="osl-ticker-dot" aria-hidden="true"></span> OSL Ticker</div>
+    <div class="osl-ticker-viewport">
+      <div class="osl-ticker-track" id="oslTickerTrack">
+        <span class="osl-ticker-item"><span class="tag">Loading</span><span>Checking OSL scores…</span></span>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <main>
@@ -2686,6 +2793,7 @@
     applyMatchResults();
     renderSourceStamps();
     renderDashboard();
+    renderOslTicker(data.oslTicker || dashboard.oslTicker || {});
   }
 
   async function loadMatchResults() {
@@ -2889,6 +2997,57 @@
     if (oppRank < usRank) return 'Above Vaughan for now, which means the scouting report will be read twice.';
     if (oppRank === usRank) return 'Same table postcode. Small margins, loud group chat.';
     return 'Below Vaughan on paper. Dangerous phrase, historically.';
+  }
+
+
+  function cleanTickerTeam(name) {
+    return canonicalTeamName(String(name || '').replace(/\s+Elite$/i, '').replace(/\s+Men$/i, '').trim());
+  }
+
+  function tickerDateLabel(value) {
+    if (!value) return '';
+    const d = new Date(`${value}T12:00:00`);
+    if (Number.isNaN(d.getTime())) return value;
+    return d.toLocaleDateString('en-CA', { month: 'short', day: 'numeric' });
+  }
+
+  function tickerTimeLabel(value) {
+    if (!value) return 'TBD';
+    const raw = String(value).trim();
+    if (/^\d{1,2}:\d{2}$/.test(raw)) {
+      const [h, m] = raw.split(':').map(Number);
+      const d = new Date();
+      d.setHours(h, m, 0, 0);
+      return d.toLocaleTimeString('en-CA', { hour: 'numeric', minute: '2-digit' }).replace(' a.m.', 'am').replace(' p.m.', 'pm');
+    }
+    return raw.replace(/\s+/g, '');
+  }
+
+  function renderOslTicker(ticker = {}) {
+    const track = document.getElementById('oslTickerTrack');
+    if (!track) return;
+    const scores = Array.isArray(ticker.recentScores) ? ticker.recentScores.slice(0, 10) : [];
+    const todayGames = Array.isArray(ticker.todayGames) ? ticker.todayGames : [];
+    const items = [];
+
+    todayGames.forEach(game => {
+      items.push(`<span class="osl-ticker-item"><span class="tag">Today</span><b>${escapeHTML(cleanTickerTeam(game.home))}</b><span class="muted">vs</span><b>${escapeHTML(cleanTickerTeam(game.away))}</b><span class="muted">${escapeHTML(tickerTimeLabel(game.time || game.t))}${game.field ? ` · ${escapeHTML(game.field)}` : ''}</span></span>`);
+    });
+
+    if (!todayGames.length) {
+      items.push('<span class="osl-ticker-item"><span class="tag">Today</span><span class="muted">No Men Provincial Elite games scheduled today</span></span>');
+    }
+
+    scores.forEach(score => {
+      items.push(`<span class="osl-ticker-item"><span class="tag">Final</span><span class="muted">${escapeHTML(tickerDateLabel(score.date))}</span><b>${escapeHTML(cleanTickerTeam(score.home))}</b><span class="score">${escapeHTML(score.homeScore)}–${escapeHTML(score.awayScore)}</span><b>${escapeHTML(cleanTickerTeam(score.away))}</b></span>`);
+    });
+
+    if (!scores.length) {
+      items.push('<span class="osl-ticker-item"><span class="tag">Scores</span><span class="muted">Recent OSL scores unavailable</span></span>');
+    }
+
+    const html = items.join('');
+    track.innerHTML = html + html;
   }
 
 
