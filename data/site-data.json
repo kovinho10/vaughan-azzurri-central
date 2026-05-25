@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-05-24",
+    "updated": "2026-05-25",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-05-24"
+        "lastChecked": "2026-05-25"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-05-24"
+        "lastChecked": "2026-05-25"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,7 +20,7 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-05-24"
+        "lastChecked": "2026-05-25"
       }
     }
   },
