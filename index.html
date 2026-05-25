@@ -2367,8 +2367,8 @@
   .osl-ticker-item .tag.final-tag { margin-left: 6px; color: #fde68a; border-color: rgba(234,179,8,.32); background: rgba(234,179,8,.10); }
   .osl-ticker-item .muted { color: var(--muted); font-weight: 700; }
   @keyframes oslTickerSlide {
-    from { transform: translateX(100vw); }
-    to { transform: translateX(-100%); }
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
   @media (max-width: 720px) {
     .osl-ticker-inner { grid-template-columns: 1fr; min-height: auto; }
@@ -3042,19 +3042,20 @@
     const todayGames = Array.isArray(ticker.todayGames) ? ticker.todayGames : [];
     const items = [];
 
-    todayGames.forEach(game => {
-      items.push(`<span class="osl-ticker-item"><span class="tag">Today</span><b>${escapeHTML(cleanTickerTeam(game.home))}</b><span class="muted">vs</span><b>${escapeHTML(cleanTickerTeam(game.away))}</b><span class="muted">${escapeHTML(tickerTimeLabel(game.time || game.t))}${game.field ? ` · ${escapeHTML(game.field)}` : ''}</span></span>`);
-    });
-
     scores.forEach(score => {
       items.push(`<span class="osl-ticker-item"><span class="tag final-tag">Final</span><span class="muted">${escapeHTML(tickerDateLabel(score.date))}</span><b>${escapeHTML(cleanTickerTeam(score.home))}</b><span class="score">${escapeHTML(score.homeScore)}–${escapeHTML(score.awayScore)}</span><b>${escapeHTML(cleanTickerTeam(score.away))}</b></span>`);
+    });
+
+    todayGames.forEach(game => {
+      items.push(`<span class="osl-ticker-item"><span class="tag">Today</span><b>${escapeHTML(cleanTickerTeam(game.home))}</b><span class="muted">vs</span><b>${escapeHTML(cleanTickerTeam(game.away))}</b><span class="muted">${escapeHTML(tickerTimeLabel(game.time || game.t))}${game.field ? ` · ${escapeHTML(game.field)}` : ''}</span></span>`);
     });
 
     if (!items.length) {
       items.push('<span class="osl-ticker-item"><span class="tag">OSL</span><span class="muted">Scores loading</span></span>');
     }
 
-    track.innerHTML = items.join('');
+    const html = items.join('');
+    track.innerHTML = html + html;
   }
 
 
