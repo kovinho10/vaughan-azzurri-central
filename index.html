@@ -2334,16 +2334,16 @@
   .osl-ticker-track {
     display: inline-flex;
     align-items: center;
-    gap: 22px;
+    gap: 34px;
     width: max-content;
-    padding: 0 22px;
+    padding: 0 34px;
     animation: oslTickerSlide 55s linear infinite;
     will-change: transform;
   }
   .osl-ticker-item {
     display: inline-flex;
     align-items: baseline;
-    gap: 7px;
+    gap: 9px;
     white-space: nowrap;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 14px;
@@ -2363,6 +2363,7 @@
     border-radius: 999px;
     padding: 3px 6px;
   }
+  .osl-ticker-item .tag.final-tag { margin-left: 6px; color: #fde68a; border-color: rgba(234,179,8,.32); background: rgba(234,179,8,.10); }
   .osl-ticker-item .muted { color: var(--muted); font-weight: 700; }
   @keyframes oslTickerSlide {
     from { transform: translateX(-50%); }
@@ -3034,12 +3035,8 @@
       items.push(`<span class="osl-ticker-item"><span class="tag">Today</span><b>${escapeHTML(cleanTickerTeam(game.home))}</b><span class="muted">vs</span><b>${escapeHTML(cleanTickerTeam(game.away))}</b><span class="muted">${escapeHTML(tickerTimeLabel(game.time || game.t))}${game.field ? ` · ${escapeHTML(game.field)}` : ''}</span></span>`);
     });
 
-    if (!todayGames.length) {
-      items.push('<span class="osl-ticker-item"><span class="tag">Today</span><span class="muted">No Men Provincial Elite games scheduled today</span></span>');
-    }
-
     scores.forEach(score => {
-      items.push(`<span class="osl-ticker-item"><span class="tag">Final</span><span class="muted">${escapeHTML(tickerDateLabel(score.date))}</span><b>${escapeHTML(cleanTickerTeam(score.home))}</b><span class="score">${escapeHTML(score.homeScore)}–${escapeHTML(score.awayScore)}</span><b>${escapeHTML(cleanTickerTeam(score.away))}</b></span>`);
+      items.push(`<span class="osl-ticker-item"><span class="tag final-tag">Final</span><span class="muted">${escapeHTML(tickerDateLabel(score.date))}</span><b>${escapeHTML(cleanTickerTeam(score.home))}</b><span class="score">${escapeHTML(score.homeScore)}–${escapeHTML(score.awayScore)}</span><b>${escapeHTML(cleanTickerTeam(score.away))}</b></span>`);
     });
 
     if (!scores.length) {
