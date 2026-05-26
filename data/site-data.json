@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-05-25",
+    "updated": "2026-05-26",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-05-25"
+        "lastChecked": "2026-05-26"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-05-25"
+        "lastChecked": "2026-05-26"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-05-25"
+        "lastChecked": "2026-05-26"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-05-25"
+        "lastChecked": "2026-05-26"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-05-25"
+        "lastChecked": "2026-05-26"
       }
     }
   },
@@ -920,7 +920,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-05-25",
+    "updated": "2026-05-26",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -949,6 +949,16 @@
         "awayScore": 3
       }
     ],
-    "todayGames": []
+    "todayGames": [
+      {
+        "gameNumber": "407",
+        "date": "2026-05-26",
+        "day": "Tue",
+        "time": "9:10pm",
+        "field": "Earlscourt North",
+        "home": "Peniche CC",
+        "away": "Hrvat St. Catharines"
+      }
+    ]
   }
 }
