@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-05-26",
+    "updated": "2026-05-27",
     "windowDays": 3,
     "maxResults": 20,
     "sources": [
@@ -216,7 +216,15 @@
       "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260525",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260525",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260525",
-      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260525"
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260525",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260526",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260526",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260526",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260526",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260526",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260526",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260526",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260526"
     ],
     "status": "local_plus_world_results",
     "worldSource": "ESPN soccer scoreboard APIs"
@@ -344,82 +352,72 @@
       "status": "Final"
     },
     {
-      "comp": "La Liga",
+      "comp": "Serie A",
       "source": "ESPN World Football",
-      "date": "2026-05-23",
-      "home": "Alavés",
-      "away": "Rayo",
+      "date": "2026-05-24",
+      "home": "Parma",
+      "away": "Sassuolo",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Final"
+    },
+    {
+      "comp": "Serie A",
+      "source": "ESPN World Football",
+      "date": "2026-05-24",
+      "home": "Napoli",
+      "away": "Udinese",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "Final"
+    },
+    {
+      "comp": "Serie A",
+      "source": "ESPN World Football",
+      "date": "2026-05-24",
+      "home": "Milan",
+      "away": "Cagliari",
       "homeScore": 1,
       "awayScore": 2,
       "status": "Final"
     },
     {
-      "comp": "La Liga",
+      "comp": "Serie A",
       "source": "ESPN World Football",
-      "date": "2026-05-23",
-      "home": "Celta Vigo",
-      "away": "Sevilla",
+      "date": "2026-05-24",
+      "home": "Cremonese",
+      "away": "Como",
+      "homeScore": 1,
+      "awayScore": 4,
+      "status": "Final"
+    },
+    {
+      "comp": "Serie A",
+      "source": "ESPN World Football",
+      "date": "2026-05-24",
+      "home": "Verona",
+      "away": "AS Roma",
+      "homeScore": 0,
+      "awayScore": 2,
+      "status": "Final"
+    },
+    {
+      "comp": "Serie A",
+      "source": "ESPN World Football",
+      "date": "2026-05-24",
+      "home": "Lecce",
+      "away": "Genoa",
       "homeScore": 1,
       "awayScore": 0,
       "status": "Final"
     },
     {
-      "comp": "La Liga",
+      "comp": "Serie A",
       "source": "ESPN World Football",
-      "date": "2026-05-23",
-      "home": "Espanyol",
-      "away": "Real Sociedad",
-      "homeScore": 1,
-      "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-23",
-      "home": "Getafe",
-      "away": "Osasuna",
-      "homeScore": 1,
-      "awayScore": 0,
-      "status": "Final"
-    },
-    {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-23",
-      "home": "Girona",
-      "away": "Elche",
-      "homeScore": 1,
-      "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-23",
-      "home": "Mallorca",
-      "away": "Real Oviedo",
-      "homeScore": 3,
-      "awayScore": 0,
-      "status": "Final"
-    },
-    {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-23",
-      "home": "Betis",
-      "away": "Levante",
+      "date": "2026-05-24",
+      "home": "Torino",
+      "away": "Juventus",
       "homeScore": 2,
-      "awayScore": 1,
-      "status": "Final"
-    },
-    {
-      "comp": "La Liga",
-      "source": "ESPN World Football",
-      "date": "2026-05-23",
-      "home": "Real Madrid",
-      "away": "Athletic",
-      "homeScore": 4,
       "awayScore": 2,
       "status": "Final"
     }
