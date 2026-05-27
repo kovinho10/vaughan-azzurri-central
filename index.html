@@ -1255,6 +1255,17 @@
     font-weight: 750;
     line-height: 1.28;
   }
+  .nm-meta .val a,
+  .fix-loc a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(96,165,250,.46);
+  }
+  .nm-meta .val a:hover,
+  .fix-loc a:hover {
+    color: var(--azz-bright);
+    border-bottom-color: var(--azz-bright);
+  }
   .nm-attendance { display: block; }
   .nm-att-num {
     font-family: 'Barlow Condensed', sans-serif;
@@ -2332,13 +2343,14 @@
   .osl-ticker-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--azz-bright); box-shadow: 0 0 12px rgba(96,165,250,.85); }
   .osl-ticker-viewport { overflow: hidden; min-width: 0; }
   .osl-ticker-track {
+    --osl-ticker-distance: 50%;
     display: flex;
     align-items: center;
     gap: 34px;
     width: max-content;
     min-width: 100%;
     padding: 0 34px;
-    animation: oslTickerSlide 55s linear infinite;
+    animation: oslTickerSlide 45s linear infinite;
     will-change: transform;
   }
   .osl-ticker-item {
@@ -2368,7 +2380,7 @@
   .osl-ticker-item .muted { color: var(--muted); font-weight: 700; }
   @keyframes oslTickerSlide {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(calc(-1 * var(--osl-ticker-distance))); }
   }
   @media (max-width: 720px) {
     .osl-ticker-inner { grid-template-columns: 1fr; min-height: auto; }
@@ -3002,6 +3014,43 @@
   }
 
 
+  const VENUE_MAP_LINKS = {
+    'North Maple': 'https://www.google.com/maps/dir//43.88094740821333,-79.51794467942347/@43.88094740821333,-79.51794467942347,12z,',
+    'North Maple Regional Park Turf #1': 'https://www.google.com/maps/dir//43.88094740821333,-79.51794467942347/@43.88094740821333,-79.51794467942347,12z,',
+    'North Maple Regional Park Turf # 1': 'https://www.google.com/maps/dir//43.88094740821333,-79.51794467942347/@43.88094740821333,-79.51794467942347,12z,',
+    'North Maple Regional Park Turf #2': 'https://www.google.com/maps/dir//43.88098899303645,-79.51793987454045/@43.88098899303645,-79.51793987454045,12z,',
+    'North Maple Regional Park Turf # 2': 'https://www.google.com/maps/dir//43.88098899303645,-79.51793987454045/@43.88098899303645,-79.51793987454045,12z,',
+    "L'Amoreaux #1": 'https://www.google.com/maps/dir//43.802911638356896,-79.30553913116455/@43.802911638356896,-79.30553913116455,12z,',
+    'LAmoreaux #1': 'https://www.google.com/maps/dir//43.802911638356896,-79.30553913116455/@43.802911638356896,-79.30553913116455,12z,',
+    'Norval Centre 1': 'https://www.google.com/maps/dir//43.62762639320158,-79.82992172241211/@43.62762639320158,-79.82992172241211,12z,',
+    'Southward 1, Grassie': 'https://www.google.com/maps/dir//43.15059686209487,-79.58453178405762/@43.15059686209487,-79.58453178405762,12z,',
+    'Southward 1 - 11v11': 'https://www.google.com/maps/dir//43.15059686209487,-79.58453178405762/@43.15059686209487,-79.58453178405762,12z,',
+    'Earlscourt Park': 'https://www.google.com/maps/dir//43.674079889998026,-79.45140838623047/@43.674079889998026,-79.45140838623047,12z,',
+    'Earlscourt North': 'https://www.google.com/maps/dir//43.67460756417471,-79.45286750793457/@43.67460756417471,-79.45286750793457,12z,',
+    'Paramount Fine Foods Centre 1': 'https://www.google.com/maps/dir//43.63410284887398,-79.6583890914917/@43.63410284887398,-79.6583890914917,12z,',
+    'Centennial College Turf': 'https://www.google.com/maps/dir//43.78547124986761,-79.22653198242188/@43.78547124986761,-79.22653198242188,12z,',
+    'Centennial College': 'https://www.google.com/maps/dir//43.78547124986761,-79.22653198242188/@43.78547124986761,-79.22653198242188,12z,',
+    'Centennial Bowl Guelph': 'https://www.google.com/maps/dir//43.523705931633835,-80.2532172203064/@43.523705931633835,-80.2532172203064,12z,',
+    'Weston Lions Field': 'https://www.google.com/maps/dir//43.6985652900827,-79.51703667640686/@43.6985652900827,-79.51703667640686,12z,',
+    'Weston Lions': 'https://www.google.com/maps/dir//43.6985652900827,-79.51703667640686/@43.6985652900827,-79.51703667640686,12z,',
+    'Zanchin Automotive Soccer Centre': 'https://www.google.com/maps/dir//43.77073743663521,-79.60229873657227/@43.77073743663521,-79.60229873657227,12z,',
+    'Zanchin Automotive Soccer Centre Stadium': 'https://www.google.com/maps/dir//43.77073743663521,-79.60229873657227/@43.77073743663521,-79.60229873657227,12z,'
+  };
+
+  function venueMapUrl(venue) {
+    const label = String(venue || '').trim();
+    if (!label) return '';
+    return VENUE_MAP_LINKS[label] || VENUE_MAP_LINKS[label.replace(/\s*#\s*/g, ' #').replace(/\s+/g, ' ').trim()] || '';
+  }
+
+  function venueLinkHTML(venue) {
+    const label = String(venue || '').trim();
+    if (!label) return '&mdash;';
+    const url = venueMapUrl(label);
+    if (!url) return escapeHTML(label);
+    return `<a href="${escapeHTML(url)}" target="_blank" rel="noopener" title="Open ${escapeHTML(label)} in Google Maps">${escapeHTML(label)}</a>`;
+  }
+
   function cleanTickerTeam(name) {
     return canonicalTeamName(String(name || '').replace(/\s+Elite$/i, '').replace(/\s+Men$/i, '').trim());
   }
@@ -3055,7 +3104,22 @@
     }
 
     const html = items.join('');
+    track.style.animation = 'none';
     track.innerHTML = html + html;
+
+    requestAnimationFrame(() => {
+      const viewport = track.parentElement?.clientWidth || track.clientWidth || 1;
+      const initialCopyWidth = Math.max(1, track.scrollWidth / 2);
+      const copiesNeeded = Math.max(2, Math.ceil((viewport * 2.4) / initialCopyWidth) + 1);
+      track.innerHTML = Array.from({ length: copiesNeeded }, () => html).join('');
+
+      requestAnimationFrame(() => {
+        const copyWidth = Math.max(1, track.scrollWidth / copiesNeeded);
+        const duration = Math.max(22, Math.min(58, copyWidth / 62));
+        track.style.setProperty('--osl-ticker-distance', `${copyWidth}px`);
+        track.style.animation = `oslTickerSlide ${duration}s linear infinite`;
+      });
+    });
   }
 
 
@@ -3268,19 +3332,62 @@
     85: ['🌨️', 'Snow showers'], 86: ['❄️', 'Heavy snow showers'], 95: ['⛈️', 'Thunderstorm'], 96: ['⛈️', 'Thunderstorm'], 99: ['⛈️', 'Thunderstorm']
   };
 
+  function metNoWeatherLabel(symbol = '') {
+    const raw = String(symbol).replace(/_(day|night|polartwilight)$/i, '');
+    if (raw.includes('thunder')) return ['⛈️', 'Thunderstorm'];
+    if (raw.includes('sleet')) return ['🌧️', 'Sleet'];
+    if (raw.includes('snow')) return ['🌨️', 'Snow'];
+    if (raw.includes('rain')) return ['🌧️', raw.includes('heavy') ? 'Heavy rain' : 'Rain'];
+    if (raw.includes('fog')) return ['🌫️', 'Fog'];
+    if (raw.includes('cloudy')) return raw.includes('partly') ? ['⛅', 'Partly cloudy'] : ['☁️', 'Cloudy'];
+    if (raw.includes('clearsky') || raw.includes('fair')) return ['☀️', 'Sunny'];
+    return ['🌡️', 'Weather'];
+  }
+
+  async function fetchVaughanWeather() {
+    const openMeteoUrls = [
+      'https://api.open-meteo.com/v1/forecast?latitude=43.8372&longitude=-79.5083&current=temperature_2m,weather_code&temperature_unit=celsius&timezone=America%2FToronto',
+      'https://api.open-meteo.com/v1/forecast?latitude=43.8372&longitude=-79.5083&current_weather=true&temperature_unit=celsius&timezone=America%2FToronto'
+    ];
+
+    for (const url of openMeteoUrls) {
+      try {
+        const res = await fetch(url, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`Open-Meteo ${res.status}`);
+        const data = await res.json();
+        const current = data.current || data.current_weather;
+        const temperature = current?.temperature_2m ?? current?.temperature;
+        const code = current?.weather_code ?? current?.weathercode;
+        if (Number.isFinite(Number(temperature))) {
+          const [icon, label] = WEATHER_CODES[Number(code)] || ['🌡️', 'Weather'];
+          return { icon, label, temperature };
+        }
+      } catch (err) {
+        console.warn('Open-Meteo weather failed', err);
+      }
+    }
+
+    const metNoUrl = 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=43.8372&lon=-79.5083';
+    const metNoRes = await fetch(metNoUrl, { cache: 'no-store' });
+    if (!metNoRes.ok) throw new Error(`Met Norway ${metNoRes.status}`);
+    const metNoData = await metNoRes.json();
+    const instant = metNoData?.properties?.timeseries?.[0]?.data?.instant?.details || {};
+    const next = metNoData?.properties?.timeseries?.[0]?.data?.next_1_hours || metNoData?.properties?.timeseries?.[0]?.data?.next_6_hours || {};
+    const temperature = instant.air_temperature;
+    if (!Number.isFinite(Number(temperature))) throw new Error('No weather temperature');
+    const [icon, label] = metNoWeatherLabel(next.summary?.symbol_code);
+    return { icon, label, temperature };
+  }
+
   async function renderWeather() {
     const el = document.getElementById('topWeather');
     if (!el) return;
     try {
-      const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=43.8372&longitude=-79.5083&current_weather=true&temperature_unit=celsius&timezone=America%2FToronto', { cache: 'no-store' });
-      if (!res.ok) throw new Error('Weather unavailable');
-      const data = await res.json();
-      const current = data.current_weather;
-      if (!current) throw new Error('No current weather');
-      const [icon, label] = WEATHER_CODES[current.weathercode] || ['🌡️', 'Weather'];
-      el.title = `Vaughan, Ontario · ${label}`;
-      el.innerHTML = `<span class="weather-icon">${icon}</span><span class="weather-label">Vaughan</span><span class="weather-temp">${Math.round(current.temperature)}°C</span>`;
+      const current = await fetchVaughanWeather();
+      el.title = `Vaughan, Ontario · ${current.label}`;
+      el.innerHTML = `<span class="weather-icon">${current.icon}</span><span class="weather-label">Vaughan</span><span class="weather-temp">${Math.round(Number(current.temperature))}°C</span>`;
     } catch (err) {
+      console.warn('Weather unavailable', err);
       el.title = 'Vaughan weather unavailable';
       el.innerHTML = '<span class="weather-icon">⛅</span><span class="weather-label">Vaughan</span><span class="weather-temp">--°C</span>';
     }
@@ -3334,7 +3441,7 @@
     if (homeNameEl) homeNameEl.innerHTML = next.comp === 'OSL' ? teamRankLabel('Vaughan') : 'Vaughan';
     document.getElementById('nmDate').textContent = next.when.toLocaleDateString('en-CA', { weekday: 'long', month: 'short', day: 'numeric' });
     document.getElementById('nmTime').textContent = next.t === 'TBD' ? 'TBD' : next.t + ' ET';
-    document.getElementById('nmVenue').textContent = next.venue;
+    document.getElementById('nmVenue').innerHTML = venueLinkHTML(next.venue);
     document.getElementById('nmHomeTag').textContent = next.home ? 'Home' : 'Away';
     document.getElementById('nmAwayTag').textContent = next.home ? 'Away' : 'Home';
     // Set comp pill
@@ -3406,7 +3513,7 @@
             <span class="fix-comp-pill ${compClass}">${compBadgeHTML(f.comp, 'mini')}${compLabel}</span>
             <span class="fix-opp">${fixtureTeamsLine(f)}</span>
           </div>
-          <div class="fix-loc">${f.venue}</div>
+          <div class="fix-loc">${venueLinkHTML(f.venue)}</div>
           <div class="fix-context-row">
             <span class="match-context-pill ${importance.tone}">${importance.text}</span>
             <span class="match-context-pill">Form: ${escapeHTML(compactForm(f.opp))}</span>
