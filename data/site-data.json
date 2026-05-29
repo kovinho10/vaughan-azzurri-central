@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-05-28",
+    "updated": "2026-05-29",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-05-28"
+        "lastChecked": "2026-05-29"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-05-28"
+        "lastChecked": "2026-05-29"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-05-28"
+        "lastChecked": "2026-05-29"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-05-28"
+        "lastChecked": "2026-05-29"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-05-28"
+        "lastChecked": "2026-05-29"
       }
     }
   },
@@ -521,6 +521,21 @@
   ],
   "standings": [
     {
+      "team": "Peniche CC",
+      "gp": 2,
+      "w": 1,
+      "t": 1,
+      "l": 0,
+      "gf": 4,
+      "ga": 3,
+      "gd": 1,
+      "pts": 4,
+      "form": [
+        "W",
+        "D"
+      ]
+    },
+    {
       "team": "Croatia Norval",
       "gp": 1,
       "w": 1,
@@ -550,30 +565,18 @@
       ]
     },
     {
-      "team": "Peniche CC",
-      "gp": 1,
-      "w": 1,
-      "t": 0,
-      "l": 0,
-      "gf": 3,
-      "ga": 2,
-      "gd": 1,
-      "pts": 3,
-      "form": [
-        "W"
-      ]
-    },
-    {
       "team": "Hrvat St. Catharines",
-      "gp": 0,
+      "gp": 1,
       "w": 0,
-      "t": 0,
+      "t": 1,
       "l": 0,
-      "gf": 0,
-      "ga": 0,
+      "gf": 1,
+      "ga": 1,
       "gd": 0,
-      "pts": 0,
-      "form": []
+      "pts": 1,
+      "form": [
+        "D"
+      ]
     },
     {
       "team": "Olimpia",
@@ -692,7 +695,7 @@
         "phase": "Live table",
         "phaseClass": "",
         "lineLabel": "Position",
-        "lineValue": "2 of 10 · 3 pts",
+        "lineValue": "3 of 10 · 3 pts",
         "stageLabel": "Men Provincial Elite",
         "stageValue": "1/18",
         "stageNote": "1 match played · 1W-0D-0L · +2 GD",
@@ -708,8 +711,8 @@
         "lineLabel": "Cup target",
         "lineValue": "$10,000 winner prize",
         "stageLabel": "3rd Round",
-        "stageValue": "Winner Game 15",
-        "stageNote": "By June 30, 2026 · Atletico Toronto/Panathinaikos winner",
+        "stageValue": "Panathinaikos",
+        "stageNote": "By June 30, 2026",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--cup"
@@ -920,10 +923,18 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-05-28",
+    "updated": "2026-05-29",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "407",
+        "date": "2026-05-26",
+        "home": "Peniche CC",
+        "away": "Hrvat St. Catharines",
+        "homeScore": 1,
+        "awayScore": 1
+      },
       {
         "gameNumber": "391",
         "date": "2026-05-21",
@@ -949,6 +960,34 @@
         "awayScore": 3
       }
     ],
-    "todayGames": []
+    "todayGames": [
+      {
+        "gameNumber": "412",
+        "date": "2026-05-29",
+        "day": "Fri",
+        "time": "8:30pm",
+        "field": "Centennial College",
+        "home": "Toronto Celtic",
+        "away": "Guelph Royals"
+      },
+      {
+        "gameNumber": "413",
+        "date": "2026-05-29",
+        "day": "Fri",
+        "time": "9:00pm",
+        "field": "Paramount Fine Foods Centre 1",
+        "home": "Olimpia",
+        "away": "Croatia Norval"
+      },
+      {
+        "gameNumber": "414",
+        "date": "2026-05-29",
+        "day": "Fri",
+        "time": "9:00pm",
+        "field": "LAmoreaux #1",
+        "home": "Scarboro Azzurri Blues",
+        "away": "GS United"
+      }
+    ]
   }
 }
