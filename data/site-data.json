@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-05-30",
+    "updated": "2026-05-31",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-05-30"
+        "lastChecked": "2026-05-31"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-05-30"
+        "lastChecked": "2026-05-31"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-05-30"
+        "lastChecked": "2026-05-31"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-05-30"
+        "lastChecked": "2026-05-31"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-05-30"
+        "lastChecked": "2026-05-31"
       }
     }
   },
@@ -580,6 +580,20 @@
       ]
     },
     {
+      "team": "Toronto Celtic",
+      "gp": 1,
+      "w": 1,
+      "t": 0,
+      "l": 0,
+      "gf": 3,
+      "ga": 2,
+      "gd": 1,
+      "pts": 3,
+      "form": [
+        "W"
+      ]
+    },
+    {
       "team": "Hrvat St. Catharines",
       "gp": 1,
       "w": 0,
@@ -595,18 +609,6 @@
     },
     {
       "team": "Panathinaikos",
-      "gp": 0,
-      "w": 0,
-      "t": 0,
-      "l": 0,
-      "gf": 0,
-      "ga": 0,
-      "gd": 0,
-      "pts": 0,
-      "form": []
-    },
-    {
-      "team": "Toronto Celtic",
       "gp": 0,
       "w": 0,
       "t": 0,
@@ -647,15 +649,16 @@
     },
     {
       "team": "Guelph Royals",
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "t": 0,
-      "l": 1,
-      "gf": 0,
-      "ga": 5,
-      "gd": -5,
+      "l": 2,
+      "gf": 2,
+      "ga": 8,
+      "gd": -6,
       "pts": 0,
       "form": [
+        "L",
         "L"
       ]
     }
@@ -926,7 +929,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-05-30",
+    "updated": "2026-05-31",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -935,6 +938,14 @@
         "date": "2026-05-29",
         "home": "Olimpia",
         "away": "Croatia Norval",
+        "homeScore": 3,
+        "awayScore": 2
+      },
+      {
+        "gameNumber": "412",
+        "date": "2026-05-29",
+        "home": "Toronto Celtic",
+        "away": "Guelph Royals",
         "homeScore": 3,
         "awayScore": 2
       },
@@ -971,6 +982,16 @@
         "awayScore": 3
       }
     ],
-    "todayGames": []
+    "todayGames": [
+      {
+        "gameNumber": "420",
+        "date": "2026-05-31",
+        "day": "Sun",
+        "time": "7:00pm",
+        "field": "LAmoreaux #1",
+        "home": "Panathinaikos",
+        "away": "Vaughan Azzurri"
+      }
+    ]
   }
 }
