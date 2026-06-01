@@ -441,7 +441,7 @@
     },
     {
       "first": "Andron",
-      "last": "Karagamaryian",
+      "last": "Kagramanyan",
       "nick": "Andron",
       "dob": null,
       "pos": "CM",
@@ -521,6 +521,22 @@
   ],
   "standings": [
     {
+      "team": "Vaughan Azzurri",
+      "gp": 2,
+      "w": 2,
+      "t": 0,
+      "l": 0,
+      "gf": 6,
+      "ga": 2,
+      "gd": 4,
+      "pts": 6,
+      "us": true,
+      "form": [
+        "W",
+        "W"
+      ]
+    },
+    {
       "team": "Peniche CC",
       "gp": 2,
       "w": 1,
@@ -548,21 +564,6 @@
       "form": [
         "W",
         "L"
-      ]
-    },
-    {
-      "team": "Vaughan Azzurri",
-      "gp": 1,
-      "w": 1,
-      "t": 0,
-      "l": 0,
-      "gf": 4,
-      "ga": 2,
-      "gd": 2,
-      "pts": 3,
-      "us": true,
-      "form": [
-        "W"
       ]
     },
     {
@@ -624,15 +625,17 @@
     },
     {
       "team": "Panathinaikos",
-      "gp": 0,
+      "gp": 1,
       "w": 0,
       "t": 0,
-      "l": 0,
+      "l": 1,
       "gf": 0,
-      "ga": 0,
-      "gd": 0,
+      "ga": 2,
+      "gd": -2,
       "pts": 0,
-      "form": []
+      "form": [
+        "L"
+      ]
     },
     {
       "team": "Scarboro Azzurri Blues",
@@ -690,9 +693,9 @@
         "OSL 2026",
         "Cup run alive"
       ],
-      "leaguePlayed": "1/18",
-      "record": "2–0–0",
-      "goals": "8:4",
+      "leaguePlayed": "2/18",
+      "record": "3–0–0",
+      "goals": "10:4",
       "leagueCupPlayed": "1",
       "leagueCupTotal": "6"
     },
@@ -703,10 +706,10 @@
         "phase": "Live table",
         "phaseClass": "",
         "lineLabel": "Position",
-        "lineValue": "3 of 10 · 3 pts",
+        "lineValue": "1 of 10 · 6 pts",
         "stageLabel": "Men Provincial Elite",
-        "stageValue": "1/18",
-        "stageNote": "1 match played · 1W-0D-0L · +2 GD",
+        "stageValue": "2/18",
+        "stageNote": "2 matches played · 2W-0D-0L · +4 GD",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--league"
@@ -759,21 +762,32 @@
       "tip": "Results, scorers, and clean sheets will populate here as the season unfolds."
     },
     "featuredMatch": {
-      "date": "2026-05-21",
+      "date": "2026-05-31",
       "comp": "OSL",
-      "home": "Vaughan Azzurri",
-      "away": "Scarboro Azzurri Blues",
-      "homeScore": 4,
+      "home": "Panathinaikos",
+      "away": "Vaughan Azzurri",
+      "homeScore": 0,
       "awayScore": 2,
       "status": "Final",
       "scorers": [
-        "Jarred Phillips",
-        "Julian Accettola",
-        "Lucas Puntillo",
-        "Michael Petitti"
+        "Andron Kagramanyan",
+        "Julian Accettola"
       ]
     },
     "recentResults": [
+      {
+        "date": "2026-05-31",
+        "comp": "OSL",
+        "home": "Panathinaikos",
+        "away": "Vaughan Azzurri",
+        "homeScore": 0,
+        "awayScore": 2,
+        "status": "Final",
+        "scorers": [
+          "Andron Kagramanyan",
+          "Julian Accettola"
+        ]
+      },
       {
         "date": "2026-05-21",
         "comp": "OSL",
@@ -935,6 +949,14 @@
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "420",
+        "date": "2026-05-31",
+        "home": "Panathinaikos",
+        "away": "Vaughan Azzurri",
+        "homeScore": 0,
+        "awayScore": 2
+      },
       {
         "gameNumber": "414",
         "date": "2026-05-29",
