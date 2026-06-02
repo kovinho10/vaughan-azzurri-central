@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-06-01",
+    "updated": "2026-06-02",
     "windowDays": 3,
     "maxResults": 20,
     "sources": [
@@ -264,7 +264,15 @@
       "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260531",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260531",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260531",
-      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260531"
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260531",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260601",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260601",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260601",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260601",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260601",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260601",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260601",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260601"
     ],
     "status": "local_plus_world_results",
     "worldSource": "ESPN soccer scoreboard APIs"
