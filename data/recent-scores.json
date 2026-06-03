@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-06-02",
+    "updated": "2026-06-03",
     "windowDays": 3,
     "maxResults": 20,
     "sources": [
@@ -272,9 +272,17 @@
       "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260601",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260601",
       "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260601",
-      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260601"
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260601",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260602",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260602",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260602",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260602",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260602",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20260602",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20260602",
+      "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20260602"
     ],
-    "status": "local_plus_world_results",
+    "status": "no_verified_recent_results_found",
     "worldSource": "ESPN soccer scoreboard APIs"
   },
   "scores": [
@@ -288,16 +296,6 @@
       "awayScore": 4,
       "status": "Final",
       "motm": "Dylan Carreiro"
-    },
-    {
-      "comp": "Champions League",
-      "source": "ESPN World Football",
-      "date": "2026-05-30",
-      "home": "PSG",
-      "away": "Arsenal",
-      "homeScore": 1,
-      "awayScore": 1,
-      "status": "Final"
     }
   ]
 }
