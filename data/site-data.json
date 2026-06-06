@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-05",
+    "updated": "2026-06-06",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-05"
+        "lastChecked": "2026-06-06"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-05"
+        "lastChecked": "2026-06-06"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-05"
+        "lastChecked": "2026-06-06"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-05"
+        "lastChecked": "2026-06-06"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-05"
+        "lastChecked": "2026-06-06"
       }
     }
   },
@@ -521,19 +521,67 @@
   ],
   "standings": [
     {
-      "team": "Vaughan Azzurri",
-      "gp": 2,
+      "team": "Croatia Norval",
+      "gp": 3,
       "w": 2,
       "t": 0,
-      "l": 0,
-      "gf": 6,
-      "ga": 2,
-      "gd": 4,
+      "l": 1,
+      "gf": 10,
+      "ga": 5,
+      "gd": 5,
+      "pts": 6,
+      "form": [
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "team": "Vaughan Azzurri",
+      "gp": 3,
+      "w": 2,
+      "t": 0,
+      "l": 1,
+      "gf": 8,
+      "ga": 5,
+      "gd": 3,
       "pts": 6,
       "us": true,
       "form": [
         "W",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "team": "Olimpia",
+      "gp": 2,
+      "w": 2,
+      "t": 0,
+      "l": 0,
+      "gf": 5,
+      "ga": 2,
+      "gd": 3,
+      "pts": 6,
+      "form": [
+        "W",
         "W"
+      ]
+    },
+    {
+      "team": "GS United",
+      "gp": 3,
+      "w": 1,
+      "t": 1,
+      "l": 1,
+      "gf": 6,
+      "ga": 5,
+      "gd": 1,
+      "pts": 4,
+      "form": [
+        "L",
+        "W",
+        "D"
       ]
     },
     {
@@ -550,50 +598,6 @@
         "W",
         "D",
         "L"
-      ]
-    },
-    {
-      "team": "Croatia Norval",
-      "gp": 2,
-      "w": 1,
-      "t": 0,
-      "l": 1,
-      "gf": 7,
-      "ga": 3,
-      "gd": 4,
-      "pts": 3,
-      "form": [
-        "W",
-        "L"
-      ]
-    },
-    {
-      "team": "GS United",
-      "gp": 2,
-      "w": 1,
-      "t": 0,
-      "l": 1,
-      "gf": 5,
-      "ga": 4,
-      "gd": 1,
-      "pts": 3,
-      "form": [
-        "L",
-        "W"
-      ]
-    },
-    {
-      "team": "Olimpia",
-      "gp": 1,
-      "w": 1,
-      "t": 0,
-      "l": 0,
-      "gf": 3,
-      "ga": 2,
-      "gd": 1,
-      "pts": 3,
-      "form": [
-        "W"
       ]
     },
     {
@@ -627,15 +631,32 @@
     },
     {
       "team": "Hrvat St. Catharines",
-      "gp": 1,
+      "gp": 2,
       "w": 0,
       "t": 1,
-      "l": 0,
+      "l": 1,
       "gf": 1,
-      "ga": 1,
-      "gd": 0,
+      "ga": 3,
+      "gd": -2,
       "pts": 1,
       "form": [
+        "D",
+        "L"
+      ]
+    },
+    {
+      "team": "Guelph Royals",
+      "gp": 3,
+      "w": 0,
+      "t": 1,
+      "l": 2,
+      "gf": 3,
+      "ga": 9,
+      "gd": -6,
+      "pts": 1,
+      "form": [
+        "L",
+        "L",
         "D"
       ]
     },
@@ -648,21 +669,6 @@
       "gf": 3,
       "ga": 7,
       "gd": -4,
-      "pts": 0,
-      "form": [
-        "L",
-        "L"
-      ]
-    },
-    {
-      "team": "Guelph Royals",
-      "gp": 2,
-      "w": 0,
-      "t": 0,
-      "l": 2,
-      "gf": 2,
-      "ga": 8,
-      "gd": -6,
       "pts": 0,
       "form": [
         "L",
@@ -695,9 +701,9 @@
         "OSL 2026",
         "Cup run alive"
       ],
-      "leaguePlayed": "2/18",
-      "record": "3–0–0",
-      "goals": "10:4",
+      "leaguePlayed": "3/18",
+      "record": "3–0–1",
+      "goals": "12:7",
       "leagueCupPlayed": "1",
       "leagueCupTotal": "6"
     },
@@ -708,10 +714,10 @@
         "phase": "Live table",
         "phaseClass": "",
         "lineLabel": "Position",
-        "lineValue": "1 of 10 · 6 pts",
+        "lineValue": "2 of 10 · 6 pts",
         "stageLabel": "Men Provincial Elite",
-        "stageValue": "2/18",
-        "stageNote": "2 matches played · 2W-0D-0L · +4 GD",
+        "stageValue": "3/18",
+        "stageNote": "3 matches played · 2W-0D-1L · +3 GD",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--league"
@@ -764,19 +770,32 @@
       "tip": "Results, scorers, and clean sheets will populate here as the season unfolds."
     },
     "featuredMatch": {
-      "date": "2026-05-31",
+      "date": "2026-06-04",
       "comp": "OSL",
-      "home": "Panathinaikos",
-      "away": "Vaughan Azzurri",
-      "homeScore": 0,
-      "awayScore": 2,
+      "home": "Vaughan Azzurri",
+      "away": "Croatia Norval",
+      "homeScore": 2,
+      "awayScore": 3,
       "status": "Final",
       "scorers": [
-        "Andron Kagramanyan",
-        "Julian Accettola"
+        "Julian Accettola",
+        "Mario Kovacevic"
       ]
     },
     "recentResults": [
+      {
+        "date": "2026-06-04",
+        "comp": "OSL",
+        "home": "Vaughan Azzurri",
+        "away": "Croatia Norval",
+        "homeScore": 2,
+        "awayScore": 3,
+        "status": "Final",
+        "scorers": [
+          "Julian Accettola",
+          "Mario Kovacevic"
+        ]
+      },
       {
         "date": "2026-05-31",
         "comp": "OSL",
@@ -947,10 +966,34 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-05",
+    "updated": "2026-06-06",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "434",
+        "date": "2026-06-04",
+        "home": "Vaughan Azzurri",
+        "away": "Croatia Norval",
+        "homeScore": 2,
+        "awayScore": 3
+      },
+      {
+        "gameNumber": "433",
+        "date": "2026-06-04",
+        "home": "Hrvat St. Catharines",
+        "away": "Olimpia",
+        "homeScore": 0,
+        "awayScore": 2
+      },
+      {
+        "gameNumber": "430",
+        "date": "2026-06-03",
+        "home": "GS United",
+        "away": "Guelph Royals",
+        "homeScore": 1,
+        "awayScore": 1
+      },
       {
         "gameNumber": "429",
         "date": "2026-06-02",
@@ -1006,34 +1049,8 @@
         "away": "Scarboro Azzurri Blues",
         "homeScore": 4,
         "awayScore": 2
-      },
-      {
-        "gameNumber": "390",
-        "date": "2026-05-21",
-        "home": "Guelph Royals",
-        "away": "Croatia Norval",
-        "homeScore": 0,
-        "awayScore": 5
-      },
-      {
-        "gameNumber": "389",
-        "date": "2026-05-20",
-        "home": "GS United",
-        "away": "Peniche CC",
-        "homeScore": 2,
-        "awayScore": 3
       }
     ],
-    "todayGames": [
-      {
-        "gameNumber": "442",
-        "date": "2026-06-05",
-        "day": "Fri",
-        "time": "9:00pm",
-        "field": "LAmoreaux #1",
-        "home": "Scarboro Azzurri Blues",
-        "away": "Toronto Celtic"
-      }
-    ]
+    "todayGames": []
   }
 }
