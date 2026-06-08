@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-07",
+    "updated": "2026-06-08",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-07"
+        "lastChecked": "2026-06-08"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-07"
+        "lastChecked": "2026-06-08"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-07"
+        "lastChecked": "2026-06-08"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-07"
+        "lastChecked": "2026-06-08"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-07"
+        "lastChecked": "2026-06-08"
       }
     }
   },
@@ -601,20 +601,6 @@
       ]
     },
     {
-      "team": "Toronto Celtic",
-      "gp": 1,
-      "w": 1,
-      "t": 0,
-      "l": 0,
-      "gf": 3,
-      "ga": 2,
-      "gd": 1,
-      "pts": 3,
-      "form": [
-        "W"
-      ]
-    },
-    {
       "team": "Panathinaikos",
       "gp": 2,
       "w": 1,
@@ -627,6 +613,37 @@
       "form": [
         "L",
         "W"
+      ]
+    },
+    {
+      "team": "Scarboro Azzurri Blues",
+      "gp": 3,
+      "w": 1,
+      "t": 0,
+      "l": 2,
+      "gf": 6,
+      "ga": 7,
+      "gd": -1,
+      "pts": 3,
+      "form": [
+        "L",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "team": "Toronto Celtic",
+      "gp": 2,
+      "w": 1,
+      "t": 0,
+      "l": 1,
+      "gf": 3,
+      "ga": 5,
+      "gd": -2,
+      "pts": 3,
+      "form": [
+        "W",
+        "L"
       ]
     },
     {
@@ -658,21 +675,6 @@
         "L",
         "L",
         "D"
-      ]
-    },
-    {
-      "team": "Scarboro Azzurri Blues",
-      "gp": 2,
-      "w": 0,
-      "t": 0,
-      "l": 2,
-      "gf": 3,
-      "ga": 7,
-      "gd": -4,
-      "pts": 0,
-      "form": [
-        "L",
-        "L"
       ]
     }
   ],
@@ -966,10 +968,18 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-07",
+    "updated": "2026-06-08",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "442",
+        "date": "2026-06-05",
+        "home": "Scarboro Azzurri Blues",
+        "away": "Toronto Celtic",
+        "homeScore": 3,
+        "awayScore": 0
+      },
       {
         "gameNumber": "434",
         "date": "2026-06-04",
@@ -1041,14 +1051,6 @@
         "away": "Hrvat St. Catharines",
         "homeScore": 1,
         "awayScore": 1
-      },
-      {
-        "gameNumber": "391",
-        "date": "2026-05-21",
-        "home": "Vaughan Azzurri",
-        "away": "Scarboro Azzurri Blues",
-        "homeScore": 4,
-        "awayScore": 2
       }
     ],
     "todayGames": []
