@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-08",
+    "updated": "2026-06-09",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-08"
+        "lastChecked": "2026-06-09"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-08"
+        "lastChecked": "2026-06-09"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-08"
+        "lastChecked": "2026-06-09"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-08"
+        "lastChecked": "2026-06-09"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-08"
+        "lastChecked": "2026-06-09"
       }
     }
   },
@@ -780,8 +780,7 @@
       "awayScore": 3,
       "status": "Final",
       "scorers": [
-        "Julian Accettola",
-        "Mario Kovacevic"
+        "Julian Accettola x2"
       ]
     },
     "recentResults": [
@@ -794,8 +793,7 @@
         "awayScore": 3,
         "status": "Final",
         "scorers": [
-          "Julian Accettola",
-          "Mario Kovacevic"
+          "Julian Accettola x2"
         ]
       },
       {
@@ -968,7 +966,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-08",
+    "updated": "2026-06-09",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
