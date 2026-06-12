@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-11",
+    "updated": "2026-06-12",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-11"
+        "lastChecked": "2026-06-12"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-11"
+        "lastChecked": "2026-06-12"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-11"
+        "lastChecked": "2026-06-12"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-11"
+        "lastChecked": "2026-06-12"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-11"
+        "lastChecked": "2026-06-12"
       }
     }
   },
@@ -966,7 +966,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-11",
+    "updated": "2026-06-12",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1053,22 +1053,22 @@
     ],
     "todayGames": [
       {
-        "gameNumber": "464",
-        "date": "2026-06-11",
-        "day": "Thu",
-        "time": "8:45pm",
-        "field": "Southward 1 - 11v11",
-        "home": "Hrvat St. Catharines",
-        "away": "Panathinaikos"
+        "gameNumber": "468",
+        "date": "2026-06-12",
+        "day": "Fri",
+        "time": "8:30pm",
+        "field": "Centennial College",
+        "home": "Toronto Celtic",
+        "away": "Peniche CC"
       },
       {
-        "gameNumber": "465",
-        "date": "2026-06-11",
-        "day": "Thu",
+        "gameNumber": "469",
+        "date": "2026-06-12",
+        "day": "Fri",
         "time": "9:00pm",
-        "field": "Centennial Bowl Guelph",
-        "home": "Guelph Royals",
-        "away": "Scarboro Azzurri Blues"
+        "field": "Paramount Fine Foods Centre 1",
+        "home": "Olimpia",
+        "away": "Vaughan Azzurri"
       }
     ]
   }
