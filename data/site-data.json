@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-12",
+    "updated": "2026-06-13",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-12"
+        "lastChecked": "2026-06-13"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-12"
+        "lastChecked": "2026-06-13"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-12"
+        "lastChecked": "2026-06-13"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-12"
+        "lastChecked": "2026-06-13"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-12"
+        "lastChecked": "2026-06-13"
       }
     }
   },
@@ -67,7 +67,16 @@
       "home": true,
       "opp": "Scarboro Azzurri",
       "venue": "North Maple Regional Park Turf #1",
-      "comp": "OSL"
+      "comp": "OSL",
+      "homeScore": 4,
+      "awayScore": 2,
+      "status": "Final",
+      "scorers": [
+        "Jarred Phillips",
+        "Julian Accettola",
+        "Lucas Puntillo",
+        "Michael Petitti"
+      ]
     },
     {
       "d": "2026-05-31",
@@ -75,7 +84,14 @@
       "home": false,
       "opp": "Pana",
       "venue": "L'Amoreaux #1",
-      "comp": "OSL"
+      "comp": "OSL",
+      "homeScore": 0,
+      "awayScore": 2,
+      "status": "Final",
+      "scorers": [
+        "Andron Kagramanyan",
+        "Julian Accettola"
+      ]
     },
     {
       "d": "2026-06-04",
@@ -83,7 +99,13 @@
       "home": true,
       "opp": "Norval",
       "venue": "North Maple Regional Park Turf #1",
-      "comp": "OSL"
+      "comp": "OSL",
+      "homeScore": 2,
+      "awayScore": 3,
+      "status": "Final",
+      "scorers": [
+        "Julian Accettola x2"
+      ]
     },
     {
       "d": "2026-06-12",
@@ -91,6 +113,21 @@
       "home": false,
       "opp": "Olimpia",
       "venue": "Paramount Fine Foods Centre 1",
+      "comp": "OSL",
+      "homeScore": 3,
+      "awayScore": 2,
+      "status": "Final",
+      "scorers": [
+        "Malcom Shaw",
+        "Milo Djuricic"
+      ]
+    },
+    {
+      "d": "2026-06-16",
+      "t": "21:10",
+      "home": false,
+      "opp": "Peniche",
+      "venue": "Earlscourt North",
       "comp": "OSL"
     },
     {
@@ -98,23 +135,15 @@
       "t": "20:45",
       "home": false,
       "opp": "St Kitts",
-      "venue": "Southward 1, Grassie",
-      "comp": "OSL"
-    },
-    {
-      "d": "2026-06-23",
-      "t": "21:10",
-      "home": false,
-      "opp": "Peniche",
-      "venue": "Earlscourt Park",
+      "venue": "Southward 1 - 11v11",
       "comp": "OSL"
     },
     {
       "d": "2026-07-02",
-      "t": "21:15",
+      "t": "21:00",
       "home": true,
       "opp": "GS United",
-      "venue": "North Maple Regional Park Turf #2",
+      "venue": "North Maple Regional Park Turf # 2",
       "comp": "OSL"
     },
     {
@@ -130,12 +159,12 @@
       "t": "20:30",
       "home": false,
       "opp": "Celtic",
-      "venue": "Centennial College Turf",
+      "venue": "Centennial College",
       "comp": "OSL"
     },
     {
       "d": "2026-07-16",
-      "t": "21:15",
+      "t": "21:00",
       "home": true,
       "opp": "Guelph",
       "venue": "North Maple Regional Park Turf #1",
@@ -143,23 +172,23 @@
     },
     {
       "d": "2026-07-30",
-      "t": "21:15",
+      "t": "21:00",
       "home": true,
       "opp": "Pana",
       "venue": "North Maple Regional Park Turf #1",
       "comp": "OSL"
     },
     {
-      "d": "2026-08-07",
+      "d": "2026-08-09",
       "t": "21:00",
       "home": false,
       "opp": "Scarboro Azzurri",
-      "venue": "L'Amoreaux #1",
+      "venue": "LAmoreaux #1",
       "comp": "OSL"
     },
     {
       "d": "2026-08-18",
-      "t": "21:15",
+      "t": "21:00",
       "home": true,
       "opp": "Peniche",
       "venue": "North Maple Regional Park Turf #1",
@@ -167,15 +196,15 @@
     },
     {
       "d": "2026-08-23",
-      "t": "21:00",
+      "t": "21:10",
       "home": false,
       "opp": "GS United",
-      "venue": "L'Amoreaux #1",
+      "venue": "LAmoreaux #1",
       "comp": "OSL"
     },
     {
       "d": "2026-08-27",
-      "t": "21:15",
+      "t": "21:00",
       "home": true,
       "opp": "Olimpia",
       "venue": "North Maple Regional Park Turf #1",
@@ -183,7 +212,7 @@
     },
     {
       "d": "2026-09-10",
-      "t": "21:15",
+      "t": "21:00",
       "home": true,
       "opp": "Celtic",
       "venue": "North Maple Regional Park Turf #1",
@@ -191,7 +220,7 @@
     },
     {
       "d": "2026-09-17",
-      "t": "21:15",
+      "t": "21:00",
       "home": true,
       "opp": "St Kitts",
       "venue": "North Maple Regional Park Turf #1",
@@ -521,6 +550,22 @@
   ],
   "standings": [
     {
+      "team": "Olimpia",
+      "gp": 3,
+      "w": 3,
+      "t": 0,
+      "l": 0,
+      "gf": 8,
+      "ga": 4,
+      "gd": 4,
+      "pts": 9,
+      "form": [
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
       "team": "Croatia Norval",
       "gp": 3,
       "w": 2,
@@ -538,33 +583,35 @@
     },
     {
       "team": "Vaughan Azzurri",
-      "gp": 3,
+      "gp": 4,
       "w": 2,
       "t": 0,
-      "l": 1,
-      "gf": 8,
-      "ga": 5,
-      "gd": 3,
+      "l": 2,
+      "gf": 10,
+      "ga": 8,
+      "gd": 2,
       "pts": 6,
       "us": true,
       "form": [
         "W",
         "W",
+        "L",
         "L"
       ]
     },
     {
-      "team": "Olimpia",
-      "gp": 2,
-      "w": 2,
-      "t": 0,
-      "l": 0,
-      "gf": 5,
-      "ga": 2,
+      "team": "Hrvat St. Catharines",
+      "gp": 3,
+      "w": 1,
+      "t": 1,
+      "l": 1,
+      "gf": 8,
+      "ga": 5,
       "gd": 3,
-      "pts": 6,
+      "pts": 4,
       "form": [
-        "W",
+        "D",
+        "L",
         "W"
       ]
     },
@@ -601,21 +648,6 @@
       ]
     },
     {
-      "team": "Panathinaikos",
-      "gp": 2,
-      "w": 1,
-      "t": 0,
-      "l": 1,
-      "gf": 3,
-      "ga": 3,
-      "gd": 0,
-      "pts": 3,
-      "form": [
-        "L",
-        "W"
-      ]
-    },
-    {
       "team": "Scarboro Azzurri Blues",
       "gp": 3,
       "w": 1,
@@ -647,17 +679,18 @@
       ]
     },
     {
-      "team": "Hrvat St. Catharines",
-      "gp": 2,
-      "w": 0,
-      "t": 1,
-      "l": 1,
-      "gf": 1,
-      "ga": 3,
-      "gd": -2,
-      "pts": 1,
+      "team": "Panathinaikos",
+      "gp": 3,
+      "w": 1,
+      "t": 0,
+      "l": 2,
+      "gf": 5,
+      "ga": 10,
+      "gd": -5,
+      "pts": 3,
       "form": [
-        "D",
+        "L",
+        "W",
         "L"
       ]
     },
@@ -703,9 +736,9 @@
         "OSL 2026",
         "Cup run alive"
       ],
-      "leaguePlayed": "3/18",
-      "record": "3–0–1",
-      "goals": "12:7",
+      "leaguePlayed": "4/18",
+      "record": "3–0–2",
+      "goals": "14:10",
       "leagueCupPlayed": "1",
       "leagueCupTotal": "6"
     },
@@ -716,10 +749,10 @@
         "phase": "Live table",
         "phaseClass": "",
         "lineLabel": "Position",
-        "lineValue": "2 of 10 · 6 pts",
+        "lineValue": "3 of 10 · 6 pts",
         "stageLabel": "Men Provincial Elite",
-        "stageValue": "3/18",
-        "stageNote": "3 matches played · 2W-0D-1L · +3 GD",
+        "stageValue": "4/18",
+        "stageNote": "4 matches played · 2W-0D-2L · +2 GD",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--league"
@@ -772,18 +805,32 @@
       "tip": "Results, scorers, and clean sheets will populate here as the season unfolds."
     },
     "featuredMatch": {
-      "date": "2026-06-04",
+      "date": "2026-06-12",
       "comp": "OSL",
-      "home": "Vaughan Azzurri",
-      "away": "Croatia Norval",
-      "homeScore": 2,
-      "awayScore": 3,
+      "home": "Olimpia",
+      "away": "Vaughan Azzurri",
+      "homeScore": 3,
+      "awayScore": 2,
       "status": "Final",
       "scorers": [
-        "Julian Accettola x2"
+        "Malcom Shaw",
+        "Milo Djuricic"
       ]
     },
     "recentResults": [
+      {
+        "date": "2026-06-12",
+        "comp": "OSL",
+        "home": "Olimpia",
+        "away": "Vaughan Azzurri",
+        "homeScore": 3,
+        "awayScore": 2,
+        "status": "Final",
+        "scorers": [
+          "Malcom Shaw",
+          "Milo Djuricic"
+        ]
+      },
       {
         "date": "2026-06-04",
         "comp": "OSL",
@@ -966,10 +1013,26 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-12",
+    "updated": "2026-06-13",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "469",
+        "date": "2026-06-12",
+        "home": "Olimpia",
+        "away": "Vaughan Azzurri",
+        "homeScore": 3,
+        "awayScore": 2
+      },
+      {
+        "gameNumber": "464",
+        "date": "2026-06-11",
+        "home": "Hrvat St. Catharines",
+        "away": "Panathinaikos",
+        "homeScore": 7,
+        "awayScore": 2
+      },
       {
         "gameNumber": "442",
         "date": "2026-06-05",
@@ -1033,43 +1096,8 @@
         "away": "Croatia Norval",
         "homeScore": 3,
         "awayScore": 2
-      },
-      {
-        "gameNumber": "412",
-        "date": "2026-05-29",
-        "home": "Toronto Celtic",
-        "away": "Guelph Royals",
-        "homeScore": 3,
-        "awayScore": 2
-      },
-      {
-        "gameNumber": "407",
-        "date": "2026-05-26",
-        "home": "Peniche CC",
-        "away": "Hrvat St. Catharines",
-        "homeScore": 1,
-        "awayScore": 1
       }
     ],
-    "todayGames": [
-      {
-        "gameNumber": "468",
-        "date": "2026-06-12",
-        "day": "Fri",
-        "time": "8:30pm",
-        "field": "Centennial College",
-        "home": "Toronto Celtic",
-        "away": "Peniche CC"
-      },
-      {
-        "gameNumber": "469",
-        "date": "2026-06-12",
-        "day": "Fri",
-        "time": "9:00pm",
-        "field": "Paramount Fine Foods Centre 1",
-        "home": "Olimpia",
-        "away": "Vaughan Azzurri"
-      }
-    ]
+    "todayGames": []
   }
 }
