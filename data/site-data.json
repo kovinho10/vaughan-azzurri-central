@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-13",
+    "updated": "2026-06-14",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-13"
+        "lastChecked": "2026-06-14"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-13"
+        "lastChecked": "2026-06-14"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-13"
+        "lastChecked": "2026-06-14"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-13"
+        "lastChecked": "2026-06-14"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-13"
+        "lastChecked": "2026-06-14"
       }
     }
   },
@@ -1013,7 +1013,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-13",
+    "updated": "2026-06-14",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1098,6 +1098,25 @@
         "awayScore": 2
       }
     ],
-    "todayGames": []
+    "todayGames": [
+      {
+        "gameNumber": "478",
+        "date": "2026-06-14",
+        "day": "Sun",
+        "time": "5:00pm",
+        "field": "Norval Centre 1",
+        "home": "Croatia Norval",
+        "away": "Hrvat St. Catharines"
+      },
+      {
+        "gameNumber": "485",
+        "date": "2026-06-14",
+        "day": "Sun",
+        "time": "7:00pm",
+        "field": "LAmoreaux #1",
+        "home": "Panathinaikos",
+        "away": "GS United"
+      }
+    ]
   }
 }
