@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-16",
+    "updated": "2026-06-17",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-16"
+        "lastChecked": "2026-06-17"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-16"
+        "lastChecked": "2026-06-17"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-16"
+        "lastChecked": "2026-06-17"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-16"
+        "lastChecked": "2026-06-17"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-16"
+        "lastChecked": "2026-06-17"
       }
     }
   },
@@ -1019,7 +1019,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-16",
+    "updated": "2026-06-17",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1106,13 +1106,13 @@
     ],
     "todayGames": [
       {
-        "gameNumber": "497",
-        "date": "2026-06-16",
-        "day": "Tue",
+        "gameNumber": "498",
+        "date": "2026-06-17",
+        "day": "Wed",
         "time": "9:10pm",
-        "field": "Earlscourt North",
-        "home": "Peniche CC",
-        "away": "Vaughan Azzurri"
+        "field": "LAmoreaux #1",
+        "home": "GS United",
+        "away": "Olimpia"
       }
     ]
   }
