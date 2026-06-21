@@ -3453,8 +3453,8 @@
     compPill.innerHTML = compBadgeHTML(next.comp, 'mini') + label;
     compPill.className = 'fix-comp-pill ' + cls;
     if (stageChip && sourceChip) {
-      if (next.comp === 'Cup' && next.opp === 'GTA United') {
-        stageChip.textContent = 'Round of 64';
+      if (next.comp === 'Cup') {
+        stageChip.textContent = next.opp === 'GTA United' ? 'Round of 64' : 'League Cup';
         stageChip.style.display = '';
         sourceChip.textContent = 'Source: OSL';
         sourceChip.style.display = '';

@@ -147,6 +147,14 @@
       "comp": "OSL"
     },
     {
+      "d": "2026-06-22",
+      "t": "21:00",
+      "home": false,
+      "opp": "Panathinaikos",
+      "venue": "L'Amoreaux #1",
+      "comp": "Cup"
+    },
+    {
       "d": "2026-07-02",
       "t": "21:00",
       "home": true,
@@ -786,7 +794,7 @@
         "lineValue": "$10,000 winner prize",
         "stageLabel": "3rd Round",
         "stageValue": "Panathinaikos",
-        "stageNote": "Monday June 22 · 9:00pmL'Amoreaux #1",
+        "stageNote": "Monday June 22 · 9:00pm · L'Amoreaux #1",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--cup"
