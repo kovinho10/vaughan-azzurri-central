@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-24",
+    "updated": "2026-06-25",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-24"
+        "lastChecked": "2026-06-25"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-24"
+        "lastChecked": "2026-06-25"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-24"
+        "lastChecked": "2026-06-25"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-24"
+        "lastChecked": "2026-06-25"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-24"
+        "lastChecked": "2026-06-25"
       }
     }
   },
@@ -717,37 +717,38 @@
       ]
     },
     {
-      "team": "Peniche CC",
+      "team": "Guelph Royals",
       "gp": 5,
       "w": 1,
       "t": 1,
       "l": 3,
-      "gf": 6,
-      "ga": 13,
-      "gd": -7,
+      "gf": 8,
+      "ga": 11,
+      "gd": -3,
       "pts": 4,
       "form": [
-        "W",
+        "L",
+        "L",
         "D",
         "L",
-        "L",
-        "L"
+        "W"
       ]
     },
     {
-      "team": "Guelph Royals",
-      "gp": 4,
-      "w": 0,
+      "team": "Peniche CC",
+      "gp": 6,
+      "w": 1,
       "t": 1,
-      "l": 3,
-      "gf": 4,
-      "ga": 11,
-      "gd": -7,
-      "pts": 1,
+      "l": 4,
+      "gf": 6,
+      "ga": 17,
+      "gd": -11,
+      "pts": 4,
       "form": [
-        "L",
-        "L",
         "D",
+        "L",
+        "L",
+        "L",
         "L"
       ]
     }
@@ -1091,10 +1092,18 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-24",
+    "updated": "2026-06-25",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "504",
+        "date": "2026-06-18",
+        "home": "Guelph Royals",
+        "away": "Peniche CC",
+        "homeScore": 4,
+        "awayScore": 0
+      },
       {
         "gameNumber": "503",
         "date": "2026-06-18",
@@ -1166,16 +1175,18 @@
         "away": "Panathinaikos",
         "homeScore": 7,
         "awayScore": 2
-      },
-      {
-        "gameNumber": "442",
-        "date": "2026-06-05",
-        "home": "Scarboro Azzurri Blues",
-        "away": "Toronto Celtic",
-        "homeScore": 3,
-        "awayScore": 0
       }
     ],
-    "todayGames": []
+    "todayGames": [
+      {
+        "gameNumber": "532",
+        "date": "2026-06-25",
+        "day": "Thu",
+        "time": "8:45pm",
+        "field": "Southward 1 - 11v11",
+        "home": "Hrvat St. Catharines",
+        "away": "GS United"
+      }
+    ]
   }
 }
