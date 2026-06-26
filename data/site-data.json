@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-25",
+    "updated": "2026-06-26",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-25"
+        "lastChecked": "2026-06-26"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-25"
+        "lastChecked": "2026-06-26"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-25"
+        "lastChecked": "2026-06-26"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-25"
+        "lastChecked": "2026-06-26"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-25"
+        "lastChecked": "2026-06-26"
       }
     }
   },
@@ -1092,7 +1092,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-25",
+    "updated": "2026-06-26",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1179,13 +1179,22 @@
     ],
     "todayGames": [
       {
-        "gameNumber": "532",
-        "date": "2026-06-25",
-        "day": "Thu",
-        "time": "8:45pm",
-        "field": "Southward 1 - 11v11",
-        "home": "Hrvat St. Catharines",
-        "away": "GS United"
+        "gameNumber": "537",
+        "date": "2026-06-26",
+        "day": "Fri",
+        "time": "8:30pm",
+        "field": "Centennial College",
+        "home": "Toronto Celtic",
+        "away": "Croatia Norval"
+      },
+      {
+        "gameNumber": "538",
+        "date": "2026-06-26",
+        "day": "Fri",
+        "time": "9:00pm",
+        "field": "Paramount Fine Foods Centre 1",
+        "home": "Olimpia",
+        "away": "Guelph Royals"
       }
     ]
   }
