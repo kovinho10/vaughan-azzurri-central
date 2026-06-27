@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-26",
+    "updated": "2026-06-27",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-26"
+        "lastChecked": "2026-06-27"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-26"
+        "lastChecked": "2026-06-27"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-26"
+        "lastChecked": "2026-06-27"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-26"
+        "lastChecked": "2026-06-27"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-26"
+        "lastChecked": "2026-06-27"
       }
     }
   },
@@ -578,6 +578,42 @@
   ],
   "standings": [
     {
+      "team": "Olimpia",
+      "gp": 5,
+      "w": 4,
+      "t": 0,
+      "l": 1,
+      "gf": 14,
+      "ga": 9,
+      "gd": 5,
+      "pts": 12,
+      "form": [
+        "W",
+        "W",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "team": "Hrvat St. Catharines",
+      "gp": 6,
+      "w": 3,
+      "t": 2,
+      "l": 1,
+      "gf": 13,
+      "ga": 8,
+      "gd": 5,
+      "pts": 11,
+      "form": [
+        "L",
+        "W",
+        "W",
+        "D",
+        "W"
+      ]
+    },
+    {
       "team": "Vaughan Azzurri",
       "gp": 6,
       "w": 3,
@@ -597,56 +633,21 @@
       ]
     },
     {
-      "team": "Olimpia",
-      "gp": 4,
-      "w": 3,
-      "t": 0,
-      "l": 1,
-      "gf": 11,
-      "ga": 8,
-      "gd": 3,
-      "pts": 9,
-      "form": [
-        "W",
-        "W",
-        "W",
-        "L"
-      ]
-    },
-    {
-      "team": "Hrvat St. Catharines",
-      "gp": 5,
-      "w": 2,
-      "t": 2,
-      "l": 1,
-      "gf": 11,
-      "ga": 7,
-      "gd": 4,
-      "pts": 8,
-      "form": [
-        "D",
-        "L",
-        "W",
-        "W",
-        "D"
-      ]
-    },
-    {
       "team": "GS United",
-      "gp": 5,
+      "gp": 6,
       "w": 2,
       "t": 1,
-      "l": 2,
-      "gf": 11,
-      "ga": 10,
-      "gd": 1,
+      "l": 3,
+      "gf": 12,
+      "ga": 12,
+      "gd": 0,
       "pts": 7,
       "form": [
-        "L",
         "W",
         "D",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -718,20 +719,20 @@
     },
     {
       "team": "Guelph Royals",
-      "gp": 5,
+      "gp": 6,
       "w": 1,
       "t": 1,
-      "l": 3,
-      "gf": 8,
-      "ga": 11,
-      "gd": -3,
+      "l": 4,
+      "gf": 9,
+      "ga": 14,
+      "gd": -5,
       "pts": 4,
       "form": [
         "L",
-        "L",
         "D",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -791,7 +792,7 @@
         "phase": "Live table",
         "phaseClass": "",
         "lineLabel": "Position",
-        "lineValue": "1 of 10 · 10 pts",
+        "lineValue": "3 of 10 · 10 pts",
         "stageLabel": "Men Provincial Elite",
         "stageValue": "6/18",
         "stageNote": "6 matches played · 3W-1D-2L · +7 GD",
@@ -1092,10 +1093,26 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-26",
+    "updated": "2026-06-27",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "538",
+        "date": "2026-06-26",
+        "home": "Olimpia",
+        "away": "Guelph Royals",
+        "homeScore": 3,
+        "awayScore": 1
+      },
+      {
+        "gameNumber": "532",
+        "date": "2026-06-25",
+        "home": "Hrvat St. Catharines",
+        "away": "GS United",
+        "homeScore": 2,
+        "awayScore": 1
+      },
       {
         "gameNumber": "504",
         "date": "2026-06-18",
@@ -1159,43 +1176,8 @@
         "away": "Peniche CC",
         "homeScore": 1,
         "awayScore": 0
-      },
-      {
-        "gameNumber": "465",
-        "date": "2026-06-11",
-        "home": "Guelph Royals",
-        "away": "Scarboro Azzurri Blues",
-        "homeScore": 1,
-        "awayScore": 2
-      },
-      {
-        "gameNumber": "464",
-        "date": "2026-06-11",
-        "home": "Hrvat St. Catharines",
-        "away": "Panathinaikos",
-        "homeScore": 7,
-        "awayScore": 2
       }
     ],
-    "todayGames": [
-      {
-        "gameNumber": "537",
-        "date": "2026-06-26",
-        "day": "Fri",
-        "time": "8:30pm",
-        "field": "Centennial College",
-        "home": "Toronto Celtic",
-        "away": "Croatia Norval"
-      },
-      {
-        "gameNumber": "538",
-        "date": "2026-06-26",
-        "day": "Fri",
-        "time": "9:00pm",
-        "field": "Paramount Fine Foods Centre 1",
-        "home": "Olimpia",
-        "away": "Guelph Royals"
-      }
-    ]
+    "todayGames": []
   }
 }
