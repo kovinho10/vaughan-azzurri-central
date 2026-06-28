@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-27",
+    "updated": "2026-06-28",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-27"
+        "lastChecked": "2026-06-28"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-27"
+        "lastChecked": "2026-06-28"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-27"
+        "lastChecked": "2026-06-28"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-27"
+        "lastChecked": "2026-06-28"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-27"
+        "lastChecked": "2026-06-28"
       }
     }
   },
@@ -633,6 +633,24 @@
       ]
     },
     {
+      "team": "Croatia Norval",
+      "gp": 5,
+      "w": 3,
+      "t": 0,
+      "l": 2,
+      "gf": 13,
+      "ga": 8,
+      "gd": 5,
+      "pts": 9,
+      "form": [
+        "W",
+        "L",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
       "team": "GS United",
       "gp": 6,
       "w": 2,
@@ -645,23 +663,6 @@
       "form": [
         "W",
         "D",
-        "L",
-        "W",
-        "L"
-      ]
-    },
-    {
-      "team": "Croatia Norval",
-      "gp": 4,
-      "w": 2,
-      "t": 0,
-      "l": 2,
-      "gf": 11,
-      "ga": 7,
-      "gd": 4,
-      "pts": 6,
-      "form": [
-        "W",
         "L",
         "W",
         "L"
@@ -686,18 +687,19 @@
     },
     {
       "team": "Toronto Celtic",
-      "gp": 3,
+      "gp": 4,
       "w": 2,
       "t": 0,
-      "l": 1,
-      "gf": 4,
-      "ga": 5,
-      "gd": -1,
+      "l": 2,
+      "gf": 5,
+      "ga": 7,
+      "gd": -2,
       "pts": 6,
       "form": [
         "W",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -1093,7 +1095,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-27",
+    "updated": "2026-06-28",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1104,6 +1106,14 @@
         "away": "Guelph Royals",
         "homeScore": 3,
         "awayScore": 1
+      },
+      {
+        "gameNumber": "537",
+        "date": "2026-06-26",
+        "home": "Toronto Celtic",
+        "away": "Croatia Norval",
+        "homeScore": 1,
+        "awayScore": 2
       },
       {
         "gameNumber": "532",
@@ -1168,14 +1178,6 @@
         "away": "Vaughan Azzurri",
         "homeScore": 3,
         "awayScore": 2
-      },
-      {
-        "gameNumber": "468",
-        "date": "2026-06-12",
-        "home": "Toronto Celtic",
-        "away": "Peniche CC",
-        "homeScore": 1,
-        "awayScore": 0
       }
     ],
     "todayGames": []
