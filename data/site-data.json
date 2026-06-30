@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-29",
+    "updated": "2026-06-30",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-29"
+        "lastChecked": "2026-06-30"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-29"
+        "lastChecked": "2026-06-30"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-29"
+        "lastChecked": "2026-06-30"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-29"
+        "lastChecked": "2026-06-30"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-29"
+        "lastChecked": "2026-06-30"
       }
     }
   },
@@ -1095,7 +1095,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-29",
+    "updated": "2026-06-30",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1180,6 +1180,25 @@
         "awayScore": 2
       }
     ],
-    "todayGames": []
+    "todayGames": [
+      {
+        "gameNumber": "561",
+        "date": "2026-06-30",
+        "day": "Tue",
+        "time": "9:10pm",
+        "field": "Earlscourt North",
+        "home": "Peniche CC",
+        "away": "Croatia Norval"
+      },
+      {
+        "gameNumber": "509",
+        "date": "2026-06-30",
+        "day": "Tue",
+        "time": "9:15pm",
+        "field": "Downsview Turf 3",
+        "home": "Toronto Celtic",
+        "away": "Olimpia"
+      }
+    ]
   }
 }
