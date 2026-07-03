@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-06-30",
+    "updated": "2026-07-03",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-06-30"
+        "lastChecked": "2026-07-03"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-06-30"
+        "lastChecked": "2026-07-03"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-06-30"
+        "lastChecked": "2026-07-03"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-06-30"
+        "lastChecked": "2026-07-03"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-06-30"
+        "lastChecked": "2026-07-03"
       }
     }
   },
@@ -579,19 +579,19 @@
   "standings": [
     {
       "team": "Olimpia",
-      "gp": 5,
-      "w": 4,
+      "gp": 6,
+      "w": 5,
       "t": 0,
       "l": 1,
-      "gf": 14,
-      "ga": 9,
-      "gd": 5,
-      "pts": 12,
+      "gf": 19,
+      "ga": 11,
+      "gd": 8,
+      "pts": 15,
       "form": [
         "W",
         "W",
-        "W",
         "L",
+        "W",
         "W"
       ]
     },
@@ -686,23 +686,6 @@
       ]
     },
     {
-      "team": "Toronto Celtic",
-      "gp": 4,
-      "w": 2,
-      "t": 0,
-      "l": 2,
-      "gf": 5,
-      "ga": 7,
-      "gd": -2,
-      "pts": 6,
-      "form": [
-        "W",
-        "L",
-        "W",
-        "L"
-      ]
-    },
-    {
       "team": "Panathinaikos",
       "gp": 4,
       "w": 2,
@@ -717,6 +700,24 @@
         "W",
         "L",
         "W"
+      ]
+    },
+    {
+      "team": "Toronto Celtic",
+      "gp": 5,
+      "w": 2,
+      "t": 0,
+      "l": 3,
+      "gf": 7,
+      "ga": 12,
+      "gd": -5,
+      "pts": 6,
+      "form": [
+        "W",
+        "L",
+        "W",
+        "L",
+        "L"
       ]
     },
     {
@@ -1095,10 +1096,18 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-06-30",
+    "updated": "2026-07-03",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "509",
+        "date": "2026-06-30",
+        "home": "Toronto Celtic",
+        "away": "Olimpia",
+        "homeScore": 2,
+        "awayScore": 5
+      },
       {
         "gameNumber": "538",
         "date": "2026-06-26",
@@ -1170,33 +1179,25 @@
         "away": "Hrvat St. Catharines",
         "homeScore": 1,
         "awayScore": 2
-      },
-      {
-        "gameNumber": "469",
-        "date": "2026-06-12",
-        "home": "Olimpia",
-        "away": "Vaughan Azzurri",
-        "homeScore": 3,
-        "awayScore": 2
       }
     ],
     "todayGames": [
       {
-        "gameNumber": "561",
-        "date": "2026-06-30",
-        "day": "Tue",
-        "time": "9:10pm",
-        "field": "Earlscourt North",
-        "home": "Peniche CC",
-        "away": "Croatia Norval"
+        "gameNumber": "570",
+        "date": "2026-07-03",
+        "day": "Fri",
+        "time": "8:30pm",
+        "field": "Centennial College",
+        "home": "Toronto Celtic",
+        "away": "Hrvat St. Catharines"
       },
       {
-        "gameNumber": "509",
-        "date": "2026-06-30",
-        "day": "Tue",
-        "time": "9:15pm",
-        "field": "Downsview Turf 3",
-        "home": "Toronto Celtic",
+        "gameNumber": "571",
+        "date": "2026-07-03",
+        "day": "Fri",
+        "time": "9:00pm",
+        "field": "LAmoreaux #1",
+        "home": "Scarboro Azzurri Blues",
         "away": "Olimpia"
       }
     ]
