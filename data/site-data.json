@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-07-07",
+    "updated": "2026-07-08",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-07-07"
+        "lastChecked": "2026-07-08"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-07-07"
+        "lastChecked": "2026-07-08"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-07-07"
+        "lastChecked": "2026-07-08"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-07-07"
+        "lastChecked": "2026-07-08"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-07-07"
+        "lastChecked": "2026-07-08"
       }
     }
   },
@@ -651,6 +651,24 @@
       ]
     },
     {
+      "team": "Panathinaikos",
+      "gp": 5,
+      "w": 3,
+      "t": 0,
+      "l": 2,
+      "gf": 10,
+      "ga": 12,
+      "gd": -2,
+      "pts": 9,
+      "form": [
+        "L",
+        "W",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
       "team": "Toronto Celtic",
       "gp": 6,
       "w": 3,
@@ -705,23 +723,6 @@
       ]
     },
     {
-      "team": "Panathinaikos",
-      "gp": 4,
-      "w": 2,
-      "t": 0,
-      "l": 2,
-      "gf": 7,
-      "ga": 11,
-      "gd": -4,
-      "pts": 6,
-      "form": [
-        "L",
-        "W",
-        "L",
-        "W"
-      ]
-    },
-    {
       "team": "Guelph Royals",
       "gp": 6,
       "w": 1,
@@ -741,16 +742,16 @@
     },
     {
       "team": "Peniche CC",
-      "gp": 6,
+      "gp": 7,
       "w": 1,
       "t": 1,
-      "l": 4,
-      "gf": 6,
-      "ga": 17,
-      "gd": -11,
+      "l": 5,
+      "gf": 7,
+      "ga": 20,
+      "gd": -13,
       "pts": 4,
       "form": [
-        "D",
+        "L",
         "L",
         "L",
         "L",
@@ -1097,10 +1098,18 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-07-07",
+    "updated": "2026-07-08",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "679",
+        "date": "2026-07-05",
+        "home": "Panathinaikos",
+        "away": "Peniche CC",
+        "homeScore": 3,
+        "awayScore": 1
+      },
       {
         "gameNumber": "571",
         "date": "2026-07-03",
@@ -1172,25 +1181,17 @@
         "away": "Olimpia",
         "homeScore": 4,
         "awayScore": 3
-      },
-      {
-        "gameNumber": "497",
-        "date": "2026-06-16",
-        "home": "Peniche CC",
-        "away": "Vaughan Azzurri",
-        "homeScore": 1,
-        "awayScore": 6
       }
     ],
     "todayGames": [
       {
-        "gameNumber": "592",
-        "date": "2026-07-07",
-        "day": "Tue",
+        "gameNumber": "593",
+        "date": "2026-07-08",
+        "day": "Wed",
         "time": "9:10pm",
-        "field": "Earlscourt North",
-        "home": "Peniche CC",
-        "away": "Scarboro Azzurri Blues"
+        "field": "LAmoreaux #1",
+        "home": "GS United",
+        "away": "Croatia Norval"
       }
     ]
   }
