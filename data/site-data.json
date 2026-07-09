@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-07-08",
+    "updated": "2026-07-09",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-07-08"
+        "lastChecked": "2026-07-09"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-07-08"
+        "lastChecked": "2026-07-09"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-07-08"
+        "lastChecked": "2026-07-09"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-07-08"
+        "lastChecked": "2026-07-09"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-07-08"
+        "lastChecked": "2026-07-09"
       }
     }
   },
@@ -1098,7 +1098,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-07-08",
+    "updated": "2026-07-09",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1185,13 +1185,13 @@
     ],
     "todayGames": [
       {
-        "gameNumber": "593",
-        "date": "2026-07-08",
-        "day": "Wed",
-        "time": "9:10pm",
-        "field": "LAmoreaux #1",
-        "home": "GS United",
-        "away": "Croatia Norval"
+        "gameNumber": "596",
+        "date": "2026-07-09",
+        "day": "Thu",
+        "time": "8:45pm",
+        "field": "Southward 1 - 11v11",
+        "home": "Hrvat St. Catharines",
+        "away": "Guelph Royals"
       }
     ]
   }
