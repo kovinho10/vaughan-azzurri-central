@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-07-09"
+        "lastChecked": "2026-07-10"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-07-09"
+        "lastChecked": "2026-07-10"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-07-09"
+        "lastChecked": "2026-07-10"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-07-09"
+        "lastChecked": "2026-07-10"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-07-09"
+        "lastChecked": "2026-07-10"
       }
     }
   },
@@ -596,6 +596,24 @@
       ]
     },
     {
+      "team": "Croatia Norval",
+      "gp": 6,
+      "w": 4,
+      "t": 0,
+      "l": 2,
+      "gf": 15,
+      "ga": 9,
+      "gd": 6,
+      "pts": 12,
+      "form": [
+        "L",
+        "W",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
       "team": "Hrvat St. Catharines",
       "gp": 7,
       "w": 3,
@@ -630,24 +648,6 @@
         "L",
         "W",
         "D"
-      ]
-    },
-    {
-      "team": "Croatia Norval",
-      "gp": 5,
-      "w": 3,
-      "t": 0,
-      "l": 2,
-      "gf": 13,
-      "ga": 8,
-      "gd": 5,
-      "pts": 9,
-      "form": [
-        "W",
-        "L",
-        "W",
-        "L",
-        "W"
       ]
     },
     {
@@ -688,19 +688,19 @@
     },
     {
       "team": "GS United",
-      "gp": 6,
+      "gp": 7,
       "w": 2,
       "t": 1,
-      "l": 3,
-      "gf": 12,
-      "ga": 12,
-      "gd": 0,
+      "l": 4,
+      "gf": 13,
+      "ga": 14,
+      "gd": -1,
       "pts": 7,
       "form": [
-        "W",
         "D",
         "L",
         "W",
+        "L",
         "L"
       ]
     },
@@ -797,7 +797,7 @@
         "phase": "Live table",
         "phaseClass": "",
         "lineLabel": "Position",
-        "lineValue": "3 of 10 · 10 pts",
+        "lineValue": "4 of 10 · 10 pts",
         "stageLabel": "Men Provincial Elite",
         "stageValue": "6/18",
         "stageNote": "6 matches played · 3W-1D-2L · +7 GD",
@@ -1098,10 +1098,18 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-07-09",
+    "updated": "2026-07-10",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "593",
+        "date": "2026-07-08",
+        "home": "GS United",
+        "away": "Croatia Norval",
+        "homeScore": 1,
+        "awayScore": 2
+      },
       {
         "gameNumber": "679",
         "date": "2026-07-05",
@@ -1173,25 +1181,26 @@
         "away": "Vaughan Azzurri",
         "homeScore": 1,
         "awayScore": 1
-      },
-      {
-        "gameNumber": "498",
-        "date": "2026-06-17",
-        "home": "GS United",
-        "away": "Olimpia",
-        "homeScore": 4,
-        "awayScore": 3
       }
     ],
     "todayGames": [
       {
-        "gameNumber": "596",
-        "date": "2026-07-09",
-        "day": "Thu",
-        "time": "8:45pm",
-        "field": "Southward 1 - 11v11",
-        "home": "Hrvat St. Catharines",
-        "away": "Guelph Royals"
+        "gameNumber": "603",
+        "date": "2026-07-10",
+        "day": "Fri",
+        "time": "8:30pm",
+        "field": "Centennial College",
+        "home": "Toronto Celtic",
+        "away": "Vaughan Azzurri"
+      },
+      {
+        "gameNumber": "604",
+        "date": "2026-07-10",
+        "day": "Fri",
+        "time": "9:00pm",
+        "field": "Paramount Fine Foods Centre 1",
+        "home": "Olimpia",
+        "away": "Panathinaikos"
       }
     ]
   }
