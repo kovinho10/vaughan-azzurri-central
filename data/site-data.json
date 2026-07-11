@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-07-10"
+        "lastChecked": "2026-07-11"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-07-10"
+        "lastChecked": "2026-07-11"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-07-10"
+        "lastChecked": "2026-07-11"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-07-10"
+        "lastChecked": "2026-07-11"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-07-10"
+        "lastChecked": "2026-07-11"
       }
     }
   },
@@ -188,7 +188,14 @@
       "home": false,
       "opp": "Celtic",
       "venue": "Centennial College",
-      "comp": "OSL"
+      "comp": "OSL",
+      "homeScore": 2,
+      "awayScore": 2,
+      "status": "Final",
+      "scorers": [
+        "Lucas Puntillo",
+        "Mario Kovacevic"
+      ]
     },
     {
       "d": "2026-07-16",
@@ -615,33 +622,51 @@
     },
     {
       "team": "Hrvat St. Catharines",
-      "gp": 7,
+      "gp": 8,
       "w": 3,
-      "t": 2,
+      "t": 3,
       "l": 2,
-      "gf": 13,
-      "ga": 11,
+      "gf": 14,
+      "ga": 12,
       "gd": 2,
-      "pts": 11,
+      "pts": 12,
       "form": [
-        "W",
         "W",
         "D",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
       "team": "Vaughan Azzurri",
-      "gp": 6,
+      "gp": 7,
+      "w": 3,
+      "t": 2,
+      "l": 2,
+      "gf": 19,
+      "ga": 12,
+      "gd": 7,
+      "pts": 11,
+      "us": true,
+      "form": [
+        "L",
+        "L",
+        "W",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "team": "Toronto Celtic",
+      "gp": 7,
       "w": 3,
       "t": 1,
-      "l": 2,
-      "gf": 17,
-      "ga": 10,
-      "gd": 7,
+      "l": 3,
+      "gf": 12,
+      "ga": 14,
+      "gd": -2,
       "pts": 10,
-      "us": true,
       "form": [
         "W",
         "L",
@@ -665,24 +690,6 @@
         "W",
         "L",
         "W",
-        "W"
-      ]
-    },
-    {
-      "team": "Toronto Celtic",
-      "gp": 6,
-      "w": 3,
-      "t": 0,
-      "l": 3,
-      "gf": 10,
-      "ga": 12,
-      "gd": -2,
-      "pts": 9,
-      "form": [
-        "L",
-        "W",
-        "L",
-        "L",
         "W"
       ]
     },
@@ -724,20 +731,20 @@
     },
     {
       "team": "Guelph Royals",
-      "gp": 6,
+      "gp": 7,
       "w": 1,
-      "t": 1,
+      "t": 2,
       "l": 4,
-      "gf": 9,
-      "ga": 14,
+      "gf": 10,
+      "ga": 15,
       "gd": -5,
-      "pts": 4,
+      "pts": 5,
       "form": [
-        "L",
         "D",
         "L",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -784,9 +791,9 @@
         "OSL 2026",
         "Cup run alive"
       ],
-      "leaguePlayed": "6/18",
-      "record": "4–1–3",
-      "goals": "23:16",
+      "leaguePlayed": "7/18",
+      "record": "4–2–3",
+      "goals": "25:18",
       "leagueCupPlayed": "2",
       "leagueCupTotal": "6"
     },
@@ -797,10 +804,10 @@
         "phase": "Live table",
         "phaseClass": "",
         "lineLabel": "Position",
-        "lineValue": "4 of 10 · 10 pts",
+        "lineValue": "4 of 10 · 11 pts",
         "stageLabel": "Men Provincial Elite",
-        "stageValue": "6/18",
-        "stageNote": "6 matches played · 3W-1D-2L · +7 GD",
+        "stageValue": "7/18",
+        "stageNote": "7 matches played · 3W-2D-2L · +7 GD",
         "logo": "assets/images/embedded/embedded-311a0a1407d6.png",
         "alt": "OSL",
         "cardClass": "comp-card--league"
@@ -853,18 +860,32 @@
       "tip": "Results, scorers, and clean sheets will populate here as the season unfolds."
     },
     "featuredMatch": {
-      "date": "2026-06-22",
-      "comp": "League Cup",
-      "home": "Panathinaikos",
+      "date": "2026-07-10",
+      "comp": "OSL",
+      "home": "Toronto Celtic",
       "away": "Vaughan Azzurri",
-      "homeScore": 4,
+      "homeScore": 2,
       "awayScore": 2,
       "status": "Final",
       "scorers": [
-        "Malcom Shaw x2"
+        "Lucas Puntillo",
+        "Mario Kovacevic"
       ]
     },
     "recentResults": [
+      {
+        "date": "2026-07-10",
+        "comp": "OSL",
+        "home": "Toronto Celtic",
+        "away": "Vaughan Azzurri",
+        "homeScore": 2,
+        "awayScore": 2,
+        "status": "Final",
+        "scorers": [
+          "Lucas Puntillo",
+          "Mario Kovacevic"
+        ]
+      },
       {
         "date": "2026-06-22",
         "comp": "League Cup",
@@ -1098,10 +1119,26 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-07-10",
+    "updated": "2026-07-11",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "603",
+        "date": "2026-07-10",
+        "home": "Toronto Celtic",
+        "away": "Vaughan Azzurri",
+        "homeScore": 2,
+        "awayScore": 2
+      },
+      {
+        "gameNumber": "596",
+        "date": "2026-07-09",
+        "home": "Hrvat St. Catharines",
+        "away": "Guelph Royals",
+        "homeScore": 1,
+        "awayScore": 1
+      },
       {
         "gameNumber": "593",
         "date": "2026-07-08",
@@ -1165,43 +1202,8 @@
         "away": "GS United",
         "homeScore": 2,
         "awayScore": 1
-      },
-      {
-        "gameNumber": "504",
-        "date": "2026-06-18",
-        "home": "Guelph Royals",
-        "away": "Peniche CC",
-        "homeScore": 4,
-        "awayScore": 0
-      },
-      {
-        "gameNumber": "503",
-        "date": "2026-06-18",
-        "home": "Hrvat St. Catharines",
-        "away": "Vaughan Azzurri",
-        "homeScore": 1,
-        "awayScore": 1
       }
     ],
-    "todayGames": [
-      {
-        "gameNumber": "603",
-        "date": "2026-07-10",
-        "day": "Fri",
-        "time": "8:30pm",
-        "field": "Centennial College",
-        "home": "Toronto Celtic",
-        "away": "Vaughan Azzurri"
-      },
-      {
-        "gameNumber": "604",
-        "date": "2026-07-10",
-        "day": "Fri",
-        "time": "9:00pm",
-        "field": "Paramount Fine Foods Centre 1",
-        "home": "Olimpia",
-        "away": "Panathinaikos"
-      }
-    ]
+    "todayGames": []
   }
 }
