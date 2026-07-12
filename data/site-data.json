@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-07-11",
+    "updated": "2026-07-12",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-07-11"
+        "lastChecked": "2026-07-12"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-07-11"
+        "lastChecked": "2026-07-12"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-07-11"
+        "lastChecked": "2026-07-12"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-07-11"
+        "lastChecked": "2026-07-12"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-07-11"
+        "lastChecked": "2026-07-12"
       }
     }
   },
@@ -586,20 +586,20 @@
   "standings": [
     {
       "team": "Olimpia",
-      "gp": 7,
+      "gp": 8,
       "w": 6,
       "t": 0,
-      "l": 1,
-      "gf": 22,
-      "ga": 12,
-      "gd": 10,
+      "l": 2,
+      "gf": 24,
+      "ga": 17,
+      "gd": 7,
       "pts": 18,
       "form": [
-        "W",
         "L",
         "W",
         "W",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -639,6 +639,24 @@
       ]
     },
     {
+      "team": "Panathinaikos",
+      "gp": 6,
+      "w": 4,
+      "t": 0,
+      "l": 2,
+      "gf": 15,
+      "ga": 14,
+      "gd": 1,
+      "pts": 12,
+      "form": [
+        "W",
+        "L",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
       "team": "Vaughan Azzurri",
       "gp": 7,
       "w": 3,
@@ -673,24 +691,6 @@
         "L",
         "W",
         "D"
-      ]
-    },
-    {
-      "team": "Panathinaikos",
-      "gp": 5,
-      "w": 3,
-      "t": 0,
-      "l": 2,
-      "gf": 10,
-      "ga": 12,
-      "gd": -2,
-      "pts": 9,
-      "form": [
-        "L",
-        "W",
-        "L",
-        "W",
-        "W"
       ]
     },
     {
@@ -804,7 +804,7 @@
         "phase": "Live table",
         "phaseClass": "",
         "lineLabel": "Position",
-        "lineValue": "4 of 10 · 11 pts",
+        "lineValue": "5 of 10 · 11 pts",
         "stageLabel": "Men Provincial Elite",
         "stageValue": "7/18",
         "stageNote": "7 matches played · 3W-2D-2L · +7 GD",
@@ -1119,10 +1119,18 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-07-11",
+    "updated": "2026-07-12",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "604",
+        "date": "2026-07-10",
+        "home": "Olimpia",
+        "away": "Panathinaikos",
+        "homeScore": 2,
+        "awayScore": 5
+      },
       {
         "gameNumber": "603",
         "date": "2026-07-10",
@@ -1194,16 +1202,18 @@
         "away": "Croatia Norval",
         "homeScore": 1,
         "awayScore": 2
-      },
-      {
-        "gameNumber": "532",
-        "date": "2026-06-25",
-        "home": "Hrvat St. Catharines",
-        "away": "GS United",
-        "homeScore": 2,
-        "awayScore": 1
       }
     ],
-    "todayGames": []
+    "todayGames": [
+      {
+        "gameNumber": "618",
+        "date": "2026-07-12",
+        "day": "Sun",
+        "time": "7:00pm",
+        "field": "LAmoreaux #1",
+        "home": "Panathinaikos",
+        "away": "Croatia Norval"
+      }
+    ]
   }
 }
