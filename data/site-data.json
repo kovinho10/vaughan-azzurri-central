@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-07-12",
+    "updated": "2026-07-13",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-07-12"
+        "lastChecked": "2026-07-13"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-07-12"
+        "lastChecked": "2026-07-13"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-07-12"
+        "lastChecked": "2026-07-13"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-07-12"
+        "lastChecked": "2026-07-13"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-07-12"
+        "lastChecked": "2026-07-13"
       }
     }
   },
@@ -1119,7 +1119,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-07-12",
+    "updated": "2026-07-13",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1204,16 +1204,6 @@
         "awayScore": 2
       }
     ],
-    "todayGames": [
-      {
-        "gameNumber": "618",
-        "date": "2026-07-12",
-        "day": "Sun",
-        "time": "7:00pm",
-        "field": "LAmoreaux #1",
-        "home": "Panathinaikos",
-        "away": "Croatia Norval"
-      }
-    ]
+    "todayGames": []
   }
 }
