@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-07-14",
+    "updated": "2026-07-15",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-07-14"
+        "lastChecked": "2026-07-15"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-07-14"
+        "lastChecked": "2026-07-15"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-07-14"
+        "lastChecked": "2026-07-15"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-07-14"
+        "lastChecked": "2026-07-15"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-07-14"
+        "lastChecked": "2026-07-15"
       }
     }
   },
@@ -1119,7 +1119,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-07-14",
+    "updated": "2026-07-15",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1204,25 +1204,6 @@
         "awayScore": 3
       }
     ],
-    "todayGames": [
-      {
-        "gameNumber": "518",
-        "date": "2026-07-14",
-        "day": "Tue",
-        "time": "9:00pm",
-        "field": "Christ The King CSS",
-        "home": "Croatia Norval",
-        "away": "Scarboro Azzurri Blues"
-      },
-      {
-        "gameNumber": "629",
-        "date": "2026-07-14",
-        "day": "Tue",
-        "time": "9:10pm",
-        "field": "Earlscourt North",
-        "home": "Peniche CC",
-        "away": "Olimpia"
-      }
-    ]
+    "todayGames": []
   }
 }
