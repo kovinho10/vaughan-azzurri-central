@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-07-15",
+    "updated": "2026-07-17",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-07-15"
+        "lastChecked": "2026-07-17"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-07-15"
+        "lastChecked": "2026-07-17"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-07-15"
+        "lastChecked": "2026-07-17"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-07-15"
+        "lastChecked": "2026-07-17"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-07-15"
+        "lastChecked": "2026-07-17"
       }
     }
   },
@@ -198,18 +198,18 @@
       ]
     },
     {
-      "d": "2026-07-16",
-      "t": "21:00",
-      "home": true,
-      "opp": "Guelph",
-      "venue": "North Maple Regional Park Turf #1",
-      "comp": "OSL"
-    },
-    {
       "d": "2026-07-30",
       "t": "21:00",
       "home": true,
       "opp": "Pana",
+      "venue": "North Maple Regional Park Turf #1",
+      "comp": "OSL"
+    },
+    {
+      "d": "2026-08-05",
+      "t": "21:00",
+      "home": true,
+      "opp": "Guelph",
       "venue": "North Maple Regional Park Turf #1",
       "comp": "OSL"
     },
@@ -1119,7 +1119,7 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-07-15",
+    "updated": "2026-07-17",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
@@ -1204,6 +1204,16 @@
         "awayScore": 3
       }
     ],
-    "todayGames": []
+    "todayGames": [
+      {
+        "gameNumber": "639",
+        "date": "2026-07-17",
+        "day": "Fri",
+        "time": "8:30pm",
+        "field": "Centennial College",
+        "home": "Toronto Celtic",
+        "away": "GS United"
+      }
+    ]
   }
 }
