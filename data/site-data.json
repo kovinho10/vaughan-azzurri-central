@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updated": "2026-07-17",
+    "updated": "2026-07-18",
     "sources": {
       "standings": {
         "label": "OSL Standings",
         "url": "https://ontariosl.com/standings/",
-        "lastChecked": "2026-07-17"
+        "lastChecked": "2026-07-18"
       },
       "leagueCup": {
         "label": "OSL Men’s Open Cup",
         "url": "https://ontariosl.com/mens-cup/",
-        "lastChecked": "2026-07-17"
+        "lastChecked": "2026-07-18"
       },
       "ontarioCup": {
         "label": "Ontario Cup",
@@ -20,17 +20,17 @@
       "teamResults": {
         "label": "OSL Team Results",
         "url": "https://ontariosl.com/team-results/",
-        "lastChecked": "2026-07-17"
+        "lastChecked": "2026-07-18"
       },
       "divisionResults": {
         "label": "OSL Men Provincial Elite Results",
         "url": "https://ontariosl.com/game-results/",
-        "lastChecked": "2026-07-17"
+        "lastChecked": "2026-07-18"
       },
       "divisionSchedule": {
         "label": "OSL Men Provincial Elite Schedule",
         "url": "https://ontariosl.com/schedule/",
-        "lastChecked": "2026-07-17"
+        "lastChecked": "2026-07-18"
       }
     }
   },
@@ -586,16 +586,16 @@
   "standings": [
     {
       "team": "Croatia Norval",
-      "gp": 8,
-      "w": 6,
+      "gp": 9,
+      "w": 7,
       "t": 0,
       "l": 2,
-      "gf": 23,
+      "gf": 25,
       "ga": 10,
-      "gd": 13,
-      "pts": 18,
+      "gd": 15,
+      "pts": 21,
       "form": [
-        "L",
+        "W",
         "W",
         "W",
         "W",
@@ -604,20 +604,20 @@
     },
     {
       "team": "Olimpia",
-      "gp": 8,
-      "w": 6,
+      "gp": 9,
+      "w": 7,
       "t": 0,
       "l": 2,
-      "gf": 24,
-      "ga": 17,
-      "gd": 7,
-      "pts": 18,
+      "gf": 28,
+      "ga": 19,
+      "gd": 9,
+      "pts": 21,
       "form": [
+        "W",
+        "W",
+        "W",
         "L",
-        "W",
-        "W",
-        "W",
-        "L"
+        "W"
       ]
     },
     {
@@ -695,20 +695,20 @@
     },
     {
       "team": "Scarboro Azzurri Blues",
-      "gp": 6,
+      "gp": 7,
       "w": 3,
       "t": 0,
-      "l": 3,
+      "l": 4,
       "gf": 12,
-      "ga": 12,
-      "gd": 0,
+      "ga": 14,
+      "gd": -2,
       "pts": 9,
       "form": [
-        "L",
         "W",
         "W",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -749,13 +749,13 @@
     },
     {
       "team": "Peniche CC",
-      "gp": 9,
+      "gp": 10,
       "w": 1,
       "t": 1,
-      "l": 7,
-      "gf": 8,
-      "ga": 26,
-      "gd": -18,
+      "l": 8,
+      "gf": 10,
+      "ga": 30,
+      "gd": -20,
       "pts": 4,
       "form": [
         "L",
@@ -1119,10 +1119,26 @@
     }
   },
   "oslTicker": {
-    "updated": "2026-07-17",
+    "updated": "2026-07-18",
     "source": "https://ontariosl.com/game-results/",
     "scheduleSource": "https://ontariosl.com/schedule/",
     "recentScores": [
+      {
+        "gameNumber": "629",
+        "date": "2026-07-14",
+        "home": "Peniche CC",
+        "away": "Olimpia",
+        "homeScore": 2,
+        "awayScore": 4
+      },
+      {
+        "gameNumber": "518",
+        "date": "2026-07-14",
+        "home": "Croatia Norval",
+        "away": "Scarboro Azzurri Blues",
+        "homeScore": 2,
+        "awayScore": 0
+      },
       {
         "gameNumber": "618",
         "date": "2026-07-12",
@@ -1186,34 +1202,8 @@
         "away": "Olimpia",
         "homeScore": 1,
         "awayScore": 3
-      },
-      {
-        "gameNumber": "570",
-        "date": "2026-07-03",
-        "home": "Toronto Celtic",
-        "away": "Hrvat St. Catharines",
-        "homeScore": 3,
-        "awayScore": 0
-      },
-      {
-        "gameNumber": "561",
-        "date": "2026-06-30",
-        "home": "Peniche CC",
-        "away": "Croatia Norval",
-        "homeScore": 0,
-        "awayScore": 3
       }
     ],
-    "todayGames": [
-      {
-        "gameNumber": "639",
-        "date": "2026-07-17",
-        "day": "Fri",
-        "time": "8:30pm",
-        "field": "Centennial College",
-        "home": "Toronto Celtic",
-        "away": "GS United"
-      }
-    ]
+    "todayGames": []
   }
 }
